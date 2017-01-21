@@ -1,79 +1,51 @@
 @import "style";
 
-.about_us_page {
-  z-index: 3;
-  height: @100p;
+.index_about {
+  .nopm;
   background: @color4;
-}
-
-.about_header {
-  font-size: 3vw;
-  text-align:center;
-  margin-top:-10%;
-  margin-bottom:10%;
-  color: @color2;
-}
-
-.about_text_container {
-  padding-right: 10% !important;
-}
-
-.about_text {
-  color:@color4;
-  font-size: 1.5vw;
-}
-
-.about_us{
-  .nop;
-}
-
-.about_us img{
-  .about_us;
-}
-
-.about_us h1{
-  font-size: 3vw;
-  text-align: center;
-  font-weight: 600;
+  height: @100h;
+  z-index: 2;
   color: @white;
-  top: 10vh;
-}
-
-.about_us_p{
-  margin-top: 2%;
-  font-size: 2vw;
   text-align: center;
-  font-weight: 100;
-  color: #FFF;
+  position: relative;
+  .index_about_container {
+    height: 100%;
+
+    .index_about_left {
+      height: 100%;
+      .index_about_left_container {
+        img {
+          height: @100h;
+          width: 100%;
+
+        }
+      }
+    }
+
+    .index_about_right {
+      height: 100%;
+      .index_about_right_container {
+        height: auto;
+        .center_vertically_css;
+        text-align: center;
+        h1 {
+          font-weight: 600;
+          font-size: 4em;
+        }
+        p {
+          font-weight: 300;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
 }
 
-/********************** TABLET SIZE ************************/
-/* Small devices (tablets, 768px and up) */
+//tablet size
 @media (min-width: @screen-sm-min) {
-  .about_us{
-    padding: 0 !important;
-    height: @100h*2
-  }
 
-  .about_us img{
-    .nop;
-  }
+}
 
-  .about_us h1{
-    font-size: 4vw;
-    content: 'viewoirt-units-buggfill; font-size:2vw';
-    text-align: center;
-    font-weight: 600;
-    color: @white;
-    top: 10vh;
-  }
-  .about_us p{
-    top: 10vh;
-    margin-top: 2%;
-    font-size: 2vW;
-    content: 'viewoirt-units-buggfill; font-size:2vw';
-    text-align: center;
-    font-weight: 300;
-    color: @white;
-  }
+@media (min-width: @screen-md-min) {
+
 }

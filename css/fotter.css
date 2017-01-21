@@ -1,71 +1,42 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css";
-.about_us_page {
-  z-index: 3;
-  height: 100%;
+.index_about {
+  padding: 0 !important;
+  margin: 0 !important;
   background: #4A4544;
-}
-.about_header {
-  font-size: 3vw;
-  text-align: center;
-  margin-top: -10%;
-  margin-bottom: 10%;
-  color: #003057;
-}
-.about_text_container {
-  padding-right: 10% !important;
-}
-.about_text {
-  color: #4A4544;
-  font-size: 1.5vw;
-}
-.about_us {
-  padding: 0 !important;
-}
-.about_us img {
-  padding: 0 !important;
-}
-.about_us h1 {
-  font-size: 3vw;
-  text-align: center;
-  font-weight: 600;
+  height: 100vh;
+  z-index: 2;
   color: #ffffff;
-  top: 10vh;
-}
-.about_us_p {
-  margin-top: 2%;
-  font-size: 2vw;
   text-align: center;
-  font-weight: 100;
-  color: #FFF;
+  position: relative;
 }
-/********************** TABLET SIZE ************************/
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .about_us {
-    padding: 0 !important;
-    height: 200vh;
-  }
-  .about_us img {
-    padding: 0 !important;
-  }
-  .about_us h1 {
-    font-size: 4vw;
-    content: 'viewoirt-units-buggfill; font-size:2vw';
-    text-align: center;
-    font-weight: 600;
-    color: #ffffff;
-    top: 10vh;
-  }
-  .about_us p {
-    top: 10vh;
-    margin-top: 2%;
-    font-size: 2vW;
-    content: 'viewoirt-units-buggfill; font-size:2vw';
-    text-align: center;
-    font-weight: 300;
-    color: #ffffff;
-  }
+.index_about .index_about_container {
+  height: 100%;
+}
+.index_about .index_about_container .index_about_left {
+  height: 100%;
+}
+.index_about .index_about_container .index_about_left .index_about_left_container img {
+  height: 100vh;
+  width: 100%;
+}
+.index_about .index_about_container .index_about_right {
+  height: 100%;
+}
+.index_about .index_about_container .index_about_right .index_about_right_container {
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.index_about .index_about_container .index_about_right .index_about_right_container h1 {
+  font-weight: 600;
+  font-size: 4em;
+}
+.index_about .index_about_container .index_about_right .index_about_right_container p {
+  font-weight: 300;
+  font-size: 1.5em;
 }
 .template,
 .always_hidden {
@@ -1303,7 +1274,7 @@ section {
   background: #FF5600;
 }
 #wall_1 {
-  background: url(../img/BG.jpg) no-repeat fixed;
+  background: url(../img/BG.png) no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
