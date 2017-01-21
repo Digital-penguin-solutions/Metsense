@@ -172,7 +172,7 @@ include "include_pages/nav.php";
                     </div>
 
                     <!--key features list right container-->
-                    <div class="product_4_right col-xs-6">
+                    <div class="product_4_right col-xs-12 col-md-6">
                         <div class="product_4_right_text_container">
                             <h2>Keyfeatures</h2>
                             <ul>
@@ -188,8 +188,8 @@ include "include_pages/nav.php";
 
                 <div class="product_4_container_bot">
                     <!--tabel of data-->
-                    <div class="product_4_table col-xs-10 col-xs-offset-1">
-                        <div class="table-responsive col-md-6 col-md-offset-3">
+                    <div class="product_4_table col-xs-12 nopm">
+                        <div class="table-responsive col-xs-12 col-md-6 col-md-offset-3">
                             <table class="table">
                                 <tbody>
                                 <tr>
