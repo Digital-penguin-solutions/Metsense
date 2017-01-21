@@ -95,7 +95,7 @@ include "include_pages/nav.php";
             <div class="product_1_container">
                 <h1><?php echo $product_name ?></h1>
                 <h2><?php echo $product_short_description ?></h2>
-                <img class="col-xs-2 col-xs-offset-5" src="img/2Droad1.png" alt="productuct">
+                <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">
                 <p class="col-xs-12"><?php echo $product_price ?>€</p>
                 <div product_id = "<?php echo $product_id; ?>" class = "buy-now col-xs-2 col-xs-offset-5"> Add to cart </div>
             </div>
@@ -104,7 +104,6 @@ include "include_pages/nav.php";
 </section>
 
 <!--Tecknical information aboute productuckt-->
-<!--php picture needed-->
 <section class="container-fluid product_s_2">
     <div class="row-fluid">
         <div class="col-xs-12">
@@ -124,7 +123,7 @@ include "include_pages/nav.php";
                 <!--picture of productuct-->
                 <div class="product_2_right col-xs-12 col-md-6">
                     <div class="product_2_right_img_container col-xs-12">
-                        <img class="col-xs-8" src="img/2Droad1.png" alt="2Droad">
+                        <img class="col-xs-8" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="Aboute image">
                     </div>
                 </div>
             </div>
@@ -158,7 +157,7 @@ include "include_pages/nav.php";
 </section>
 
 <!--key features-->
-<!--php needed-->
+<!--php needed for table-->
 <section class="container-fluid product_s_4">
     <div class="row-fluid">
         <div class="col-xs-12">
@@ -168,7 +167,7 @@ include "include_pages/nav.php";
                     <!--productuct img lefft container-->
                     <div class="product_4_left col-xs-12 col-md-6">
                         <div class="product_4_left_img_container col-xs-12">
-                            <img class="col-xs-8" src="img/2Droad1.png" alt="2Droad">
+                            <img class="col-xs-10 col-md-8" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="key featuar img">
                         </div>
                     </div>
 
@@ -177,11 +176,6 @@ include "include_pages/nav.php";
                         <div class="product_4_right_text_container">
                             <h2>Keyfeatures</h2>
                             <ul>
-                                <li>Full description of road surface condition</li>
-                                <li>Measurement area from about 2x2 m to over 6x6 m</li>
-                                <li>Several thousands of measuring points</li>
-                                <li>ntegrated road surface temperature sensor</li>
-                                <li>Easy to understand visual presentation of measured data</li>
                                 <?php
                                 foreach ($key_features as $feature) {
                                     echo "<li>". $feature."</li>";

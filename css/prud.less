@@ -42,7 +42,7 @@
 .product_s_2{
   .nopm;
   background: @color2;
-  height: @100h;
+  height: 150vh;
   z-index: 2;
   color: @white;
   text-align: center;
@@ -50,7 +50,7 @@
   .product_2_container{
     height: 100%;
     .product_2_left{
-      height: 100%;
+      height: 50%;
       .product_2_left_text_container{
         height: auto;
         .center_vertically_css;
@@ -67,7 +67,7 @@
       }
     }
     .product_2_right {
-      height: 100%;
+      height: 50%;
       .product_2_right_img_container{
         height: auto;
         .center_vertically_css;
@@ -101,7 +101,7 @@
 //styling for section 4
 .product_s_4{
   .nopm;
-  height: 160vh;
+  height: 320vh;
   background: @color2;
   color: @white;
   z-index: 2;
@@ -110,9 +110,9 @@
     .nopm;
     height: 100%;
     .product_4_container_top {
-      height: @100h;
+      height: 150vh;
       .product_4_left {
-        height: 100%;
+        height: 50%;
         .product_4_left_img_container {
           height: auto;
           .center_vertically_css;
@@ -121,22 +121,18 @@
           }
         }
       }
-
       .product_4_right {
-        height: 80%;
+        height: 50%;
         .product_4_right_text_container {
           height: auto;
           .center_vertically_css;
           h2 {
             font-weight: 600;
             font-size: 4em;
-            margin: 8vh 0 3vh 0;
-
           }
           li {
-            font-size: 2em;
+            font-size: 1em;
             font-weight: 300;
-
           }
         }
       }
@@ -156,3 +152,71 @@
     }
   }
 }
+
+//tablet size
+@media (min-width: @screen-sm-min) {
+
+}
+
+//normal computer size
+@media (min-width: @screen-md-min) {
+  //section 2 md size
+  .product_s_2 {
+    height: @100h;
+    .product_2_left {
+      height: 100%;
+    }
+    .product_2_right {
+      height: 100%;
+    }
+  }
+  //section 4 md size
+  .product_s_4 {
+    height: 160vh;
+    .product_4_container {
+      height: 100%;
+      .product_4_container_top {
+        height: @100h;
+        .product_4_left {
+          height: 100%;
+          .product_4_left_img_container {
+            height: auto;
+            .center_vertically_css;
+            img {
+              margin-left: 10vw;
+            }
+          }
+        }
+        .product_4_right {
+          height: 80%;
+          .product_4_right_text_container {
+            height: auto;
+            .center_vertically_css;
+            h2 {
+              font-size: 4em;
+              margin: 8vh 0 3vh 0;
+              text-align: right;
+            }
+            li {
+              font-size: 2em;
+            }
+          }
+        }
+      }
+      .product_4_container_bot {
+        height: 60vh;
+        .product_4_table {
+          tbody {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+//lg screans
+@media (min-width: @screen-lg-min) {
+
+}
+
