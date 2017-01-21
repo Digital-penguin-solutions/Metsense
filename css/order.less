@@ -1,0 +1,81 @@
+@import "style";
+
+
+.order_header {
+  position:absolute;
+  top: 10%;
+  font-size: 3.5vw;
+}
+
+.img_order{
+  height: 10vh;
+}
+
+.order_table tr:first-child td{
+  font-size: 2.2vw;
+}
+
+.order_table td {
+  font-size: 1.5vw;
+}
+
+.order_table {
+  text-align:center;
+  border-collapse:separate;
+  border-spacing:1.5vw;
+}
+
+.quantity_select {
+  width: 100%;
+  height: auto;
+  margin-left:9%;
+}
+
+.quantity_select div {
+  float:left;
+  width: 25%;
+  text-align:center;
+  border: 1px solid black;
+  cursor: pointer;
+
+  /* Makes the text not selectable */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+.current_quantity {
+  width:33%;
+  cursor: default;
+  border: none !important;
+}
+
+.total_order_price {
+  font-weight: 800;
+}
+
+section button {
+  margin: 10% auto;
+  font-size: 2.0rem;
+  padding: 1.25rem 2.5rem;
+  display: block;
+  background-color: #0080CF;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-weight: 300;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section button:hover {
+  background-color: #ffffff;
+  color: #0080CF;
+  border-color: #0080CF;
+}

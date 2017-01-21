@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./built"
+  },
+  "filesGlob": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "!./node_modules/**/*"
+  ],
+  "files": [
+    "./src/PngWriter.ts",
+    "./src/Base64Writer.ts",
+    "./src/Filter.ts",
+    "./src/main.ts"
+  ]
+}

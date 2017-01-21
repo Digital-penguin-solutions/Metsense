@@ -1,0 +1,235 @@
+//bootstrap import
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css";
+
+//import all elem for page
+@import "aboute";
+@import "admin";
+@import "cart";
+@import "checkout";
+@import "fotter";
+@import "nav";
+@import "order";
+@import "pruducts";
+@import "skrollbar";
+@import "slider";
+@import "teck";
+@import "welcome";
+@import "prud";
+
+//colors for the page
+//base color black and white
+@black: #0000000;
+@white: #ffffff;
+
+//custum collors
+@color1: #0080cf;
+@color2: #003057;
+@color3: #FF5600;
+@color4: #4A4544;
+
+//stadard varibels
+@no: 0 !important;
+
+//size variables
+@100h: 100vh;
+@100w: 100vw;
+@75h: 75vh;
+@75w: 75vw;
+@50h: 50vh;
+@50w: 50vw;
+@25h: 25vh;
+@25w: 25vw;
+
+@100p: 100%;
+@75p: 75%;
+@50p: 50%;
+@25p: 25%;
+
+//full with
+.fullw{
+  width: @100p;
+}
+
+//full height
+.fullh{
+  height: @100p;
+}
+
+//computer scree sises and up
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+//a transition class
+.transition (@prop: all, @time: 2s, @ease: linear) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+//Set a font for all text
+* {
+  font-family: 'Lato', sans-serif !important;
+}
+
+//base settings
+.wrapper{
+  .nopm;
+  height: 100%;
+  width: 100%;
+  background: @white;
+  z-index: 1;
+  top: @no;
+  left: @no;
+  position: relative;
+}
+
+html {
+  .wrapper;
+}
+
+body {
+  .wrapper;
+}
+
+section {
+  position:relative;
+  width: 100%;
+  overflow:auto;
+}
+
+#background_fixed {
+  position: fixed;
+  background: url("../img/bg.jpg") no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+//Set an objekt top 100% height
+.full_height {
+  display: block;
+  .fullh !important;
+}
+
+//Set a objekt to 100% height and 100% with
+.full_size {
+  .full_height;
+  .fullw !important;
+}
+
+// Center vertically
+.center_vertically_css {
+  position: relative;
+  top: @50p;
+  transform: translateY(-50%);
+}
+
+// Center horizonatally
+.center_css {
+  position: relative;
+  left: @50p;
+  top: @50p;
+  transform: translate(-@50p, -@50p);
+}
+
+// Center horizonatally
+.center_horizontally_css {
+  position: relative;
+  left: @50p;
+  transform: translateX(-@50p);
+}
+
+.nopm {
+  padding: @no;
+  margin: @no;
+}
+.nom{
+  margin: @no;
+}
+.nop{
+  padding: @no;
+}
+.tole {
+  top: @no;
+  left: @no;
+}
+
+.test_abs {
+  width:100%;
+  background:yellow;
+  position:absolute;
+  bottom:0;
+  height:50px;
+}
+.all_products {
+  background: @color2;
+}
+.test {
+  background:@color1;
+}
+.order_first {
+  background:@white;
+  .fullh;
+  color: @color4;
+}
+.padding_sides {
+  padding-left:10% !important;
+  padding-right:10% !important;
+}
+.product_details {
+  .fullh;
+}
+
+.key_features_list li{
+  font-size: 1.5vw;
+  margin-bottom:1%;
+  color: @color4;
+}
+
+.key_features_list {
+  background-color:@white !important;
+}
+
+.key_features_header {
+  font-size: 3vw;
+  text-align:center;
+  margin-bottom:10%;
+  margin-top:-5%;
+  color: @color2;
+}
+
+.side_image {
+  max-height: 60%;
+  width: auto;
+  max-width:90%;
+}
+
+.background_image_container {
+  .fullh;
+  .fullw;
+  position:absolute;
+  .tole;
+}
+
+.background_image_container img {
+  .background_image_container;
+}
+
+.image {
+  min-height: 100%;
+  .fullw;
+  z-index: 100;
+  background: @color3;
+}
+
+#wall_1 {
+  background: url(../img/BG.jpg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

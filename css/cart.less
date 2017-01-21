@@ -1,0 +1,163 @@
+@import "style";
+
+
+.cart_section {
+  min-height: @100p ;
+  padding: 0 10%;
+}
+
+.cart_cross {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 9%;
+}
+
+.finish_button {
+  display:block;
+  height: 8vh;
+  line-height: 8vh;
+  margin-top: 5%;
+  border-radius: 30% 100% 30% 100%;
+  background:@color3;
+  font-size:2vw;
+  cursor:pointer;
+  color:@white;
+  text-align:center;
+}
+
+.checkout_button {
+  display:block;
+  width:25%;
+  height: 6vh;
+  margin: 5% 0 4% 0;
+  border-radius: 30% 100%;
+  background: @color3;
+  line-height: 6vh;
+  text-align:center;
+  font-size: 1.2vw;
+  color:@white;
+  cursor:pointer;
+}
+
+.cart_load {
+  .fullw;
+}
+.cart_empty {
+  text-align:center;
+  font-size:1.2vw;
+  margin-top:5%;
+}
+
+.cart_container h1 {
+  text-align:center;
+  margin-bottom: 5%;
+}
+
+.cart_small h1{
+  font-size:1.9vw;
+}
+
+.cart_big h1{
+  font-size: 2.4vw;
+}
+
+.cart_big {
+  width:70%;
+  margin-left:15%;
+  margin-top: 8%;
+  padding-right:10px;
+}
+
+.cart_small {
+  position:fixed;
+  width:40vw;
+  max-height:80%;
+  top:10%;
+  right:10%;
+  z-index:1000;
+  overflow:scroll;
+  border: 1px black solid;
+}
+
+.cart_container {
+  background:@white;
+}
+
+.cart_item td{
+  display:block;
+  float:left;
+  width:33%;
+  text-align:center;
+  font-size:1vw;
+}
+
+.cart_item table{
+  width:60%;
+  float:left;
+}
+
+.cart_small h2{
+  font-size:1.2vw;
+}
+
+.cart_big h2{
+  font-size:1.8vw;
+}
+
+.cart_item h2{
+  text-align:center;
+  margin:0;
+}
+
+.cart_small .cart_item {
+  height:15vh;
+}
+
+.cart_big .cart_item {
+  height:20vh;
+}
+
+/* This will be the first list item */
+.cart_item:nth-child(2) {
+  height:0 !important;
+}
+
+.cart_item {
+  border-bottom: 1px solid grey;
+  margin-top:2%;
+  //width: calc (100px -10px);
+  margin-left:10px;
+}
+
+.upper_cart_row {
+  height:30%
+}
+
+.lower_cart_row {
+  height:70%;
+}
+
+.cart_product_image img{
+  max-width:90%;
+  height:120%;
+  margin-top: -10%;
+}
+
+.cart_product_image {
+  float:left;
+  width: 20%;
+  height:100%;
+  margin-left:10%;
+}
+
+.cart_remove img{
+  width:100%;
+  cursor: pointer;
+}
+
+.cart_remove {
+  float:left;
+  width:5%;
+  height:100%;
+}

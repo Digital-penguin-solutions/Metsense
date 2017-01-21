@@ -1,0 +1,158 @@
+@import "style.less";
+
+//styling for section 1
+.product_s_1{
+  padding:0 !important;;
+  margin-top:5vh;
+  background: @color1;
+  height: @100h;
+  z-index: 2;
+  color: @white;
+  text-align: center;
+  position: relative;
+
+  .product_1_container{
+    img{
+      margin-top:10vh;
+    }
+    h1{
+      margin-top: 7vh;
+      font-size: 5em;
+      font-weight: 800;
+    }
+    h2{
+      font-size: 3em;
+      font-weight: 400;
+    }
+    p{
+      font-size: 2em;
+      margin-top: 5vh;
+    }
+    a{
+      .nop;
+      .finish_button;
+      height: 6vh;
+      font-size: 1.3em;
+      margin-top:4vh;
+    }
+  }
+}
+
+//styling for section 2
+.product_s_2{
+  .nopm;
+  background: @color2;
+  height: @100h;
+  z-index: 2;
+  color: @white;
+  text-align: center;
+  position: relative;
+  .product_2_container{
+    height: 100%;
+    .product_2_left{
+      height: 100%;
+      .product_2_left_text_container{
+        height: auto;
+        .center_vertically_css;
+        h1{
+          font-weight: 600;
+          font-size: 3.4em;
+          margin:8vh 0 3vh 0;
+        }
+        p{
+          font-weight: 400;
+          font-size: 1.8em;
+          margin-bottom: 1vh;
+        }
+      }
+    }
+    .product_2_right {
+      height: 100%;
+      .product_2_right_img_container{
+        height: auto;
+        .center_vertically_css;
+        img{
+          margin-left:10vw;
+        }
+      }
+    }
+  }
+}
+
+//styling for section 3
+.product_s_3{
+  .nopm;
+  height: @100h;
+  background: @color1;
+  z-index: 2;
+  position: relative;
+  .product_3_container{
+    .product_details{
+      .all_slider_container{
+        .slider_page{
+          .product_big_image{
+          }
+        }
+      }
+    }
+  }
+}
+
+//styling for section 4
+.product_s_4{
+  .nopm;
+  height: 160vh;
+  background: @color2;
+  color: @white;
+  z-index: 2;
+  position: relative;
+  .product_4_container {
+    .nopm;
+    height: 100%;
+    .product_4_container_top {
+      height: @100h;
+      .product_4_left {
+        height: 100%;
+        .product_4_left_img_container {
+          height: auto;
+          .center_vertically_css;
+          img {
+            margin-left: 10vw;
+          }
+        }
+      }
+
+      .product_4_right {
+        height: 80%;
+        .product_4_right_text_container {
+          height: auto;
+          .center_vertically_css;
+          h2 {
+            font-weight: 600;
+            font-size: 4em;
+            margin: 8vh 0 3vh 0;
+
+          }
+          li {
+            font-size: 2em;
+            font-weight: 300;
+
+          }
+        }
+      }
+    }
+
+    .product_4_container_bot{
+      top: 0 !important;
+      height: 60vh;
+      width: auto;
+      .product_4_table{
+        tbody{
+          color: @white;
+          font-size: 1.5em;
+
+        }
+      }
+    }
+  }
+}

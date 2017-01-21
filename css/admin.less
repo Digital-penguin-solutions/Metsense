@@ -1,0 +1,193 @@
+@import "style.less";
+
+
+.template, .always_hidden{
+  display:none;
+}
+
+.admin_header {
+  margin-top: 10vh;
+  text-align:center;
+  font-size:2vw;
+}
+
+.admin_product h1 {
+  text-align:center;
+  margin-top: 3%;
+  font-size:2vw;
+}
+
+/* Delete and edit buttons */
+.admin_product a {
+  display:block;
+  width: 30%;
+  height:15%;
+  position:absolute;
+  bottom:5%;
+  background: white;
+  padding:0;
+  text-align:center;
+  color: #003057;
+  cursor:pointer;
+
+}
+
+.admin_product img {
+  max-width:90%;
+  height:50%;
+}
+
+.admin_product {
+  margin-top:10%;
+  background:#0080CF;
+  height:35vh;
+  margin-bottom:5%;
+  padding:0 !important;
+}
+
+.product_delete_button {
+  left:60%;
+}
+
+.product_edit_button {
+  left: 10%;
+}
+
+.add_product_button {
+  text-align:center;
+  display:block;
+  width: 20%;
+  text-decoration:none;
+  color: @white;
+  font-size: 1vw;
+  cursor:pointer;
+  background: @color1;
+  margin-top:5%;
+  padding:1%;
+  margin-bottom:5%;
+}
+
+.add_product_form textarea	{
+ .fullw;
+  height:20vh;
+  resize: none;
+}
+.add_product_form input	{
+ .fullw;
+}
+
+.add_product_form h1{
+  text-align:center;
+  font-size: 2vw;
+  margin-top:9%;
+}
+
+/* Admin form to add a new product*/
+.add_product_form {
+  width:60%;
+  margin-left:20%;
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+.admin_list_container h1 {
+  margin-top:5%;
+}
+
+/* Container for the key features list on the admin page */
+.admin_list_container {
+ .fullw;
+  border: solid 1px @color4;
+  background:white;
+  padding: 10px 0;
+  margin-top:5%;
+  overflow: auto;
+}
+/* Container for a single row in an admin list*/
+.admin_list_item {
+  margin-top:5%;
+  width:@100p;
+}
+
+.admin_list_item p {
+  margin-left:10%;
+  display:block;
+  float:left;
+}
+
+/* an item in the list of slider images */
+.image_list_item {
+  height: 20vh;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.image_list_item input {
+  margin-left:5% !important;
+  width:35% !important;
+  float:left;
+}
+.image_list_item p {
+  margin-left:5% !important;
+}
+
+/* Preview for image in slider list editor */
+.list_preview_image {
+  width: 20%;
+  max-height:90%;
+  margin-left:2%;
+}
+
+.image_select_container {
+  height: 20vh;
+  border: black solid 1px;
+}
+
+.image_select_container input {
+  width:35% !important;
+  float:left;
+  margin-left:5%;
+}
+.image_select_container p {
+  display:block;
+  float:left;
+  margin-left:10%;
+}
+
+/* Button to add a new row to an admin list*/
+.add_item {
+  width:20%;
+  height:5vh;
+  line-height:5vh;
+  margin-left: 40%;
+  background: @color2;
+  text-align:center;
+  color: @white;
+  margin-top:5%;
+  font-size: 0.8vw;
+  cursor:pointer;
+  float:left;
+}
+
+/* The cross to remove an item from an admin list*/
+.remove_item {
+  width:4%;
+  margin-right:4%;
+  cursor:pointer;
+  vertical-align: baseline !important;
+}
+
+.admin_list_item input {
+  float:left;
+}
+
+/* The inputs in the tech_table and the key_features need to have different width*/
+.admin_key_features_list input {
+  width:80%;
+  margin-left:10%;
+}
+/* This one is slightly smaller cause there are gonna be two next to eachother*/
+.admin_tech_list input {
+  width:35%;
+  margin-left:10%;
+}
