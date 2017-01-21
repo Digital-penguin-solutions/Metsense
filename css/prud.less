@@ -156,13 +156,41 @@
 
 //tablet size
 @media (min-width: @screen-sm-min) {
-
+  //section 4 tablet size
+  .product_s_4{
+    .product_4_container {
+      .product_4_container_top {
+        .product_4_left {
+          .product_4_left_img_container {
+            margin-top: 10vh;
+            .center_vertically_css;
+            img {
+            }
+          }
+        }
+        .product_4_right {
+          .product_4_right_text_container {
+            .center_vertically_css;
+            h2 {
+            }
+            li {
+            }
+          }
+        }
+      }
+      .product_4_container_bot{
+        .product_4_table{
+          tbody{
+          }
+        }
+      }
+    }
+  }
 }
 
 //normal computer size
 @media (min-width: @screen-md-min) {
   //section 2 md size
-  
   .product_s_2{
     height: @100h;
     .product_2_container{
@@ -187,8 +215,6 @@
     }
   }
 
-
-
   //section 4 md size
   .product_s_4 {
     height: 160vh;
@@ -200,6 +226,7 @@
           height: 100%;
           .product_4_left_img_container {
             height: auto;
+            margin-top: 0;
             .center_vertically_css;
             img {
               margin-left: 10vw;
@@ -233,9 +260,3 @@
     }
   }
 }
-
-//lg screans
-@media (min-width: @screen-lg-min) {
-
-}
-

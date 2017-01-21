@@ -1000,6 +1000,19 @@ figure.effect-sarah:hover p {
   color: #ffffff;
   font-size: 1em;
 }
+@media (min-width: 768px) {
+  .product_s_4 .product_4_container .product_4_container_top .product_4_left .product_4_left_img_container {
+    margin-top: 10vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .product_s_4 .product_4_container .product_4_container_top .product_4_right .product_4_right_text_container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 @media (min-width: 992px) {
   .product_s_2 {
     height: 100vh;
@@ -1034,6 +1047,7 @@ figure.effect-sarah:hover p {
   }
   .product_s_4 .product_4_container .product_4_container_top .product_4_left .product_4_left_img_container {
     height: auto;
+    margin-top: 0;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
