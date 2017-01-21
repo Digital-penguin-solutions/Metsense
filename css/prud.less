@@ -162,15 +162,33 @@
 //normal computer size
 @media (min-width: @screen-md-min) {
   //section 2 md size
-  .product_s_2 {
+  
+  .product_s_2{
     height: @100h;
-    .product_2_left {
-      height: 100%;
-    }
-    .product_2_right {
-      height: 100%;
+    .product_2_container{
+      .product_2_left{
+        height: 100%;
+        .product_2_left_text_container{
+          .center_vertically_css;
+          h1{
+          }
+          p{
+          }
+        }
+      }
+      .product_2_right {
+        height: 100%;
+        .product_2_right_img_container{
+          .center_vertically_css;
+          img{
+          }
+        }
+      }
     }
   }
+
+
+
   //section 4 md size
   .product_s_4 {
     height: 160vh;
@@ -193,10 +211,10 @@
           .product_4_right_text_container {
             height: auto;
             .center_vertically_css;
+            text-align: left;
             h2 {
               font-size: 4em;
               margin: 8vh 0 3vh 0;
-              text-align: right;
             }
             li {
               font-size: 2em;
