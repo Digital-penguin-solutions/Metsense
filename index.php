@@ -11,13 +11,13 @@
 <html lang="en">
 <head>
     <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
-    <title>MetSense Home</title>
+    <title>MetSense-Home</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Digital Dnternet Solutions">
+    <meta name="author" content="Digital Internet solutions">
 
-    <!--main css style sheat-->
+    <!--main css style scheat-->
     <link rel="stylesheet" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
@@ -116,20 +116,22 @@ include "include_pages/welcome_index.php";
     </section>
 </div>
 
+<!--about us section-->
 <section class="container-fluid index_about" id="about_us_page">
     <div class="row-fluid index_about">
         <div class="col-xs-12 index_about">
             <div class="index_about_container">
-                <!--left container-->
+                <!--left container top in mobil and tablet-->
                 <div class="index_about_left col-xs-12 col-md-6 nopm">
                     <div class="index_about_left_container col-xs-12 nopm">
                         <img src="img/abote.jpg" alt="About metsense">
                     </div>
                 </div>
-                <!--right container-->
+                <!--right container bot in mobil and tablet-->
                 <div class="index_about_right col-xs-12 col-md-6">
                     <div class="index_about_right_container col-xs-12">
                         <h1>About us</h1>
+                        <!--About uss text-->
                         <p>MetSense brings innovative sensor solutions to the market for winter road maintenance.
                             This enables mobile and stationary monitoring of parameters such as: Road surface status,
                             Road surface friction, Road surface temperature and more.</p>
@@ -140,8 +142,6 @@ include "include_pages/welcome_index.php";
         </div>
     </div>
 </section>
-
-
 
 <!--include the fotter-->
 <?php
