@@ -1,171 +1,162 @@
 <?php
 /**
-	* Order page
-	* 
-	* Order the peuduct, showing the price and total price
-	*
-	* @param author Digitalis
-*/
+ * Order page
+ *
+ * Order the peuduct, showing the price and total price
+ *
+ * @param author Digitalis
+ */
 ?>
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
-            <title>MetSense Home</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
+    <title>MetSense Home</title>
 
 
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="author" content="Klimator">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Klimator">
 
-			<script> 
-				var cart_size = "big";
-			</script>
+    <script>
+        var cart_size = "big";
+    </script>
 
-            <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
-            <!--======================================= Font ===================================-->
-            <!--Font awsome-->
-            <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-            <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
-            <!--======================================= /*Font ================================-->
+    <!--======================================= JAVA SCRIPT ===========================-->
+    <!--JQuery-->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <!--Velocity -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
+    <script src="js/jquery.color.js"></script>
 
-            <!--======================================= JAVA SCRIPT ===========================-->
-            <!--JQuery-->
-            <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-            <!--Velocity -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
-            <script src="js/jquery.color.js"></script>
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
+    <!-- Smooth scoll-->
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+        //smoothScroll.init();
+    </script>
+    <script src="js/jquery.stellar.js"></script>
+    <script>
+        $(document).ready(function(e) {
+            $(window).stellar();
+        });
+    </script>
+    <!--Fade in-->
+    <script src="js/fade.in.js"></script>
 
-            <!-- JavaScript -->
-            <script src="js/scripts.js"></script>
-            <!-- Smooth scoll-->
-            <script src="js/smooth-scroll.min.js"></script>
-            <script> 
-                //smoothScroll.init();
-            </script>
-            <script src="js/jquery.stellar.js"></script>
-            <script>
-                $(document).ready(function(e) {
-                    $(window).stellar();
-                });
-            </script>
-            <!--Fade in-->
-            <script src="js/fade.in.js"></script>
-
-            <!--slide in-->
-            <script src="js/slide.in.js"></script>
+    <!--slide in-->
+    <script src="js/slide.in.js"></script>
 
 
-            <!-- Latest compiled and minified JavaScript for bootstrap-->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript for bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-            <!--======================================= /* JAVA SCRIPT ========================-->
-            <!--icon-->
-            <link rel="shortcut icon" href="/site01/img/logo/icontop.png" type="image/x-icon" />
+    <!--======================================= /* JAVA SCRIPT ========================-->
+    <!--icon-->
+    <link rel="shortcut icon" href="/site01/img/logo/icontop.png" type="image/x-icon" />
 
-            <!-- Latest compiled and minified JavaScript for bootstrap -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity=		"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript for bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity=		"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-        </head>
+</head>
+<?php
+include "functions.php";
+
+$con = connect();
+session_start();
+
+
+$products = array();
+if (isset($_SESSION['cart_ids']) && isset($_SESSION['cart_num'])) {
+    $cart_ids = $_SESSION['cart_ids'];
+    $cart_num = $_SESSION['cart_num'];
+
+    foreach($cart_ids as $id){
+        $product = get_product_by_id($con, $id);
+        $products[] = $product;
+    }
+}
+?>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top ">
+<?php
+$hide_cart = true;
+include "include_pages/nav.php";
+?>
+
+<section id = "finish_order" class = "">
+
+    <h1 class = "checkout_header"> Checkout </h1>
+    <div class = "col-md-4 col-md-offset-2 customer_info">
+        <h1>Customer Information</h1>
+
+        <h2> Email </h2>
+        <input placeholder = "Email" type = "text">
+
+        <h2> Company name </h2>
+        <input placeholder = "Company name" type = "text">
+
+        <h2> First name</h2>
+        <input placeholder = "First name" type = "text">
+
+        <h2> Last name</h2>
+        <input placeholder = "Last name" type = "text">
+
+
+        <h2> Country </h2>
+        <select name="country">
+            <?php include "select_country.php"; ?>
+        </select>
+
+        <h2>Additional Information (optional)</h2>
+        <textarea placeholder = "Additional information"></textarea>
+
+    </div>
+    <div class = "col-md-3 col-md-offset-1 cart_info">
+        <h1>Order Summary</h1>
+
         <?php
-            include "functions.php";
+        $total_price = 0;
+        foreach ($products as $index=>$product){
 
-            $con = connect();
-	    	session_start();
-
-
-		    $products = array();
-		    if (isset($_SESSION['cart_ids']) && isset($_SESSION['cart_num'])) {
-			    $cart_ids = $_SESSION['cart_ids'];
-			    $cart_num = $_SESSION['cart_num'];
-
-			    foreach($cart_ids as $id){
-				    $product = get_product_by_id($con, $id);
-				    $products[] = $product;
-			    }
-		    }
-		?>
-
-        <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top ">
-            <?php
-				$hide_cart = true;
-				include "nav.php";
+            $num = $_SESSION['cart_num'][$index];
+            $total_price_single = $_SESSION['cart_num'][$index] * $product['price'];
+            $total_price += $total_price_single;
             ?>
-
-			
-			<section id = "finish_order" class = "">
-				
-				<h1 class = "checkout_header"> Checkout </h1>
-				<div class = "col-md-4 col-md-offset-2 customer_info">
-					<h1>Customer Information</h1>
-
-					
-					<h2> Email </h2>
-					<input placeholder = "Email" type = "text">
-
-					<h2> Company name </h2>
-					<input placeholder = "Company name" type = "text">
-
-					<h2> First name</h2>
-					<input placeholder = "First name" type = "text">
-
-					<h2> Last name</h2>
-					<input placeholder = "Last name" type = "text">
-
-
-					<h2> Country </h2>
-					<select name="country">
-						<?php include "select_country.php"; ?>
-					</select>
-
-					<h2>Additional Information (optional)</h2>
-					<textarea placeholder = "Additional information"></textarea>
-
-
-				</div>
-				<div class = "col-md-3 col-md-offset-1 cart_info">
-					<h1>Order Summary</h1>
-					
-					<?php
-					$total_price = 0;
-					foreach ($products as $index=>$product){
-
-						$num = $_SESSION['cart_num'][$index];
-						$total_price_single = $_SESSION['cart_num'][$index] * $product['price'];
-						$total_price += $total_price_single;
-					?>
-						<div class = "summary_product">
-							<div class = "summary_icon_container">
-								<img src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" alt="A product" />
-							</div>
-							<p class = "summary_name"><strong><?php echo $product['name']; ?> </strong> x <?php echo $num; ?> </p>
-							<p class = "summary_single_price"> <?php echo $total_price_single; ?>$</p>
-						</div>
-					<?php
-					}
-					?>
-
-					<div class = "line"> </div>
-
-					<p class = "summary_total_text">Total Payment</p>
-					<p class = "summary_total_price"> <?php echo $total_price;?>$</p>
-				</div>
-                <a href = "order.php" class = "finish_button col-md-3 col-md-offset-2">
-                    Change order
-                </a>
-                <a class = "finish_button col-md-3 col-md-offset-2">
-                    Finish order
-                </a>
-			</section>
-
-
+            <div class = "summary_product">
+                <div class = "summary_icon_container">
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" alt="A product" />
+                </div>
+                <p class = "summary_name"><strong><?php echo $product['name']; ?> </strong> x <?php echo $num; ?> </p>
+                <p class = "summary_single_price"> <?php echo $total_price_single; ?>$</p>
+            </div>
             <?php
-				include "fotter.php";
-            ?>
+        }
+        ?>
 
-        </body>
-    </html>
+        <div class = "line"> </div>
+
+        <p class = "summary_total_text">Total Payment</p>
+        <p class = "summary_total_price"> <?php echo $total_price;?>$</p>
+    </div>
+    <a href = "order.php" class = "finish_button col-md-3 col-md-offset-2">
+        Change order
+    </a>
+    <a class = "finish_button col-md-3 col-md-offset-2">
+        Finish order
+    </a>
+</section>
+
+<?php
+include "include_pages/fotter.php";
+?>
+
+</body>
+</html>

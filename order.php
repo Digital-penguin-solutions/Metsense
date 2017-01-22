@@ -61,9 +61,8 @@ $products = get_all_products($con);
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top ">
 <?php
 $hide_cart = true;
-include "nav.php";
+include "include_pages/nav.php";
 ?>
-
 
 <section id = "welcome_page" class = "cart_section no_padding">
 
@@ -71,7 +70,7 @@ include "nav.php";
 
 
 <?php
-include "fotter.php";
+include "include_pages/fotter.php";
 ?>
 
 </body>
