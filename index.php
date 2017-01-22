@@ -116,18 +116,18 @@ include "include_pages/welcome_index.php";
     </section>
 </div>
 
-<section class="container-fluid index_about">
+<section class="container-fluid index_about" id="about_us_page">
     <div class="row-fluid index_about">
         <div class="col-xs-12 index_about">
             <div class="index_about_container">
                 <!--left container-->
-                <div class="index_about_left col-xs-6 nopm">
+                <div class="index_about_left col-xs-12 col-md-6 nopm">
                     <div class="index_about_left_container col-xs-12 nopm">
                         <img src="img/abote.jpg" alt="About metsense">
                     </div>
                 </div>
                 <!--right container-->
-                <div class="index_about_right col-xs-6">
+                <div class="index_about_right col-xs-12 col-md-6">
                     <div class="index_about_right_container col-xs-12">
                         <h1>About us</h1>
                         <p>MetSense brings innovative sensor solutions to the market for winter road maintenance.
