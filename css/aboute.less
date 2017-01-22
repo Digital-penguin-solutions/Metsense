@@ -1,5 +1,5 @@
 @import "style";
-
+/*
 .index_about {
   .nopm;
   background: @color4;
@@ -40,6 +40,51 @@
     }
   }
 }
+*/
+
+.index_about{
+  .nopm;
+  background: @color4;
+  height: 100vh;
+  z-index: 2;
+  color: @white;
+  text-align: center;
+  position: relative;
+  .index_about_container{
+    height: 100%;
+    .index_about_left{
+      height: 100%;
+      .index_about_left_container{
+        height: auto;
+        .center_vertically_css;
+        img{
+
+        }
+
+      }
+    }
+    .index_about_right {
+      height: 50%;
+      .index_about_right_container{
+        height: auto;
+        .center_vertically_css;
+        h1{
+          font-weight: 600;
+          font-size: 3.4em;
+          margin:8vh 0 3vh 0;
+        }
+        p{
+          font-weight: 400;
+          font-size: 1.8em;
+          margin-bottom: 1vh;
+        }
+      }
+    }
+  }
+}
+
+
+
 
 //tablet size
 @media (min-width: @screen-sm-min) {

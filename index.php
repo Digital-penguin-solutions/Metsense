@@ -117,12 +117,12 @@ include "include_pages/welcome_index.php";
 </div>
 
 <section class="container-fluid index_about">
-    <div class="row-fluid">
-        <div class="col-xs-12">
+    <div class="row-fluid index_about">
+        <div class="col-xs-12 index_about">
             <div class="index_about_container">
                 <!--left container-->
-                <div class="index_about_left col-xs-6">
-                    <div class="index_about_left_container col-xs-12">
+                <div class="index_about_left col-xs-6 nopm">
+                    <div class="index_about_left_container col-xs-12 nopm">
                         <img src="img/abote.jpg" alt="About metsense">
                     </div>
                 </div>

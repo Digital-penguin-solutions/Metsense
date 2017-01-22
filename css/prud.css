@@ -1,5 +1,47 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css";
+/*
+.index_about {
+  .nopm;
+  background: @color4;
+  height: @100h;
+  z-index: 2;
+  color: @white;
+  text-align: center;
+  position: relative;
+  .index_about_container {
+    height: 100%;
+
+    .index_about_left {
+      height: 100%;
+      .index_about_left_container {
+        img {
+          height: @100h;
+          width: 100%;
+
+        }
+      }
+    }
+
+    .index_about_right {
+      height: 100%;
+      .index_about_right_container {
+        height: auto;
+        .center_vertically_css;
+        text-align: center;
+        h1 {
+          font-weight: 600;
+          font-size: 4em;
+        }
+        p {
+          font-weight: 300;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+*/
 .index_about {
   padding: 0 !important;
   margin: 0 !important;
@@ -16,27 +58,30 @@
 .index_about .index_about_container .index_about_left {
   height: 100%;
 }
-.index_about .index_about_container .index_about_left .index_about_left_container img {
-  height: 100vh;
-  width: 100%;
+.index_about .index_about_container .index_about_left .index_about_left_container {
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .index_about .index_about_container .index_about_right {
-  height: 100%;
+  height: 50%;
 }
 .index_about .index_about_container .index_about_right .index_about_right_container {
   height: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  text-align: center;
 }
 .index_about .index_about_container .index_about_right .index_about_right_container h1 {
   font-weight: 600;
-  font-size: 4em;
+  font-size: 3.4em;
+  margin: 8vh 0 3vh 0;
 }
 .index_about .index_about_container .index_about_right .index_about_right_container p {
-  font-weight: 300;
-  font-size: 1.5em;
+  font-weight: 400;
+  font-size: 1.8em;
+  margin-bottom: 1vh;
 }
 .template,
 .always_hidden {
