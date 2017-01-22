@@ -117,7 +117,7 @@ include "include_pages/welcome_index.php";
 </div>
 
 <!--about us section-->
-<section class="container-fluid index_about" id="about_us_page">
+<section class="container-fluid index_about" id="about_us_pages">
     <div class="row-fluid index_about">
         <div class="col-xs-12 index_about">
             <div class="index_about_container">
