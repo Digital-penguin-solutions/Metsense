@@ -16,8 +16,7 @@ else
 }
 ?>
 
-
-<!-- =========================== NAV MENU ===========================-->
+<!-- Liks when meneu is toggeld on-->
 <div class = "nav_menu_container">
     <ul class = "nav_menu center_css">
         <li><a class = "nav_link" data-scroll href = "../Metsense/index.php#welcome_page"><p> Home </p></a></li>
@@ -26,9 +25,8 @@ else
         <li><a class = "nav_link" data-scroll href = "../Metsense/order.php"><p> Shopping cart </p></a></li>
     </ul>
 </div>
-<!-- =========================== END OF NAV MENU ===========================-->
 
-<!--=============================NAv============================- -->
+<!--The top of the page -->
 <nav class="navbar navbar-default navbar-fixed-top nav-manstyle">
     <div class="container-fluid full_height">
         <div class="navbar-header center_css">
@@ -38,8 +36,8 @@ else
         </div>
     </div>
 </nav>
-<!--=============================/NAv============================ -->
 
+<!--Cart btn-->
 <?php
 if(!$hide_cart){
     ?>
@@ -51,6 +49,7 @@ if(!$hide_cart){
 }
 ?>
 
+<!--hamburger meneu-->
 <ul class = "nav_button_container">
     <li>
         <a class = "McButton" data = "hamburger-menu">

@@ -760,7 +760,7 @@ figure.effect-sarah:hover p {
 .slider_dots_container {
   position: absolute;
   height: 1vw;
-  bottom: 2%;
+  bottom: 5vh;
   width: 100%;
 }
 .inner_dots_container {
@@ -769,8 +769,8 @@ figure.effect-sarah:hover p {
   background-color: rgba(0, 0, 0, 0) !important;
 }
 .slider_dot {
-  width: 0.7vw;
-  height: 0.7vw;
+  width: 1vw;
+  height: 1vw;
   float: left;
   border-radius: 50%;
   border: 4px solid;
