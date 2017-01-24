@@ -781,6 +781,12 @@ figure.effect-sarah:hover p {
   top: 50%;
   cursor: pointer;
 }
+.slider_arrow_right:hover {
+  background: #FF5600;
+  height: 100px;
+  width: 100px;
+  z-index: 100000;
+}
 .slider_arrow_right {
   right: 0;
 }
