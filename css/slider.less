@@ -1,23 +1,19 @@
 @import "style";
 
 .slider_arrow {
-  position:absolute;
-  width:5%;
-  height:10%;
-  top:50%;
-  cursor:pointer;
-
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  top: 50%;
+  cursor: pointer;
 }
-
 .slider_arrow:hover{
-  background: @color4 * 0.2;
-  height: 100px;
-  width: 100px;
-  z-index: 100000;
+  background: rgba(74,69,68, 0.3);
+  .transition(@time: 0.7s);
 }
 
 .slider_arrow_right {
-  right:0;
+  right: 0;
 }
 
 .slider_arrow_left {
@@ -37,8 +33,8 @@
 
 //*{
 //.list_object_text ;
- // font-size: 1.5vw;
-  //text-align:center;
+// font-size: 1.5vw;
+//text-align:center;
 //}
 
 .slider_page {
@@ -68,7 +64,8 @@
 
 .slider_dots_container {
   position: absolute;
-  height: 1vw;
+  height: 0.7vh;
+  width: 0.7vw;
   bottom:5vh;
   .fullw;
 }

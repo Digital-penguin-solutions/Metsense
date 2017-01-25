@@ -1,7 +1,5 @@
 *.xml
-.idea/watcherTasks.xml
 *.css
-css/teck.css
-css/skrollbar.css
-css/nav.css
-css/cart.css
+.DS_Store
+*.iml
+Metsense.iml

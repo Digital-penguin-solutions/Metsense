@@ -18,11 +18,11 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
-          <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin" />
+          <root url="file://C:/xampp/php/pear" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin" />
+          <root url="file://C:/xampp/php/pear" />
         </SOURCES>
       </library>
     </orderEntry>

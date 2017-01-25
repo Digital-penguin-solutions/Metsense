@@ -29,7 +29,7 @@
 
                 <div class = "fotter_low">
                     <div class="footer_logo_container col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4 ">
-                        <img src="../Metsense/img/logo/logo-w.svg" alt = "Metsense logo">
+                        <a href="../Metsense/index.php"><img src="../Metsense/img/logo/logo-w.svg" alt = "Metsense logo"></a>
                         <div class="footer_info ">
                             <p>	&copy; 2017 Metsens all rights reserved</p>
                             <p>Website made by DigitalIS</p>
