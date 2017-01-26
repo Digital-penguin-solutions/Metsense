@@ -1,5 +1,4 @@
-*.xml
 *.css
 .DS_Store
 *.iml
-Metsense.iml
+.idea/
