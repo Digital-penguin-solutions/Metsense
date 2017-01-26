@@ -47,7 +47,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity=		"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 
-
 <?php
 include "functions.php";
 
@@ -55,11 +54,9 @@ $con = connect();
 
 $products = get_all_products($con);
 
-
 ?>
 
 <body>
-
 <?php
 include "include_pages/nav.php";
 ?>
@@ -114,6 +111,10 @@ include "include_pages/nav.php";
         </div>
     </div>
 </section>
+
+<?php
+include "include_pages/fotter.php";
+?>
 
 </body>
 </html>

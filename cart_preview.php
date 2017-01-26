@@ -5,7 +5,7 @@
 	* 
 	* Order the product, showing the price and total price
 	*
-	* @param author Digitalss
+	* param author Digitalss
 */
 	include "functions.php";
 	$con = connect();

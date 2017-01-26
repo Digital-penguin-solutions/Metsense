@@ -73,7 +73,7 @@ include "include_pages/nav.php";
 include "include_pages/welcome_index.php";
 ?>
 
-<!--products wall updated from the databes-->
+<!--products wall updated from the database-->
 <div id="wall_1" class="image" data-stellar-background-ratio= "0.1">
     <section id = "products_page" >
         <div class="container-fluid full_height">
@@ -85,19 +85,19 @@ include "include_pages/welcome_index.php";
                     $id = $product["product_id"];
                     $main_image_data = $product["main_image"];
                     ?>
-                    <!--This is one pruduct needs to be chpad-->
+                    <!--This is one product needs to be chpad-->
                     <div class="col-lg-6 col-sm-12 full_height">
                         <div class="prud">
                             <!--<a href="product.php"></a> -->
                             <figure class="effect-sarah">
-                                <!--Link to prudukt-->
+                                <!--Link to product-->
                                 <figcaption class="col-lg-12">
-                                    <!--Pducuct name-->
+                                    <!--Product name-->
                                     <h2><span><?php echo $name ?></span></h2>
-                                    <!--pruduckt deskription-->
+                                    <!--product description-->
                                     <p class="description"> <?php echo $short ?> </p>
                                 </figcaption>
-                                <!--Picture of pruduckt hav to hav a transperant backround-->
+                                <!--Picture of product hav to hav a transparent background-->
                                 <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>" />-->
                                 <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
                                 <?php
