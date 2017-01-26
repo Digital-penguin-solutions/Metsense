@@ -68,6 +68,14 @@
   transition: @prop @time @ease;
 }
 
+.backround(@size: cover){
+  -webkit-background-size: @size;
+  -moz-background-size: @size;
+  -o-background-size: @size;
+  background-size: @size;
+
+}
+
 //Set a font for all text
 * {
   font-family: 'Lato', sans-serif !important;
@@ -103,10 +111,7 @@ section {
 #background_fixed {
   position: fixed;
   background: url("../img/bg.jpg") no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  .backround;
 }
 
 //Set an objekt top 100% height
@@ -210,8 +215,5 @@ section {
 
 #wall_1 {
   background: url(../img/BG.png) no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  .backround;
 }
