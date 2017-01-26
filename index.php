@@ -64,15 +64,16 @@ include "functions.php";
 $con = connect();
 $products = get_all_products($con);
 ?>
-<body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top ">
+<body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="background_fixed"></div>
 <!--include the nav-->
 <?php
 include "include_pages/nav.php";
+//welcome page slider
 include "include_pages/welcome_index.php";
 ?>
 
-<!--pruducts-->
+<!--products wall updated from the databes-->
 <div id="wall_1" class="image" data-stellar-background-ratio= "0.1">
     <section id = "products_page" >
         <div class="container-fluid full_height">
@@ -97,10 +98,8 @@ include "include_pages/welcome_index.php";
                                     <p class="description"> <?php echo $short ?> </p>
                                 </figcaption>
                                 <!--Picture of pruduckt hav to hav a transperant backround-->
-
                                 <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>" />-->
                                 <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
-
                                 <?php
                                 echo"<a href = 'product.php?product_id=$id'></a>";
                                 ?>
@@ -109,7 +108,6 @@ include "include_pages/welcome_index.php";
                     </div>
                     <?php
                 }
-
                 ?>
             </div>
         </div>

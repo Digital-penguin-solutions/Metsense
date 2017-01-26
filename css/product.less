@@ -1,6 +1,6 @@
 @import "style.less";
 
-//styling for section 1
+//styling for section 1 pruduckt page
 .product_s_1{
   padding:0 !important;;
   margin-top:5vh;
@@ -38,7 +38,7 @@
   }
 }
 
-//styling for section 2
+//styling for section 2 pruduckt page
 .product_s_2{
   .nopm;
   background: @color2;
@@ -79,7 +79,7 @@
   }
 }
 
-//styling for section 3
+//styling for section 3 pruduckt page
 .product_s_3{
   .nopm;
   height: @100h;
@@ -99,7 +99,7 @@
   }
 }
 
-//styling for section 4
+//styling for section 4 pruduckt page
 .product_s_4{
   .nopm;
   height: 200vh;
@@ -153,6 +153,104 @@
       }
     }
   }
+}
+
+#products_page {
+  min-height: 100vh;
+  .fullw;
+  -webkit-box-shadow: 0px -5px 10px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -5px 10px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px -5px 10px -6px rgba(0,0,0,0.75);
+}
+
+.prud{
+  margin: 5%;
+  height: 80vh;
+  width: 90%;
+}
+
+.prud a{
+  height: 80vh;
+  width: 90%;
+  display:block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+figure.effect-sarah {
+  background-color: rgba(0,128,207,0.5);
+  .fullh;
+  .fullw;
+}
+
+figure.effect-sarah img {
+  height:58%;
+  max-width:90%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%,0,0);
+  transform: translate3d(-50%,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover img {
+  opacity: 0.4;
+  -webkit-transform: translate3d(-40%,0,0);
+  transform: translate3d(-40%,0,0);
+}
+
+figure.effect-sarah figcaption {
+  text-align: left;
+  padding-right: 30%;
+}
+
+figure.effect-sarah h2 {
+  position: relative;
+  left: 20%;
+  overflow: hidden;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: calc(2vw + 3vh); /* Scales from both width and height*/
+  color: @color4;
+}
+
+figure.effect-sarah h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  .fullw;
+  height: 3px;
+  background: @white;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+  padding: 0 !important;
+  font-size: 1.3vw;
+  font-weight: 100;
+  color: @white;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(30%,0);
+  transform: translate3d(30%,0,0);
+}
+
+figure.effect-sarah:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 //tablet size
