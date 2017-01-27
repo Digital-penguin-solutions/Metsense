@@ -13,8 +13,7 @@
 <html>
 <head>
     <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
-    <title>MetSense Home</title>
-
+    <title></title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,11 +22,8 @@
 
     <link href="css/style.css" rel="stylesheet">
 
-    <!--======================================= Font ===================================-->
-    <!--Font awsome-->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
-    <!--======================================= /*Font ================================-->
+
 
     <!--======================================= JAVA SCRIPT ===========================-->
     <!--JQuery-->
