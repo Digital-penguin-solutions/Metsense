@@ -23,9 +23,6 @@
 
             <link href="css/style.css" rel="stylesheet">
 
-            <!--======================================= Font ===================================-->
-            <!--Font awsome-->
-            <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
             <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
             <!--======================================= /*Font ================================-->
 
@@ -60,7 +57,7 @@
 
             <!--======================================= /* JAVA SCRIPT ========================-->
             <!--icon-->
-            <link rel="shortcut icon" href="/site01/img/logo/icontop.png" type="image/x-icon" />
+            <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
 
             <!-- Latest compiled and minified JavaScript for bootstrap -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity=		"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

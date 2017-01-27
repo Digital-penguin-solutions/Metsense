@@ -53,7 +53,7 @@
 
     <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
-    <link rel="shortcut icon" href="/img/logo/icontop.png" type="image/x-icon" />
+    <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
 
     <!-- Latest compiled and minified JavaScript for bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
