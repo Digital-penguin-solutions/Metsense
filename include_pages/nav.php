@@ -42,7 +42,7 @@ else
 if(!$hide_cart){
     ?>
     <div class = "cart_button_container">
-        <img src = "../Metsense/img/cart.png">
+        <img src = "../Metsense/img/cart.svg">
     </div>
 
     <?php
