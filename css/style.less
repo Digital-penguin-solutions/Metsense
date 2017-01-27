@@ -47,12 +47,17 @@
 
 //full with
 .fullw{
-  width: @100p;
+  width: @100p !important;
 }
 
 //full height
 .fullh{
-  height: @100p;
+  height: @100p !important;
+}
+
+.full_size{
+  .fullh;
+  .fullw;
 }
 
 //computer scree sises and up
@@ -73,7 +78,6 @@
   -moz-background-size: @size;
   -o-background-size: @size;
   background-size: @size;
-
 }
 
 //Set a font for all text
@@ -112,18 +116,6 @@ section {
   position: fixed;
   background: url("../img/bg.jpg") no-repeat fixed;
   .backround;
-}
-
-//Set an objekt top 100% height
-.full_height {
-  display: block;
-  .fullh !important;
-}
-
-//Set a objekt to 100% height and 100% with
-.full_size {
-  .full_height;
-  .fullw !important;
 }
 
 // Center vertically
