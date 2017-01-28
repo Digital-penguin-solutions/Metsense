@@ -217,7 +217,7 @@ include "nav.php";
 </section>
 
 <?php
-include "fotter.php";
+include "include_pages/footer.php";
 ?>
 </body>
 </html>

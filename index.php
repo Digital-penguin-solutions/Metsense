@@ -143,7 +143,7 @@ include "include_pages/welcome_index.php";
 
 <!--include the footer-->
 <?php
-include "include_pages/fotter.php";
+include "include_pages/footer.php";
 ?>
 </body>
 </html>
