@@ -45,21 +45,6 @@
 @50p: 50%;
 @25p: 25%;
 
-//full with
-.fullw{
-  width: @100p !important;
-}
-
-//full height
-.fullh{
-  height: @100p !important;
-}
-
-.full_size{
-  .fullh;
-  .fullw;
-}
-
 //computer scree sises and up
 @screen-sm-min: 768px;
 @screen-md-min: 992px;
@@ -88,12 +73,10 @@
 //base settings
 .wrapper{
   .nopm;
-  height: 100%;
-  width: 100%;
+  .tole;
+  .full_size;
   background: @white;
   z-index: 1;
-  top: @no;
-  left: @no;
   position: relative;
 }
 
@@ -126,18 +109,16 @@ section {
 }
 
 // Center horizonatally
-.center_css {
-  position: relative;
-  left: @50p;
-  top: @50p;
-  transform: translate(-@50p, -@50p);
-}
-
-// Center horizonatally
 .center_horizontally_css {
   position: relative;
   left: @50p;
   transform: translateX(-@50p);
+}
+
+// Center horizonatally
+.center_css {
+  .center_horizontally_css;
+  .center_vertically_css;
 }
 
 .nopm {
@@ -153,4 +134,19 @@ section {
 .tole {
   top: @no;
   left: @no;
+}
+
+//full with
+.fullw{
+  width: @100p !important;
+}
+
+//full height
+.fullh{
+  height: @100p !important;
+}
+
+.full_size{
+  .fullh;
+  .fullw;
 }
