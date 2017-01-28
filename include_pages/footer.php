@@ -4,7 +4,7 @@
 	* 
 	* One singel page that conatins all the footer content. for convinienc file gets included in all "real files"
 	*
-	* @param author Digitalis
+	* param author Digitalis
 */
 ?>
 
