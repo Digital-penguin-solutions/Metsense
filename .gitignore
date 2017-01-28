@@ -2,3 +2,5 @@
 .DS_Store
 *.iml
 .idea/
+*.db
+img/Thumbs.db
