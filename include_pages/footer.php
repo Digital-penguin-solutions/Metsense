@@ -13,7 +13,7 @@
     <div class="row-fluid footer ">
         <div class="col-xs-12 footer">
             <div class="footer_container">
-                <!--styling for the trangle
+                <!--styling for the trangle-->
                 <div class="footer_top col-xs-12">
                     <div class="footer_triangle col-xs-12">
                         <img src="../Metsense/img/triangel.svg" alt="triangle">
