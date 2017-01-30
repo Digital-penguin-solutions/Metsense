@@ -17,7 +17,7 @@
             <div class = "background_image_container">
                 <img src = "img/slider/2.jpg" alt = "iceroad">
             </div>
-            <div class = "welcome_text_container light center_css">
+            <div class ="welcome_text_container light center_css">
                 <h1>Metrological sensors for precice measurments</h1>
                 <h2>FROM SWEDEN</h2>
             </div>
