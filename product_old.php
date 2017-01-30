@@ -55,14 +55,18 @@
 
 
     <!-- Latest compiled and minified JavaScript for bootstrap-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
 
     <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
     <link rel="shortcut icon" href="/img/logo/icontop.png" type="image/x-icon" />
 
     <!-- Latest compiled and minified JavaScript for bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity=		"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity= "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
 
 
 </head>
@@ -114,8 +118,10 @@ include "nav.php";
                 <div class = "row">
                     <div class = "col-md-6 intro_price"> <?php echo $product_price ?> $ </div>
                     <div class = "col-md-6">
-                        <!--<a href = "alter_cart.php?add=&product_id=<?php echo $product_id;?>"><div class = "intro_button uppercase"> Add to cart </div></a>-->
-                        <div product_id = "<?php echo $product_id; ?>" class = "intro_button uppercase"> Add to cart </div>
+                        <!--<a href = "alter_cart.php?add=&product_id=<?php echo $product_id;?>">
+                        <div class = "intro_button uppercase"> Add to cart </div></a>-->
+                        <div product_id = "<?php echo $product_id; ?>" class = "intro_button uppercase">
+                            Add to cart </div>
                     </div>
                 </div>
             </div>

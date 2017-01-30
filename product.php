@@ -186,45 +186,32 @@ include "include_pages/nav.php";
                     </div>
                 </div>
 
+                <!-- Table -->
                 <div class="product_4_container_bot">
-                    <!--tabel of data-->
                     <div class="product_4_table col-xs-12 nopm">
                         <div class="table-responsive col-xs-12 col-md-6 col-md-offset-3">
                             <table class="table">
                                 <tbody>
-                                <tr>
-                                    <td>Measurement range</td>
-                                    <td>Friction coefficient  µfrom 0.0 to 1.0</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>Road conditions, example: Dry, Ice, Wet, Snow</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>Road surface temperature:  -40°C to + 70°C</td>
-                                </tr>
-                                <tr>
-                                    <td>Data output</td>
-                                    <td>Ethernet</td>
-                                </tr>
-                                <tr>
-                                    <td>Operating temperature</td>
-                                    <td>-40°C to + 70°C</td>
-                                </tr>
-                                <tr>
-                                    <td>Physical dimensions</td>
-                                    <td>351x277x146,  excluding mounting bracket</td>
-                                </tr>
-                                <tr>
-                                    <td>Cable length</td>
-                                    <td>1Om standard, or specified upon order</td>
-                                </tr>
+                                <?php
+                                // prints all the tech table rows
+                                for ($i  = 0; $i < sizeof($tech_table_array); $i++) {
+                                    $row = $tech_table_array[$i];
+                                    $left_item = $row[0];
+                                    $right_item = $row[1];
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $left_item ?></td>
+                                        <td><?php echo $right_item ?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
