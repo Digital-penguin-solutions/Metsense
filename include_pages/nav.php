@@ -19,10 +19,10 @@ else
 <!-- Liks when meneu is toggeld on-->
 <div class = "nav_menu_container">
     <ul class = "nav_menu center_css">
-        <li><a class = "nav_link" data-scroll href = "../Metsense/index.php#welcome_page"><p> Home </p></a></li>
-        <li><a class = "nav_link" data-scroll href = "../Metsense/index.php#products_page"><p> Products </p></a></li>
-        <li><a class = "nav_link" data-scroll href = "../Metsense/index.php#about_us_pages"><p> About us </p></a></li>
-        <li><a class = "nav_link" data-scroll href = "../Metsense/order.php"><p> Shopping cart </p></a></li>
+        <li><a class = "nav_link" data-scroll href = "../Metsense/index#welcome_page"><p> Home </p></a></li>
+        <li><a class = "nav_link" data-scroll href = "../Metsense/index#products_page"><p> Products </p></a></li>
+        <li><a class = "nav_link" data-scroll href = "../Metsense/index#about_us_pages"><p> About us </p></a></li>
+        <li><a class = "nav_link" data-scroll href = "../Metsense/order"><p> Shopping cart </p></a></li>
     </ul>
 </div>
 
@@ -30,7 +30,7 @@ else
 <nav class="navbar navbar-default navbar-fixed-top nav-manstyle">
     <div class="container-fluid full_height">
         <div class="navbar-header center_css">
-            <a class="navbar-brand" href="../Metsense/index.php">
+            <a class="navbar-brand" href="../Metsense/index">
                 <img class = "nav_logo" alt="Brand" src="../Metsense/img/logo/logo.svg">
             </a>
         </div>

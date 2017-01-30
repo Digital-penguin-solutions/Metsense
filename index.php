@@ -85,10 +85,8 @@ include "include_pages/welcome_index.php";
                     $id = $product["product_id"];
                     $main_image_data = $product["main_image"];
                     ?>
-                    <!--This is one product needs to be chpad-->
                     <div class="col-lg-6 col-sm-12 full_height">
                         <div class="prud">
-                            <!--<a href="product.php"></a> -->
                             <figure class="effect-sarah">
                                 <!--Link to product-->
                                 <figcaption class="col-lg-12">
@@ -101,7 +99,7 @@ include "include_pages/welcome_index.php";
                                 <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>" />-->
                                 <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
                                 <?php
-                                echo"<a href = 'product.php?product_id=$id'></a>";
+                                echo"<a href = 'product?product_id=$id'></a>";
                                 ?>
                             </figure>
                         </div>

@@ -29,7 +29,7 @@
 				</div>
 				<!--logo and the creater of the webpage-->
 				<div class="footer_bot col-xs-12">
-					<a href="../index.php">
+					<a href="../index">
 						<img class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2" src="../Metsense/img/logo/logo-w.svg" alt="Metsense logo">
 					</a>
 					<!--ator of webpage and copyright stuff-->
