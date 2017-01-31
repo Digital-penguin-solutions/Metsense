@@ -117,7 +117,6 @@ if(!isset($functions_included)){
         return $array;
     }
 
-
     function get_product_by_id($con, $id){
 
         $id = secure_str($id);
@@ -127,6 +126,7 @@ if(!isset($functions_included)){
 
         return $data;
 	}
+
     function get_product_long_by_id($con, $id){
 
         $id = secure_str($id);
@@ -140,7 +140,6 @@ if(!isset($functions_included)){
     }
 
     // the tech table is stored as a large string with '#!' seperating each row and '%!' seperating each part of a row
-    //
     function get_tech_table_by_id($con, $id){
         $id = secure_str($id);
         $query = "SELECT * FROM tech_table_row WHERE product_id = '$id'";
@@ -162,7 +161,6 @@ if(!isset($functions_included)){
         return $array;
     }
 
-
 	// gets all slider images
     function get_product_images_by_id($con, $id){
 
@@ -179,6 +177,7 @@ if(!isset($functions_included)){
         return $array;
 
 	}
+
     function get_product_name_by_id($con, $id){
         $id = secure_str($id);
         $query = "SELECT name FROM product WHERE product_id = '$id'";
