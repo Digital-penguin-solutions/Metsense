@@ -223,12 +223,12 @@
 }
 /* The inputs in the tech_table and the key_features need to have different width*/
 .admin_key_features_list input {
-  width: 80%;
+  width: 80% !important;
   margin-left: 10%;
 }
 /* This one is slightly smaller cause there are gonna be two next to eachother*/
 .admin_tech_list input {
-  width: 35%;
+  width: 35% !important;
   margin-left: 10%;
 }
 .checkout_header {
@@ -1313,7 +1313,7 @@ section {
 .cart_product_image img {
   max-width: 90%;
   height: 120%;
-  margin-top: -10%;
+  margin-top: -20%;
 }
 .cart_product_image {
   float: left;
