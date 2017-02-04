@@ -49,6 +49,7 @@
 
 <?php
 include "functions.php";
+session_start();
 
 $con = connect();
 
@@ -67,6 +68,9 @@ include "include_pages/nav.php";
             <div class = "col-md-8 col-md-offset-2">
                 <h1 class = "admin_header"> Admin page </h1>
 
+                <?php 
+                if(isset($_SESSION['admin'])){
+                ?>
                 <div class = "row admin_all_products_container">
 
                     <?php
@@ -104,9 +108,30 @@ include "include_pages/nav.php";
                     }
                     ?>
                 </div>
-                <a href = "add_product.php" class = "add_product_button center_horizontally_css">
-                    Add a new product
-                </a>
+                <?php 
+
+                    }
+
+                ?>
+                <?php 
+                if(isset($_SESSION['admin'])){
+                    ?>
+                    <a href = "add_product.php" class = "add_product_button center_horizontally_css">
+                        Add a new product
+                    </a>
+                <?php 
+                }
+                else {
+                ?>
+                    <form  action = "login.php" method = "post">
+                        PASSWORD:
+                        <input type = "text" name = "password">
+                        <input type = "submit" name = "login">
+
+                    </form>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
