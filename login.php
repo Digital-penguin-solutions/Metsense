@@ -32,11 +32,5 @@
             // wrong password
             echo "wrong";
         }
-
-
-
     }
-
-
-
 ?>

@@ -154,9 +154,5 @@ include "include_pages/nav.php";
     </a>
 </section>
 
-<?php
-include "include_pages/footer.php";
-?>
-
 </body>
 </html>

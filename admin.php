@@ -137,9 +137,5 @@ include "include_pages/nav.php";
     </div>
 </section>
 
-<?php
-include "include_pages/footer.php";
-?>
-
 </body>
 </html>

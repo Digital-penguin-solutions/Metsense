@@ -284,7 +284,7 @@
 .cart_product_image img {
   max-width: 90%;
   height: 120%;
-  margin-top: -20%;
+  margin-top: -50%;
 }
 .cart_product_image {
   float: left;
@@ -326,8 +326,7 @@
 .customer_info {
   text-align: center;
   border: 1px black solid;
-  padding: 0;
-  padding-bottom: 3%;
+  padding: 0 0 3%;
 }
 .cart_info {
   text-align: center;
@@ -350,6 +349,7 @@
 .summary_icon_container {
   width: 20%;
   float: left;
+  margin-right: 1vw;
 }
 .summary_icon_container img {
   width: 100% !important;
