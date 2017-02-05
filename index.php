@@ -121,18 +121,18 @@ include "include_pages/welcome_index.php";
                 <!--left container top in mobil and tablet-->
                 <div class="index_about_left col-xs-12 col-md-6 nopm">
                     <div class="index_about_left_container col-xs-12 nopm">
-                        <img src="img/abote.jpg" alt="About metsense">
+                        <img class="slide-in slide-in-delay-2 slide-in-left" src="img/abote.jpg" alt="About metsense">
                     </div>
                 </div>
                 <!--right container bot in mobil and tablet-->
                 <div class="index_about_right col-xs-12 col-md-6">
                     <div class="index_about_right_container col-xs-12">
-                        <h1>About us</h1>
+                        <h1 class="fade-in fade-in-delay-05">About us</h1>
                         <!--About uss text-->
-                        <p>MetSense brings innovative sensor solutions to the market for winter road maintenance.
+                        <p class="fade-in fade-in-delay-1">MetSense brings innovative sensor solutions to the market for winter road maintenance.
                             This enables mobile and stationary monitoring of parameters such as: Road surface status,
                             Road surface friction, Road surface temperature and more.</p>
-                        <p>All products are designed in Sweden and manufactured in the EU.</p>
+                        <p class="fade-in fade-in-delay-2">All products are designed in Sweden and manufactured in the EU.</p>
                     </div>
                 </div>
             </div>
