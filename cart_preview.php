@@ -32,10 +32,10 @@
 
 	// a small version means it's only a preview of the cart and should lead the order.php page
 	if ($size == "small"){
-		$continue_link = "order.php";
+		$continue_link = "order";
 	}
 	else { // big link means this is on the order.php page and should link to finish_order.php
-		$continue_link = "finish_order.php";
+		$continue_link = "finish_order";
 	}
 
 ?>
