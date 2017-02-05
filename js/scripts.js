@@ -135,7 +135,7 @@ function init_remove_from_cart() {
 // inits the add to cart button
 function init_add_to_cart(){
 
-	$(".intro_button").click(function(){
+	$(".buy-now").click(function(){
 	
 		var id = $(this).attr("product_id");
 

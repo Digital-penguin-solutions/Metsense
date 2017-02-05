@@ -99,7 +99,9 @@ include "include_pages/nav.php";
             <div class="product_1_container">
                 <h1><?php echo $product_name ?></h1>
                 <h2><?php echo $product_short_description ?></h2>
-                <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">
+                <!--<img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">-->
+                <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="Aboute image">
+                
                 <p class="col-xs-12"><?php echo $product_price ?>€</p>
                 <div product_id = "<?php echo $product_id; ?>" class = "intro_button buy-now col-xs-2 col-xs-offset-5"> Add to cart </div>
             </div>
