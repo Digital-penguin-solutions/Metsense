@@ -42,6 +42,7 @@
             $(window).stellar();
         });
     </script>
+    <script src="js/jquery.appear.js"></script>
     <!--Fade in-->
     <script src="js/fade.in.js"></script>
     <!--slide in-->
