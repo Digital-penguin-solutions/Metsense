@@ -23,6 +23,9 @@
 
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/admin_script.js"></script>
     <!-- Smooth scoll-->
     <script src="js/smooth-scroll.min.js"></script>
     <script>
