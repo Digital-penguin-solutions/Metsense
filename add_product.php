@@ -13,12 +13,14 @@
 <?php
 ini_set('memory_limit', '-1'); // not best but it works
 include "functions.php";
+session_start();
 //session_destroy();
 
 $con = connect();
 
 // if a product is to be added or changed
 if (isset($_POST["add"]) && isset($_SESSION['admin'])){
+
 
     // if a product_id is already set, then a product is to be edited
     if (isset($_POST['product_id'])){
@@ -163,7 +165,7 @@ if (isset($_GET["product_id"])){
     $short = $product['short_description'];
     $long = $product['long_description'];
     $price = $product['price'];
-    $key_feature_iamge = $product['key_features_image'];
+    $key_features_image = $product['key_features_image'];
     $tech_image = $product['tech_image'];
     $main_image = $product['main_image'];
     $about_image = $product['about_image'];

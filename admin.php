@@ -125,7 +125,7 @@ include "include_pages/nav.php";
                 ?>
                     <form  action = "login.php" method = "post">
                         PASSWORD:
-                        <input type = "text" name = "password">
+                        <input type = "password" name = "password">
                         <input type = "submit" name = "login">
 
                     </form>
