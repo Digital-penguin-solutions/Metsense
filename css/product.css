@@ -1067,6 +1067,8 @@ section {
 }
 .product_s_2 .product_2_container .product_2_right .product_2_right_img_container img {
   margin-left: 10vw;
+  max-height: 70vh;
+  width: auto;
 }
 .product_s_3 {
   padding: 0 !important;
@@ -1327,6 +1329,6 @@ figure.effect-sarah:hover p {
     height: 60vh;
   }
   .product_s_4 .product_4_container .product_4_container_bot .product_4_table td {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 }
