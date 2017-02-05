@@ -68,10 +68,5 @@ include "include_pages/nav.php";
 
 </section>
 
-
-<?php
-include "include_pages/footer.php";
-?>
-
 </body>
 </html>
