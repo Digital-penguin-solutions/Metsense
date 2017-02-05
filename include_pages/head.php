@@ -17,7 +17,6 @@
 
 <!--======================================= Font ===================================-->
 <!--Font awsome-->
-<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 <!--======================================= /*Font ================================-->
 
