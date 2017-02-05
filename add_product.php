@@ -13,7 +13,7 @@
 <?php
 ini_set('memory_limit', '-1'); // not best but it works
 include "functions.php";
-session_destroy();
+//session_destroy();
 
 $con = connect();
 
