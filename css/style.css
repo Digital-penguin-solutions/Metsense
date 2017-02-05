@@ -1123,7 +1123,7 @@ figure.effect-sarah h2 {
   overflow: hidden;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: calc(5vw);
+  font-size: 3vw;
   /* Scales from both width and height*/
   color: #4A4544;
 }
