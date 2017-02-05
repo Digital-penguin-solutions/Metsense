@@ -93,12 +93,12 @@ include "include_pages/nav.php";
                             <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>" />
 
                             <!--- EDIT BUTTON-->
-                            <a href = "add_product.php?product_id=<?php echo $product_id?>" class = "product_edit_button">
+                            <a href = "add_product?product_id=<?php echo $product_id?>" class = "product_edit_button">
                                 <p class = "center_vertically_css">Edit</p>
                             </a>
 
                             <!--- DELETE BUTTON-->
-                            <a href = "actions/delete_product.php?id=<?php echo $product_id?>" class = "product_delete_button">
+                            <a href = "actions/delete_product?id=<?php echo $product_id?>" class = "product_delete_button">
                                 <p class = "center_vertically_css">Delete</p>
                             </a>
 
@@ -116,14 +116,14 @@ include "include_pages/nav.php";
                 <?php 
                 if(isset($_SESSION['admin'])){
                     ?>
-                    <a href = "add_product.php" class = "add_product_button center_horizontally_css">
+                    <a href = "add_product" class = "add_product_button center_horizontally_css">
                         Add a new product
                     </a>
                 <?php 
                 }
                 else {
                 ?>
-                    <form  action = "login.php" method = "post">
+                    <form  action = "login" method = "post">
                         PASSWORD:
                         <input type = "password" name = "password">
                         <input type = "submit" name = "login">

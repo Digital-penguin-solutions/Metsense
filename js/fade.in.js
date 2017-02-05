@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	"use strict";
-	jQuery.fx.interval = 100; /* Ju lägre denna är desto högre kvalitet blir det på animationer men ju lägre den är desto mer tar den på CPU. - JF */
+	jQuery.fx.interval = 100; /* Ju lï¿½gre denna ï¿½r desto hï¿½gre kvalitet blir det pï¿½ animationer men ju lï¿½gre den ï¿½r desto mer tar den pï¿½ CPU. - JF */
 	var fade_in_duration = 1000;
 	var pop_up_duration = 500;
 	
@@ -9,17 +9,17 @@ $(document).ready(function() {
 	// checks if user uses a desktop JF
 	if(body_width > 992) {
 		$(".fade-in").appear();
-		$(".fade-in").addClass("has-not-faded"); // denna klassen läggs till på alla object som ska fadas in när de syns J-F
-		$(".fade-in").css("opacity","0"); // gör alla object som ska fadas in osynliga från början J-F
+		$(".fade-in").addClass("has-not-faded"); // denna klassen lï¿½ggs till pï¿½ alla object som ska fadas in nï¿½r de syns J-F
+		$(".fade-in").css("opacity","0"); // gï¿½r alla object som ska fadas in osynliga frï¿½n bï¿½rjan J-F
 		$(".fade-in").css("position","relative");
 		$(".fade-in").css("top","20px");
 		
 		
-		/* när ett objekt med klassen ".fade-in" kommer in på skärmen*/
+		/* nï¿½r ett objekt med klassen ".fade-in" kommer in pï¿½ skï¿½rmen*/
 		$("body").on('appear', ".fade-in", function(event, $ef) {
 			
 			var $this = $(this);
-			// kollar så den inte redan har fadats in
+			// kollar sï¿½ den inte redan har fadats in
 			if($(this).hasClass('has-not-faded') ){	
 				var delay = 0;
 				
@@ -41,8 +41,8 @@ $(document).ready(function() {
 				
 				setTimeout(function()
 				{
-					$this.removeClass("has-not-faded"); // tar bort klassen som säger att detta objekten inte har fadats in än J-F
-					$this.animate( {opacity: '1' }, {duration: fade_in_duration, queue:false}); // höjer opaciteten så objeket blir synligt J-F
+					$this.removeClass("has-not-faded"); // tar bort klassen som sï¿½ger att detta objekten inte har fadats in ï¿½n J-F
+					$this.animate( {opacity: '1' }, {duration: fade_in_duration, queue:false}); // hï¿½jer opaciteten sï¿½ objeket blir synligt J-F
 					$this.animate( { top: '0px'}, {duration: pop_up_duration, queue:false});
 					
 				}, delay);
@@ -52,11 +52,11 @@ $(document).ready(function() {
 			}
 		});
 		
-		// när ett objekt med klassen ".fade-in" försvinner från skärmen
+		// nï¿½r ett objekt med klassen ".fade-in" fï¿½rsvinner frï¿½n skï¿½rmen
 		//$("body").on('disappear' ,".fade-in" , function(event, $ef) {
-		//	$(this).stop(); // stoppar alla pågående animationer
-		//		$(this).animate( {opacity: '0' }, 0); // sänker opacity till 0 så den inte syns igen J-F
-		//	$(this).addClass("has-not-faded");	 // lägger till klassen så den kan fadas igen
+		//	$(this).stop(); // stoppar alla pï¿½gï¿½ende animationer
+		//		$(this).animate( {opacity: '0' }, 0); // sï¿½nker opacity till 0 sï¿½ den inte syns igen J-F
+		//	$(this).addClass("has-not-faded");	 // lï¿½gger till klassen sï¿½ den kan fadas igen
 		//$(this).animate( { top: '20px'}, 0);
 	//});
 	

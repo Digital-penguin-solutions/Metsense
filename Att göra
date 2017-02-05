@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 3  login saken
 4  Göra att de kan ändra lösenorded
 5  index css prudukt texten är för stor
@@ -16,3 +17,13 @@ FIXAT: 9  key fetures sakerna fungerar inte med databasen
 19 404 
 20 welcome 
 21 shopping cart i nav??
+=======
+* login saken
+* Göra att de kan ändra lösenorded
+* Animeringar fad in saker typ
+* nav texten är för långt ner
+* Serchengien optimasiation
+* Lägga till en titel på varje sida så att den är korekt
+* Ta bort lösenordet när man loggar in på admin sidan
+* På Checkout ska det komma upp tack för din bestäälning och leda en till index.php
+>>>>>>> 7cc5f76ca76bcfee611e222c5c11b7ec6455372e

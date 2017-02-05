@@ -1,5 +1,5 @@
 <!--Welcome page-->
-<section id = "welcome_page" class = "nop">
+<section id = "welcome_page " class = "nop">
     <div class = "all_slider_container no_list">
         <!--1-->
         <div class = "slider_page col-md-12">

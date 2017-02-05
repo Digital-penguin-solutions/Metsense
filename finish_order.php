@@ -146,7 +146,7 @@ include "include_pages/nav.php";
         <p class = "summary_total_text">Total Payment</p>
         <p class = "summary_total_price"> <?php echo $total_price;?>$</p>
     </div>
-    <a href = "order.php" class = "finish_button col-md-3 col-md-offset-2">
+    <a href = "order" class = "finish_button col-md-3 col-md-offset-2">
         Change order
     </a>
     <a class = "finish_button col-md-3 col-md-offset-2">
