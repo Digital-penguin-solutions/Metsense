@@ -2,5 +2,5 @@
 *.iml
 .idea/
 *.db
-css/nav.css
-css/nav.css
+*.css
+!style.css
