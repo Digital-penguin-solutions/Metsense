@@ -16,7 +16,7 @@
 				<!--styling for the trangle-->
 				<div class="footer_top col-xs-12">
 					<div class="footer_triangle col-xs-12">
-						<img src="../img/triangel.svg" alt="triangle">
+						<img src="img/triangel.svg" alt="triangle">
 					</div>
 				</div>
 				<!--mid section contact us info-->
@@ -29,8 +29,8 @@
 				</div>
 				<!--logo and the creater of the webpage-->
 				<div class="footer_bot col-xs-12">
-					<a href="../index">
-						<img class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2" src="../img/logo/logo-w.svg" alt="Metsense logo">
+					<a href="index">
+						<img class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2" src="img/logo/logo-w.svg" alt="Metsense logo">
 					</a>
 					<!--ator of webpage and copyright stuff-->
 				</div>
