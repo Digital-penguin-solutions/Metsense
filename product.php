@@ -97,13 +97,13 @@ include "include_pages/nav.php";
     <div class="row-fluid">
         <div class="col-xs-12">
             <div class="product_1_container">
-                <h1><?php echo $product_name ?></h1>
-                <h2><?php echo $product_short_description ?></h2>
+                <h1 class="fade-in fade-delay-05"><?php echo $product_name ?></h1>
+                <h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2>
                 <!--<img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">-->
-                <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="Aboute image">
+                <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="Aboute image">
                 
-                <p class="col-xs-12"><?php echo $product_price ?>€</p>
-                <div product_id = "<?php echo $product_id; ?>" class = "intro_button buy-now col-xs-2 col-xs-offset-5"> Add to cart </div>
+                <p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p>
+                <div product_id = "<?php echo $product_id; ?>" class = "intro_button buy-now col-xs-2 col-xs-offset-5 fade-in fade-delay-3"> Add to cart </div>
             </div>
         </div>
     </div>
@@ -118,8 +118,8 @@ include "include_pages/nav.php";
                 <!--text part of aboute productuct-->
                 <div class="product_2_left col-xs-12 col-md-6">
                     <div class="product_2_left_text_container">
-                        <h1>Aboute our sensor</h1>
-                        <p>
+                        <h1 class="slide-in slide-in-delay-1 slide-in-left">Aboute our sensor</h1>
+                        <p class="slide-in slide-in-delay-1 slide-in-left">
                             <?php
                             echo nl2br($product_long_description);
                             ?>
@@ -129,7 +129,7 @@ include "include_pages/nav.php";
                 <!--picture of productuct-->
                 <div class="product_2_right col-xs-12 col-md-6">
                     <div class="product_2_right_img_container col-xs-12">
-                        <img class="col-xs-8" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="Aboute image">
+                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="Aboute image">
                     </div>
                 </div>
             </div>
@@ -173,18 +173,18 @@ include "include_pages/nav.php";
                     <!--productuct img lefft container-->
                     <div class="product_4_left col-xs-12 col-md-6">
                         <div class="product_4_left_img_container col-xs-12">
-                            <img class="col-xs-10 col-md-8" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="key featuar img">
+                            <img class="col-xs-10 col-md-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="key featuar img">
                         </div>
                     </div>
 
                     <!--key features list right container-->
                     <div class="product_4_right col-xs-12 col-md-6">
                         <div class="product_4_right_text_container">
-                            <h2>Keyfeatures</h2>
+                            <h2 class="fade-in fade-delay-1">Keyfeatures</h2>
                             <ul>
                                 <?php
                                 foreach ($key_features as $feature) {
-                                    echo "<li>". $feature."</li>";
+                                    echo "<li class='fade-in fade-delay-2'>". $feature."</li>";
                                 }
                                 ?>
                             </ul>
@@ -197,7 +197,7 @@ include "include_pages/nav.php";
                     <div class="product_4_table col-xs-12 nopm">
                         <div class="table-responsive col-xs-12 col-md-6 col-md-offset-3">
                             <table class="table">
-                                <tbody>
+                                <tbody class="fade-in fade-delay-1">
                                 <?php
                                 // prints all the tech table rows
                                 for ($i  = 0; $i < sizeof($tech_table_array); $i++) {
@@ -222,8 +222,6 @@ include "include_pages/nav.php";
         </div>
     </div>
 </section>
-
-
 
 <?php
 include "include_pages/footer.php";
