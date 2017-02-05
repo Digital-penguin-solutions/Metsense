@@ -348,7 +348,7 @@
 .cart_product_image img {
   max-width: 90%;
   height: 120%;
-  margin-top: -50%;
+  margin-top: -15%;
 }
 .cart_product_image {
   float: left;
