@@ -231,6 +231,21 @@
   width: 35% !important;
   margin-left: 10%;
 }
+.login {
+  margin-top: 5vh;
+  margin-left: 20vw;
+  font-size: 1vw;
+  display: inline-flex;
+}
+.login p {
+  font-weight: 600;
+  font-size: 1.6vw;
+  margin-right: 1vw;
+  vertical-align: middle;
+}
+.login input {
+  font-weight: 600;
+}
 .cart_section {
   min-height: 100%;
   padding: 0 10%;
@@ -857,7 +872,6 @@ section button:hover {
   top: 0;
   overflow: hidden;
   position: relative;
-  background:rgba(100,100,200,1);
 }
 .uppercase {
   text-transform: uppercase;
@@ -1077,7 +1091,6 @@ section button:hover {
   -webkit-box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
-  padding-bottom:5%;
 }
 .prud {
   margin: 5%;
@@ -1334,10 +1347,3 @@ section {
   height: 100% !important;
   width: 100% !important;
 }
-
-
-
-
-
-
-
