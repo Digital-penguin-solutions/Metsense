@@ -71,7 +71,7 @@
 			
 			<div class = "lower_cart_row">
 				<div class = "cart_product_image">
-					<img class = "center_css" src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" />
+					<img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" />
 				</div>
 					
 				<table class = "center_vertically_css">
