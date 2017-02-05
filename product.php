@@ -101,7 +101,7 @@ include "include_pages/nav.php";
                 <h2><?php echo $product_short_description ?></h2>
                 <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">
                 <p class="col-xs-12"><?php echo $product_price ?>€</p>
-                <div product_id = "<?php echo $product_id; ?>" class = "buy-now col-xs-2 col-xs-offset-5"> Add to cart </div>
+                <div product_id = "<?php echo $product_id; ?>" class = "intro_button buy-now col-xs-2 col-xs-offset-5"> Add to cart </div>
             </div>
         </div>
     </div>
