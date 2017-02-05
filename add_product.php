@@ -13,11 +13,12 @@
 <?php
 ini_set('memory_limit', '-1'); // not best but it works
 include "functions.php";
+session_destroy();
 
 $con = connect();
 
 // if a product is to be added or changed
-if (isset($_POST["add"])){
+if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 
     // if a product_id is already set, then a product is to be edited
     if (isset($_POST['product_id'])){
