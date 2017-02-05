@@ -86,7 +86,7 @@ include "include_pages/welcome_index.php";
                     $id = $product["product_id"];
                     $main_image_data = $product["main_image"];
                     ?>
-                    <div class="col-lg-6 col-sm-12 full_height">
+                    <div class="col-lg-6 col-sm-12 full_height fade-in">
                         <div class="prud">
                             <figure class="effect-sarah">
                                 <!--Link to product-->

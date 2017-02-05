@@ -4,6 +4,5 @@
 * nav texten är för långt ner
 * Serchengien optimasiation
 * Lägga till en titel på varje sida så att den är korekt
-* Ta bort fil vägen på visa saker så att den inte syns i serch baren
 * Ta bort lösenordet när man loggar in på admin sidan
 * På Checkout ska det komma upp tack för din bestäälning och leda en till index.php
