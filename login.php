@@ -26,11 +26,11 @@
         if(password_verify($password, $admin_pass)) { // Check if the passwords match
              
             $_SESSION['admin'] = "true";
-            echo "worked";
+            header("Location: admin.php");
         }
         else {
+            header("Location: admin.php");
             // wrong password
-            echo "wrong";
         }
     }
 ?>
