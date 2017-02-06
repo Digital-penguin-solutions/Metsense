@@ -195,7 +195,7 @@ include "include_pages/nav.php";
                 <!-- Table -->
                 <div class="product_4_container_bot">
                     <div class="product_4_table col-xs-12 nopm">
-                        <div class="table-responsive col-xs-12 col-md-6 col-md-offset-3">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3">
                             <table class="table">
                                 <tbody class="fade-in fade-delay-1">
                                 <?php

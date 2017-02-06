@@ -976,12 +976,12 @@ section button:hover {
 }
 .product_s_2 .product_2_container .product_2_left .product_2_left_text_container h1 {
   font-weight: 600;
-  font-size: 3.4em;
+  font-size: 3em;
   margin: 8vh 0 3vh 0;
 }
 .product_s_2 .product_2_container .product_2_left .product_2_left_text_container p {
   font-weight: 400;
-  font-size: 1.8em;
+  font-size: 1em;
   margin-bottom: 1vh;
 }
 .product_s_2 .product_2_container .product_2_right {
@@ -1075,11 +1075,19 @@ section button:hover {
   font-weight: 300;
 }
 .product_s_4 .product_4_container .product_4_container_bot {
+  padding: 0 !important;
+  margin: 0 !important;
   top: 0 !important;
   height: 50vh;
-  width: auto;
+  width: 100%;
+}
+.product_s_4 .product_4_container .product_4_container_bot .product_4_table {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .product_s_4 .product_4_container .product_4_container_bot .product_4_table tbody {
+  padding: 0 !important;
+  margin: 0 !important;
   color: #ffffff;
   font-size: 0.6em;
 }
@@ -1110,6 +1118,12 @@ section button:hover {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .product_s_2 .product_2_container .product_2_left .product_2_left_text_container h1 {
+    font-size: 3.4em;
+  }
+  .product_s_2 .product_2_container .product_2_left .product_2_left_text_container p {
+    font-size: 1.8em;
   }
   .product_s_2 .product_2_container .product_2_right {
     height: 100%;

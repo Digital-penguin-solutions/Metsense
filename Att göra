@@ -1,31 +1,15 @@
-<<<<<<< HEAD
-3  login saken
-4  Göra att de kan ändra lösenorded
-5  index css prudukt texten är för stor
-6  prudukt sidan får inte allt plats i y led
-7  Animeringar fad in saker typ
-8  nav texten är för långt ner
-FIXAT: 9  key fetures sakerna fungerar inte med databasen 
-10 Styla checkout information sakerna
-11 Serchengien optimasiation
-12 Lägga till en titel på varje sida så att den är korekt
-14 Ta bort fil vägen på visa saker så att den inte syns i serch baren
-15 Ta bort lösenordet när man loggar in på admin sidan
-16 På Checkout ska det komma upp tack för din bestäälning och leda en till index.php
-17 Respons när man sparar produkt
-18 Add to cart respons och göra synlig
-19 404 
-20 welcome 
-21 shopping cart i nav??
-=======
-* login saken
 * Göra att de kan ändra lösenorded
 * nav texten är för långt ner
 * Serchengien optimasiation
 * Lägga till en titel på varje sida så att den är korekt
-* Ta bort lösenordet när man loggar in på admin sidan
-* På Checkout ska det komma upp tack för din bestäälning och leda en till index.php
->>>>>>> 7cc5f76ca76bcfee611e222c5c11b7ec6455372e
+* På Checkout ska det komma upp tack för din bestälning och leda en till index.php
+* Respons när man sparar produkt
+* Add to cart respons och göra synlig
+* welcome
+* shopping cart i nav??
+* Göra om komprimerings algoritmen för slider sidan
+* Animera om hur slider sidorna får in en ny bild
+* Göra så att slider får ett intervall innan den byter till nästa bild
 
 Fel på telfon att fixa
 index
@@ -34,7 +18,6 @@ index
 * prudukt bilderna är för stora
 * prudukt sektionen är för stora
 * bakrunds bilden i paralex på pruduk skalar inte
-* about us texten är för stor
 
 footer
 * fottern skalar inte
