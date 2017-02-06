@@ -123,11 +123,10 @@ include "include_pages/nav.php";
                 }
                 else {
                 ?>
-                    <form  action = "login" method = "post">
-                        PASSWORD:
+                    <form class="login"  action = "login" method = "post">
+                        <p>PASSWORD:</p>
                         <input type = "password" name = "password">
-                        <input type = "submit" name = "login">
-
+                        <input type = "submit" name = "login" value="Login">
                     </form>
                 <?php
                 }
