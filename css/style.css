@@ -39,7 +39,7 @@
 }
 .index_about .index_about_container .index_about_right .index_about_right_container p {
   font-weight: 400;
-  font-size: 1.8em;
+  font-size: 1.2em;
   margin-bottom: 1vh;
 }
 @media (min-width: 992px) {
@@ -62,6 +62,9 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .index_about .index_about_container .index_about_right .index_about_right_container p {
+    font-size: 1.8em;
   }
 }
 .template,
@@ -872,14 +875,6 @@ section button:hover {
   top: 0;
   overflow: hidden;
   position: relative;
-<<<<<<< HEAD
-  background:url("../img/logo/logo.svg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 50%;
-=======
->>>>>>> e10826a9ce3b469020cfd7e711e2bf43130744f4
 }
 .uppercase {
   text-transform: uppercase;
