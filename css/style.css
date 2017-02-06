@@ -472,7 +472,7 @@ footer {
 footer .footer {
   padding: 0 !important;
   margin: 0 !important;
-  height: 95vh;
+  height: 100vh;
   background: #003057;
 }
 footer .footer .footer_container {
@@ -481,7 +481,7 @@ footer .footer .footer_container {
   margin: 0 !important;
 }
 footer .footer .footer_container .footer_top {
-  height: 30vh;
+  height: 20vh;
   width: 100%;
   padding: 0 !important;
   margin: 0 !important;
@@ -507,11 +507,11 @@ footer .footer .footer_container .footer_mid .footer_contact {
   text-align: center;
 }
 footer .footer .footer_container .footer_mid .footer_contact h1 {
-  font-size: 4.5em;
+  font-size: 10vw;
   font-weight: 600;
 }
 footer .footer .footer_container .footer_mid .footer_contact p {
-  font-size: 2em;
+  font-size: 4vw;
   font-weight: 400;
 }
 footer .footer .footer_container .footer_bot {
@@ -529,7 +529,82 @@ footer .footer .footer_container .footer_info {
 }
 footer .footer .footer_container .footer_info p {
   text-align: center;
-  font-size: 1em;
+  font-size: 2.2vw;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 0 !important;
+    margin: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 3;
+  }
+  footer .footer {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 95vh;
+    background: #003057;
+  }
+  footer .footer .footer_container {
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  footer .footer .footer_container .footer_top {
+    height: 30vh;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  footer .footer .footer_container .footer_top .footer_triangle {
+    height: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  footer .footer .footer_container .footer_top .footer_triangle img {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  footer .footer .footer_container .footer_mid {
+    margin-top: 9vh;
+    height: 30vh;
+    color: #ffffff;
+  }
+  footer .footer .footer_container .footer_mid .footer_contact {
+    text-align: center;
+  }
+  footer .footer .footer_container .footer_mid .footer_contact h1 {
+    font-size: 4.5em;
+    font-weight: 600;
+  }
+  footer .footer .footer_container .footer_mid .footer_contact p {
+    font-size: 2em;
+    font-weight: 400;
+  }
+  footer .footer .footer_container .footer_bot {
+    height: 25vh;
+  }
+  footer .footer .footer_container .footer_info {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    height: 6vh;
+    color: #ffffff;
+    background: #4A4544;
+    bottom: 0;
+    z-index: 5;
+  }
+  footer .footer .footer_container .footer_info p {
+    text-align: center;
+    font-size: 1em;
+  }
 }
 .cart_button_container {
   min-height: 50px;

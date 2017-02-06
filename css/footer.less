@@ -1,5 +1,5 @@
 @import "style";
-//yo
+//footer styling
 footer {
   .nopm;
   .tole;
@@ -10,7 +10,7 @@ footer {
   z-index: 3;
   .footer {
     .nopm;
-    height: 95vh;
+    height: 100vh;
     background: @color2;
     .footer_container {
       height: 100%;
@@ -18,7 +18,7 @@ footer {
 
       //top part of footer triangle
       .footer_top {
-        height: 30vh;
+        height: 20vh;
         width: 100%;
         .nopm;
         .footer_triangle {
@@ -39,11 +39,11 @@ footer {
         .footer_contact {
           text-align: center;
           h1 {
-            font-size: 4.5em;
+            font-size: 10vw;
             font-weight: 600;
           }
           p {
-            font-size: 2em;
+            font-size: 4vw;
             font-weight: 400;
           }
         }
@@ -68,7 +68,85 @@ footer {
         z-index: 5;
         p {
           text-align: center;
-          font-size: 1em;
+          font-size: 2.2vw;
+        }
+      }
+    }
+  }
+}
+
+//footer desktop
+@media (min-width: @screen-sm-min) {
+  footer {
+    .nopm;
+    .tole;
+    position:relative;
+    max-width: 100%;
+    width: 100%;
+    overflow:hidden;
+    z-index: 3;
+    .footer {
+      .nopm;
+      height: 95vh;
+      background: @color2;
+      .footer_container {
+        height: 100%;
+        .nopm;
+
+        //top part of footer triangle
+        .footer_top {
+          height: 30vh;
+          width: 100%;
+          .nopm;
+          .footer_triangle {
+            .full_size;
+            .nopm;
+            img {
+              .nopm;
+              .full_size;
+            }
+          }
+        }
+
+        //mid part of footer contact info
+        .footer_mid {
+          margin-top: 9vh;
+          height: 30vh;
+          color: @white;
+          .footer_contact {
+            text-align: center;
+            h1 {
+              font-size: 4.5em;
+              font-weight: 600;
+            }
+            p {
+              font-size: 2em;
+              font-weight: 400;
+            }
+          }
+        }
+
+        //bottom part of footer logo and cheater
+        .footer_bot {
+          height: 25vh;
+          a {
+            img {
+
+            }
+          }
+        }
+        .footer_info {
+          .nopm;
+          position: absolute;
+          height: 6vh;
+          color: @white;
+          background: @color4;
+          bottom: 0;
+          z-index: 5;
+          p {
+            text-align: center;
+            font-size: 1em;
+          }
         }
       }
     }
