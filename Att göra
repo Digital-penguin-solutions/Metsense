@@ -26,3 +26,24 @@ FIXAT: 9  key fetures sakerna fungerar inte med databasen
 * Ta bort lösenordet när man loggar in på admin sidan
 * På Checkout ska det komma upp tack för din bestäälning och leda en till index.php
 >>>>>>> 7cc5f76ca76bcfee611e222c5c11b7ec6455372e
+
+Fel på telfon att fixa
+index
+* texten på welcome är för liten
+* bilden på welcome är för liten på y led
+* prudukt bilderna är för stora
+* prudukt sektionen är för stora
+* bakrunds bilden i paralex på pruduk skalar inte
+* about us texten är för stor
+
+footer
+* fottern skalar inte
+
+nav
+* loggan skalar inte
+* kundvagns iconen skalar inte
+* länkarna är för små
+
+prudukt sidan
+*första rubriken är för stor
+*bilden på andra sidan ligger inte i mitten
