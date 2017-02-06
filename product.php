@@ -8,8 +8,8 @@
 ?>
 <html>
 <head>
-    <meta name="description" content="MetSense our latest product">
-    <title>MetSense product</title>
+    <meta name="description" content="MetSense latest product's">
+    <title>MetSense product's</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

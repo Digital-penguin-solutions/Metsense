@@ -66,6 +66,12 @@
   background-size: @size;
 }
 
+.box_shadow(@hori : 1px, @vert :0px, @Blur: 0px, @Spread: 0px, @color: rgba(0,0,0,0.20)){
+  -webkit-box-shadow: @hori @vert @Blur @Spread @color;
+  -moz-box-shadow: @hori @vert @Blur @Spread @color;
+  box-shadow: @hori @vert @Blur @Spread @color;
+}
+
 //Set a font for all text
 * {
   font-family: 'Lato', sans-serif !important;

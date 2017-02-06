@@ -10,8 +10,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
-    <title>MetSense Home</title>
+    <meta name="description" content="Finch you order to get the sensor for your needs">
+    <title>Finch you order</title>
 
 
     <meta charset="utf-8">

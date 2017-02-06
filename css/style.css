@@ -459,6 +459,9 @@
   margin-right: 5%;
 }
 footer {
+  -webkit-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
   padding: 0 !important;
   margin: 0 !important;
   top: 0 !important;
@@ -518,6 +521,9 @@ footer .footer .footer_container .footer_bot {
   height: 25vh;
 }
 footer .footer .footer_container .footer_info {
+  -webkit-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
   padding: 0 !important;
   margin: 0 !important;
   position: absolute;

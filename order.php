@@ -12,8 +12,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
-    <title>MetSense Home</title>
+    <meta name="description" content="MetSense order your product">
+    <title>Order</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
