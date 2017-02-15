@@ -1,0 +1,21 @@
+{
+  "name": "metsense",
+  "version": "1.0.0",
+  "description": "metsense offical website for 2017",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digitalis-web/Metsense.git"
+  },
+  "author": "digitalis",
+  "bugs": {
+    "url": "https://github.com/Digitalis-web/Metsense/issues"
+  },
+  "homepage": "https://github.com/Digitalis-web/Metsense#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.1.0"
+  }
+}
