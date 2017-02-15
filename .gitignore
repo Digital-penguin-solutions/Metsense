@@ -4,3 +4,4 @@
 *.db
 *.css
 !style.css
+db_connect.php
