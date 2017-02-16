@@ -32,7 +32,7 @@
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
     <script src="js/jquery.stellar.js"></script>
-    
+
     <script>
         smoothScroll.init();
     </script>
