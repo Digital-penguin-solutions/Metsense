@@ -9,7 +9,7 @@
   position: absolute;
   top: 2%;
   right: 2%;
-  width: 8vw;
+  width: 7vw;
   cursor: pointer;
 }
 
@@ -140,7 +140,7 @@
 
 .cart_product_image img{
   max-width:90%;
-  height:120%;
+  height:100%;
   margin-top: -15%;
 }
 
@@ -152,7 +152,8 @@
 }
 
 .cart_remove img{
-  width:100%;
+  width:6vh;
+  margin-top:-5vh;
   cursor: pointer;
 }
 
@@ -163,6 +164,14 @@
 }
 
 @media (min-width: @screen-md-min) {
+  .cart_cross {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 4vw;
+    cursor: pointer;
+  }
+
   .finish_button {
     font-size:2.5vw;
   }
@@ -200,5 +209,9 @@
 
   .cart_big h2{
     font-size:1.8vw;
+  }
+  .cart_remove img{
+    width:6vh;
+    margin-top:-5vh;
   }
 }
