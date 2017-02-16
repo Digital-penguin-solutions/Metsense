@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function (grunt) {
 
     //confg main prodjekt settings
@@ -6,31 +8,48 @@ module.exports = function (grunt) {
         //basic settings about our plugins
         pkg: grunt.file.readJSON('package.json'),
 
-        //name of plugin
-        cssmin:{
-            combine:{
+        //concat css files and js files
+        concat: {
+            js1: {
+                src: ['html/js/jquery.color.js','js/scripts.js','htmljs/smooth-scroll.min.js'],
+                dest: 'build/js/script1.js'
+            },
+            js2: {
+                src: ['html/js/jquery.appear.js','html/js/fade.in.js','html/js/slide.in.js'],
+                dest: 'build/js/script2.js'
+            },
+            css: {
+                src: ['html/css/style.css'],
+                dest: 'build/css/style.css'
+            }
+        },
+
+        //compress js
+        uglify:{
+            dist:{
                 files:{
-                    'html/css/app.css': ['html/css/app.css']
+                    'build/js/script1.js': ['build/js/script1.js'],
+                    'build/js/script2.js': ['build/js/script2.js'],
+
                 }
             }
         },
 
-        //name of plugin
-        uglify:{
-            dist:{
-                files:{
-                    'html/js/scripts.js': ['html/js/scripts.js']
+        //minify css
+        cssmin: {
+            target: {
+                files: {
+                    'build/css/style.css': ['build/css/style.css'],
                 }
             }
-        }
-
+        },
     });
 
-    //Load the plugin
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     //Do the task
-    grunt.registerTask('default', ['cssmin']);
+    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };
