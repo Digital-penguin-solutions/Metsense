@@ -28,8 +28,11 @@
     <!--Velocity -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
 
-
-    <script src="js/style1.js"></script>
+    <script src="js/jquery.color.js"></script>
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.stellar.js"></script>
+    
     <script>
         smoothScroll.init();
     </script>
@@ -41,7 +44,12 @@
     </script>
 
     <!--slide in-->
-    <script src="js/style2.js"></script>
+    !--Appear lib -->
+    <script src="js/jquery.appear.js"></script>
+    <!--Fade in-->
+    <script src="js/fade.in.js"></script>
+    <!--slide in-->
+    <script src="js/slide.in.js"></script>
 
     <!-- Latest compiled and minified JavaScript for bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
