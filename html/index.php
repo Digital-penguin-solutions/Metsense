@@ -78,7 +78,7 @@ include "include_pages/welcome_index.php";
 ?>
 
 <!--products wall updated from the database-->
-<div id="wall_1" class="image" data-stellar-background-ratio= "0.1">
+<div id="wall_1" class="image" data-stellar-background-ratio= "0.2">
     <section id = "products_page" >
         <div class="container-fluid full_height">
             <div class="row full_height">

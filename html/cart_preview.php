@@ -1,12 +1,6 @@
 <?php
 	session_start();
-/**
-	* Order page
-	* 
-	* Order the product, showing the price and total price
-	*
-	* param author Digitalss
-*/
+
 	include "functions.php";
 	$con = connect();
 
@@ -37,16 +31,13 @@
 	else { // big link means this is on the order.php page and should link to finish_order.php
 		$continue_link = "finish_order";
 	}
-
 ?>
-
 
 <div class = "cart_container <?php echo $cart_class; ?>">
 	<h1> Your cart</h1>
 
 	<!-- Only for adding a border to the top of the next cart_item-->
-	<div class = "cart_item">
-	</div>
+	<div class = "cart_item"></div>
 
 		
 	<?php

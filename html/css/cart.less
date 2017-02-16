@@ -9,17 +9,19 @@
   position: absolute;
   top: 2%;
   right: 2%;
-  width: 9%;
+  width: 8vw;
+  cursor: pointer;
 }
 
 .finish_button {
   display:block;
-  height: 8vh;
-  line-height: 8vh;
+  height: 10vh;
+  width:20vw;
+  line-height: 10vh;
   margin-top: 5%;
   border-radius: 30% 100% 30% 100%;
   background:@color3;
-  font-size:2vw;
+  font-size:4vw;
   cursor:pointer;
   color:@white;
   text-align:center;
@@ -27,14 +29,14 @@
 
 .checkout_button {
   display:block;
-  width:25%;
-  height: 6vh;
+  width:30vw;
+  height: 10vh;
   margin: 5% 0 4% 0;
   border-radius: 30% 100%;
   background: @color3;
-  line-height: 6vh;
+  line-height: 10vh;
   text-align:center;
-  font-size: 1.2vw;
+  font-size: 4.5vw;
   color:@white;
   cursor:pointer;
 }
@@ -44,7 +46,7 @@
 }
 .cart_empty {
   text-align:center;
-  font-size:1.2vw;
+  font-size:4vw;
   margin-top:5%;
 }
 
@@ -54,11 +56,11 @@
 }
 
 .cart_small h1{
-  font-size:1.9vw;
+  font-size:4vw;
 }
 
 .cart_big h1{
-  font-size: 2.4vw;
+  font-size: 5vw;
 }
 
 .cart_big {
@@ -70,13 +72,12 @@
 
 .cart_small {
   position:fixed;
-  width:40vw;
-  max-height:80%;
-  top:10%;
-  right:10%;
+  width:60vw;
+  height:100vh;
+  top:8%;
+  right:0;
   z-index:1000;
   overflow:scroll;
-  border: 1px black solid;
 }
 
 .cart_container {
@@ -88,7 +89,7 @@
   float:left;
   width:33%;
   text-align:center;
-  font-size:1vw;
+  font-size:3vw;
 }
 
 .cart_item table{
@@ -97,11 +98,11 @@
 }
 
 .cart_small h2{
-  font-size:1.2vw;
+  font-size:3vw;
 }
 
 .cart_big h2{
-  font-size:1.8vw;
+  font-size:3vw;
 }
 
 .cart_item h2{
@@ -159,4 +160,45 @@
   float:left;
   width:5%;
   height:100%;
+}
+
+@media (min-width: @screen-md-min) {
+  .finish_button {
+    font-size:2.5vw;
+  }
+
+  .checkout_button {
+    width:20vw;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 2.2vw;
+  }
+
+  .cart_empty {
+    font-size:2vw;
+  }
+
+  .cart_small h1{
+    font-size:3vw;
+  }
+
+  .cart_big h1{
+    font-size: 2.4vw;
+  }
+
+  .cart_small{
+    width: 35vw;
+  }
+
+  .cart_item td{
+    font-size:1vw;
+  }
+
+  .cart_small h2{
+    font-size:1.2vw;
+  }
+
+  .cart_big h2{
+    font-size:1.8vw;
+  }
 }
