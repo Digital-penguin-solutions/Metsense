@@ -18,14 +18,18 @@ module.exports = function (grunt) {
         },
 
         watch: {
+            html: {
+                files: ['html/*.html'],
+                tasks: ['htmlmin']
+            },
             css: {
                 files: ['html/css/**/*.css'],
                 tasks: ['cssmin']
             },
-            html: {
-                files: ['html/*.html'],
-                tasks: ['htmlmin']
-            }
+            js: {
+                files: ['html/**/*.js'],
+                tasks: ['uglify']
+            },
         },
 
         uglify: {
@@ -43,13 +47,13 @@ module.exports = function (grunt) {
             }
         },
 
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-                options: {                                 // Target options
+        htmlmin: {
+            dist: {
+                options: {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files: {                                   // Dictionary of files
+                files: {
                     'build/add_product.php': 'html/add_product.php',
                     'build/404error.html': 'html/404error.html',
                     'build/admin.php': 'html/admin.php',
@@ -76,6 +80,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     //Do the task
-    grunt.registerTask('default', ['cssmin','htmlmin','watch']);
+    grunt.registerTask('default', ['cssmin','htmlmin','uglify','watch']);
 
 };
