@@ -1,5 +1,6 @@
 //
 $(document).ready(function() {
+    $(".slide-in").css("visibility","visible"); 
     "use strict";
     jQuery.fx.interval = 100; /* Ju lägre denna är desto högre kvalitet blir det på animationer men ju lägre den är desto mer tar den på CPU. - JF */
     var fade_in_duration = 500;

@@ -1,4 +1,6 @@
+console.log("hello");
 $(document).ready(function() {
+    $(".fade-in").css("visibility","visible"); 
 	"use strict";
 	jQuery.fx.interval = 100; /* Ju l�gre denna �r desto h�gre kvalitet blir det p� animationer men ju l�gre den �r desto mer tar den p� CPU. - JF */
 	var fade_in_duration = 1000;

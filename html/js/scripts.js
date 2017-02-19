@@ -41,6 +41,8 @@ var border_not_selected_color = "gray";
 var slider_dot_width = 0;
 
 function on_ready () {
+
+    $(".nav_menu_container").css("visibility","visible"); 
 	init_mc_button();
 
 	init_nav_links();
@@ -147,6 +149,10 @@ function init_add_to_cart(){
 
 		xhr.success(function(response){
 			load_cart(cart_size); // reload the cart when it's done
+            var button = document.getElementsByClassName("intro_button")[0];
+            console.log(button);
+            button.innerHTML = "Added to cart";
+            button.style.backgroundColor = "#009600";
 		});
 
 	});

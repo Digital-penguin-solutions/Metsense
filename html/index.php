@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Digital Internet solutions">
 
-    <!--main css style scheat-->
+    <!--main css style sheet   -->
     <link rel="stylesheet" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
@@ -33,10 +33,11 @@
     <script src="js/scripts.js"></script>
     <script src="js/jquery.stellar.js"></script>
 
-    <script>
+    <!--<script>
         smoothScroll.init();
-    </script>
+    </script>-->
     <script src="js/jquery.stellar.js"></script>
+
     <script>
         $(document).ready(function(e) {
             $(window).stellar();
