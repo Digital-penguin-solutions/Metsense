@@ -60,7 +60,6 @@ module.exports = function (grunt) {
                     'build/alter_cart.php': 'html/alter_cart.php',
                     'build/cart_preview.php': 'html/cart_preview.php',
                     'build/finish_order.php': 'html/finish_order.php',
-                    'build/functions.php': 'html/functions.php',
                     'build/index.php': 'html/index.php',
                     'build/login.php': 'html/login.php',
                     'build/order.php': 'html/order.php',
