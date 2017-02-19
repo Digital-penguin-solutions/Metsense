@@ -38,7 +38,8 @@
 
     <!-- Latest compiled and minified JavaScript for bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
 
     <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
@@ -46,7 +47,8 @@
 
     <!-- Latest compiled and minified JavaScript for bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
 </head>
 <?php
 //functions
@@ -86,7 +88,7 @@ include "include_pages/welcome_index.php";
                                     <p class="description"> <?php echo $short ?> </p>
                                 </figcaption>
                                 <!--Picture of product hav to hav a transparent background-->
-                                <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>" />-->
+                                <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>"/>-->
                                 <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
                                 <?php
                                 echo"<a href = 'product?product_id=$id'></a>";
@@ -118,10 +120,14 @@ include "include_pages/welcome_index.php";
                     <div class="index_about_right_container col-xs-12">
                         <h1 class="fade-in fade-in-delay-05">About us</h1>
                         <!--About uss text-->
-                        <p class="fade-in fade-in-delay-1">MetSense brings innovative sensor solutions to the market for winter road maintenance.
+                        <p class="fade-in fade-in-delay-1">
+                            MetSense brings innovative sensor solutions to the market for winter road maintenance.
                             This enables mobile and stationary monitoring of parameters such as: Road surface status,
-                            Road surface friction, Road surface temperature and more.</p>
-                        <p class="fade-in fade-in-delay-2">All products are designed in Sweden and manufactured in the EU.</p>
+                            Road surface friction, Road surface temperature and more.
+                        </p>
+                        <p class="fade-in fade-in-delay-2">
+                            All products are designed in Sweden and manufactured in the EU.
+                        </p>
                     </div>
                 </div>
             </div>

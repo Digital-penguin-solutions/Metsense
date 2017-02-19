@@ -1448,7 +1448,7 @@ figure.effect-sarah:hover p {
 }
 @media (min-width: 992px) {
   #wall_1 {
-    background: url(../img/BG.jpg) no-repeat fixed;
+    background: url(../img/bg.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
