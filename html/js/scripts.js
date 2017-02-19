@@ -288,13 +288,21 @@ function slider_go_to_page(slider_number, page){
 	var pages = $(".slider_page[slider_number='"+ slider_number +"']");
 
 
-
-	$(pages).fadeToggle(slider_speed / 2);
-
     // the page that is to be shown
     var new_page = pages[page];
 
-    new_page.style.visibility = "hidden";
+    //new_page.style.visibility = "hidden";
+    var background_image = new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].src;
+    //new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].style.visibility = "hidden";
+    //new_page.parentNode.style.background = "url(" + background_image + ") no-repeat center center fixed";
+    //new_page.parentNode.style.backgroundSize = "cover";
+    //console.log(background_image);
+
+
+
+	$(pages).fadeToggle(slider_speed / 2);
+
+
 	for (var i = 0; i < pages.length; i++)
 	{
 
