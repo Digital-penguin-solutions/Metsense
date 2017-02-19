@@ -18,7 +18,8 @@
     <!--JQuery-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!--Velocity -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script>
+
 
     <script src="js/color-stellar.js"></script>
     <!-- JavaScript -->
