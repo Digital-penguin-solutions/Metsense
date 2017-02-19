@@ -1,12 +1,3 @@
-<?php
-/**
- * Home page
- *
- * The main home page for Metsense
- *
- * Autor author Digitalis
- */
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +37,7 @@
     </script>
 
     <!--slide in-->
-    !--Appear lib -->
+    <!--Appear lib -->
     <script src="js/jquery.appear.js"></script>
     <!--Fade in-->
     <script src="js/fade.in.js"></script>
@@ -66,6 +57,7 @@
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <?php
+//functions
 include "functions.php";
 $con = connect();
 $products = get_all_products($con);
