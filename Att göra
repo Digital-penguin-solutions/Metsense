@@ -1,6 +1,6 @@
 * Serchengien optimasiation
-* Lägga till en titel på varje sida så att den är korekt
-* På Checkout ska det komma upp tack för din bestälning och leda en till index.php
+* Lägga till en titel på varje sida så att den är korrekt
+* På Checkout ska det komma upp tack för din beställning och leda en till index.php
 * Göra så att image slider kommer in från höger och åker ut till vänster.
 * Få alla imeg slider att byta bild aoutomatiskt efter 0.5 sec
 * Göra iconen på webbläsare till logga
