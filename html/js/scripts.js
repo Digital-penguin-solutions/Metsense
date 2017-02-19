@@ -291,6 +291,10 @@ function slider_go_to_page(slider_number, page){
 
 	$(pages).fadeToggle(slider_speed / 2);
 
+    // the page that is to be shown
+    var new_page = pages[page];
+
+    new_page.style.visibility = "hidden";
 	for (var i = 0; i < pages.length; i++)
 	{
 
@@ -374,7 +378,7 @@ function init_sliders(){
 		}	
 
 
-		// adds the dott container
+		// adds the dot container
 		else if (!$(slider).hasClass("no_dots")) 
 		{
 			var dots_container = $("<div class = 'slider_dots_container center_horizontally_css'>");

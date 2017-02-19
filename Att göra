@@ -1,7 +1,6 @@
 * Serchengien optimasiation
 * Lägga till en titel på varje sida så att den är korekt
 * På Checkout ska det komma upp tack för din bestälning och leda en till index.php
-* Respons när man sparar produkt
 * welcome
 * Animera om hur slider sidorna får in en ny bild ????
 * Göra så att slider får ett intervall innan den byter till nästa bild ??
@@ -15,6 +14,7 @@ Fel på telfon att fixa
 KLARA SAKER:
 * Göra att de kan ändra lösenorded
 * Add to cart respons och göra synlig
+* Respons när man sparar produkt
 
 
 TROLIGTIVS FIXAT MEN BEHÖVER DUBBELKOLLAS:
