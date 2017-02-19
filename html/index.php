@@ -126,7 +126,7 @@ include "include_pages/welcome_index.php";
                 <!--left container top in mobil and tablet-->
                 <div class="index_about_left col-xs-12 col-md-6 nopm">
                     <div class="index_about_left_container col-xs-12 nopm">
-                        <img class="slide-in slide-in-delay-2 slide-in-left" src="img/abote.jpg" alt="About metsense">
+                        <img src="img/abote.jpg" alt="About metsense">
                     </div>
                 </div>
                 <!--right container bot in mobil and tablet-->
