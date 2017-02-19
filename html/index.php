@@ -22,10 +22,11 @@
     <script src="js/color-stellar.js"></script>
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
 
-    <!--<script>
+    <script>
         smoothScroll.init();
-    </script>-->
+    </script>
 
     <script>
         $(document).ready(function(e) {
