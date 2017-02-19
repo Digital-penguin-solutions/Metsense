@@ -28,6 +28,21 @@ module.exports = function (grunt) {
             }
         },
 
+        uglify: {
+            my_target: {
+                files: {
+                    'build/js/admin_script.js': ['html/js/admin_script.js'],
+                    'build/js/backgroundslider.js': ['html/js/backgroundslider.js'],
+                    'build/js/JIC.in.js': ['html/js/JIC.in.js'],
+                    'build/js/color-stellar.js': ['html/js/jquery.stellar.js','html/js/jquery.color.js'],
+                    'build/js/png.compress.js': ['html/js/png.compress.js'],
+                    'build/js/scripts.js': ['html/js/scripts.js'],
+                    'build/js/smooth-scroll.js': ['html/js/smooth-scroll.js'],
+                    'build/js/fade-slide.js':['html/js/jquery.appear.js','html/js/slide.in.js','html/js/fade.in.js']
+                }
+            }
+        },
+
         htmlmin: {                                     // Task
             dist: {                                      // Target
                 options: {                                 // Target options
@@ -58,6 +73,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     //Do the task
     grunt.registerTask('default', ['cssmin','htmlmin','watch']);
