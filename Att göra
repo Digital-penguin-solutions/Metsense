@@ -5,6 +5,7 @@
 * Få alla imeg slider att byta bild aoutomatiskt efter 0.5 sec
 * Göra iconen på webbläsare till logga
 * cart sidan ska slida ut från höger sida istället för att fada in
+* På prudukt sidan url göra det till namnet på prudukten istället för id
 
 KLARA SAKER:
 * Göra att de kan ändra lösenorded
