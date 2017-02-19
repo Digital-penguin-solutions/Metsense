@@ -74,6 +74,7 @@ module.exports = function (grunt) {
         }
     });
 
+    //load in all grunt stuff
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
