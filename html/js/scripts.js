@@ -54,7 +54,8 @@ function on_ready () {
 		slider_go_to_page(i, 0);
 	}
 
-	slider_speed = 600; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
+	//slider_speed = 600; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
+    slider_speed = 800; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
 
 	toggle_nav_menu();
 	fade_duration = 500; // same as for slider_speed
@@ -292,15 +293,14 @@ function slider_go_to_page(slider_number, page){
     var new_page = pages[page];
 
     //new_page.style.visibility = "hidden";
-    var background_image = new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].src;
+    var background_image = new_page.getElementsByTagName("img")[0].src;
     //new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].style.visibility = "hidden";
-    //new_page.parentNode.style.background = "url(" + background_image + ") no-repeat center center fixed";
-    //new_page.parentNode.style.backgroundSize = "cover";
-    //console.log(background_image);
+    new_page.parentNode.style.background = "url(" + background_image + ") no-repeat center center";
+    new_page.parentNode.style.backgroundSize = "100% 100%";
 
 
 
-	$(pages).fadeToggle(slider_speed / 2);
+	$(pages).fadeToggle(slider_speed);
 
 
 	for (var i = 0; i < pages.length; i++)
@@ -312,10 +312,9 @@ function slider_go_to_page(slider_number, page){
 	}
 
 
-	$(pages).fadeToggle(slider_speed / 2);
+    $(pages).fadeToggle(slider_speed);
 
 	var nth = ":nth-child("+(page+1)+")";
-	console.log(slider);
 	//
 	// if there is a list on this slider
 	if (!$(slider).hasClass("no_list")) {

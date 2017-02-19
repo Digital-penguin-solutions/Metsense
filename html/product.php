@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Klimator">
 
+    <!--main css style sheet   -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/temp.css">
 
@@ -26,31 +27,35 @@
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!--Velocity -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
-    <script src="js/jquery.color.js"></script>
+
+    <script src="js/color-stellar.js"></script>
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
-    <script src="js/jquery.stellar.js"></script>
 
-    <!--Appear lib -->
-    <script src="js/jquery.appear.js"></script>
-    <!--Fade in-->
-    <script src="js/fade.in.js"></script>
-    <!--slide in-->
-    <script src="js/slide.in.js"></script>
+    <!--<script>
+        smoothScroll.init();
+    </script>-->
 
+    <script>
+        $(document).ready(function(e) {
+            $(window).stellar();
+        });
+    </script>
+
+    <script src="js/fade-slide.js"></script>
 
     <!-- Latest compiled and minified JavaScript for bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-            crossorigin="anonymous"></script>
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
     <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
 
-
-
-</head>
+    <!-- Latest compiled and minified JavaScript for bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<head>
 <?php
 
 include "functions.php";
