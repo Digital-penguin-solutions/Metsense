@@ -131,7 +131,7 @@ function send_form(){
 
 		// compress for jpg
 		if (mime != "image/png"){
-			var quality = 0.7;
+			var quality = 0.9;
 
 			var cvs = document.createElement('canvas');
 			cvs.width = natW; 
@@ -172,9 +172,10 @@ function send_form(){
 	});
 
 	xhr.success(function(response){
-		console.log(response);
-		// when the info has been sent, the page will be reloaded
+		//console.log(response);
 		//$(document).scrollTop(0);
+        window.location.replace("admin?message=Product has been added");
+        //console.log("asdasd");
 		//location.reload();
 	});
 }

@@ -1,14 +1,23 @@
-* Göra att de kan ändra lösenorded
 * Serchengien optimasiation
 * Lägga till en titel på varje sida så att den är korekt
 * På Checkout ska det komma upp tack för din bestälning och leda en till index.php
 * Respons när man sparar produkt
-* Add to cart respons och göra synlig
 * welcome
-* Göra om komprimerings algoritmen för slider sidan
 * Animera om hur slider sidorna får in en ny bild ????
 * Göra så att slider får ett intervall innan den byter till nästa bild ??
 
 * Göra så att cart från naven kommer ut från höger sida istället så det är lättare att se på olika enheter ??
 
 Fel på telfon att fixa
+
+
+
+KLARA SAKER:
+* Göra att de kan ändra lösenorded
+* Add to cart respons och göra synlig
+
+
+TROLIGTIVS FIXAT MEN BEHÖVER DUBBELKOLLAS:
+* Göra om komprimerings algoritmen för slider sidan
+
+

@@ -20,6 +20,7 @@
     <meta name="author" content="Klimator">
 
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/temp.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
@@ -70,6 +71,29 @@ include "include_pages/nav.php";
 
                 <?php 
                 if(isset($_SESSION['admin'])){
+
+
+                    if(isset($_GET['logout'])){
+                        session_destroy();
+                        header("Location: admin.php");
+                    }
+                    if(isset($_GET['message'])){
+                        $message = $_GET['message'];
+                        echo "<h1 class = 'admin_message'>" . $message . "</h1>";
+
+                    }
+
+                    if(isset($_GET['change_password'])){
+                        
+                        ?>
+                        <form class="login change_password_form"  action = "login" method = "post">
+                            <p>New password:</p>
+                            <input placeholder = "New password" type = "password" name = "password"><br>
+                            <input placeholder = "Repeat new password" type = "password" name = "password_repeat">
+                            <input type = "submit" name = "set_password" value="Change">
+                        </form>
+                        <?php
+                    }
                 ?>
                 <div class = "row admin_all_products_container">
 
@@ -118,6 +142,12 @@ include "include_pages/nav.php";
                     ?>
                     <a href = "add_product" class = "add_product_button center_horizontally_css">
                         Add a new product
+                    </a>
+                    <a href = "admin?change_password=" class = "add_product_button center_horizontally_css">
+                        Change password
+                    </a>
+                    <a href = "admin?logout=" class = "add_product_button center_horizontally_css">
+                        Logout
                     </a>
                 <?php 
                 }

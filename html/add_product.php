@@ -57,18 +57,16 @@
 </head>
 
 <?php
-ini_set('memory_limit', '-1'); // not best but it works
+ini_set('memory_limit', '-1'); 
 include "functions.php";
 session_start();
-//session_destroy();
 
 $con = connect();
 
 if (isset($_SESSION['admin'])) {
 
 }
-//
-//
+
 // if a product is to be added or changed
 if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 
@@ -206,6 +204,7 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
         mysqli_query($con, $query) or die (mysqli_error($con));
     }
 }
+if (isset($_SESSION['admin'])) {
 
 // When a product is going to be viewed for editing
 if (isset($_GET["product_id"])){
@@ -403,4 +402,10 @@ include "include_pages/nav.php";
 </section>
 
 </body>
+<?php
+}
+else {
+    header("Location: index.php");
+}
+?>
 </html>
