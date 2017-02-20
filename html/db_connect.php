@@ -8,8 +8,7 @@
 */
 
 function connect(){
-    //$con = mysqli_connect("treelineweb.com", "fcclftva_user", "daggmask", "fcclftva_f");
-    $con = mysqli_connect("146.185.150.217", "test", "daggmask1", "metsense");
+    $con = mysqli_connect("146.185.150.217", "root2", "test123", "metsense");
 
     if (mysqli_connect_errno()){
         echo "Failed". mysqli_connect_error();
