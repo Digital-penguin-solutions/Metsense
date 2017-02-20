@@ -46,10 +46,6 @@
     <!--icon-->
     <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
 
-    <!-- Latest compiled and minified JavaScript for bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-            crossorigin="anonymous"></script>
 </head>
 <?php
 //functions
@@ -59,11 +55,12 @@ $products = get_all_products($con);
 ?>
 <body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="background_fixed"></div>
-<!--include the nav-->
+
 <?php
-include "include_pages/nav.php";
-//welcome page slider
-include "include_pages/welcome_index.php";
+    // include the nav
+    include "include_pages/nav.php";
+    //welcome page slider
+    include "include_pages/welcome_index.php";
 ?>
 
 <!--products wall updated from the database-->
@@ -92,7 +89,7 @@ include "include_pages/welcome_index.php";
                                 <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>"/>-->
                                 <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
                                 <?php
-                                echo"<a href = 'product?product_id=$id'></a>";
+                                echo"<a href = 'product?p=$name'></a>";
                                 ?>
                             </figure>
                         </div>
@@ -119,15 +116,15 @@ include "include_pages/welcome_index.php";
                 <!--right container bot in mobil and tablet-->
                 <div class="index_about_right col-xs-12 col-md-6">
                     <div class="index_about_right_container col-xs-12">
-                        <h1 class="fade-in fade-in-delay-05">About us</h1>
+                        <h1 class="fade-in fade-delay-05">About us</h1>
                         <!--About uss text-->
-                        <p class="fade-in fade-in-delay-1">
+                        <p class="fade-in fade-delay-1">
                             MetSense brings innovative sensor solutions to the market for winter road maintenance.
                             This enables mobile and stationary monitoring of parameters such as: Road surface status,
                             Road surface friction, Road surface temperature and more.
                         </p>
-                        <p class="fade-in fade-in-delay-2">
-                            All products are designed in Sweden and manufactured in the EU.
+                        <p class="fade-in fade-delay-2">
+                            <b><i>All products are designed in Sweden and manufactured in the EU.</i></b>
                         </p>
                     </div>
                 </div>

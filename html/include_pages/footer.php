@@ -35,8 +35,10 @@
 					<!--ator of webpage and copyright stuff-->
 				</div>
 				<div class="footer_info col-xs-12">
-					<p>&copy; 2017 Metsens all rights reserved</p>
-					<p>Website made by DigitalIS</p>
+                    <div class = "center_vertically_css">
+                        <p>&copy; 2017 Metsense all rights reserved</p>
+                        <p><i>Website made by DigitalIS</i></p>
+                    </div>
 				</div>
 			</div>
 		</div>

@@ -161,7 +161,17 @@ if(!isset($functions_included)){
         return $array;
     }
 
-    function get_product_id_by_name($con, $id){
+    function get_product_id_by_name($con, $name){
+
+        $id = secure_str($name);
+        $query = "SELECT * FROM product WHERE name = '$name'";
+        $select = mysqli_query($con, $query) or die (mysqli_error($con));
+
+
+		$data = mysqli_fetch_array($select);
+        $id = $data['product_id'];
+
+        return $id;
         
     }
 	// gets all slider images

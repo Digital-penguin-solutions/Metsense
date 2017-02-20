@@ -3,7 +3,6 @@
 * Göra så att image slider kommer in från höger och åker ut till vänster.
 * Få alla imeg slider att byta bild aoutomatiskt efter 0.5 sec
 * cart sidan ska slida ut från höger sida istället för att fada in
-* På prudukt sidan url göra det till namnet på prudukten istället för id
 * Byta ikonen som syns i tabben i webbläsaren till en bild som är rektangulär, så den inte blir utdragen
 
 TROLIGTIVS FIXAT MEN BEHÖVER DUBBELKOLLAS:

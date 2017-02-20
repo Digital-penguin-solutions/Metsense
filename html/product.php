@@ -1,6 +1,5 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
  * User: olqeable
  * Date: 2017-01-17
  * Time: 16:02
@@ -61,8 +60,9 @@ include "functions.php";
 
 $con = connect();
 
-if (isset($_GET['product_id'])) {
-    $product_id = $_GET['product_id'];
+if (isset($_GET['p'])) {
+    $product_name = $_GET['p'];
+    $product_id = get_product_id_by_name($con, $product_name);
 
 }
 else {
@@ -129,10 +129,10 @@ include "include_pages/nav.php";
                         </p>
                     </div>
                 </div>
-                <!--picture of productuct-->
+                <!--picture of product-->
                 <div class="product_2_right col-xs-12 col-md-6">
                     <div class="product_2_right_img_container col-xs-12">
-                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="Aboute image">
+                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="About image">
                     </div>
                 </div>
             </div>
