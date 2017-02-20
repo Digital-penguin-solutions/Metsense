@@ -63,6 +63,6 @@ include "include_pages/nav.php";
                     ?> <a href="add_product" class="add_product_button center_horizontally_css">Add a new product </a><a href="admin?change_password=" class="add_product_button center_horizontally_css">Change password </a><a href="admin?logout=" class="add_product_button center_horizontally_css">Logout </a> <?php 
                 }
                 else {
-                ?> <form class="login" action="login" method="post"><p>PASSWORD:</p><input type="password" name="password"> <input type="submit" name="login" value="Login"></form> <?php
+                ?> <form class="login hidden-sm hidden-xs" action="login" method="post"><p>PASSWORD:</p><input type="password" name="password"> <input type="submit" name="login" value="Login"></form> <?php
                 }
                 ?> </div></div></div></section></body></html>

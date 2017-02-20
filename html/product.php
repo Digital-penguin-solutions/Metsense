@@ -104,7 +104,7 @@ include "include_pages/nav.php";
                 <h1 class="fade-in fade-delay-05"><?php echo $product_name ?></h1>
                 <h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2>
                 <!--<img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">-->
-                <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image">
+                <img class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image">
 
                 <p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p>
                 <div product_id = "<?php echo $product_id; ?>" class = "intro_button  buy-now col-xs-2 col-xs-offset-5 fade-in fade-delay-3"> Add to cart </div>

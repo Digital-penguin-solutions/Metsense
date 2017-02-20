@@ -1188,7 +1188,7 @@ section button:hover {
 .product_s_2 .product_2_container .product_2_right .product_2_right_img_container img {
   margin-left: 10vw;
   max-height: 70vh;
-  width: auto;
+  max-width: 45vw;
 }
 .product_s_3 {
   padding: 0 !important;
@@ -1522,8 +1522,8 @@ figure.effect-sarah:hover p {
     width: 100% !important;
   }
   figure.effect-sarah img {
-    height: 58%;
-    max-width: 90%;
+    height: 20vw;
+    max-width: 25vw;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(-50%, 0, 0);
