@@ -18,6 +18,7 @@
 
     <!--main css style sheet   -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/temp.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
@@ -53,10 +54,6 @@
     <!--icon-->
     <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
 
-    <!-- Latest compiled and minified JavaScript for bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-            crossorigin="anonymous"></script>
 </head>
 <?php
 
@@ -104,7 +101,9 @@ include "include_pages/nav.php";
                 <h1 class="fade-in fade-delay-05"><?php echo $product_name ?></h1>
                 <h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2>
                 <!--<img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">-->
-                <img class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image">
+                <div class = "product_main_image_container">
+                    <img class = "product_main_image col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image">
+                </div>
 
                 <p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p>
                 <div product_id = "<?php echo $product_id; ?>" class = "intro_button  buy-now col-xs-2 col-xs-offset-5 fade-in fade-delay-3"> Add to cart </div>
@@ -113,7 +112,7 @@ include "include_pages/nav.php";
     </div>
 </section>
 
-<!--Tecknical information aboute productuckt-->
+<!--Tecknical information about productuckt-->
 <section class="container-fluid product_s_2">
     <div class="row-fluid">
         <div class="col-xs-12">
@@ -122,7 +121,7 @@ include "include_pages/nav.php";
                 <!--text part of aboute productuct-->
                 <div class="product_2_left col-xs-12 col-md-6">
                     <div class="product_2_left_text_container">
-                        <h1 class="slide-in slide-in-delay-1 slide-in-left">Aboute our sensor</h1>
+                        <h1 class="slide-in slide-in-delay-1 slide-in-left">About this sensor</h1>
                         <p class="slide-in slide-in-delay-1 slide-in-left">
                             <?php
                             echo nl2br($product_long_description);

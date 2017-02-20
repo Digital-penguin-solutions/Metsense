@@ -305,7 +305,6 @@ function slider_go_to_page(slider_number, page){
 
 
         $(pages).fadeToggle(slider_speed, function() {
-            sliding = false;
         });
 
 
@@ -318,7 +317,9 @@ function slider_go_to_page(slider_number, page){
         }
 
 
-        $(pages).fadeToggle(slider_speed);
+        $(pages).fadeToggle(slider_speed, function(){
+            sliding = false;
+        });
 
         var nth = ":nth-child("+(page+1)+")";
         //
@@ -360,6 +361,7 @@ function slider_go_to_page(slider_number, page){
 function init_sliders(){
 
 	var sliders = document.getElementsByClassName("all_slider_container");
+    $(sliders).css("visibility", "visible");
 
 	var page_width = $(window).width();
 	slider_dot_width = "0.7"; // vw

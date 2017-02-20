@@ -161,6 +161,9 @@ if(!isset($functions_included)){
         return $array;
     }
 
+    function get_product_id_by_name($con, $id){
+        
+    }
 	// gets all slider images
     function get_product_images_by_id($con, $id){
 

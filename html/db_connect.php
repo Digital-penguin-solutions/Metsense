@@ -1,7 +1,5 @@
 <?php
 /**
-	* Coneckting the the database
-	* 
 	* Conecting to the database
 	*
 	* @param author Digitalis

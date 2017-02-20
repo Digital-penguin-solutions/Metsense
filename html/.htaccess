@@ -5,6 +5,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
+#RewriteCond %{REQUEST_URI} product/(.*)
+#funkar typ
+#ReWriteRule ^product/(.*)$ product.php?product_id=$1 [L]
+
+
 #browser chaching
 <IfModule mod_expires.c>
     ExpiresActive on

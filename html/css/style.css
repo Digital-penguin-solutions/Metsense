@@ -1061,6 +1061,7 @@ section button:hover {
   color: #ffffff;
 }
 .welcome_text_container {
+  word-spacing: 0.7em; 
   text-align: center;
   text-transform: uppercase;
   position: relative;
