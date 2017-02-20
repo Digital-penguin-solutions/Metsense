@@ -8,33 +8,33 @@
 ?>
 <html>
 <head>
-    <meta name="description" content="MetSense latest products">
+    <meta name="description" content="Our latest products that you can order">
     <title>MetSense products</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Klimator">
+    <meta name="author" content="Digital Internet solutions">
 
     <!--main css style sheet   -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/temp.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
     <!--======================================= JAVA SCRIPT ===========================-->
-    <!--JQuery-->
+    <!--latest jquery-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!--Velocity -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script>
 
     <script src="js/color-stellar.js"></script>
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
 
-    <!--<script>
+    <script>
         smoothScroll.init();
-    </script>-->
+    </script>
 
     <script>
         $(document).ready(function(e) {
@@ -46,7 +46,8 @@
 
     <!-- Latest compiled and minified JavaScript for bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
 
     <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
@@ -54,8 +55,9 @@
 
     <!-- Latest compiled and minified JavaScript for bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<head>
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+</head>
 <?php
 
 include "functions.php";
@@ -103,7 +105,7 @@ include "include_pages/nav.php";
                 <h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2>
                 <!--<img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">-->
                 <img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image">
-                
+
                 <p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p>
                 <div product_id = "<?php echo $product_id; ?>" class = "intro_button  buy-now col-xs-2 col-xs-offset-5 fade-in fade-delay-3"> Add to cart </div>
             </div>
