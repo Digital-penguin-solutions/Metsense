@@ -1486,11 +1486,10 @@ figure.effect-sarah:hover p {
 @media (min-width: 992px) {
   #wall_1 {
     background: url(../img/bg.jpg) no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 100vh;
+    -webkit-background-size: 100vw 180vh;
+    -moz-background-size: 100vw 180vh;
+    -o-background-size: 100vw 180vh;
+    background-size: 100vw 180vh;
     width: auto;
   }
   #products_page {
