@@ -167,7 +167,7 @@ include "include_pages/nav.php";
                 }
                 else {
                 ?>
-                    <form class="login"  action = "login" method = "post">
+                    <form class="login hidden-sm hidden-xs"  action = "login" method = "post">
                         <p>PASSWORD:</p>
                         <input type = "password" name = "password">
                         <input type = "submit" name = "login" value="Login">
