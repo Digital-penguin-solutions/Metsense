@@ -66,17 +66,6 @@
     font-size: 1.8em;
   }
 }
-.intro_button {
-  /*width:10vw;*/
-  height: 8vh;
-  border-radius: 30% 100%;
-  background: #FF5600;
-  line-height: 8vh;
-  text-align: center;
-  font-size: 1.0vw;
-  color: #FFFFFF;
-  cursor: pointer;
-}
 .template,
 .always_hidden {
   display: none;
@@ -289,6 +278,14 @@
   cursor: pointer;
   color: #ffffff;
   text-align: center;
+  text-decoration: none;
+}
+.finish_button:hover {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #802b00;
 }
 .checkout_button {
   display: block;
@@ -302,6 +299,14 @@
   font-size: 4.5vw;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
+}
+.checkout_button:hover {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #802b00;
 }
 .cart_load {
   width: 100% !important;
@@ -521,9 +526,6 @@
   margin-right: 5%;
 }
 footer {
-  -webkit-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
   padding: 0 !important;
   margin: 0 !important;
   top: 0 !important;
@@ -596,6 +598,8 @@ footer .footer .footer_container .footer_info {
   z-index: 5;
 }
 footer .footer .footer_container .footer_info p {
+  padding: 0 !important;
+  margin: 0 !important;
   text-align: center;
   font-size: 2.2vw;
 }
@@ -1128,9 +1132,17 @@ section button:hover {
   cursor: pointer;
   color: #ffffff;
   text-align: center;
+  text-decoration: none;
   height: 6vh;
   font-size: 1.3em;
   margin-top: 4vh;
+}
+.product_s_1 .product_1_container a:hover {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #802b00;
 }
 .product_s_2 {
   padding: 0 !important;
@@ -1270,6 +1282,23 @@ section button:hover {
   margin: 0 !important;
   color: #ffffff;
   font-size: 0.6em;
+}
+.intro_button {
+  height: 8vh;
+  border-radius: 30% 100%;
+  background: #FF5600;
+  line-height: 8vh;
+  text-align: center;
+  font-size: 1.0vw;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.intro_button:hover {
+  background: #802b00;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 @media (min-width: 768px) {
   .product_s_4 .product_4_container .product_4_container_top .product_4_left .product_4_left_img_container {

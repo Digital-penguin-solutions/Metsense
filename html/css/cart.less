@@ -14,19 +14,23 @@
 }
 
 .finish_button {
-  display:block;
+  display: block;
   height: 10vh;
-  width:20vw;
+  width: 20vw;
   line-height: 10vh;
   margin-top: 5%;
   border-radius: 30% 100% 30% 100%;
-  background:@color3;
-  font-size:4vw;
-  cursor:pointer;
-  color:@white;
-  text-align:center;
+  background: @color3;
+  font-size: 4vw;
+  cursor: pointer;
+  color: @white;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    .transition(@time: 0.3s);
+    background: @color3/2;
+  }
 }
-
 .checkout_button {
   display:block;
   width:30vw;
@@ -39,6 +43,11 @@
   font-size: 4.5vw;
   color:@white;
   cursor:pointer;
+  text-decoration: none;
+  &:hover{
+    .transition(@time: 0.3s);
+    background: @color3/2;
+  }
 }
 
 .cart_load {

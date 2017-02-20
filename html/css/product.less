@@ -173,6 +173,21 @@
   }
 }
 
+.intro_button {
+  height: 8vh;
+  border-radius: 30% 100%;
+  background:@color3;
+  line-height: 8vh;
+  text-align:center;
+  font-size: 1.0vw;
+  color:#FFFFFF;
+  cursor:pointer;
+  &:hover {
+    background: @color3 / 2 ;
+    .transition(@time: 0.3s);
+  }
+}
+
 //tablet size
 @media (min-width: @screen-sm-min) {
   //section 4 tablet size
