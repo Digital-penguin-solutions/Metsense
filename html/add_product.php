@@ -229,6 +229,7 @@ include "include_pages/nav.php";
         <div class = "row full_height">
             <div class = "col-md-8 col-md-offset-2">
                 <h1 class = "admin_header"> Add new product</h1>
+                <h2 class = "admin_header2"> All product images need to be a squere like 1000X1000 px</h2>
                 <form id = "form" class = "add_product_form" method = "post" action = "add_product.php" enctype="multipart/form-data">
                     <input type = "hidden" name = "add">
                     <?php

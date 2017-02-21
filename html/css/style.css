@@ -82,6 +82,11 @@
   text-align: center;
   font-size: 2vw;
 }
+.admin_header2 {
+  margin-top: 1vh;
+  text-align: center;
+  font-size: 1.5vh;
+}
 .admin_product h1 {
   text-align: center;
   margin-top: 3%;
@@ -321,7 +326,7 @@
   color: #ffffff;
   cursor: pointer;
   text-decoration: none;
-  background: #0080cf;
+  background: #003057;
 }
 .more_products:hover {
   -webkit-transition: all 0.3s linear;
@@ -331,7 +336,7 @@
   background: #802b00;
 }
 .more_products:hover {
-  background: #004068;
+  background: #00182c;
 }
 .cart_load {
   width: 100% !important;

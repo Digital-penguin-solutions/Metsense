@@ -1,20 +1,14 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: olqeable
- * Date: 2017-01-17
- * Time: 16:02
- */
-?> <html><head><meta name="description" content="Our latest products that you can order"><title>MetSense products</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script><script src="js/color-stellar.js"></script><script src="js/scripts.js"></script><script src="js/smooth-scroll.min.js"></script><script>smoothScroll.init();</script><script>$(document).ready(function(e) {
+<html><head><meta name="description" content="Our latest products that you can order"><title>MetSense products</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script><script src="js/color-stellar.js"></script><script src="js/scripts.js"></script><script src="js/smooth-scroll.min.js"></script><script>smoothScroll.init();</script><script>$(document).ready(function(e) {
             $(window).stellar();
-        });</script><script src="js/fade-slide.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></head> <?php
+        });</script><script src="js/fade-slide.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"></head> <?php
 
 include "functions.php";
 
 $con = connect();
 
-if (isset($_GET['product_id'])) {
-    $product_id = $_GET['product_id'];
+if (isset($_GET['p'])) {
+    $product_name = $_GET['p'];
+    $product_id = get_product_id_by_name($con, $product_name);
 
 }
 else {
@@ -41,9 +35,9 @@ $tech_table_array = get_tech_table_by_id($con, $product_id);
 
 ?> <body> <?php
 include "include_pages/nav.php";
-?> <section class="container-fluid product_s_1"><div class="row-fluid"><div class="col-xs-12"><div class="product_1_container"><h1 class="fade-in fade-delay-05"><?php echo $product_name ?></h1><h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2><img class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image"><p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p><div product_id="<?php echo $product_id; ?>" class="intro_button buy-now col-xs-2 col-xs-offset-5 fade-in fade-delay-3">Add to cart</div></div></div></div></section><section class="container-fluid product_s_2"><div class="row-fluid"><div class="col-xs-12"><div class="product_2_container"><div class="product_2_left col-xs-12 col-md-6"><div class="product_2_left_text_container"><h1 class="slide-in slide-in-delay-1 slide-in-left">Aboute our sensor</h1><p class="slide-in slide-in-delay-1 slide-in-left"> <?php
+?> <section class="container-fluid product_s_1"><div class="row-fluid"><div class="col-xs-12"><div class="product_1_container"><h1 class="fade-in fade-delay-05"><?php echo $product_name ?></h1><h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2><div class="product_main_image_container"><img class="product_main_image col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image"></div><p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p><div product_id="<?php echo $product_id; ?>" class="intro_button buy-now col-xs-2 col-xs-offset-5 fade-in fade-delay-3">Add to cart</div></div></div></div></section><section class="container-fluid product_s_2"><div class="row-fluid"><div class="col-xs-12"><div class="product_2_container"><div class="product_2_left col-xs-12 col-md-6"><div class="product_2_left_text_container"><h1 class="slide-in slide-in-delay-1 slide-in-left">About this sensor</h1><p class="slide-in slide-in-delay-1 slide-in-left"> <?php
                             echo nl2br($product_long_description);
-                            ?> </p></div></div><div class="product_2_right col-xs-12 col-md-6"><div class="product_2_right_img_container col-xs-12"><img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="Aboute image"></div></div></div></div></div></section><section class="container-fluid product_s_3"><div class="row-fluid"><div class="col-xs-12 nopm"><div class="product_3_container"><div class="product_details"><div class="all_slider_container no_list"> <?php
+                            ?> </p></div></div><div class="product_2_right col-xs-12 col-md-6"><div class="product_2_right_img_container col-xs-12"><img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="About image"></div></div></div></div></div></section><section class="container-fluid product_s_3"><div class="row-fluid"><div class="col-xs-12 nopm"><div class="product_3_container"><div class="product_details"><div class="all_slider_container no_list"> <?php
                         foreach ($slider_images as $image) {
                             $image = $image['data'];
                             ?> <div class="slider_page"><img class="product_big_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image); ?>"></div> <?php

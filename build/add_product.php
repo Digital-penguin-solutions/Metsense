@@ -1,6 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta name="description" content="MetSense - Complete sensor solutions for winter maintenance."><title>MetSense-Home</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script><script src="js/jquery.color.js"></script><script src="js/scripts.js"></script><script src="js/admin_script.js"></script><script src="js/smooth-scroll.min.js"></script><script>smoothScroll.init();</script><script src="js/jquery.stellar.js"></script><script>$(document).ready(function(e) {
-            $(window).stellar();
-        });</script><script src="js/fade.in.js"></script><script src="js/slide.in.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></head> <?php
+<!DOCTYPE html><html lang="en"><head><meta name="description" content="MetSense - A page to add new pruduckts ti the webpage"><title>MetSense-add_pruduckt</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script><script src="js/color-stellar.js"></script><script src="js/scripts.js"></script><script src="js/smooth-scroll.min.js"></script><script src="js/fade-slide.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></head> <?php
 ini_set('memory_limit', '-1'); 
 include "functions.php";
 session_start();
@@ -46,7 +44,6 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 
     read_image($con, "main_image");
     read_image($con, "key_features_image");
-    read_image($con, "tech_image");
     read_image($con, "about_image");
 
     read_slider_images($con, "slider_image");
@@ -180,7 +177,7 @@ else {
 }
 ?> <body> <?php
 include "include_pages/nav.php";
-?> <section class="admin_page"><div class="container-fluid full_height"><div class="row full_height"><div class="col-md-8 col-md-offset-2"><h1 class="admin_header">Add new product</h1><form id="form" class="add_product_form" method="post" action="add_product.php" enctype="multipart/form-data"><input type="hidden" name="add"> <?php
+?> <section class="admin_page"><div class="container-fluid full_height"><div class="row full_height"><div class="col-md-8 col-md-offset-2"><h1 class="admin_header">Add new product</h1><h2 class="admin_header2">All product images need to be a squere like 1000X1000 px</h2><form id="form" class="add_product_form" method="post" action="add_product.php" enctype="multipart/form-data"><input type="hidden" name="add"> <?php
                     if (isset($_GET["product_id"])){
                         ?> <input type="hidden" value="<?php echo $_GET['product_id'] ?>" name="product_id"> <?php
                     }
