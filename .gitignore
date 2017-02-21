@@ -5,6 +5,6 @@
 *.css
 !style.css
 db_connect.php
-html/db_connect.php
-
-html/db_connect.php
+node_modules/less/test/browser/css/
+node_modules/less/test/css/
+node_modules/tiny-lr/examples/express/styles/
