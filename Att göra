@@ -1,9 +1,7 @@
 * Serchengien optimasiation
 * På Checkout ska det komma upp tack för din beställning och leda en till index.php
-* Göra så att image slider kommer in från höger och åker ut till vänster.
 * Få alla imeg slider att byta bild aoutomatiskt efter 0.5 sec
 * cart sidan ska slida ut från höger sida istället för att fada in
-* Byta ikonen som syns i tabben i webbläsaren till en bild som är rektangulär, så den inte blir utdragen
 
 TROLIGTIVS FIXAT MEN BEHÖVER DUBBELKOLLAS:
 * Göra om komprimerings algoritmen för slider sidan

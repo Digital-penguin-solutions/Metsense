@@ -684,7 +684,7 @@ footer .footer .footer_container .footer_info p {
   right: 15%;
   top: 1%;
   width: 8%;
-  height: auto;
+  height: 8%;
   list-style: none;
   z-index: 1032;
 }
@@ -1061,7 +1061,6 @@ section button:hover {
   color: #ffffff;
 }
 .welcome_text_container {
-  word-spacing: 0.7em; 
   text-align: center;
   text-transform: uppercase;
   position: relative;
