@@ -32,7 +32,6 @@
 		$continue_link = "finish_order";
 	}
 ?>
-
 <div class = "cart_container <?php echo $cart_class; ?>">
 	<h1> Your cart</h1>
 
@@ -100,12 +99,6 @@
     </a>
 
 	<a href = "<?php echo $continue_link ?>" class = "center_horizontally_css checkout_button">
-		Order
+		Make an order
 	</a>
-
-
-
 </div>
-
-
-
