@@ -9,8 +9,7 @@
     <meta name="author" content="Digital Internet solutions">
 
     <!--main css style sheet   -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/temp.css">
+    <link rel="stylesheet" href="css/app.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 

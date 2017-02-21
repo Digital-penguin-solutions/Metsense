@@ -1,0 +1,22 @@
+@import "everything";
+
+//a transition class
+.transition (@prop: all, @time: 2s, @ease: linear) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+.backround(@size: cover){
+  -webkit-background-size: @size;
+  -moz-background-size: @size;
+  -o-background-size: @size;
+  background-size: @size;
+}
+
+.box_shadow(@hori : 1px, @vert :0px, @Blur: 0px, @Spread: 0px, @color: rgba(0,0,0,0.20)){
+  -webkit-box-shadow: @hori @vert @Blur @Spread @color;
+  -moz-box-shadow: @hori @vert @Blur @Spread @color;
+  box-shadow: @hori @vert @Blur @Spread @color;
+}

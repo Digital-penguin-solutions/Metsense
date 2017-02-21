@@ -3,7 +3,7 @@
 .idea/
 *.db
 *.css
-!style.css
+!app.css
 db_connect.php
 node_modules/less/test/browser/css/
 node_modules/less/test/css/

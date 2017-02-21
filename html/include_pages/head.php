@@ -1,11 +1,11 @@
 <?php
 /**
-	* Head content for metsens
-	* 
-	* Storing the head folder in a diferent file for convinienc and securety
-	*
-	* @param author Digitalis
-*/
+ * Head content for metsens
+ *
+ * Storing the head folder in a diferent file for convinienc and securety
+ *
+ * @param author Digitalis
+ */
 ?>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
 <meta name="author" content="Klimator">
 
 
-<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
 
 <!--======================================= Font ===================================-->
 <!--Font awsome-->
