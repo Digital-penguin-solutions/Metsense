@@ -83,7 +83,7 @@ include "include_pages/nav.php";
             <div class = "col-md-8 col-md-offset-2">
                 <h1 class = "admin_header"> Admin page </h1>
 
-                <?php 
+                <?php
                 if(isset($_SESSION['admin'])){
 
 
@@ -98,7 +98,7 @@ include "include_pages/nav.php";
                     }
 
                     if(isset($_GET['change_password'])){
-                        
+
                         ?>
                         <form class="login change_password_form"  action = "login" method = "post">
                             <p>New password:</p>
@@ -108,50 +108,50 @@ include "include_pages/nav.php";
                         </form>
                         <?php
                     }
-                ?>
-                <div class = "row admin_all_products_container">
+                    ?>
+                    <div class = "row admin_all_products_container">
 
-                    <?php
-                    $count = 0;
-                    foreach ($products as $product) {
-                        $name = $product['name'];
-                        $main_image = $product['main_image'];
-                        $product_id = $product['product_id'];
+                        <?php
+                        $count = 0;
+                        foreach ($products as $product) {
+                            $name = $product['name'];
+                            $main_image = $product['main_image'];
+                            $product_id = $product['product_id'];
 
 
-                        if($count % 2 == 0) {
-                            $offset = 1;
-                        }
-                        else {
-                            $offset = 2;
+                            if($count % 2 == 0) {
+                                $offset = 1;
+                            }
+                            else {
+                                $offset = 2;
+                            }
+                            ?>
+                            <div class = "col-md-4 col-md-offset-<?php echo $offset ?> admin_product">
+                                <h1> <?php echo $name ?></h1>
+                                <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>" />
+
+                                <!--- EDIT BUTTON-->
+                                <a href = "add_product?product_id=<?php echo $product_id?>" class = "product_edit_button">
+                                    <p class = "center_vertically_css">Edit</p>
+                                </a>
+
+                                <!--- DELETE BUTTON-->
+                                <a href = "actions/delete_product?id=<?php echo $product_id?>" class = "product_delete_button">
+                                    <p class = "center_vertically_css">Delete</p>
+                                </a>
+
+                            </div>
+                            <?php
+                            $count++;
                         }
                         ?>
-                        <div class = "col-md-4 col-md-offset-<?php echo $offset ?> admin_product">
-                            <h1> <?php echo $name ?></h1>
-                            <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>" />
+                    </div>
+                    <?php
 
-                            <!--- EDIT BUTTON-->
-                            <a href = "add_product?product_id=<?php echo $product_id?>" class = "product_edit_button">
-                                <p class = "center_vertically_css">Edit</p>
-                            </a>
-
-                            <!--- DELETE BUTTON-->
-                            <a href = "actions/delete_product?id=<?php echo $product_id?>" class = "product_delete_button">
-                                <p class = "center_vertically_css">Delete</p>
-                            </a>
-
-                        </div>
-                        <?php
-                        $count++;
-                    }
-                    ?>
-                </div>
-                <?php 
-
-                    }
+                }
 
                 ?>
-                <?php 
+                <?php
                 if(isset($_SESSION['admin'])){
                     ?>
                     <a href = "add_product" class = "add_product_button center_horizontally_css">
@@ -163,16 +163,16 @@ include "include_pages/nav.php";
                     <a href = "admin?logout=" class = "add_product_button center_horizontally_css">
                         Logout
                     </a>
-                <?php 
+                    <?php
                 }
                 else {
-                ?>
+                    ?>
                     <form class="login hidden-sm hidden-xs"  action = "login" method = "post">
                         <p>PASSWORD:</p>
                         <input type = "password" name = "password">
                         <input type = "submit" name = "login" value="Login">
                     </form>
-                <?php
+                    <?php
                 }
                 ?>
             </div>

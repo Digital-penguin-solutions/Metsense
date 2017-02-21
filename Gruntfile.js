@@ -17,21 +17,6 @@ module.exports = function (grunt) {
             }
         },
 
-        watch: {
-            html: {
-                files: ['html/*.html'],
-                tasks: ['htmlmin']
-            },
-            css: {
-                files: ['html/css/**/*.css'],
-                tasks: ['cssmin']
-            },
-            js: {
-                files: ['html/**/*.js'],
-                tasks: ['uglify']
-            },
-        },
-
         uglify: {
             my_target: {
                 files: {
@@ -59,6 +44,7 @@ module.exports = function (grunt) {
                     'build/admin.php': 'html/admin.php',
                     'build/alter_cart.php': 'html/alter_cart.php',
                     'build/cart_preview.php': 'html/cart_preview.php',
+                    'build/db_connect.php': 'html/db_connect.php',
                     'build/finish_order.php': 'html/finish_order.php',
                     'build/index.php': 'html/index.php',
                     'build/login.php': 'html/login.php',
@@ -70,7 +56,26 @@ module.exports = function (grunt) {
                     'build/include_pages/welcome_index.php': 'html/include_pages/welcome_index.php',
                 }
             }
-        }
+        },
+
+        watch: {
+            html: {
+                files: ['html/*.html'],
+                tasks: ['htmlmin']
+            },
+            php: {
+                files: ['html/*.php'],
+                tasks: ['htmlmin']
+            },
+            css: {
+                files: ['html/css/**/*.css'],
+                tasks: ['cssmin']
+            },
+            js: {
+                files: ['html/**/*.js'],
+                tasks: ['uglify']
+            },
+        },
     });
 
     //load in all grunt stuff
