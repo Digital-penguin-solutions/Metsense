@@ -308,6 +308,31 @@
   transition: all 0.3s linear;
   background: #802b00;
 }
+.more_products {
+  display: block;
+  width: 30vw;
+  height: 10vh;
+  margin: 5% 0 4% 0;
+  border-radius: 30% 100%;
+  background: #FF5600;
+  line-height: 10vh;
+  text-align: center;
+  font-size: 4.5vw;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  background: #0080cf;
+}
+.more_products:hover {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #802b00;
+}
+.more_products:hover {
+  background: #004068;
+}
 .cart_load {
   width: 100% !important;
 }

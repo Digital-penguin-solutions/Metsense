@@ -98,6 +98,11 @@
 	<a href = "<?php echo $continue_link ?>" class = "center_horizontally_css checkout_button">
 		Continue
 	</a>
+
+    <a href = "index#products_page" class = "center_horizontally_css more_products">
+		More products
+	</a>
+
 </div>
 
 
