@@ -54,6 +54,7 @@ module.exports = function (grunt) {
                     'build/include_pages/footer.php': 'html/include_pages/footer.php',
                     'build/include_pages/nav.php': 'html/include_pages/nav.php',
                     'build/include_pages/welcome_index.php': 'html/include_pages/welcome_index.php',
+                    'build/include_pages/loading.php': 'html/include_pages/loading.php',
                 }
             }
         },
