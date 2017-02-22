@@ -1,3 +1,6 @@
+<?php
+include "include_pages/loading.php"
+?>
 <html>
 <head>
     <meta name="description" content="Our latest products that you can order">

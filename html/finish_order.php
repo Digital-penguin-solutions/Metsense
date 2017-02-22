@@ -1,11 +1,5 @@
 <?php
-/**
- * Order page
- *
- * Order the peuduct, showing the price and total price
- *
- * @param author Digitalis
- */
+include "include_pages/loading.php"
 ?>
 <!DOCTYPE html>
 <html>

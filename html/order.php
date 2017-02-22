@@ -1,3 +1,6 @@
+<?php
+include "include_pages/loading.php"
+?>
 <!DOCTYPE html>
 <html>
 <head>

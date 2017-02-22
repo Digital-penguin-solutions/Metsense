@@ -1,12 +1,5 @@
 <?php
-/**
- *
- * Admin Page
- *
- * A page for the system admin to edit/delete and and prducts to the main page
- *
- * @param author Digitalis
- */
+include "include_pages/loading.php"
 ?>
 <!DOCTYPE html>
 <html>
