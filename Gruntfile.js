@@ -39,22 +39,24 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'build/add_product.php': 'html/add_product.php',
                     'build/404error.html': 'html/404error.html',
+                    'build/add_product.php': 'html/add_product.php',
                     'build/admin.php': 'html/admin.php',
                     'build/alter_cart.php': 'html/alter_cart.php',
                     'build/cart_preview.php': 'html/cart_preview.php',
                     'build/db_connect.php': 'html/db_connect.php',
                     'build/finish_order.php': 'html/finish_order.php',
+                    'build/functions.php': 'html/functions.php',
                     'build/index.php': 'html/index.php',
                     'build/login.php': 'html/login.php',
                     'build/order.php': 'html/order.php',
                     'build/product.php': 'html/product.php',
                     'build/select_country.php': 'html/select_country.php',
                     'build/include_pages/footer.php': 'html/include_pages/footer.php',
+                    'build/include_pages/head.php': 'html/include_pages/head.php',
+                    'build/include_pages/loading.php': 'html/include_pages/loading.php',
                     'build/include_pages/nav.php': 'html/include_pages/nav.php',
                     'build/include_pages/welcome_index.php': 'html/include_pages/welcome_index.php',
-                    'build/include_pages/loading.php': 'html/include_pages/loading.php',
                 }
             }
         },
@@ -81,9 +83,9 @@ module.exports = function (grunt) {
 
     //load in all grunt stuff
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     //Do the task
     grunt.registerTask('default', ['cssmin','htmlmin','uglify','watch']);
