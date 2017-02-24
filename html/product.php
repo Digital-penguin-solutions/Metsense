@@ -75,7 +75,7 @@ $product_price = $product["price"];
 // images
 $main_image = $product["main_image"];
 $key_features_image = $product["key_features_image"];
-$tech_image = $product["tech_image"];
+//$tech_image = $product["tech_image"];
 $about_image = $product["about_image"];
 
 $slider_images = get_product_images_by_id($con, $product_id);
@@ -142,7 +142,7 @@ include "include_pages/nav.php";
             <!--img slider of productucts-->
             <div class="product_3_container">
                 <div class="product_details">
-                    <div class = "all_slider_container no_list">
+                    <div class = "all_slider_container no_content no_list">
                         <?php
                         foreach ($slider_images as $image) {
                             $image = $image['data'];

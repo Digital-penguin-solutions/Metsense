@@ -13,6 +13,7 @@ include "include_pages/loading.php"
 
     <!--main css style sheet   -->
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/temp.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
@@ -88,7 +89,6 @@ $products = get_all_products($con);
                                     <p class="description"> <?php echo $short ?> </p>
                                 </figcaption>
                                 <!--Picture of product hav to hav a transparent background-->
-                                <!--<img class = "center_horizontally_css" src="<?php echo $main_image_data;  ?>"/>-->
                                 <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
                                 <?php
                                 echo"<a href = 'product?p=$name'></a>";

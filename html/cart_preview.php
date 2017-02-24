@@ -99,6 +99,6 @@
     </a>
 
 	<a href = "<?php echo $continue_link ?>" class = "center_horizontally_css checkout_button">
-		Make an order
+		Continue
 	</a>
 </div>

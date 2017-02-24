@@ -274,6 +274,12 @@ function slider_go_to_page(slider_number, page){
         sliding = true;
         var slider = all_sliders[slider_number]; 	
 
+        var no_content = false;
+
+        if (slider.classList.contains("no_content")){
+            no_content = true;
+        }
+
         var list_container = $(".slider_list_container[slider_number='"+slider_number+"']");
 
         // counts the number of pages on this slider. Minus 2 cause of the two arrows
@@ -317,10 +323,15 @@ function slider_go_to_page(slider_number, page){
         }
 
 
-        $(pages).fadeToggle(slider_speed, function(){
+        var fade_in_time = slider_speed / 2;
+
+        if(no_content){
+            fade_in_time = 0;
+        }
+
+        $(pages).fadeToggle(fade_in_time, function(){
             sliding = false;
         });
-
         var nth = ":nth-child("+(page+1)+")";
         //
         // if there is a list on this slider
