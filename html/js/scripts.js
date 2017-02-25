@@ -108,13 +108,33 @@ function toggle_cart(instant, close){
 			var tmp_speed = cart_speed;
 		}	
 
-		if(close)
-		{
-			$(".cart_container").fadeOut(tmp_speed);
-		}
-		else {
-			$(".cart_container").fadeToggle(tmp_speed);
-		}
+        var width = $(".cart_small").width();
+        if(close)
+        {
+            
+            
+            $(".cart_small").animate({right:(-width)},tmp_speed);
+            //$(".cart_container").animate({width:'toggle'},tmp_speed);
+        }
+        else { // toggle
+            if ($(".cart_small").css("right") == "0px"){ // if shown
+                $(".cart_small").animate({right:(-width)},tmp_speed); // hide
+            } else { // if hidden
+                $(".cart_small").animate({right:0},tmp_speed); // show
+            }
+
+        console.log("hello" + width);
+            //$(".cart_container").fadeToggle(tmp_speed);
+            //$(".cart_container").animate({width:'toggle'},tmp_speed);
+
+        }
+		//if(close)
+		//{
+			//$(".cart_container").fadeOut(tmp_speed);
+		//}
+		//else {
+			//$(".cart_container").fadeToggle(tmp_speed);
+		//}
 	}
 }	
 

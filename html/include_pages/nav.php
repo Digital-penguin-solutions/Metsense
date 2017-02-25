@@ -2,10 +2,11 @@
 /**
  * Nav page
  *
- * store the nav secktion in a diferent file for convinienc
+ * store the nav section in a different file for convenience
  *
  * @param author Digitalis
  */
+
 // default is that the cart is shown
 if(isset($hide_cart)){
     $hide_cart = true;
@@ -16,13 +17,13 @@ else
 }
 ?>
 
-<!-- Liks when meneu is toggeld on-->
+<!-- Links shown when menu is toggeld on-->
 <div class = "nav_menu_container">
     <ul class = "nav_menu center_css">
         <li><a class = "nav_link" data-scroll href = "index#welcome_page"><p> Home </p></a></li>
         <li><a class = "nav_link" data-scroll href = "index#products_page"><p> Products </p></a></li>
         <li><a class = "nav_link" data-scroll href = "index#about_us_pages"><p> About us </p></a></li>
-        <li><a class = "nav_link" data-scroll href = "order"><p> Shopping cart </p></a></li>
+        <li><a class = "nav_link" href = "order"><p> Shopping cart </p></a></li>
     </ul>
 </div>
 
@@ -37,7 +38,7 @@ else
     </div>
 </nav>
 
-<!--Cart btn-->
+<!--Cart button-->
 <?php
 if(!$hide_cart){
     ?>
@@ -49,7 +50,7 @@ if(!$hide_cart){
 }
 ?>
 
-<!--hamburger meneu-->
+<!--hamburger mene-->
 <ul class = "nav_button_container">
     <li>
         <a class = "McButton" data = "hamburger-menu">
