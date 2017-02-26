@@ -42,7 +42,7 @@ else { // big link means this is on the order.php page and should link to finish
     <?php
 
     if ($size != "big"){
-        echo "<img src = 'img/cross.png' class = 'cart_cross'>";
+        echo "<img src = 'img/cross.svg' class = 'cart_cross'>";
     }
 
     if(count($products) === 0){

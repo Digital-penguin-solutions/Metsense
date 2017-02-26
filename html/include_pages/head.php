@@ -25,7 +25,6 @@
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <!--Velocity -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" type="text/javascript"></script>
-<script src="../js/jquery.color.js"></script>
 
 <!-- JavaScript -->
 <script src="../js/admin_script.js"></script>
@@ -36,11 +35,7 @@
 <!-- Smooth scoll-->
 <script src="../js/smooth-scroll.min.js"></script>
 <!--Appear lib -->
-<script src="../js/jquery.appear.js"></script>
-<!--Fade in-->
-<script src="../js/fade.in.js"></script>
-<!--slide in-->
-<script src="../js/slide.in.js"></script>
+
 
 
 <!-- Latest compiled and minified JavaScript for bootstrap-->
