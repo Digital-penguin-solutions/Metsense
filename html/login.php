@@ -40,3 +40,4 @@ else if (isset($_POST['login'])){
         // wrong password
     }
 }
+?>

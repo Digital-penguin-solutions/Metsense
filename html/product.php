@@ -22,8 +22,8 @@ include "include_pages/loading.php"
     <!--Velocity -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script>
 
-    <script src="js/color-stellar-fade"></script>
     <!-- JavaScript -->
+    <script src="js/color-stellar-fade.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
 
