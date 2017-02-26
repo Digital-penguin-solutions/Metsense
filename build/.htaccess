@@ -1,15 +1,12 @@
 ErrorDocument 404 /404error.html
 
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-#RewriteCond %{REQUEST_URI} product/(.*)
-#funkar typ
-#ReWriteRule ^product/(.*)$ product.php?product_id=$1 [L]
-#ReWriteRule ^product(.*)$ product.php?p=$1 [L]
-
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteBase /acre/real/
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^properties$ /property_available.php/$1 [NC,QSA]
+</IfModule>
 
 #browser chaching
 <IfModule mod_expires.c>
