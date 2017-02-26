@@ -23,7 +23,7 @@ include "include_pages/loading.php"
     <!--Velocity -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script>
 
-    <script src="js/color-stellar.js"></script>
+    <script src="js/color-stellar-fade"></script>
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
@@ -41,8 +41,6 @@ include "include_pages/loading.php"
         var cart_size = "big";
     </script>
 
-    <script src="js/fade-slide.js"></script>
-
     <!-- Latest compiled and minified JavaScript for bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
@@ -51,11 +49,6 @@ include "include_pages/loading.php"
     <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
     <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
-
-    <!-- Latest compiled and minified JavaScript for bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-            crossorigin="anonymous"></script>
 </head>
 <?php
 include "functions.php";

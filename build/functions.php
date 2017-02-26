@@ -1,11 +1,11 @@
 <?php
 /**
-	* Functions page
-	* 
-	* All functions that are used on the web page. 
-	*
-	* @param author Digitalis
-*/
+ * Functions page
+ *
+ * All functions that are used on the web page.
+ *
+ * @param author Digitalis
+ */
 ?> <?php
 /*
 		Här finns alla funktioner som används, denna sidan inkluderas på alla andra sidor där funktioner behövs
@@ -24,80 +24,80 @@ if(!isset($functions_included)){
         $data = trim($data);
         $data = addslashes($data);
         $data = mysqli_real_escape_string($con, $data);
-        $data = strip_tags($data);	
+        $data = strip_tags($data);
 
         return $data;
     }
 
     function read_slider_images($con, $index){
-		
-		global $slider_images_array;
 
-		if(isset($_POST[$index])) { 
-			
-			$images = $_POST[$index];
+        global $slider_images_array;
 
-			for ($i = 0; $i < sizeof($images); $i++){
+        if(isset($_POST[$index])) {
 
-				$data = $images[$i];	
-				$split = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
+            $images = $_POST[$index];
 
-				$data = $split[0]; // image data is one the first index
-				$filename = $split[1]; 
-				$image_id = $split[2]; 
+            for ($i = 0; $i < sizeof($images); $i++){
 
-				if ($data) {
+                $data = $images[$i];
+                $split = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
 
-					$data = preg_replace('/^data:image\/(png|jpg|jpeg);base64,/', '', $data);
-					$data = mysqli_real_escape_string($con, base64_decode($data));
+                $data = $split[0]; // image data is one the first index
+                $filename = $split[1];
+                $image_id = $split[2];
 
-					$info = array($data, $filename, $image_id);
-					$slider_images_array[] = $info;
-				}
-				else {
-				}
-			}
-		}
-		else {
-			echo "not found";
-		}
+                if ($data) {
 
-	}
+                    $data = preg_replace('/^data:image\/(png|jpg|jpeg);base64,/', '', $data);
+                    $data = mysqli_real_escape_string($con, base64_decode($data));
+
+                    $info = array($data, $filename, $image_id);
+                    $slider_images_array[] = $info;
+                }
+                else {
+                }
+            }
+        }
+        else {
+            echo "not found";
+        }
+
+    }
 
     function read_image($con, $index){
-		
-		$result;
-		global $images_array;
 
-		if(isset($_POST[$index])) { 
-			
-			$data = $_POST[$index];
-			
-			$split = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
+        $result;
+        global $images_array;
 
-			$data = $split[0]; // image data is one the first index
+        if(isset($_POST[$index])) {
 
-			if ($data) {
+            $data = $_POST[$index];
 
-				$data = preg_replace('/^data:image\/(png|jpg|jpeg);base64,/', '', $data);
-				$data = mysqli_real_escape_string($con, base64_decode($data));
-				//$image = file_put_contents($image_data);
+            $split = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
+
+            $data = $split[0]; // image data is one the first index
+
+            if ($data) {
+
+                $data = preg_replace('/^data:image\/(png|jpg|jpeg);base64,/', '', $data);
+                $data = mysqli_real_escape_string($con, base64_decode($data));
+                //$image = file_put_contents($image_data);
 
 
-				$result = $data;
-				
-				$info = array($data, $index);
-				$images_array[] = $info;
-			}
-			else {
-				$result = "empty";
-			}
-		}
-		else {
-			echo "not found single <br>";
-		}
+                $result = $data;
 
-	}
+                $info = array($data, $index);
+                $images_array[] = $info;
+            }
+            else {
+                $result = "empty";
+            }
+        }
+        else {
+            echo "not found single <br>";
+        }
+
+    }
 
     function get_all_products($con) {
 
@@ -123,7 +123,7 @@ if(!isset($functions_included)){
         $data = mysqli_fetch_array($select);
 
         return $data;
-	}
+    }
 
     function get_product_long_by_id($con, $id){
 
@@ -143,17 +143,17 @@ if(!isset($functions_included)){
         $query = "SELECT * FROM tech_table_row WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
-		$array = array();
+        $array = array();
 
 
-		while ($data = mysqli_fetch_array($select)) {
-			$left = $data["left_content"];
-			$right = $data["right_content"];
+        while ($data = mysqli_fetch_array($select)) {
+            $left = $data["left_content"];
+            $right = $data["right_content"];
 
-			$array_tmp = array($left, $right);
-			
-			$array[] = $array_tmp;
-		}
+            $array_tmp = array($left, $right);
+
+            $array[] = $array_tmp;
+        }
 
 
         return $array;
@@ -166,28 +166,28 @@ if(!isset($functions_included)){
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
 
-		$data = mysqli_fetch_array($select);
+        $data = mysqli_fetch_array($select);
         $id = $data['product_id'];
 
         return $id;
-        
+
     }
-	// gets all slider images
+    // gets all slider images
     function get_product_images_by_id($con, $id){
 
         $id = secure_str($id);
         $query = "SELECT * FROM product_image WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
-		$array = array();
+        $array = array();
 
-		while ($data = mysqli_fetch_array($select)) {
-			$array[] = $data;
-		}
+        while ($data = mysqli_fetch_array($select)) {
+            $array[] = $data;
+        }
 
         return $array;
 
-	}
+    }
 
     function get_product_name_by_id($con, $id){
         $id = secure_str($id);
@@ -197,7 +197,7 @@ if(!isset($functions_included)){
 
         $name = $data['name'];
         return $name;
-    }	
+    }
 
     function get_product_short_by_id($con, $id){
         $id = secure_str($id);
@@ -207,7 +207,7 @@ if(!isset($functions_included)){
 
         $description = $data['short_description'];
         return $description;
-    }	
+    }
 
     function get_product_price_by_id($con, $id){
         $id = secure_str($id);
@@ -217,17 +217,17 @@ if(!isset($functions_included)){
 
         $price = $data['price'];
         return $price;
-    }	
+    }
 
     function get_key_features_by_id($con, $id){
         $id = secure_str($id);
         $query = "SELECT * FROM key_feature WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
-		$array = array();
+        $array = array();
 
-		while ($data = mysqli_fetch_array($select)) {
-			$array[] = $data["content"];
-		}
+        while ($data = mysqli_fetch_array($select)) {
+            $array[] = $data["content"];
+        }
 
         return $array;
     }
@@ -238,27 +238,27 @@ if(!isset($functions_included)){
     }
 
 
-    function compress($source, $destination, $quality) { 
-        $info = getimagesize($source); 
+    function compress($source, $destination, $quality) {
+        $info = getimagesize($source);
 
         if ($info['mime'] == 'image/jpeg') {
-            $image = imagecreatefromjpeg($source); 
+            $image = imagecreatefromjpeg($source);
         }
         elseif ($info['mime'] == 'image/gif'){
-            $image = imagecreatefromgif($source); 
+            $image = imagecreatefromgif($source);
         }
         elseif ($info['mime'] == 'image/png') {
-            $image = imagecreatefrompng($source); 
+            $image = imagecreatefrompng($source);
         }
-        imagejpeg($image, $destination, $quality); 
-        return $destination; 
+        imagejpeg($image, $destination, $quality);
+        return $destination;
     }
 
     function return_bytes($val) {
         $val = trim($val);
         $last = strtolower($val[strlen($val)-1]);
         switch($last) {
-                // The 'G' modifier is available since PHP 5.1.0
+            // The 'G' modifier is available since PHP 5.1.0
             case 'g':
                 $val *= 1024;
             case 'm':
@@ -278,7 +278,7 @@ if(!isset($functions_included)){
             $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
 
         echo $output;
-    }	
+    }
 
 }
 ?>
