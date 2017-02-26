@@ -16,19 +16,19 @@
 				<!--styling for the trangle-->
 				<div class="footer_top col-xs-12">
 					<div class="footer_triangle col-xs-12">
-						<img src="img/triangel.svg" alt="triangle" class="fade-in">
+						<img src="img/triangel.svg" alt="triangle">
 					</div>
 				</div>
 				<!--mid section contact us info-->
 				<div class="footer_mid col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
-					<div class="footer_contact fade-in fade-delay-1">
+					<div class="footer_contact fade-in">
 						<h1>Contact us</h1>
 						<p>info@metsense.com</p>
 						<p>+46(0)70 1090230</p>
 					</div>
 				</div>
 				<!--logo and the creater of the webpage-->
-				<div class="footer_bot col-xs-12 fade-in fade-delay-2">
+				<div class="footer_bot col-xs-12 fade-in fade-delay-1">
 					<a href="index">
 						<img class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1" src="img/logo/logo-w.svg" alt="Metsense logo">
 					</a>
