@@ -22,7 +22,8 @@ module.exports = function (grunt) {
                 files: {
                     'build/js/JIC.in.js': ['html/js/JIC.in.js'],
                     'build/js/smooth-scroll.min.js': ['html/js/smooth-scroll.min.js'],
-                    'build/js/scripts.js':['html/js/backgroundslider.js','html/js/admin_script.js','html/js/scripts.js'],
+                    'build/js/admin_script.js': ['html/js/admin_script.js'],
+                    'build/js/scripts.js':['html/js/backgroundslider.js','html/js/scripts.js'],
                     'build/js/color-stellar.js': ['html/js/color-stellar.js','html/js/fade-slide.js'],
                     'build/js/fade-slide.js':['html/js/jquery.appear.js','html/js/slide.in.js','html/js/fade.in.js'],
                     'build/js/color-stellar-fade.js': ['html/js/fade-slide.js','html/js/color-stellar.js'],
