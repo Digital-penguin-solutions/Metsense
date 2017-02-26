@@ -2,7 +2,7 @@
 /**
 	* Functions page
 	* 
-	* All funcktions that is used on the web page. 
+	* All functions that are used on the web page. 
 	*
 	* @param author Digitalis
 */
