@@ -1,12 +1,12 @@
 ErrorDocument 404 /404error.html
 
-<IfModule mod_rewrite.c>
- RewriteEngine On
- RewriteBase /acre/real/
- RewriteCond %{REQUEST_FILENAME} !-f
- RewriteCond %{REQUEST_FILENAME} !-d
- RewriteRule ^properties$ /property_available.php/$1 [NC,QSA]
-</IfModule>
+RewriteEngine On
+RewriteBase /acre/real/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
 
 <IfModule mod_headers.c>
   <FilesMatch "\.(js|css|xml|gz)$">
@@ -63,9 +63,6 @@ ErrorDocument 404 /404error.html
     AddType application/x-font-woff .woff
     AddType image/svg+xml .svg
 
-    # Compress compressible fonts
-    # only uncomment if you dont have compression turned on already. Otherwise it will cause all other filestypes not to get compressed
-    # AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
 
     ExpiresActive on
 

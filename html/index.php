@@ -13,6 +13,7 @@ include "include_pages/loading.php"
 
     <!--main css style sheet   -->
     <link rel="stylesheet" href="css/app.css">
+
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
@@ -42,7 +43,7 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="icon" href="img/logo/icontop.png">
+    <link rel="icon" href="img/logo/favicon.png">
 </head>
 <?php
 //functions
