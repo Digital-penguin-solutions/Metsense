@@ -42,9 +42,8 @@ include "include_pages/loading.php"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 
-    <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
-    <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
+    <link rel="icon" href="img/logo/icontop.png">
 </head>
 <?php
 

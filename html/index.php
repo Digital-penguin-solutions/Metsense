@@ -13,10 +13,9 @@ include "include_pages/loading.php"
 
     <!--main css style sheet   -->
     <link rel="stylesheet" href="css/app.css">
-
+    <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
-    <!--======================================= JAVA SCRIPT ===========================-->
     <!--latest jquery-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!--Velocity -->
@@ -43,7 +42,7 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="shortcut icon" href="img/logo/icontop.png" type="image/x-icon"/>
+    <link rel="icon" href="img/logo/icontop.png">
 </head>
 <?php
 //functions

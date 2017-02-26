@@ -13,10 +13,9 @@ include "include_pages/loading.php"
 
     <!--main css style sheet   -->
     <link rel="stylesheet" href="css/app.css">
-
+    <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
-    <!--======================================= JAVA SCRIPT ===========================-->
     <!--latest jquery-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!--Velocity -->
@@ -32,18 +31,12 @@ include "include_pages/loading.php"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 
-    <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
-    <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
-
-    <!-- Latest compiled and minified JavaScript for bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-            crossorigin="anonymous"></script>
+    <link rel="icon" href="img/logo/icontop.png">
 </head>
 
 <?php
-ini_set('memory_limit', '-1'); 
+ini_set('memory_limit', '-1');
 include "functions.php";
 session_start();
 
@@ -192,203 +185,203 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 if (isset($_SESSION['admin'])) {
 
 // When a product is going to be viewed for editing
-if (isset($_GET["product_id"])){
-    $product_id = $_GET["product_id"];
+    if (isset($_GET["product_id"])){
+        $product_id = $_GET["product_id"];
 
-    $product = get_product_by_id($con, $product_id);
-    $name = $product['name'];
-    $short = $product['short_description'];
-    $long = $product['long_description'];
-    $price = $product['price'];
-    $key_features_image = $product['key_features_image'];
-    $tech_image = $product['tech_image'];
-    $main_image = $product['main_image'];
-    $about_image = $product['about_image'];
+        $product = get_product_by_id($con, $product_id);
+        $name = $product['name'];
+        $short = $product['short_description'];
+        $long = $product['long_description'];
+        $price = $product['price'];
+        $key_features_image = $product['key_features_image'];
+        $tech_image = $product['tech_image'];
+        $main_image = $product['main_image'];
+        $about_image = $product['about_image'];
 
-    $tech_rows = get_tech_table_by_id($con, $product_id);
-    $key_features = get_key_features_by_id($con, $product_id);
-    $slider_images = get_product_images_by_id($con, $product_id);
-}
-else {
-    // if a new product is to be created, all the values should be empty
-    $name = "";
-    $short = "";
-    $long = "";
-    $price = "";
-    $tech_rows = array();
-    $key_features = array();
-    $slider_images = array();
-}
-?>
-<body>
-<?php
-include "include_pages/nav.php";
-?>
+        $tech_rows = get_tech_table_by_id($con, $product_id);
+        $key_features = get_key_features_by_id($con, $product_id);
+        $slider_images = get_product_images_by_id($con, $product_id);
+    }
+    else {
+        // if a new product is to be created, all the values should be empty
+        $name = "";
+        $short = "";
+        $long = "";
+        $price = "";
+        $tech_rows = array();
+        $key_features = array();
+        $slider_images = array();
+    }
+    ?>
+    <body>
+    <?php
+    include "include_pages/nav.php";
+    ?>
 
-<section class = "admin_page">
-    <div class = "container-fluid full_height">
-        <div class = "row full_height">
-            <div class = "col-md-8 col-md-offset-2">
-                <h1 class = "admin_header"> Add new product</h1>
-                <h2 class = "admin_header2"> All product images need to be a squere like 1000X1000 px</h2>
-                <form id = "form" class = "add_product_form" method = "post" action = "add_product.php" enctype="multipart/form-data">
-                    <input type = "hidden" name = "add">
-                    <?php
-                    if (isset($_GET["product_id"])){
-                        ?>
-                        <input type = "hidden" value = "<?php echo $_GET['product_id'] ?>" name = "product_id">
+    <section class = "admin_page">
+        <div class = "container-fluid full_height">
+            <div class = "row full_height">
+                <div class = "col-md-8 col-md-offset-2">
+                    <h1 class = "admin_header"> Add new product</h1>
+                    <h2 class = "admin_header2"> All product images need to be a squere like 1000X1000 px</h2>
+                    <form id = "form" class = "add_product_form" method = "post" action = "add_product.php" enctype="multipart/form-data">
+                        <input type = "hidden" name = "add">
                         <?php
-                    }
-                    ?>
-
-                    <h1> Product Name</h1>
-                    <input value = "<?php echo $name ?>" type = "text" name = "name">
-
-                    <h1>  Short description</h1>
-                    <textarea name = "short_description"><?php echo $short?></textarea>
-
-                    <h1>  Long description</h1>
-                    <textarea name = "long_description"><?php echo $long?></textarea>
-
-                    <h1> Price  </h1>
-                    <input value = "<?php echo $price ?>" type = "text" name = "price">
-
-                    <div class = "admin_list_container admin_key_features_list">
-                        <h1>Key Features List</h1>
-                        <?php
-                        // echos out all the existing items of the list, if there are any
-                        foreach($key_features as $features){
+                        if (isset($_GET["product_id"])){
                             ?>
-                            <div class = "admin_list_item">
-                                <input value = "<?php echo $features ?>" name = "key_feature[]" type = "text" placeholder = "Key Feature" >
-                                <img src = "img/cross.png" class = "remove_item">
-                            </div>
+                            <input type = "hidden" value = "<?php echo $_GET['product_id'] ?>" name = "product_id">
                             <?php
                         }
                         ?>
-                        <div class = "template admin_list_item">
-                            <input name = "key_feature[]" type = "text" placeholder = "Key Feature" >
-                            <img src = "img/cross.png" class = "remove_item">
-                        </div>
-                        <div class = "add_item">Add new row</div>
-                    </div>
 
-                    <!-- START FOR tech data table insertion -->
-                    <div class = "admin_list_container admin_tech_list">
-                        <h1>Technical data table</h1>
-                        <?php
-                        // echos out all the existing items of the list, if there are any
-                        foreach($tech_rows as $row){
+                        <h1> Product Name</h1>
+                        <input value = "<?php echo $name ?>" type = "text" name = "name">
+
+                        <h1>  Short description</h1>
+                        <textarea name = "short_description"><?php echo $short?></textarea>
+
+                        <h1>  Long description</h1>
+                        <textarea name = "long_description"><?php echo $long?></textarea>
+
+                        <h1> Price  </h1>
+                        <input value = "<?php echo $price ?>" type = "text" name = "price">
+
+                        <div class = "admin_list_container admin_key_features_list">
+                            <h1>Key Features List</h1>
+                            <?php
+                            // echos out all the existing items of the list, if there are any
+                            foreach($key_features as $features){
+                                ?>
+                                <div class = "admin_list_item">
+                                    <input value = "<?php echo $features ?>" name = "key_feature[]" type = "text" placeholder = "Key Feature" >
+                                    <img src = "img/cross.png" class = "remove_item">
+                                </div>
+                                <?php
+                            }
                             ?>
-                            <div class = "admin_list_item">
-                                <input value = "<?php echo $row[0]?>" name = "tech_row_left[]" type = "text" placeholder = "Left column">
-                                <input value = "<?php echo $row[1]?>" name = "tech_row_right[]" type = "text" placeholder = "Right column">
+                            <div class = "template admin_list_item">
+                                <input name = "key_feature[]" type = "text" placeholder = "Key Feature" >
                                 <img src = "img/cross.png" class = "remove_item">
                             </div>
+                            <div class = "add_item">Add new row</div>
+                        </div>
+
+                        <!-- START FOR tech data table insertion -->
+                        <div class = "admin_list_container admin_tech_list">
+                            <h1>Technical data table</h1>
                             <?php
-                        }
-                        ?>
-                        <div class = "template admin_list_item">
-                            <input name = "tech_row_left[]" type = "text" placeholder = "Left column">
-                            <input name = "tech_row_right[]" type = "text" placeholder = "Right column">
-                            <img src = "img/cross.png" class = "remove_item">
-                        </div>
-                        <div class = "add_item">Add new row</div>
-                    </div>
-
-                    <div class = "admin_list_container admin_tech_list">
-                        <h1>Slider images</h1>
-
-                        <!--- THIS FIRST ONE IS HIDDEN AND IS ONLY A TEMPLETE FOR CREATING A NEW ONE BUT IT HAS TO BE HERE  -->
-                        <div class = "template admin_list_item image_list_item">
-                            <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                            <input class = "center_vertically_css" name = "slider_image[]" type = "file" onchange="compress_image(event)" >
-                            <p class = "center_vertically_css">
-                                <strong> Current: </strong>  none
-                            </p>
-                            <img src = "img/cross.png"  class = "center_vertically_css remove_item">
-                        </div>
-                        <?php
-
-                        // The ones that already exist for this product
-                        foreach ($slider_images as $image) {
-
-                            $image_id = $image['product_image_id'];
-                            $image_name = $image['filename'];
+                            // echos out all the existing items of the list, if there are any
+                            foreach($tech_rows as $row){
+                                ?>
+                                <div class = "admin_list_item">
+                                    <input value = "<?php echo $row[0]?>" name = "tech_row_left[]" type = "text" placeholder = "Left column">
+                                    <input value = "<?php echo $row[1]?>" name = "tech_row_right[]" type = "text" placeholder = "Right column">
+                                    <img src = "img/cross.png" class = "remove_item">
+                                </div>
+                                <?php
+                            }
                             ?>
-                            <div class = "admin_list_item image_list_item">
+                            <div class = "template admin_list_item">
+                                <input name = "tech_row_left[]" type = "text" placeholder = "Left column">
+                                <input name = "tech_row_right[]" type = "text" placeholder = "Right column">
+                                <img src = "img/cross.png" class = "remove_item">
+                            </div>
+                            <div class = "add_item">Add new row</div>
+                        </div>
+
+                        <div class = "admin_list_container admin_tech_list">
+                            <h1>Slider images</h1>
+
+                            <!--- THIS FIRST ONE IS HIDDEN AND IS ONLY A TEMPLETE FOR CREATING A NEW ONE BUT IT HAS TO BE HERE  -->
+                            <div class = "template admin_list_item image_list_item">
                                 <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                                <input image_id = "<?php echo $image_id;  ?>" class = "center_vertically_css" name = "slider_image[]" type = "file" onchange="compress_image(event)" >
+                                <input class = "center_vertically_css" name = "slider_image[]" type = "file" onchange="compress_image(event)" >
                                 <p class = "center_vertically_css">
-                                    <strong> Current: </strong>
+                                    <strong> Current: </strong>  none
                                 </p>
-                                <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image['data']); ?>" />
-                                <img src = "img/cross.png" image_id = "<?php echo $image_id; ?>" class = "center_vertically_css remove_item">
+                                <img src = "img/cross.png"  class = "center_vertically_css remove_item">
                             </div>
                             <?php
-                        }
 
-                        ?>
-                        <div class = "add_item">Add new image</div>
-                    </div>
+                            // The ones that already exist for this product
+                            foreach ($slider_images as $image) {
 
-                    <h1> Key Features Image</h1>
-                    <div class = "image_select_container">
-                        <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                        <input name = "key_features_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
-                        <p class = "center_vertically_css">
-                            <strong> Current: </strong>
-                        </p>
-                        <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image); ?>" />
-                    </div>
+                                $image_id = $image['product_image_id'];
+                                $image_name = $image['filename'];
+                                ?>
+                                <div class = "admin_list_item image_list_item">
+                                    <p class = "center_vertically_css"> <strong>New image: </strong> </p>
+                                    <input image_id = "<?php echo $image_id;  ?>" class = "center_vertically_css" name = "slider_image[]" type = "file" onchange="compress_image(event)" >
+                                    <p class = "center_vertically_css">
+                                        <strong> Current: </strong>
+                                    </p>
+                                    <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image['data']); ?>" />
+                                    <img src = "img/cross.png" image_id = "<?php echo $image_id; ?>" class = "center_vertically_css remove_item">
+                                </div>
+                                <?php
+                            }
+
+                            ?>
+                            <div class = "add_item">Add new image</div>
+                        </div>
+
+                        <h1> Key Features Image</h1>
+                        <div class = "image_select_container">
+                            <p class = "center_vertically_css"> <strong>New image: </strong> </p>
+                            <input name = "key_features_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
+                            <p class = "center_vertically_css">
+                                <strong> Current: </strong>
+                            </p>
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image); ?>" />
+                        </div>
 
 
-                    <h1> Tech Table Image</h1>
-                    <div class = "image_select_container">
-                        <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                        <input name = "tech_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
-                        <p class = "center_vertically_css">
-                            <strong> Current: </strong>
-                        </p>
-                        <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $tech_image); ?>" />
-                    </div>
+                        <h1> Tech Table Image</h1>
+                        <div class = "image_select_container">
+                            <p class = "center_vertically_css"> <strong>New image: </strong> </p>
+                            <input name = "tech_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
+                            <p class = "center_vertically_css">
+                                <strong> Current: </strong>
+                            </p>
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $tech_image); ?>" />
+                        </div>
 
-                    <h1> About Image </h1>
-                    <div class = "image_select_container">
-                        <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                        <input name = "about_image" class = "center_vertically_css"  type = "file" onchange="compress_image(event)" >
-                        <p class = "center_vertically_css">
-                            <strong> Current: </strong>
-                        </p>
-                        <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image); ?>" />
-                    </div>
+                        <h1> About Image </h1>
+                        <div class = "image_select_container">
+                            <p class = "center_vertically_css"> <strong>New image: </strong> </p>
+                            <input name = "about_image" class = "center_vertically_css"  type = "file" onchange="compress_image(event)" >
+                            <p class = "center_vertically_css">
+                                <strong> Current: </strong>
+                            </p>
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image); ?>" />
+                        </div>
 
-                    <h1> Main Image </h1>
-                    <div class = "image_select_container">
-                        <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                        <input name = "main_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
-                        <p class = "center_vertically_css">
-                            <strong> Current: </strong>
-                        </p>
-                        <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image); ?>" />
-                    </div>
+                        <h1> Main Image </h1>
+                        <div class = "image_select_container">
+                            <p class = "center_vertically_css"> <strong>New image: </strong> </p>
+                            <input name = "main_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
+                            <p class = "center_vertically_css">
+                                <strong> Current: </strong>
+                            </p>
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image); ?>" />
+                        </div>
 
-                    <!--
-                    <div value = "Save product" onclick="send_form()" class = "add_product_button center_horizontally_css">
-                        Save product
-                    </div>-->
-                    <section class="col-md-4 col-md-offset-4">
-                        <button id="js-trigger-overlay" onclick="send_form()" type="button">Save product</button>
-                    </section>
+                        <!--
+                        <div value = "Save product" onclick="send_form()" class = "add_product_button center_horizontally_css">
+                            Save product
+                        </div>-->
+                        <section class="col-md-4 col-md-offset-4">
+                            <button id="js-trigger-overlay" onclick="send_form()" type="button">Save product</button>
+                        </section>
 
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-</body>
-<?php
+    </body>
+    <?php
 }
 else {
     header("Location: index.php");

@@ -17,7 +17,6 @@ include "include_pages/loading.php"
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet">
 
-    <!--======================================= JAVA SCRIPT ===========================-->
     <!--latest jquery-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!--Velocity -->
@@ -45,9 +44,8 @@ include "include_pages/loading.php"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 
-    <!--======================================= /* JAVA SCRIPT ========================-->
     <!--icon-->
-    <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
+    <link rel="icon" href="img/logo/icontop.png">
 </head>
 
 <?php

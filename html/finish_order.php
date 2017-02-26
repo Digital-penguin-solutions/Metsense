@@ -48,7 +48,7 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="SHORTCUT ICON" href="img/logo/icontop.png" type="image/x-icon"/>
+    <link rel="icon" href="img/logo/icontop.png">
 </head>
 <?php
 include "functions.php";
