@@ -8,6 +8,12 @@ ErrorDocument 404 /404error.html
  RewriteRule ^properties$ /property_available.php/$1 [NC,QSA]
 </IfModule>
 
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
 #browser chaching
 <IfModule mod_expires.c>
     ExpiresActive on
