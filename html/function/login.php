@@ -33,10 +33,10 @@ else if (isset($_POST['login'])){
     if(password_verify($password, $admin_pass)) { // Check if the passwords match
 
         $_SESSION['admin'] = "true";
-        header("Location: admin.php");
+        header("Location: ../admin.php");
     }
     else {
-        header("Location: admin.php");
+        header("Location: ../admin.php");
         // wrong password
     }
 }
