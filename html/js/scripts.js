@@ -144,7 +144,7 @@ function init_remove_from_cart() {
 		var id = $(this).attr("product_id");
 
 		var xhr = $.ajax({
-			url: 'alter_cart.php',
+			url: 'function/alter_cart.php',
 			type: 'GET',
 			data: "remove=&product_id=" + id
 		});
@@ -163,7 +163,7 @@ function init_add_to_cart(){
 		var id = $(this).attr("product_id");
 
 		var xhr = $.ajax({
-			url: 'alter_cart.php',
+			url: 'function/alter_cart.php',
 			type: 'GET',
 			data: "add=&product_id=" + id
 		});
@@ -245,7 +245,7 @@ function send_quantity(clicked, quantity){
 	
 	var id = $(clicked).attr("product_id");
 	var xhr = $.ajax({
-		url: 'alter_cart.php',
+		url: 'function/alter_cart.php',
 		type: 'GET',
 		data: "update_quantity=&quantity=" + quantity + "&product_id=" + id
 	});
