@@ -77,7 +77,19 @@ include "include_pages/nav.php";
 
 <section id = "finish_order" class = "">
 
-    <h1 class = "checkout_header"> Checkout </h1>
+    <?php
+        if(isset($_GET['thanks'])){
+?>
+            <h1 class = "checkout_header"> Thank you! </h1>
+            <h3 class = "admin_header"> Your order has been sent to us and we will be in contact with further instructions very soon. <br><br>Please contact <strong>info@metsense.com</strong> if you have any more questions in the meantime.</h3>
+            <a href = "index" class = "blue finish_button col-xs-3 col-xs-offset-5">
+                Home
+            </a>
+<?php
+        }
+        else {
+    ?>
+    <h1 class = "checkout_header"> Finish order </h1>
     <div class = "col-md-4 col-md-offset-2 customer_info">
         <h1>Customer Information</h1>
 
@@ -101,6 +113,8 @@ include "include_pages/nav.php";
 
         <h2>Additional Information (optional)</h2>
         <textarea placeholder = "Additional information"></textarea>
+<br><br>
+        <p class = "">Some additional cost may be added for shipping depending on your location, you will be notified about this as soon as we get back to you</p>
 
     </div>
     <div class = "col-md-3 col-md-offset-1 cart_info">
@@ -133,9 +147,12 @@ include "include_pages/nav.php";
     <a href = "order" class = "blue finish_button col-md-3 col-md-offset-2">
         Change order
     </a>
-    <a class = "finish_button col-md-3 col-md-offset-2">
+    <a href = "finish_order?thanks=" class = "finish_button col-md-3 col-md-offset-2">
         Finish order
     </a>
+<?php
+        }
+?>
 </section>
 
 </body>
