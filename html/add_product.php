@@ -24,6 +24,7 @@ include "include_pages/loading.php"
     <!-- JavaScript -->
     <script src="js/color-stellar-fade.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/admin_script.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
 
     <!-- Latest compiled and minified JavaScript for bootstrap-->
