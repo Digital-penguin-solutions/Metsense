@@ -43,8 +43,8 @@ session_start();
 
 $con = connect();
 
-if (isset($_SESSION['admin'])) {
-
+if (!isset($_SESSION['admin'])) {
+    header("Location: index.php");
 }
 
 // if a product is to be added or changed
@@ -195,7 +195,7 @@ if (isset($_SESSION['admin'])) {
         $long = $product['long_description'];
         $price = $product['price'];
         $key_features_image = $product['key_features_image'];
-        $tech_image = $product['tech_image'];
+        //$tech_image = $product['tech_image'];
         $main_image = $product['main_image'];
         $about_image = $product['about_image'];
 
@@ -337,15 +337,15 @@ if (isset($_SESSION['admin'])) {
                         </div>
 
 
-                        <h1> Tech Table Image</h1>
+                        <!--<h1> Tech Table Image</h1>
                         <div class = "image_select_container">
                             <p class = "center_vertically_css"> <strong>New image: </strong> </p>
                             <input name = "tech_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
                             <p class = "center_vertically_css">
                                 <strong> Current: </strong>
                             </p>
-                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $tech_image); ?>" />
-                        </div>
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php //echo base64_encode( $tech_image); ?>" />
+                        </div>-->
 
                         <h1> About Image </h1>
                         <div class = "image_select_container">
