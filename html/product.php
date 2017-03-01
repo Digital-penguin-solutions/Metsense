@@ -175,11 +175,11 @@ include "include_pages/nav.php";
                     <!--key features list right container-->
                     <div class="product_4_right col-xs-12 col-md-6">
                         <div class="product_4_right_text_container">
-                            <h2 class="fade-in fade-delay-1">Keyfeatures</h2>
+                            <h2 class="fade-in">Keyfeatures</h2>
                             <ul>
                                 <?php
                                 foreach ($key_features as $feature) {
-                                    echo "<li class='fade-in fade-delay-2'>". $feature."</li>";
+                                    echo "<li class='fade-in fade-delay-1'>". $feature."</li>";
                                 }
                                 ?>
                             </ul>
@@ -192,7 +192,7 @@ include "include_pages/nav.php";
                     <div class="product_4_table col-xs-12 nopm">
                         <div class="col-xs-12 col-md-6 col-md-offset-3">
                             <table class="table">
-                                <tbody class="fade-in fade-delay-1">
+                                <tbody class="fade-in">
                                 <?php
                                 // prints all the tech table rows
                                 for ($i  = 0; $i < sizeof($tech_table_array); $i++) {

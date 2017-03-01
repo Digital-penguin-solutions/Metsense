@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['admin'])){
-        include "../functions.php";
+        include "../function/functions.php";
         $con = connect();
         $id = secure_str($_GET["id"]);
 

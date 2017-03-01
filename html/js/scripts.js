@@ -123,7 +123,6 @@ function toggle_cart(instant, close){
                 $(".cart_small").animate({right:0},tmp_speed); // show
             }
 
-        console.log("hello" + width);
             //$(".cart_container").fadeToggle(tmp_speed);
             //$(".cart_container").animate({width:'toggle'},tmp_speed);
 
@@ -171,7 +170,6 @@ function init_add_to_cart(){
 		xhr.success(function(response){
 			load_cart(cart_size); // reload the cart when it's done
             var button = document.getElementsByClassName("intro_button")[0];
-            console.log(button);
             button.innerHTML = "Added to cart";
             button.style.backgroundColor = "#009600";
 		});
@@ -358,7 +356,6 @@ function slider_go_to_page(slider_number, page){
         if (!$(slider).hasClass("no_list")) {
 
             var clicked = $(list_container).find(nth).not("p");
-            console.log(clicked);
 
             // makes all the list objects except the clicked on go back to the original color
             jQuery(list_container).find(".slider_list_object").not(clicked).animate({backgroundColor : not_selected_background, color : not_selected_color}, slider_speed);
@@ -583,7 +580,6 @@ function toggle_nav(override_animation){
 	var McBar2 = McButton.find("b:nth-child(2)");
 	var McBar3 = McButton.find("b:nth-child(3)");
     
-console.log(McButton.hasClass("active"));
     if (!nav_in_animation || override_animation) {
 		nav_in_animation = true;
 		var speed_scale = 0.8;
@@ -593,7 +589,6 @@ console.log(McButton.hasClass("active"));
 		$(McButton).toggleClass("active");
 
 		if (McButton.hasClass("active")) {
-			console.log(123123);
 			McBar1.velocity({ top: "50%" }, {duration: 200 * speed_scale, easing: "swing"});
 			McBar3.velocity({ top: "50%" }, {duration: 200 * speed_scale, easing: "swing"})
 				.velocity({rotateZ:"90deg"}, {duration: 800 * speed_scale, delay: 200, easing: [500,20] });

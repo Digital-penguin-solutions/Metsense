@@ -69,10 +69,15 @@ include "include_pages/nav.php";
         <div class = "row full_height">
             <div class = "col-md-8 col-md-offset-2">
                 <h1 class = "admin_header"> Admin page </h1>
+            
 
                 <?php
-                if(isset($_SESSION['admin'])){
 
+                if(isset($_GET['wrong'])){
+                    echo "<h2 class = 'admin_header'> Wrong password, please try again </h2>"; 
+                }
+
+                if(isset($_SESSION['admin'])){
 
                     if(isset($_GET['logout'])){
                         session_destroy();

@@ -16,14 +16,13 @@ if (isset($_POST['set_password']) && isset($_SESSION['admin'])){
 
 
         mysqli_query($con, "UPDATE constant set data='$password' WHERE name='password'") or die (mysqli_error($con));
-        header("Location: admin.php?message=Password has been updated");
+        header("Location: ../admin.php?message=Password has been updated");
     }
     else {
-        header("Location: admin.php?change_password=&message=Passwords do not match");
+        header("Location: ../admin.php?change_password=&message=Passwords do not match");
     }
 }
 else if (isset($_POST['login'])){
-    echo "login";
     $select_pass = mysqli_query($con, "SELECT * FROM constant WHERE name = 'password' ");
     $data_pass = mysqli_fetch_array($select_pass);
     $admin_pass = $data_pass['data'];
@@ -36,7 +35,7 @@ else if (isset($_POST['login'])){
         header("Location: ../admin.php");
     }
     else {
-        header("Location: ../admin.php");
+        header("Location: ../admin.php?wrong=");
         // wrong password
     }
 }
