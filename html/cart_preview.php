@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "functions.php";
+include "function/functions.php";
 $con = connect();
 
 $products = array();
@@ -86,7 +86,7 @@ else { // big link means this is on the order.php page and should link to finish
                 </table>
 
                 <div class = "cart_remove">
-                    <img product_id = "<?php echo $product['product_id']; ?>" src = "img/cross.png" class = "center_css">
+                    <img product_id = "<?php echo $product['product_id']; ?>" src = "img/cross.svg" class = "center_css">
 
                 </div>
             </div>

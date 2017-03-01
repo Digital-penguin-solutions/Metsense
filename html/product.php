@@ -48,7 +48,7 @@ include "include_pages/loading.php"
 </head>
 <?php
 
-include "functions.php";
+include "function/functions.php";
 
 $con = connect();
 

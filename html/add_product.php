@@ -32,12 +32,12 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="icon" href="img/logo/icontop.png">
+    <link rel="icon" href="img/logo/favicon.png">
 </head>
 
 <?php
 ini_set('memory_limit', '-1');
-include "functions.php";
+include "function/functions.php";
 session_start();
 
 $con = connect();
@@ -254,14 +254,14 @@ if (isset($_SESSION['admin'])) {
                                 ?>
                                 <div class = "admin_list_item">
                                     <input value = "<?php echo $features ?>" name = "key_feature[]" type = "text" placeholder = "Key Feature" >
-                                    <img src = "img/cross.png" class = "remove_item">
+                                    <img src = "img/cross.svg" class = "remove_item">
                                 </div>
                                 <?php
                             }
                             ?>
                             <div class = "template admin_list_item">
                                 <input name = "key_feature[]" type = "text" placeholder = "Key Feature" >
-                                <img src = "img/cross.png" class = "remove_item">
+                                <img src = "img/cross.svg" class = "remove_item">
                             </div>
                             <div class = "add_item">Add new row</div>
                         </div>
@@ -276,7 +276,7 @@ if (isset($_SESSION['admin'])) {
                                 <div class = "admin_list_item">
                                     <input value = "<?php echo $row[0]?>" name = "tech_row_left[]" type = "text" placeholder = "Left column">
                                     <input value = "<?php echo $row[1]?>" name = "tech_row_right[]" type = "text" placeholder = "Right column">
-                                    <img src = "img/cross.png" class = "remove_item">
+                                    <img src = "img/cross.svg" class = "remove_item">
                                 </div>
                                 <?php
                             }
@@ -284,7 +284,7 @@ if (isset($_SESSION['admin'])) {
                             <div class = "template admin_list_item">
                                 <input name = "tech_row_left[]" type = "text" placeholder = "Left column">
                                 <input name = "tech_row_right[]" type = "text" placeholder = "Right column">
-                                <img src = "img/cross.png" class = "remove_item">
+                                <img src = "img/cross.svg" class = "remove_item">
                             </div>
                             <div class = "add_item">Add new row</div>
                         </div>
@@ -299,7 +299,7 @@ if (isset($_SESSION['admin'])) {
                                 <p class = "center_vertically_css">
                                     <strong> Current: </strong>  none
                                 </p>
-                                <img src = "img/cross.png"  class = "center_vertically_css remove_item">
+                                <img src = "img/cross.svg"  class = "center_vertically_css remove_item">
                             </div>
                             <?php
 
@@ -316,7 +316,7 @@ if (isset($_SESSION['admin'])) {
                                         <strong> Current: </strong>
                                     </p>
                                     <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image['data']); ?>" />
-                                    <img src = "img/cross.png" image_id = "<?php echo $image_id; ?>" class = "center_vertically_css remove_item">
+                                    <img src = "img/cross.svg" image_id = "<?php echo $image_id; ?>" class = "center_vertically_css remove_item">
                                 </div>
                                 <?php
                             }

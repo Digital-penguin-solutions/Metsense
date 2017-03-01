@@ -48,10 +48,10 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="icon" href="img/logo/icontop.png">
+    <link rel="icon" href="img/logo/favicon.png">
 </head>
 <?php
-include "functions.php";
+include "function/functions.php";
 
 $con = connect();
 session_start();
@@ -96,7 +96,7 @@ include "include_pages/nav.php";
 
         <h2> Country </h2>
         <select name="country">
-            <?php include "select_country.php"; ?>
+            <?php include "function/select_country.php"; ?>
         </select>
 
         <h2>Additional Information (optional)</h2>

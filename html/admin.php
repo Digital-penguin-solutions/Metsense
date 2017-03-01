@@ -45,11 +45,11 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="icon" href="img/logo/icontop.png">
+    <link rel="icon" href="img/logo/favicon.png">
 </head>
 
 <?php
-include "functions.php";
+include "function/functions.php";
 session_start();
 
 $con = connect();
@@ -86,7 +86,7 @@ include "include_pages/nav.php";
                     if(isset($_GET['change_password'])){
 
                         ?>
-                        <form class="login change_password_form"  action = "login" method = "post">
+                        <form class="login change_password_form" action = "function/login.php" method = "post">
                             <p>New password:</p>
                             <input placeholder = "New password" type = "password" name = "password"><br>
                             <input placeholder = "Repeat new password" type = "password" name = "password_repeat">
@@ -153,7 +153,7 @@ include "include_pages/nav.php";
                 }
                 else {
                     ?>
-                    <form class="login hidden-sm hidden-xs"  action = "login" method = "post">
+                    <form class="login hidden-sm hidden-xs" action = "function/login.php" method = "post">
                         <p>PASSWORD:</p>
                         <input type = "password" name = "password">
                         <input type = "submit" name = "login" value="Login">

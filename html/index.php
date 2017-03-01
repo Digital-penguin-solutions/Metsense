@@ -47,7 +47,7 @@ include "include_pages/loading.php"
 </head>
 <?php
 //functions
-include "functions.php";
+include "function/functions.php";
 $con = connect();
 $products = get_all_products($con);
 ?>

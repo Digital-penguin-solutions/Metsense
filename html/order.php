@@ -47,10 +47,10 @@ include "include_pages/loading.php"
             crossorigin="anonymous"></script>
 
     <!--icon-->
-    <link rel="icon" href="img/logo/icontop.png">
+    <link rel="icon" href="img/logo/favicon.png">
 </head>
 <?php
-include "functions.php";
+include "function/functions.php";
 
 $con = connect();
 
