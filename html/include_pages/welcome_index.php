@@ -7,10 +7,10 @@
                 <img src = "img/slider/1.jpg" alt = "MetTempMobile">
             </div>
             <div class = "welcome_text_container dark">
-                <div class = "fade-in fade-delay-1">
+                <div class = "fade-in fade-delay-05">
                     <h1 class="welcome_text_possision_1">Metrological sensors for precise measurements</h1>
                 </div>
-                <div class = "fade-in fade-delay-3">
+                <div class = "fade-in fade-delay-2">
                     <h2 class="welcome_text_possision_1">FROM SWEDEN</h2>
                 </div>
             </div>

@@ -56,6 +56,7 @@ $products = get_all_products($con);
 
 <?php
 // include the nav
+$_GET['scroll'] = "";
 include "include_pages/nav.php";
 //welcome page slider
 include "include_pages/welcome_index.php";
@@ -113,14 +114,14 @@ include "include_pages/welcome_index.php";
                 <!--right container bot in mobil and tablet-->
                 <div class="index_about_right col-xs-12 col-md-6">
                     <div class="index_about_right_container col-xs-12">
-                        <h1 class="fade-in fade-delay-05">About us</h1>
+                        <h1 class="fade-in ">About us</h1>
                         <!--About uss text-->
-                        <p class="fade-in fade-delay-1">
+                        <p class="fade-in fade-delay-05">
                             MetSense brings innovative sensor solutions to the market for winter road maintenance.
                             This enables mobile and stationary monitoring of parameters such as: Road surface status,
                             Road surface friction, Road surface temperature and more.
                         </p>
-                        <p class="fade-in fade-delay-2">
+                        <p class="fade-in fade-delay-1">
                             <b><i>All products are designed in Sweden and manufactured in the EU.</i></b>
                         </p>
                     </div>

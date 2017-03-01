@@ -15,14 +15,22 @@ else
 {
     $hide_cart = false;
 }
+
+if(isset($_GET['scroll'])){
+    $scroll = "data-scroll";
+}
+else {
+    $scroll = "";
+}
 ?>
+
 
 <!-- Links shown when menu is toggeld on-->
 <div class = "nav_menu_container">
     <ul class = "nav_menu center_css">
-        <li><a class = "nav_link" data-scroll href = "index#welcome_page"><p> Home </p></a></li>
-        <li><a class = "nav_link" data-scroll href = "index#products_page"><p> Products </p></a></li>
-        <li><a class = "nav_link" data-scroll href = "index#about_us_pages"><p> About us </p></a></li>
+        <li><a class = "nav_link" <?php echo $scroll; ?> href = "index#welcome_page"><p> Home </p></a></li>
+        <li><a class = "nav_link" <?php echo $scroll; ?> href = "index#products_page"><p> Products </p></a></li>
+        <li><a class = "nav_link" <?php echo $scroll; ?> href = "index#about_us_pages"><p> About us </p></a></li>
         <li><a class = "nav_link" href = "order"><p> Shopping cart </p></a></li>
     </ul>
 </div>
