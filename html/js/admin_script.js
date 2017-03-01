@@ -174,7 +174,7 @@ function send_form(){
 	xhr.success(function(response) {
 		//console.log(response);
 		//$(document).scrollTop(0);
-        window.location.replace("admin?message=Product has been added");
+        window.location.replace("admin?message=Product has been added or edited");
         //console.log("asdasd");
 		//location.reload();
 	});
