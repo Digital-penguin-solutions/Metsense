@@ -774,28 +774,25 @@ figure.effect-sarah:hover p {
   margin: 0 !important;
 }
 .index_about .index_about_container .index_about_contact .index_about_contact_container {
-  padding: 0 !important;
   color: #ffffff;
-  margin-top: 2vh;
+  padding: 5vh;
 }
 .index_about .index_about_container .index_about_contact .index_about_contact_container h1 {
-  font-size: 5vw;
+  font-size: 7vw;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 2vh;
 }
 .index_about .index_about_container .index_about_contact .index_about_contact_container img {
   margin-top: 1vh;
-  height: 20vw;
-  width: 20vw;
+  height: 40vw;
+  width: 40vw;
   border-radius: 50%;
 }
-.index_about .index_about_container .index_about_contact .index_about_contact_container img:hover {
-  opacity: 90;
-}
 .index_about .index_about_container .index_about_contact .index_about_contact_container p {
-  margin-top: 1.5vh;
-  font-size: 3vw;
+  margin-top: 2vh;
+  font-size: 4vw;
   font-weight: 300;
   text-align: center;
 }
@@ -811,6 +808,9 @@ figure.effect-sarah:hover p {
   }
   .index_about .index_about_container .index_about_left .index_about_left_container {
     height: 100%;
+  }
+  .index_about .index_about_container .index_about_left .index_about_left_container img {
+    border-radius: 0 0 20px 0;
   }
   .index_about .index_about_container .index_about_right {
     height: 100vh;
@@ -829,6 +829,7 @@ figure.effect-sarah:hover p {
   }
   .index_about .index_about_container .index_about_contact .index_about_contact_container {
     color: #ffffff;
+    height: 100%;
   }
   .index_about .index_about_container .index_about_contact .index_about_contact_container h1 {
     font-size: 5vw;
@@ -841,7 +842,7 @@ figure.effect-sarah:hover p {
   }
   .index_about .index_about_container .index_about_contact .index_about_contact_container p {
     margin-top: 1.5vh;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 300;
   }
 }

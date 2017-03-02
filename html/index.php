@@ -127,10 +127,10 @@ include "include_pages/welcome_index.php";
                     </div>
                 </div>
 
-                <div class="index_about_contact col-xs-12">
-                    <div class="index_about_contact_container">
+                <div class="index_about_contact">
+                    <div class="index_about_contact_container fade-in">
                         <h1>Contact person</h1>
-                        <img src="img/contact.jpg" alt="contact person for metsense">
+                        <img src="img/contact.jpg" alt="contact person for Metsense">
                         <p>anders@metsense.com</p>
                         <p>+46 7010 902 30</p>
                     </div>
