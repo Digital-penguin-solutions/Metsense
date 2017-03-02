@@ -2,7 +2,7 @@
 
 module.exports = function (grunt) {
 
-    //confg main prodjekt settings
+    //config main project settings
     grunt.initConfig({
 
         //basic settings about our plugins
@@ -17,6 +17,7 @@ module.exports = function (grunt) {
             }
         },
 
+        //minify js
         uglify: {
             my_target: {
                 files: {
@@ -32,6 +33,7 @@ module.exports = function (grunt) {
             }
         },
 
+        //minify html and php
         htmlmin: {
             dist: {
                 options: {
@@ -39,6 +41,9 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {
+                    //action
+                    'build/actions/delete_product.php':'html/actions/delete_product.php',
+
                     //functions
                     'build/function/alter_cart.php':'html/function/alter_cart.php',
                     'build/function/db_connect.php':'html/function/db_connect.php',
@@ -67,6 +72,7 @@ module.exports = function (grunt) {
             }
         },
 
+        //watch for changes in files
         watch: {
             html: {
                 files: ['html/*.html'],

@@ -37,7 +37,7 @@ include "include_pages/loading.php"
         });
     </script>
 
-    <!-- Latest compiled and minified JavaScript for bootstrap-->
+    <!-- Latest compiled and minefield JavaScript for bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
