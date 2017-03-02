@@ -16,7 +16,7 @@
 				<!--styling for the trangle-->
 				<div class="footer_top col-xs-12">
 					<div class="footer_triangle col-xs-12">
-						<img src="img/triangel.svg" alt="triangle" class="fade-in">
+						<img src="img/triangel.svg" alt="triangle">
 					</div>
 				</div>
 				<!--mid section contact us info-->
