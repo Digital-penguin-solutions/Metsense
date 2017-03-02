@@ -24,7 +24,7 @@
 					<div class="footer_contact fade-in fade-delay-1">
 						<h1>Contact us</h1>
 						<p>info@metsense.com</p>
-						<p>+46(0)70 1090230</p>
+						<p>+46 7010 902 30</p>
 					</div>
 				</div>
 				<!--logo and the creater of the webpage-->

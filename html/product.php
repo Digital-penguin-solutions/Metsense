@@ -110,11 +110,18 @@ include "include_pages/nav.php";
         <div class="col-xs-12">
             <!--tecnical infomation container-->
             <div class="product_2_container">
+
+                <div class="product_2_right col-xs-12 col-md-5">
+                    <div class="product_2_right_img_container col-xs-12">
+                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="About image">
+                    </div>
+                </div>
+
                 <!--text part of aboute productuct-->
-                <div class="product_2_left col-xs-12 col-md-6">
+                <div class="product_2_left col-xs-12 col-md-6 col-md-offset-1">
                     <div class="product_2_left_text_container">
-                        <h1 class="slide-in slide-in-delay-1 slide-in-left">About this sensor</h1>
-                        <p class="slide-in slide-in-delay-1 slide-in-left">
+                        <h1 class="slide-in slide-in-delay-1 slide-in-right">About this sensor</h1>
+                        <p class="slide-in slide-in-delay-1 slide-in-right">
                             <?php
                             echo nl2br($product_long_description);
                             ?>
@@ -122,11 +129,7 @@ include "include_pages/nav.php";
                     </div>
                 </div>
                 <!--picture of product-->
-                <div class="product_2_right col-xs-12 col-md-6">
-                    <div class="product_2_right_img_container col-xs-12">
-                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="About image">
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -175,7 +178,7 @@ include "include_pages/nav.php";
                     <!--key features list right container-->
                     <div class="product_4_right col-xs-12 col-md-6">
                         <div class="product_4_right_text_container">
-                            <h2 class="fade-in">Keyfeatures</h2>
+                            <h2 class="fade-in">Key Features</h2>
                             <ul>
                                 <?php
                                 foreach ($key_features as $feature) {

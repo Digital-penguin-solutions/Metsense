@@ -728,7 +728,7 @@ figure.effect-sarah:hover p {
   padding: 0 !important;
   margin: 0 !important;
   background: #4A4544;
-  height: 190vh;
+  height: 240vh;
   z-index: 2;
   color: #ffffff;
   text-align: center;
@@ -766,21 +766,45 @@ figure.effect-sarah:hover p {
   font-size: 1.2em;
   margin-bottom: 1vh;
 }
+.index_about .index_about_container .index_about_contact {
+  height: 50vh;
+  width: auto;
+}
+.index_about .index_about_container .index_about_contact .index_about_contact_container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #ffffff;
+}
+.index_about .index_about_container .index_about_contact .index_about_contact_container h1 {
+  font-size: 4vw;
+  font-weight: 600;
+}
+.index_about .index_about_container .index_about_contact .index_about_contact_container img {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+}
+.index_about .index_about_container .index_about_contact .index_about_contact_container p {
+  font-size: 1vw;
+  font-weight: 200;
+}
 @media (min-width: 992px) {
   .index_about {
-    height: 100vh;
+    height: 150vh;
   }
   .index_about .index_about_container {
     height: 100%;
   }
   .index_about .index_about_container .index_about_left {
-    height: 100%;
+    height: 100vh;
   }
   .index_about .index_about_container .index_about_left .index_about_left_container {
     height: 100%;
   }
   .index_about .index_about_container .index_about_right {
-    height: 100%;
+    height: 100vh;
   }
   .index_about .index_about_container .index_about_right .index_about_right_container {
     position: relative;
@@ -849,7 +873,6 @@ figure.effect-sarah:hover p {
   height: 150vh;
   z-index: 2;
   color: #ffffff;
-  text-align: center;
   position: relative;
 }
 .product_s_2 .product_2_container {
@@ -863,15 +886,17 @@ figure.effect-sarah:hover p {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  margin-top: -5vw;
 }
 .product_s_2 .product_2_container .product_2_left .product_2_left_text_container h1 {
   font-weight: 600;
   font-size: 3em;
   margin: 8vh 0 3vh 0;
+  text-align: center;
 }
 .product_s_2 .product_2_container .product_2_left .product_2_left_text_container p {
-  font-weight: 400;
-  font-size: 1em;
+  font-weight: 200;
+  font-size: 1vw;
   margin-bottom: 1vh;
 }
 .product_s_2 .product_2_container .product_2_right {
@@ -1028,12 +1053,13 @@ figure.effect-sarah:hover p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    margin-right: 2vw;
   }
   .product_s_2 .product_2_container .product_2_left .product_2_left_text_container h1 {
     font-size: 3.4em;
   }
   .product_s_2 .product_2_container .product_2_left .product_2_left_text_container p {
-    font-size: 1.8em;
+    font-size: 1.7vw;
   }
   .product_s_2 .product_2_container .product_2_right {
     height: 100%;
@@ -1080,7 +1106,7 @@ figure.effect-sarah:hover p {
     margin: 8vh 0 3vh 0;
   }
   .product_s_4 .product_4_container .product_4_container_top .product_4_right .product_4_right_text_container li {
-    font-size: 2em;
+    font-size: 1.8vw;
   }
   .product_s_4 .product_4_container .product_4_container_bot {
     height: 60vh;

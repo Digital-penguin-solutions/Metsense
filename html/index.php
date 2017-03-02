@@ -126,6 +126,15 @@ include "include_pages/welcome_index.php";
                         </p>
                     </div>
                 </div>
+
+                <div class="index_about_contact col-xs-12">
+                    <div class="index_about_contact_container">
+                        <h1>Contact persone</h1>
+                        <img src="img/contact.jpg" alt="contact person for metsense">
+                        <p>anders@metsense.com</p>
+                        <p>+46 7010 902 30</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

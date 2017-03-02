@@ -66,7 +66,7 @@ else { // big link means this is on the order.php page and should link to finish
 
                 <table class = "center_vertically_css">
                     <tr>
-                        <td class = "order_price"> <?php echo $product['price']; ?> $</td>
+                        <td class = "order_price"> <?php echo $product['price']; ?> €</td>
                         <td>
                             <div class = "quantity_select">
                                 <div class = "current_quantity">
