@@ -4,5 +4,6 @@
 *.db
 *.css
 !app.css
+!temp.css
 db_connect.php
 node_modules
