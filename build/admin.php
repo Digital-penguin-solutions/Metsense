@@ -1,9 +1,9 @@
 <?php
 include "include_pages/loading.php"
-?> <!DOCTYPE html><html><head><meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website"><title>Admin page</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><link rel="stylesheet" href="css/app.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script><script src="js/color-stellar-fade.js"></script><script src="js/scripts.js"></script><script src="js/smooth-scroll.min.js"></script><script>smoothScroll.init();</script><script>$(document).ready(function(e) {
+?> <!DOCTYPE html><html><head><meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website"><title>Admin page</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><link rel="stylesheet" href="css/app.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script><script src="js/color-stellar-fade.js"></script><script src="js/scripts.js"></script><script src="js/admin_script.js"></script><script src="js/smooth-scroll.min.js"></script><script>smoothScroll.init();</script><script>$(document).ready(function(e) {
             $(window).stellar();
-        });</script><script src="js/fade-slide.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="icon" href="img/logo/icontop.png"></head> <?php
-include "functions.php";
+        });</script><script src="js/fade-slide.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="icon" href="img/logo/favicon.png"></head> <?php
+include "function/functions.php";
 session_start();
 
 $con = connect();
@@ -13,8 +13,12 @@ $products = get_all_products($con);
 ?> <body> <?php
 include "include_pages/nav.php";
 ?> <section class="admin_page"><div class="container-fluid full_height"><div class="row full_height"><div class="col-md-8 col-md-offset-2"><h1 class="admin_header">Admin page</h1> <?php
-                if(isset($_SESSION['admin'])){
 
+                if(isset($_GET['wrong'])){
+                    echo "<h2 class = 'admin_header'> Wrong password, please try again </h2>"; 
+                }
+
+                if(isset($_SESSION['admin'])){
 
                     if(isset($_GET['logout'])){
                         session_destroy();
@@ -28,7 +32,7 @@ include "include_pages/nav.php";
 
                     if(isset($_GET['change_password'])){
 
-                        ?> <form class="login change_password_form" action="login" method="post"><p>New password:</p><input placeholder="New password" type="password" name="password"><br><input placeholder="Repeat new password" type="password" name="password_repeat"> <input type="submit" name="set_password" value="Change"></form> <?php
+                        ?> <form class="login change_password_form" action="function/login.php" method="post"><p>New password:</p><input placeholder="New password" type="password" name="password"><br><input placeholder="Repeat new password" type="password" name="password_repeat"> <input type="submit" name="set_password" value="Change"></form> <?php
                     }
                     ?> <div class="row admin_all_products_container"> <?php
                         $count = 0;
@@ -56,6 +60,6 @@ include "include_pages/nav.php";
                     ?> <a href="add_product" class="add_product_button center_horizontally_css">Add a new product </a><a href="admin?change_password=" class="add_product_button center_horizontally_css">Change password </a><a href="admin?logout=" class="add_product_button center_horizontally_css">Logout </a> <?php
                 }
                 else {
-                    ?> <form class="login hidden-sm hidden-xs" action="login" method="post"><p>PASSWORD:</p><input type="password" name="password"> <input type="submit" name="login" value="Login"></form> <?php
+                    ?> <form class="login hidden-sm hidden-xs" action="function/login.php" method="post"><p>PASSWORD:</p><input type="password" name="password"> <input type="submit" name="login" value="Login"></form> <?php
                 }
                 ?> </div></div></div></section></body></html>

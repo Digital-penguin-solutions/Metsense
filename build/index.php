@@ -4,11 +4,12 @@ include "include_pages/loading.php"
             $(window).stellar();
         });</script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="icon" href="img/logo/favicon.png"></head> <?php
 //functions
-include "functions.php";
+include "function/functions.php";
 $con = connect();
 $products = get_all_products($con);
 ?> <body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top"><div id="background_fixed"></div> <?php
 // include the nav
+$_GET['scroll'] = "";
 include "include_pages/nav.php";
 //welcome page slider
 include "include_pages/welcome_index.php";
@@ -22,6 +23,6 @@ include "include_pages/welcome_index.php";
                                 echo"<a href = 'product?p=$name'></a>";
                                 ?> </figure></div></div> <?php
                 }
-                ?> </div></div></section></div><section class="container-fluid index_about" id="about_us_pages"><div class="row-fluid index_about"><div class="col-xs-12 index_about"><div class="index_about_container"><div class="index_about_left col-xs-12 col-md-6 nopm"><div class="index_about_left_container col-xs-12 nopm"><img src="img/abote.jpg" alt="About metsense"></div></div><div class="index_about_right col-xs-12 col-md-6"><div class="index_about_right_container col-xs-12"><h1 class="fade-in fade-delay-05">About us</h1><p class="fade-in fade-delay-1">MetSense brings innovative sensor solutions to the market for winter road maintenance. This enables mobile and stationary monitoring of parameters such as: Road surface status, Road surface friction, Road surface temperature and more.</p><p class="fade-in fade-delay-2"><b><i>All products are designed in Sweden and manufactured in the EU.</i></b></p></div></div></div></div></div></section> <?php
+                ?> </div></div></section></div><section class="container-fluid index_about" id="about_us_pages"><div class="row-fluid index_about"><div class="col-xs-12 index_about"><div class="index_about_container"><div class="index_about_left col-xs-12 col-md-6 nopm"><div class="index_about_left_container col-xs-12 nopm"><img src="img/abote.jpg" alt="About metsense"></div></div><div class="index_about_right col-xs-12 col-md-6"><div class="index_about_right_container col-xs-12"><h1 class="fade-in">About us</h1><p class="fade-in fade-delay-05">MetSense brings innovative sensor solutions to the market for winter road maintenance. This enables mobile and stationary monitoring of parameters such as: Road surface status, Road surface friction, Road surface temperature and more.</p><p class="fade-in fade-delay-1"><b><i>All products are designed in Sweden and manufactured in the EU.</i></b></p></div></div></div></div></div></section> <?php
 include "include_pages/footer.php";
 ?> </body></html>

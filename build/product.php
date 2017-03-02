@@ -4,7 +4,7 @@ include "include_pages/loading.php"
             $(window).stellar();
         });</script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><link rel="icon" href="img/logo/favicon.png"></head> <?php
 
-include "functions.php";
+include "function/functions.php";
 
 $con = connect();
 
@@ -44,11 +44,11 @@ include "include_pages/nav.php";
                             $image = $image['data'];
                             ?> <div class="slider_page"><img class="product_big_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image); ?>"></div> <?php
                         }
-                        ?> </div></div></div></div></div></section><section class="container-fluid product_s_4"><div class="row-fluid"><div class="col-xs-12"><div class="product_4_container"><div class="product_4_container_top"><div class="product_4_left col-xs-12 col-md-6"><div class="product_4_left_img_container col-xs-12"><img class="col-xs-10 col-md-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="key featuar img"></div></div><div class="product_4_right col-xs-12 col-md-6"><div class="product_4_right_text_container"><h2 class="fade-in fade-delay-1">Keyfeatures</h2><ul> <?php
+                        ?> </div></div></div></div></div></section><section class="container-fluid product_s_4"><div class="row-fluid"><div class="col-xs-12"><div class="product_4_container"><div class="product_4_container_top"><div class="product_4_left col-xs-12 col-md-6"><div class="product_4_left_img_container col-xs-12"><img class="col-xs-10 col-md-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="key featuar img"></div></div><div class="product_4_right col-xs-12 col-md-6"><div class="product_4_right_text_container"><h2 class="fade-in">Keyfeatures</h2><ul> <?php
                                 foreach ($key_features as $feature) {
-                                    echo "<li class='fade-in fade-delay-2'>". $feature."</li>";
+                                    echo "<li class='fade-in fade-delay-1'>". $feature."</li>";
                                 }
-                                ?> </ul></div></div></div><div class="product_4_container_bot"><div class="product_4_table col-xs-12 nopm"><div class="col-xs-12 col-md-6 col-md-offset-3"><table class="table"><tbody class="fade-in fade-delay-1"> <?php
+                                ?> </ul></div></div></div><div class="product_4_container_bot"><div class="product_4_table col-xs-12 nopm"><div class="col-xs-12 col-md-6 col-md-offset-3"><table class="table"><tbody class="fade-in"> <?php
                                 // prints all the tech table rows
                                 for ($i  = 0; $i < sizeof($tech_table_array); $i++) {
                                     $row = $tech_table_array[$i];

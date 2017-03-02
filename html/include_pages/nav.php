@@ -1,11 +1,4 @@
 <?php
-/**
- * Nav page
- *
- * store the nav section in a different file for convenience
- *
- * @param author Digitalis
- */
 
 // default is that the cart is shown
 if(isset($hide_cart)){
