@@ -31,7 +31,7 @@ if ($size == "small"){
 else { // big link means this is on the order.php page and should link to finish_order.php
     $continue_link = "finish_order";
 }
-?> <div class="cart_container <?php echo $cart_class; ?>"><h1>Your cart</h1><div class="cart_item"></div> <?php
+?> <div class="cart_container <?php echo $cart_class; ?>"><h1>Your cart</h1><!-- Only for adding a border to the top of the next cart_item--><div class="cart_item"></div> <?php
 
     if ($size != "big"){
         echo "<img src = 'img/cross.svg' class = 'cart_cross'>";
