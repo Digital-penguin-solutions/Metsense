@@ -40,6 +40,7 @@ gulp.task('minify', ['removeComm'] , function() {
 
 gulp.task('less', function () {
     return gulp.src('html/less/*.less')
+        .pipe(plumber())
         .pipe(less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
