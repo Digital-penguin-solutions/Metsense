@@ -69,14 +69,15 @@ include "include_pages/welcome_index.php";
             <div class="row full_height">
                 <?php
 
-                $show = $product["show"];
-
-                if($show < 0){
                     foreach ($products as $product) {
-                        $name            = $product["name"];
-                        $short           = $product["short_description"];
-                        $id              = $product["product_id"];
-                        $main_image_data = $product["main_image"];
+                        $show = $product["show"];
+                        if($show == 0){
+                            break;
+                        }
+                            $name = $product["name"];
+                            $short = $product["short_description"];
+                            $id = $product["product_id"];
+                            $main_image_data = $product["main_image"];
 
                         ?>
                         <div class="col-lg-6 col-sm-12 full_height fade-in">
@@ -102,7 +103,6 @@ include "include_pages/welcome_index.php";
                         </div>
                         <?php
                     }
-                }
                 ?>
             </div>
         </div>
@@ -155,3 +155,5 @@ include "include_pages/footer.php";
 ?>
 </body>
 </html>
+
+
