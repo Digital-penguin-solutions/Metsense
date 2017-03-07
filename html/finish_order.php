@@ -9,12 +9,6 @@ include "include_pages/head.php";
     <title>Finish you order</title>
 
     <script>
-        smoothScroll.init();
-
-        $(document).ready(function(e) {
-            $(window).stellar();
-        });
-
         var cart_size = "big";
     </script>
 </head>

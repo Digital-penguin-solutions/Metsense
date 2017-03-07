@@ -1,11 +1,7 @@
 <?php
 include "include_pages/loading.php";
 include "include_pages/head.php";
-?> <!DOCTYPE html><html><head><meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website"><title>Admin page</title><script>smoothScroll.init();
-
-        $(document).ready(function(e) {
-            $(window).stellar();
-        });</script></head> <?php
+?> <!DOCTYPE html><html><head><meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website"><title>Admin page</title></head> <?php
 include "function/functions.php";
 session_start();
 $con = connect();

@@ -1,6 +1,7 @@
 <!--Welcome page-->
 <section id = "welcome_page" class = "nop">
     <div class = "all_slider_container no_list">
+
         <!--1-->
         <div class = "slider_page col-md-12">
             <div class = "background_image_container">
@@ -81,5 +82,6 @@
                 <h2 class="welcome_text_possision_1">FROM SWEDEN</h2>
             </div>
         </div>
+
     </div>
 </section>

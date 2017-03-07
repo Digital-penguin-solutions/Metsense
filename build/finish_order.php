@@ -1,13 +1,7 @@
 <?php
 include "include_pages/loading.php";
 include "include_pages/head.php";
-?> <!DOCTYPE html><html><head><meta name="description" content="Finish you order to get the sensor for your needs"><title>Finish you order</title><script>smoothScroll.init();
-
-        $(document).ready(function(e) {
-            $(window).stellar();
-        });
-
-        var cart_size = "big";</script></head> <?php
+?> <!DOCTYPE html><html><head><meta name="description" content="Finish you order to get the sensor for your needs"><title>Finish you order</title><script>var cart_size = "big";</script></head> <?php
 include "function/functions.php";
 
 $con = connect();

@@ -1,9 +1,7 @@
 <?php
 include "include_pages/loading.php";
 include "include_pages/head.php";
-?> <html><head><meta name="description" content="Our latest products that you can order"><title>MetSense products</title><script>smoothScroll.init();</script><script>$(document).ready(function(e) {
-            $(window).stellar();
-        });</script></head> <?php
+?> <html><head><meta name="description" content="Our latest products that you can order"><title>MetSense products</title></head> <?php
 
 include "function/functions.php";
 

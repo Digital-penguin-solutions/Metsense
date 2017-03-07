@@ -7,16 +7,6 @@ include "include_pages/head.php";
 <head>
     <meta name="description" content="MetSense - Complete sensor solutions for winter maintenance.">
     <title>MetSense - Home</title>
-
-    <script>
-        smoothScroll.init();
-    </script>
-
-    <script>
-        $(document).ready(function(e) {
-            $(window).stellar();
-        });
-    </script>
 </head>
 <?php
 //functions
@@ -40,43 +30,56 @@ include "include_pages/welcome_index.php";
     <section id = "products_page" >
         <div class="container-fluid full_height">
             <div class="row full_height">
+
                 <?php
+                $count=1;
 
-                    foreach ($products as $product) {
-                        $show = $product["show"];
-                        if($show == 0){
-                            break;
-                        }
-                            $name = $product["name"];
-                            $short = $product["short_description"];
-                            $id = $product["product_id"];
-                            $main_image_data = $product["main_image"];
-
-                        ?>
-                        <div class="col-lg-6 col-sm-12 full_height fade-in">
-                            <div class="prud">
-                                <figure class="effect-sarah">
-                                    <!--Link to product-->
-                                    <figcaption class="col-lg-12">
-                                        <!--Product name-->
-                                        <h2><span><?php echo $name;
-                                                echo "$show"; ?></span></h2>
-                                        <!--product description-->
-                                        <p class="description"> <?php echo $short ?> </p>
-                                    </figcaption>
-                                    <!--Picture of product hav to hav a transparent background-->
-                                    <img class="center_horizontally_css"
-                                         src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data); ?>"
-                                         alt="Metsens Prduucts"/>
-                                    <?php
-                                    echo "<a href = 'product?p=$name'></a>";
-                                    ?>
-                                </figure>
-                            </div>
-                        </div>
-                        <?php
+                //loop out all product in the database where variable show is == 1
+                foreach ($products as $product) {
+                    $show = $product["show"];
+                    if($show == 0){
+                        break;
                     }
+                    $name = $product["name"];
+                    $short = $product["short_description"];
+                    $id = $product["product_id"];
+                    $main_image_data = $product["main_image"];
+
+                    $count++;
+
+                    if($count%2==0){
+                        echo '<div class="col-md-6 col-xs-12 full_height">';
+                    }
+                    else if($count%2==1){
+                        echo '<div class=" col-xs-6 full_height">';
+                    }
+                    else{
+                        echo '<div class="col-xs-12 full_height">';
+                    }
+                    ?>
+                    <div class="prud">
+                        <figure class="effect-sarah">
+                            <!--Link to product-->
+                            <figcaption class="col-lg-12">
+                                <!--Product name-->
+                                <h2><span><?php echo $name;
+                                        echo "$show"; ?></span></h2>
+                                <!--product description-->
+                                <p class="description"> <?php echo $short ?> </p>
+                            </figcaption>
+                            <!--Picture of product hav to hav a transparent background-->
+                            <img class="center_horizontally_css"
+                                 src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data); ?>"
+                                 alt="Metsens Prduucts"/>
+                            <?php
+                            echo "<a href = 'product?p=$name'></a>";
+                            ?>
+                        </figure>
+                    </div>
+                    <?php echo '</div>';
+                }
                 ?>
+
             </div>
         </div>
     </section>
@@ -87,12 +90,14 @@ include "include_pages/welcome_index.php";
     <div class="row-fluid index_about">
         <div class="col-xs-12 index_about">
             <div class="index_about_container">
+
                 <!--left container top in mobil and tablet-->
                 <div class="index_about_left col-xs-12 col-md-6 nopm">
                     <div class="index_about_left_container col-xs-12 nopm">
                         <img src="img/abote.jpg" alt="About metsense">
                     </div>
                 </div>
+
                 <!--right container bot in mobil and tablet-->
                 <div class="index_about_right col-xs-12 col-md-6">
                     <div class="index_about_right_container col-xs-12">
@@ -117,6 +122,7 @@ include "include_pages/welcome_index.php";
                         <p>+46 7010 902 30</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -128,5 +134,3 @@ include "include_pages/footer.php";
 ?>
 </body>
 </html>
-
-

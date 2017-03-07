@@ -7,14 +7,6 @@ include "include_pages/head.php";
 <head>
     <meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website">
     <title>Admin page</title>
-
-    <script>
-        smoothScroll.init();
-
-        $(document).ready(function(e) {
-            $(window).stellar();
-        });
-    </script>
 </head>
 
 <?php

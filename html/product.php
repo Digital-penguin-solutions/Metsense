@@ -6,16 +6,6 @@ include "include_pages/head.php";
 <head>
     <meta name="description" content="Our latest products that you can order">
     <title>MetSense products</title>
-
-    <script>
-        smoothScroll.init();
-    </script>
-
-    <script>
-        $(document).ready(function(e) {
-            $(window).stellar();
-        });
-    </script>
 </head>
 <?php
 
