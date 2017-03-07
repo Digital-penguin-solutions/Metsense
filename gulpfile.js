@@ -107,7 +107,7 @@ gulp.task('imgmin', function () {
 // watch for file changes and performs the different tasks
 gulp.task('watch', function () {
     gulp.watch('html/js/*js',         ['scripts']);
-    gulp.watch('html/scss/*less',     ['minify-css']);
+    gulp.watch('html/less/*less',     ['minify-css']);
     gulp.watch('html/**/*{html,php}', ['minify']);
     gulp.watch('html/img/**/*',       ['imgmin']);
     gulp.watch('html/.htaccess',      ['copy']);
