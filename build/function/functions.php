@@ -1,20 +1,12 @@
 <?php
-/**
- * Functions page
- *
- * All functions that are used on the web page.
- *
- * @param author Digitalis
- */
-?> <?php
-/*
-		Här finns alla funktioner som används, denna sidan inkluderas på alla andra sidor där funktioner behövs
-	*/
+//all functions for Metsense.com
 
+//check if functions is included in page to acses them
 if(!isset($functions_included)){
 
     $functions_included = true;
 
+    //include connect page
     include "db_connect.php";
 
     // secures a string, protects against SQL injections and other attacks
@@ -29,6 +21,7 @@ if(!isset($functions_included)){
         return $data;
     }
 
+    //read slider images
     function read_slider_images($con, $index){
 
         global $slider_images_array;
@@ -39,10 +32,10 @@ if(!isset($functions_included)){
 
             for ($i = 0; $i < sizeof($images); $i++){
 
-                $data = $images[$i];
-                $split = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
+                $data     = $images[$i];
+                $split    = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
 
-                $data = $split[0]; // image data is one the first index
+                $data     = $split[0]; // image data is one the first index
                 $filename = $split[1];
                 $image_id = $split[2];
 
@@ -64,6 +57,7 @@ if(!isset($functions_included)){
 
     }
 
+    //read other images
     function read_image($con, $index){
 
         $result;
@@ -71,11 +65,11 @@ if(!isset($functions_included)){
 
         if(isset($_POST[$index])) {
 
-            $data = $_POST[$index];
+            $data  = $_POST[$index];
 
             $split = explode("@)(@#!#!#", $data); // splits the data string into image_data, filename and image_id
 
-            $data = $split[0]; // image data is one the first index
+            $data  = $split[0]; // image data is one the first index
 
             if ($data) {
 
@@ -86,7 +80,7 @@ if(!isset($functions_included)){
 
                 $result = $data;
 
-                $info = array($data, $index);
+                $info           = array($data, $index);
                 $images_array[] = $info;
             }
             else {
@@ -99,12 +93,13 @@ if(!isset($functions_included)){
 
     }
 
+    //get all pruduckts from database
     function get_all_products($con) {
 
-        $query = "SELECT * FROM product";
+        $query  = "SELECT * FROM product";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
-        $array = array();
+        $array  = array();
 
         while($data = mysqli_fetch_array($select)){
 
@@ -115,6 +110,7 @@ if(!isset($functions_included)){
         return $array;
     }
 
+    //get all pruduckt from the database by id
     function get_product_by_id($con, $id){
 
         $id = secure_str($id);
@@ -125,6 +121,7 @@ if(!isset($functions_included)){
         return $data;
     }
 
+    //get long description by id from database
     function get_product_long_by_id($con, $id){
 
         $id = secure_str($id);
@@ -147,39 +144,40 @@ if(!isset($functions_included)){
 
 
         while ($data = mysqli_fetch_array($select)) {
-            $left = $data["left_content"];
-            $right = $data["right_content"];
+            $left      = $data["left_content"];
+            $right     = $data["right_content"];
 
             $array_tmp = array($left, $right);
 
-            $array[] = $array_tmp;
+            $array[]   = $array_tmp;
         }
-
 
         return $array;
     }
 
+    //get pruduckt by name from database
     function get_product_id_by_name($con, $name){
 
-        $id = secure_str($name);
-        $query = "SELECT * FROM product WHERE name = '$name'";
+        $id     = secure_str($name);
+        $query  = "SELECT * FROM product WHERE name = '$name'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
 
-        $data = mysqli_fetch_array($select);
-        $id = $data['product_id'];
+        $data   = mysqli_fetch_array($select);
+        $id     = $data['product_id'];
 
         return $id;
 
     }
+
     // gets all slider images
     function get_product_images_by_id($con, $id){
 
-        $id = secure_str($id);
-        $query = "SELECT * FROM product_image WHERE product_id = '$id'";
+        $id     = secure_str($id);
+        $query  = "SELECT * FROM product_image WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
-        $array = array();
+        $array  = array();
 
         while ($data = mysqli_fetch_array($select)) {
             $array[] = $data;
@@ -189,41 +187,45 @@ if(!isset($functions_included)){
 
     }
 
+    //get name of prudukt by id from database
     function get_product_name_by_id($con, $id){
-        $id = secure_str($id);
-        $query = "SELECT name FROM product WHERE product_id = '$id'";
+        $id     = secure_str($id);
+        $query  = "SELECT name FROM product WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
-        $data = mysqli_fetch_array($select);
+        $data   = mysqli_fetch_array($select);
 
         $name = $data['name'];
         return $name;
     }
 
+    //get short description by id from database
     function get_product_short_by_id($con, $id){
-        $id = secure_str($id);
-        $query = "SELECT short_description FROM product WHERE product_id = '$id'";
-        $select = mysqli_query($con, $query) or die (mysqli_error($con));
-        $data = mysqli_fetch_array($select);
+        $id          = secure_str($id);
+        $query       = "SELECT short_description FROM product WHERE product_id = '$id'";
+        $select      = mysqli_query($con, $query) or die (mysqli_error($con));
+        $data        = mysqli_fetch_array($select);
 
         $description = $data['short_description'];
         return $description;
     }
 
+    //get price from database by id
     function get_product_price_by_id($con, $id){
-        $id = secure_str($id);
-        $query = "SELECT price FROM product WHERE product_id = '$id'";
+        $id     = secure_str($id);
+        $query  = "SELECT price FROM product WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
-        $data = mysqli_fetch_array($select);
+        $data   = mysqli_fetch_array($select);
 
         $price = $data['price'];
         return $price;
     }
 
+    //get key featuers by id from database
     function get_key_features_by_id($con, $id){
-        $id = secure_str($id);
-        $query = "SELECT * FROM key_feature WHERE product_id = '$id'";
+        $id     = secure_str($id);
+        $query  = "SELECT * FROM key_feature WHERE product_id = '$id'";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
-        $array = array();
+        $array  = array();
 
         while ($data = mysqli_fetch_array($select)) {
             $array[] = $data["content"];
@@ -232,16 +234,17 @@ if(!isset($functions_included)){
         return $array;
     }
 
+    //logout from admin page
     function logout(){
         session_start();
         session_destroy();
     }
 
-
+    //compress images
     function compress($source, $destination, $quality) {
         $info = getimagesize($source);
 
-        if ($info['mime'] == 'image/jpeg') {
+        if ($info['mime']     == 'image/jpeg') {
             $image = imagecreatefromjpeg($source);
         }
         elseif ($info['mime'] == 'image/gif'){
@@ -267,6 +270,7 @@ if(!isset($functions_included)){
         return $val;
     }
 
+    //debugging website in consol
     function debug_to_console( $data ) {
 
         if ( is_array( $data ) )
@@ -276,6 +280,5 @@ if(!isset($functions_included)){
 
         echo $output;
     }
-
 }
 ?>

@@ -48,7 +48,7 @@ include "include_pages/loading.php"
 <?php
 //functions
 include "function/functions.php";
-$con = connect();
+$con      = connect();
 $products = get_all_products($con);
 ?>
 <body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -68,31 +68,40 @@ include "include_pages/welcome_index.php";
         <div class="container-fluid full_height">
             <div class="row full_height">
                 <?php
-                foreach($products as $product) {
-                    $name = $product["name"];
-                    $short = $product["short_description"];
-                    $id = $product["product_id"];
-                    $main_image_data = $product["main_image"];
-                    ?>
-                    <div class="col-lg-6 col-sm-12 full_height fade-in">
-                        <div class="prud">
-                            <figure class="effect-sarah">
-                                <!--Link to product-->
-                                <figcaption class="col-lg-12">
-                                    <!--Product name-->
-                                    <h2><span><?php echo $name ?></span></h2>
-                                    <!--product description-->
-                                    <p class="description"> <?php echo $short ?> </p>
-                                </figcaption>
-                                <!--Picture of product hav to hav a transparent background-->
-                                <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image_data ); ?>" alt="Metsens Prduucts" />
-                                <?php
-                                echo"<a href = 'product?p=$name'></a>";
-                                ?>
-                            </figure>
+
+                $show = $product["show"];
+
+                if($show < 0){
+                    foreach ($products as $product) {
+                        $name            = $product["name"];
+                        $short           = $product["short_description"];
+                        $id              = $product["product_id"];
+                        $main_image_data = $product["main_image"];
+
+                        ?>
+                        <div class="col-lg-6 col-sm-12 full_height fade-in">
+                            <div class="prud">
+                                <figure class="effect-sarah">
+                                    <!--Link to product-->
+                                    <figcaption class="col-lg-12">
+                                        <!--Product name-->
+                                        <h2><span><?php echo $name;
+                                                echo "$show"; ?></span></h2>
+                                        <!--product description-->
+                                        <p class="description"> <?php echo $short ?> </p>
+                                    </figcaption>
+                                    <!--Picture of product hav to hav a transparent background-->
+                                    <img class="center_horizontally_css"
+                                         src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data); ?>"
+                                         alt="Metsens Prduucts"/>
+                                    <?php
+                                    echo "<a href = 'product?p=$name'></a>";
+                                    ?>
+                                </figure>
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
+                    }
                 }
                 ?>
             </div>

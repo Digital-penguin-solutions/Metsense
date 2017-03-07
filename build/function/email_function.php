@@ -1,9 +1,9 @@
 <?php
 //variables for email
-$to = 'info@digitalis.se';
-$subject = 'Digitalis client';
-$name = $_POST['name'];
-$email = $_POST['email'];
+$to         = 'info@digitalis.se';
+$subject    = 'Digitalis client';
+$name       = $_POST['name'];
+$email      = $_POST['email'];
 
 
 //email function

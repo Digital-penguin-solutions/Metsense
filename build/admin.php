@@ -37,7 +37,7 @@ include "include_pages/nav.php";
                     ?> <div class="row admin_all_products_container"> <?php
                         $count = 0;
                         foreach ($products as $product) {
-                            $name = $product['name'];
+                            $name       = $product['name'];
                             $main_image = $product['main_image'];
                             $product_id = $product['product_id'];
 

@@ -63,7 +63,7 @@ if (isset($_SESSION['cart_ids']) && isset($_SESSION['cart_num'])) {
     $cart_num = $_SESSION['cart_num'];
 
     foreach($cart_ids as $id){
-        $product = get_product_by_id($con, $id);
+        $product    = get_product_by_id($con, $id);
         $products[] = $product;
     }
 }
