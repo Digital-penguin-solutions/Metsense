@@ -1523,15 +1523,19 @@ figure.effect-sarah:hover p {
   height: 100%;
   margin-left: 10%;
 }
-.cart_remove img {
-  width: 6vh;
-  margin-top: -5vh;
-  cursor: pointer;
-}
 .cart_remove {
   float: left;
   width: 5%;
   height: 100%;
+}
+.cart_remove img {
+  width: 3vh;
+  height: 3vw;
+  margin-top: -5vh;
+  cursor: pointer;
+}
+.cart_remove img:hover {
+  cursor: pointer;
 }
 @media (min-width: 992px) {
   .cart_cross {

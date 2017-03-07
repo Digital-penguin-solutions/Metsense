@@ -172,16 +172,19 @@
   margin-left:10%;
 }
 
-.cart_remove img{
-  width:6vh;
-  margin-top:-5vh;
-  cursor: pointer;
-}
-
 .cart_remove {
   float:left;
   width:5%;
   height:100%;
+  img{
+    width:3vh;
+    height: 3vw;
+    margin-top:-5vh;
+    cursor: pointer;
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }
 
 @media (min-width: @screen-md-min) {
