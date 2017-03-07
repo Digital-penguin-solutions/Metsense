@@ -1,6 +1,7 @@
 <?php
-include "include_pages/loading.php"
-?> <!DOCTYPE html><html lang="en"><head><meta name="description" content="MetSense - A page to add new pruduckts ti the webpage"><title>MetSense-add_pruduckt</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Digital Internet solutions"><!--main css style sheet   --><link rel="stylesheet" href="css/app.css"><!--Font--><link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900i" rel="stylesheet"><!--latest jquery--><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><!--Velocity --><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script><!-- JavaScript --><script src="js/color-stellar-fade.js"></script><script src="js/scripts.js"></script><script src="js/admin_script.js"></script><script src="js/smooth-scroll.min.js"></script><!-- Latest compiled and minified JavaScript for bootstrap--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><!--icon--><link rel="icon" href="img/logo/favicon.png"></head> <?php
+include "include_pages/loading.php";
+include "include_pages/head.php";
+?> <!DOCTYPE html><html lang="en"><head><meta name="description" content="MetSense - A page to add new pruduckts ti the webpage"><title>MetSense-add_pruduckt</title></head> <?php
 ini_set('memory_limit', '-1');
 include "function/functions.php";
 session_start();
