@@ -30,12 +30,10 @@ include "include_pages/welcome_index.php";
     <section id = "products_page" >
         <div class="container-fluid full_height">
             <div class="row full_height">
-
                 <?php
                 //variables
                 $i = 0;
                 $len = count($products);
-
                 $odd    = 'col-xs-12';
                 $even   = 'col-md-6 col-xs-12';
 
@@ -48,51 +46,47 @@ include "include_pages/welcome_index.php";
                     $id              = $product["product_id"];
                     $main_image_data = $product["main_image"];
 
-                    $i++;
-
+                    //don't show pages that has the variabel show deactivated
                     if($show == 0){
                         break;
                     }
 
+                    //for every looped out objekt add 1 to the i variabel used in checking for the last pruduckt
+                    $i++;
+
+                    //check if the last pruduct is alone then it covers the entier page
                     if (($i == $len - 1) && $i%2 == 1){
                         $size = $odd;
                     }
                     else{
                         $size = $even;
-
                     }
                     ?>
-
-                    <div class=" full_height fade-in <?php echo $size; ?>">
+                    <div class=" full_height fade-in nopm <?php echo $size ?>">
                         <div class="prud">
                             <figure class="effect-sarah">
                                 <!--Link to product-->
                                 <figcaption class="col-lg-12">
                                     <!--Product name-->
-                                    <h2><span><?php echo $name; ?></span></h2>
+                                    <h2><span><?php echo $name ?></span></h2>
                                     <!--product description-->
                                     <p class="description"> <?php echo $short ?> </p>
                                 </figcaption>
                                 <!--Picture of product hav to hav a transparent background-->
                                 <img class="center_horizontally_css"
-                                     src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data); ?>"
+                                     src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data) ?>"
                                      alt="Metsens Prduucts"/>
-                                <?php
-                                echo "<a href = 'product?p=$name'></a>";
-                                ?>
+                                <?php echo "<a href = 'product?p=$name'></a>"?>
                             </figure>
                         </div>
                     </div>
-
                     <?php
                 }
                 ?>
-
             </div>
         </div>
     </section>
 </div>
-
 
 <!--about us section-->
 <section class="container-fluid index_about" id="about_us_pages">
