@@ -8,7 +8,6 @@ include "include_pages/head.php";
     <meta name="description" content="MetSense - A page to add new pruduckts ti the webpage">
     <title>MetSense-add_pruduckt</title>
 </head>
-
 <?php
 ini_set('memory_limit', '-1');
 include "function/functions.php";
@@ -26,21 +25,21 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 
     // if a product_id is already set, then a product is to be edited
     if (isset($_POST['product_id'])){
-        $editing = true;
-        $product_id = $_POST['product_id'];
+        $editing        = true;
+        $product_id     = $_POST['product_id'];
     }
     else {
-        $editing = false;
+        $editing        = false;
     }
 
-    $name = secure_str($_POST["name"]);
-
-    $short = secure_str($_POST["short_description"]);
-    $long = secure_str($_POST["long_description"]);
-    $price = secure_str($_POST["price"]);
-    $key_features = $_POST["key_feature"];
-    $tech_row_left = $_POST["tech_row_left"];
-    $tech_row_right = $_POST["tech_row_right"];
+    $name               = secure_str($_POST["name"]);
+    $short              = secure_str($_POST["short_description"]);
+    $long               = secure_str($_POST["long_description"]);
+    $price              = secure_str($_POST["price"]);
+    $key_features       = $_POST["key_feature"];
+    $tech_row_left      = $_POST["tech_row_left"];
+    $tech_row_right     = $_POST["tech_row_right"];
+    $show               = $_POST["show"];
 
     if (isset($_POST["removed_images"])){
         $removed_images = $_POST["removed_images"];
@@ -49,8 +48,7 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
         $removed_images = array();
     }
 
-
-    $images_array = array(); // array for all the single images
+    $images_array        = array(); // array for all the single images
     $slider_images_array = array(); // array for all the slider_images
 
     read_image($con, "main_image");
@@ -97,7 +95,6 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
         mysqli_query($con, $images_query) or die (mysqli_error($con));
     }
 
-
     // removes all the previous rows from key_features
     $query = "DELETE FROM key_feature";
     mysqli_query($con, $query) or die (mysqli_error($con));
@@ -117,7 +114,7 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 
     // adds to tech table
     for ($i = 0; $i < sizeof($tech_row_left); $i++) {
-        $left_content = secure_str($tech_row_left[$i]);
+        $left_content  = secure_str($tech_row_left[$i]);
         $right_content = secure_str($tech_row_right[$i]);
         if (!empty($left_content) && !empty($right_content)){
             $query = "INSERT INTO tech_table_row (product_id, left_content, right_content) VALUES ('$product_id', '$left_content', '$right_content')";
@@ -128,8 +125,8 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
     // inserts all the slider_images into the database
     foreach ($slider_images_array as $info){
         $image_data = $info[0];
-        $filename = $info[1];
-        $image_id = $info[2];
+        $filename   = $info[1];
+        $image_id   = $info[2];
 
         // if this is none, then there is a new image to be uploaded. if image_id has a value, an old image is to be modified
         if($image_id == "none") {
@@ -156,35 +153,36 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
         mysqli_query($con, $query) or die (mysqli_error($con));
     }
 }
+
 if (isset($_SESSION['admin'])) {
 
 // When a product is going to be viewed for editing
     if (isset($_GET["product_id"])){
-        $product_id = $_GET["product_id"];
-
-        $product = get_product_by_id($con, $product_id);
-        $name = $product['name'];
-        $short = $product['short_description'];
-        $long = $product['long_description'];
-        $price = $product['price'];
+        $product_id         = $_GET["product_id"];
+        $product            = get_product_by_id($con, $product_id);
+        $name               = $product['name'];
+        $show               = $product['show'];
+        $short              = $product['short_description'];
+        $long               = $product['long_description'];
+        $price              = $product['price'];
         $key_features_image = $product['key_features_image'];
-        //$tech_image = $product['tech_image'];
-        $main_image = $product['main_image'];
-        $about_image = $product['about_image'];
+        $main_image         = $product['main_image'];
+        $about_image        = $product['about_image'];
 
-        $tech_rows = get_tech_table_by_id($con, $product_id);
-        $key_features = get_key_features_by_id($con, $product_id);
-        $slider_images = get_product_images_by_id($con, $product_id);
+        $tech_rows          = get_tech_table_by_id($con, $product_id);
+        $key_features       = get_key_features_by_id($con, $product_id);
+        $slider_images      = get_product_images_by_id($con, $product_id);
     }
     else {
         // if a new product is to be created, all the values should be empty
-        $name = "";
-        $short = "";
-        $long = "";
-        $price = "";
-        $tech_rows = array();
-        $key_features = array();
-        $slider_images = array();
+        $name               = "";
+        $show               = "";
+        $short              = "";
+        $long               = "";
+        $price              = "";
+        $tech_rows          = array();
+        $key_features       = array();
+        $slider_images      = array();
     }
     ?>
     <body>
@@ -309,17 +307,6 @@ if (isset($_SESSION['admin'])) {
                             <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image); ?>" />
                         </div>
 
-
-                        <!--<h1> Tech Table Image</h1>
-                        <div class = "image_select_container">
-                            <p class = "center_vertically_css"> <strong>New image: </strong> </p>
-                            <input name = "tech_image" class = "center_vertically_css" type = "file" onchange="compress_image(event)" >
-                            <p class = "center_vertically_css">
-                                <strong> Current: </strong>
-                            </p>
-                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php //echo base64_encode( $tech_image); ?>" />
-                        </div>-->
-
                         <h1> About Image </h1>
                         <div class = "image_select_container">
                             <p class = "center_vertically_css"> <strong>New image: </strong> </p>
@@ -340,10 +327,6 @@ if (isset($_SESSION['admin'])) {
                             <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image); ?>" />
                         </div>
 
-                        <!--
-                        <div value = "Save product" onclick="send_form()" class = "add_product_button center_horizontally_css">
-                            Save product
-                        </div>-->
                         <section class="col-md-4 col-md-offset-4">
                             <button id="js-trigger-overlay" onclick="send_form()" type="button">Save product</button>
                         </section>
@@ -357,6 +340,7 @@ if (isset($_SESSION['admin'])) {
     </body>
     <?php
 }
+
 else {
     header("Location: index.php");
 }
