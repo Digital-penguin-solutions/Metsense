@@ -60,7 +60,7 @@ gulp.task('less', function() {
 gulp.task('prefix', function () {
     return gulp.src('html/css/app.css')
         .pipe(prefix())
-        .pipe(gulp.dest('html/css/s'));
+        .pipe(gulp.dest('html/css/'));
 });
 
 //minify css files and run the sass function before
