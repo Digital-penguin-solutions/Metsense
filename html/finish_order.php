@@ -52,33 +52,35 @@ include "include_pages/nav.php";
     else {
         ?>
         <h1 class = "checkout_header"> Finish order </h1>
-        <div class = "col-md-4 col-md-offset-2 customer_info">
+
+        <form class = "col-md-4 col-md-offset-2 customer_info" action="function/email_function.php" method="post">
             <h1>Customer Information</h1>
 
             <h2> Email </h2>
-            <input placeholder = "Email" type = "text">
+            <input id="email" name="email" title="email" placeholder = "Email" type = "text"">
 
             <h2> Company name </h2>
-            <input placeholder = "Company name" type = "text">
+            <input id="cname" name="cname" title="cname" placeholder = "Company name" type = "text">
 
             <h2> First name</h2>
-            <input placeholder = "First name" type = "text">
+            <input id="fname" name="fname" title="fname" placeholder = "First name" type = "text">
 
             <h2> Last name</h2>
-            <input placeholder = "Last name" type = "text">
+            <input id="lname" name="lname" title="lname" placeholder = "Last name" type = "text">
 
 
             <h2> Country </h2>
-            <select name="country">
+            <select id="country" name="country" title="country" name="country">
                 <?php include "function/select_country.php"; ?>
             </select>
 
             <h2>Additional Information (optional)</h2>
-            <textarea placeholder = "Additional information"></textarea>
+            <textarea id="info" name="info" title="info" placeholder = "Additional information"></textarea>
             <br><br>
             <p class = "">Some additional cost may be added for shipping depending on your location, you will be notified about this as soon as we get back to you</p>
 
-        </div>
+        </form>
+
         <div class = "col-md-3 col-md-offset-1 cart_info">
             <h1>Order Summary</h1>
 
@@ -86,9 +88,9 @@ include "include_pages/nav.php";
             $total_price = 0;
             foreach ($products as $index=>$product){
 
-                $num = $_SESSION['cart_num'][$index];
+                $num                = $_SESSION['cart_num'][$index];
                 $total_price_single = $_SESSION['cart_num'][$index] * $product['price'];
-                $total_price += $total_price_single;
+                $total_price        += $total_price_single;
                 ?>
                 <div class = "summary_product">
                     <div class = "summary_icon_container">
@@ -106,9 +108,11 @@ include "include_pages/nav.php";
             <p class = "summary_total_text">Total Payment</p>
             <p class = "summary_total_price"> <?php echo $total_price;?>$</p>
         </div>
+
         <a href = "order" class = "blue finish_button col-md-3 col-md-offset-2">
             Change order
         </a>
+
         <a href = "finish_order?thanks=" class = "finish_button col-md-3 col-md-offset-2">
             Finish order
         </a>

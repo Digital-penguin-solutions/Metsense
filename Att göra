@@ -2,7 +2,6 @@ Vad vi kan göra nu
     * På Checkout ska det komma upp tack för din beställning och leda en till index.php
     * Få alla img slider att byta bild aoutomatiskt efter 0.5 sec
     * Få upp en länk för att se de den uppdaterade sidan efter redigering på admin sidan.
-
     * Göra det möjligt för metsense att organisera sina givare på index sidan annorlunda.
 
 
@@ -14,6 +13,5 @@ TROLIGTIVS FIXAT MEN BEHÖVER DUBBELKOLLAS:
 
 
 Saker som Metsense folket vill att vi ska göra
-     * Den tredje produkten i produkterna större
      * Dölj produkt tillfälligt
 		produkterna är gömda på index men finns inget sätt att dölja dem via admin 		sidan.

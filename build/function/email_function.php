@@ -1,27 +1,34 @@
 <?php
 //variables for email
-$to         = 'info@digitalis.se';
-$subject    = 'Digitalis client';
-$name       = $_POST['name'];
+$to         = 'anders.bjork@metsense.com';
+$subject    = 'Metsense client';
 $email      = $_POST['email'];
+$cname      = $_POST['cname'];
+$fname      = $_POST['fname'];
+$lname      = $_POST['lname'];
+$country    = $_POST['country'];
+$info       = $_POST['info'];
 
 
 //email function
 $message = <<<EMAIL
-Name:  \n <b>$name</b> \n
-Email:  \n <b>$email</b> \n
+Name:                   \n <b>$cname . $lname</b> \n
+Email:                  \n <b>$email</b> \n
+Company:                \n <b>$cname</b> \n
+Country:                \n <b>$country</b> \n
+Addisional information: \n <b>$info</b> \n
 
 EMAIL;
 $header = "From: $email";
 
 //validation
 if($_POST){
-    if($name == '' || $email == ''){
+    if($email == '' || $cname == '' || $fname == '' || $lname == '' || $country == '' || $info == ''){
         $feedback = 'Please fill out all the fields';
         header("Location: contact.php?feedback=$feedback");
     }
     //name validator
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+    if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
         $feedback = "Only letters and white space allowed";
     }
     //email calidator
