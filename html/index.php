@@ -118,8 +118,8 @@ include "include_pages/welcome_index.php";
                     <div class="index_about_contact_container fade-in">
                         <h1>Contact person</h1>
                         <img src="img/contact.jpg" alt="contact person for Metsense">
-                        <p>anders@metsense.com</p>
-                        <p>+46 7010 902 30</p>
+                        <p>anders.bjork@metsense.com</p>
+                        <p>+46 70 109 02 30</p>
                     </div>
                 </div>
 
