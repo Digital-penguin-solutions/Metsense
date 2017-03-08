@@ -55,9 +55,6 @@ section {
 #background_fixed {
   position: fixed;
   background: url("../img/bg.jpg") no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 .center_vertically_css {
@@ -229,8 +226,6 @@ footer .footer .footer_container .footer_bot {
   height: 25vh;
 }
 footer .footer .footer_container .footer_info {
-  -webkit-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
   box-shadow: -1px 0px 1px 5px rgba(0, 0, 0, 0.2);
   padding: 0 !important;
   margin: 0 !important;
@@ -340,9 +335,6 @@ footer .footer .footer_container .footer_info p {
 .cart_button_container img:hover {
   cursor: pointer;
   opacity: 0.85;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .nav_button_container li {
@@ -540,9 +532,6 @@ b:nth-child(3) {
 }
 #products_page {
   background: url(../img/bg.jpg) no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   min-height: 100vh;
   width: 100% !important;
@@ -575,7 +564,8 @@ figure.effect-sarah img {
   max-width: 90%;
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(-50%, 0, 0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 figure.effect-sarah h2 {
   position: relative;
@@ -626,9 +616,6 @@ figure.effect-sarah:hover:after h2 {
 @media (min-width: 992px) {
   #wall_1 {
     background: url(../img/bg.jpg) no-repeat fixed;
-    -webkit-background-size: 100vw 180vh;
-    -moz-background-size: 100vw 180vh;
-    -o-background-size: 100vw 180vh;
     background-size: 100vw 180vh;
     width: auto;
   }
@@ -664,7 +651,8 @@ figure.effect-sarah:hover:after h2 {
     max-width: 25vw;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(-50%, 0, 0);
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   figure.effect-sarah h2 {
     position: relative;
@@ -877,9 +865,6 @@ figure.effect-sarah:hover:after h2 {
   margin-top: 4vh;
 }
 .product_s_1 .product_1_container a:hover {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   background: #802b00;
 }
@@ -1035,9 +1020,6 @@ figure.effect-sarah:hover:after h2 {
 }
 .intro_button:hover {
   background: #802b00;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 @media (min-width: 768px) {
@@ -1315,6 +1297,7 @@ figure.effect-sarah:hover:after h2 {
   margin-top: 5vh;
   margin-left: 20vw;
   font-size: 1vw;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 .login p {
@@ -1355,9 +1338,6 @@ figure.effect-sarah:hover:after h2 {
   text-decoration: none;
 }
 .finish_button:hover {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   background: #802b00;
 }
@@ -1376,9 +1356,6 @@ figure.effect-sarah:hover:after h2 {
   text-decoration: none;
 }
 .checkout_button:hover {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   background: #802b00;
 }
@@ -1398,9 +1375,6 @@ figure.effect-sarah:hover:after h2 {
   background: #003057;
 }
 .more_products:hover {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   background: #802b00;
 }
@@ -1696,10 +1670,7 @@ section button {
   border: 1px solid transparent;
   color: #ffffff;
   font-weight: 300;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 section button:hover {
@@ -1721,9 +1692,6 @@ section button:hover {
 }
 .slider_arrow:hover {
   background: rgba(74, 69, 68, 0.3);
-  -webkit-transition: all 0.7s linear;
-  -moz-transition: all 0.7s linear;
-  -o-transition: all 0.7s linear;
   transition: all 0.7s linear;
 }
 .slider_arrow_right {
