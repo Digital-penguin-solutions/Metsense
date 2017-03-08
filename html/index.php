@@ -9,11 +9,11 @@ include "include_pages/head.php";
     <title>MetSense - Home</title>
 </head>
 <?php
-//functions
 include "function/functions.php";
 $con      = connect();
 $products = get_all_products($con);
 ?>
+
 <body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="background_fixed"></div>
 
@@ -32,51 +32,57 @@ include "include_pages/welcome_index.php";
             <div class="row full_height">
 
                 <?php
-                $count=1;
+                //variables
+                $count  = 1;
+                $odd    = '<div class=" col-xs-12 full_height">';
+                $even   = '<div class=" col-md-6 col-xs-12 full_height">';
 
                 //loop out all product in the database where variable show is == 1
                 foreach ($products as $product) {
-                    $show = $product["show"];
-                    if($show == 0){
-                        break;
-                    }
-                    $name = $product["name"];
-                    $short = $product["short_description"];
-                    $id = $product["product_id"];
+
+                    $show            = $product["show"];
+                    $name            = $product["name"];
+                    $short           = $product["short_description"];
+                    $id              = $product["product_id"];
                     $main_image_data = $product["main_image"];
 
                     $count++;
 
-                    if($count%2==0){
-                        echo '<div class="col-md-6 col-xs-12 full_height">';
+                    if($show == 0){
+                        break;
                     }
-                    else if($count%2==1){
-                        echo '<div class=" col-xs-6 full_height">';
+
+                    if($count%2==0){
+                        $size = $odd;
                     }
                     else{
-                        echo '<div class="col-xs-12 full_height">';
+                        $size = $even;
+
                     }
                     ?>
-                    <div class="prud">
-                        <figure class="effect-sarah">
-                            <!--Link to product-->
-                            <figcaption class="col-lg-12">
-                                <!--Product name-->
-                                <h2><span><?php echo $name;
-                                        echo "$show"; ?></span></h2>
-                                <!--product description-->
-                                <p class="description"> <?php echo $short ?> </p>
-                            </figcaption>
-                            <!--Picture of product hav to hav a transparent background-->
-                            <img class="center_horizontally_css"
-                                 src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data); ?>"
-                                 alt="Metsens Prduucts"/>
-                            <?php
-                            echo "<a href = 'product?p=$name'></a>";
-                            ?>
-                        </figure>
+
+                    <div class=" full_height fade-in <?php echo $size; ?>">
+                        <div class="prud">
+                            <figure class="effect-sarah">
+                                <!--Link to product-->
+                                <figcaption class="col-lg-12">
+                                    <!--Product name-->
+                                    <h2><span><?php echo $name; ?></span></h2>
+                                    <!--product description-->
+                                    <p class="description"> <?php echo $short ?> </p>
+                                </figcaption>
+                                <!--Picture of product hav to hav a transparent background-->
+                                <img class="center_horizontally_css"
+                                     src="data:image/jpeg;base64,<?php echo base64_encode($main_image_data); ?>"
+                                     alt="Metsens Prduucts"/>
+                                <?php
+                                echo "<a href = 'product?p=$name'></a>";
+                                ?>
+                            </figure>
+                        </div>
                     </div>
-                    <?php echo '</div>';
+
+                    <?php
                 }
                 ?>
 
@@ -84,6 +90,7 @@ include "include_pages/welcome_index.php";
         </div>
     </section>
 </div>
+
 
 <!--about us section-->
 <section class="container-fluid index_about" id="about_us_pages">
