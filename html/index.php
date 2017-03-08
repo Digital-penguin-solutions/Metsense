@@ -32,10 +32,11 @@ include "include_pages/welcome_index.php";
             <div class="row full_height">
                 <?php
                 //variables
-                $i = 0;
-                $len = count($products);
-                $odd    = 'col-xs-12';
-                $even   = 'col-md-6 col-xs-12';
+                $i          = 0;
+                $len        = count($products);
+                $odds       = 'prud-big';
+                $odd        = 'col-xs-12';
+                $even       = 'col-md-6 col-xs-12';
 
                 //loop out all product in the database where variable show is == 1
                 foreach ($products as $product) {
@@ -56,14 +57,16 @@ include "include_pages/welcome_index.php";
 
                     //check if the last pruduct is alone then it covers the entier page
                     if (($i == $len - 1) && $i%2 == 1){
-                        $size = $odd;
+                        $size     = $odd;
+                        $size_big = $odds;
                     }
                     else{
-                        $size = $even;
+                        $size     = $even;
+                        $size_big = Null;
                     }
                     ?>
                     <div class=" full_height fade-in nopm <?php echo $size ?>">
-                        <div class="prud">
+                        <div class="prud <?php echo $size_big?>">
                             <figure class="effect-sarah">
                                 <!--Link to product-->
                                 <figcaption class="col-lg-12">
