@@ -1,5 +1,6 @@
 .DS_Store
 *.db
+*.iml
 .idea/
 db_connect.php
-node_modules
+node_modules/
