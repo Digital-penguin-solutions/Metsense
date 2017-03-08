@@ -3,7 +3,7 @@ var gulp        = require('gulp');
 var less        = require('gulp-less');
 var path        = require('path');
 var cleanCss    = require('gulp-clean-css');
-var prefix      = require('gulp-autoprefixer');
+var prefix      = require('gulp-postcss');
 var uglify      = require('gulp-uglify');
 var concat      = require('gulp-concat');
 var htmlmin     = require('gulp-htmlmin');
@@ -38,6 +38,7 @@ gulp.task('minify', ['removeComm'] , function() {
         .pipe(gulp.dest('build/'));
 });
 
+
 gulp.task('less', function () {
     return gulp.src('html/less/*.less')
         .pipe(plumber())
@@ -54,6 +55,12 @@ gulp.task('less', function() {
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('html/css'));
+});
+
+gulp.task('prefix', function () {
+    return gulp.src('html/css/app.css')
+        .pipe(prefix())
+        .pipe(gulp.dest('html/css/s'));
 });
 
 //minify css files and run the sass function before

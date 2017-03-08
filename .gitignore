@@ -1,10 +1,6 @@
 .DS_Store
+*.db
 *.iml
 .idea/
-*.db
-*.css
-!app.css
-!temp.css
 db_connect.php
-node_modules
-html/css/*.less
+node_modules/

@@ -546,8 +546,6 @@ b:nth-child(3) {
   background-size: cover;
   min-height: 100vh;
   width: 100% !important;
-  -webkit-box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
 }
 .prud {
@@ -575,47 +573,17 @@ figure.effect-sarah {
 figure.effect-sarah img {
   height: 50%;
   max-width: 90%;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-figure.effect-sarah:hover img {
-  opacity: 0.4;
-  -webkit-transform: translate3d(-40%, 0, 0);
-  transform: translate3d(-40%, 0, 0);
-}
-figure.effect-sarah figcaption {
-  text-align: left;
-  padding-right: 30%;
 }
 figure.effect-sarah h2 {
   position: relative;
   left: 20%;
   overflow: hidden;
   font-weight: 600;
-  /*text-transform: uppercase;*/
   font-size: 9vw;
   color: #4A4544;
-}
-figure.effect-sarah h2::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100% !important;
-  height: 3px;
-  background: #ffffff;
-  content: '';
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-}
-figure.effect-sarah:hover h2::after {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 figure.effect-sarah p {
   padding: 0 !important;
@@ -623,14 +591,33 @@ figure.effect-sarah p {
   font-weight: 100;
   color: #ffffff;
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(30%, 0);
   transform: translate3d(30%, 0, 0);
+}
+figure.effect-sarah figcaption {
+  text-align: left;
+  padding-right: 30%;
+}
+figure.effect-sarah:after h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;
+  height: 3px;
+  background: #ffffff;
+  content: '';
+  transition: transform 0.35s;
+  transform: translate3d(-100%, 0, 0);
+}
+figure.effect-sarah:hover img {
+  opacity: 0.4;
+  transform: translate3d(-40%, 0, 0);
 }
 figure.effect-sarah:hover p {
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+figure.effect-sarah:hover:after h2 {
   transform: translate3d(0, 0, 0);
 }
 .description {
@@ -649,8 +636,6 @@ figure.effect-sarah:hover p {
     background: transparent;
     min-height: 100vh;
     width: 100% !important;
-    -webkit-box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 0 -5px 10px -6px rgba(0, 0, 0, 0.75);
   }
   .prud {
@@ -677,48 +662,17 @@ figure.effect-sarah:hover p {
   figure.effect-sarah img {
     height: 20vw;
     max-width: 25vw;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
-  figure.effect-sarah:hover img {
-    opacity: 0.4;
-    -webkit-transform: translate3d(-40%, 0, 0);
-    transform: translate3d(-40%, 0, 0);
-  }
-  figure.effect-sarah figcaption {
-    text-align: left;
-    padding-right: 30%;
   }
   figure.effect-sarah h2 {
     position: relative;
     left: 20%;
     overflow: hidden;
     font-weight: 600;
-    /*text-transform: uppercase;*/
     font-size: 3vw;
-    /* Scales from both width and height*/
     color: #4A4544;
-  }
-  figure.effect-sarah h2::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100% !important;
-    height: 3px;
-    background: #ffffff;
-    content: '';
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  figure.effect-sarah:hover h2::after {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
   figure.effect-sarah p {
     padding: 0 !important;
@@ -726,15 +680,34 @@ figure.effect-sarah:hover p {
     font-weight: 100;
     color: #ffffff;
     opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(30%, 0);
     transform: translate3d(30%, 0, 0);
+  }
+  figure.effect-sarah figcaption {
+    text-align: left;
+    padding-right: 30%;
+  }
+  figure.effect-sarah:hover img {
+    opacity: 0.4;
+    transform: translate3d(-40%, 0, 0);
   }
   figure.effect-sarah:hover p {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+  figure.effect-sarah:hover:after h2 {
+    transform: translate3d(0, 0, 0);
+  }
+  figure.effect-sarah:after h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 3px;
+    background: #ffffff;
+    content: '';
+    transition: transform 0.35s;
+    transform: translate3d(-100%, 0, 0);
   }
 }
 .index_about {
