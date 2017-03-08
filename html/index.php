@@ -33,9 +33,11 @@ include "include_pages/welcome_index.php";
 
                 <?php
                 //variables
-                $count  = 1;
-                $odd    = '<div class=" col-xs-12 full_height">';
-                $even   = '<div class=" col-md-6 col-xs-12 full_height">';
+                $i = 0;
+                $len = count($products);
+
+                $odd    = 'col-xs-12';
+                $even   = 'col-md-6 col-xs-12';
 
                 //loop out all product in the database where variable show is == 1
                 foreach ($products as $product) {
@@ -46,13 +48,13 @@ include "include_pages/welcome_index.php";
                     $id              = $product["product_id"];
                     $main_image_data = $product["main_image"];
 
-                    $count++;
+                    $i++;
 
                     if($show == 0){
                         break;
                     }
 
-                    if($count%2==0){
+                    if (($i == $len - 1) && $i%2 == 1){
                         $size = $odd;
                     }
                     else{

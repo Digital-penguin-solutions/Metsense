@@ -13,9 +13,11 @@ include "include_pages/nav.php";
 include "include_pages/welcome_index.php";
 ?> <!--products wall updated from the database--><div id="wall_1" class="image" data-stellar-background-ratio="0.2"><section id="products_page"><div class="container-fluid full_height"><div class="row full_height"> <?php
                 //variables
-                $count  = 1;
-                $odd    = '<div class=" col-xs-12 full_height">';
-                $even   = '<div class=" col-md-6 col-xs-12 full_height">';
+                $i = 0;
+                $len = count($products);
+
+                $odd    = 'col-xs-12';
+                $even   = 'col-md-6 col-xs-12';
 
                 //loop out all product in the database where variable show is == 1
                 foreach ($products as $product) {
@@ -26,13 +28,13 @@ include "include_pages/welcome_index.php";
                     $id              = $product["product_id"];
                     $main_image_data = $product["main_image"];
 
-                    $count++;
+                    $i++;
 
                     if($show == 0){
                         break;
                     }
 
-                    if($count%2==0){
+                    if (($i == $len - 1) && $i%2 == 1){
                         $size = $odd;
                     }
                     else{
