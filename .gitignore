@@ -3,3 +3,4 @@
 .idea/
 db_connect.php
 node_modules/
+*.iml
