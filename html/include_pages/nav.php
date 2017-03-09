@@ -17,7 +17,6 @@ else {
 }
 ?>
 
-
 <!-- Links shown when menu is toggeld on-->
 <div class = "nav_menu_container">
     <ul class = "nav_menu center_css">
@@ -51,7 +50,7 @@ if(!$hide_cart){
 }
 ?>
 
-<!--hamburger mene-->
+<!--hamburger meneu-->
 <ul class = "nav_button_container">
     <li>
         <a class = "McButton" data = "hamburger-menu">

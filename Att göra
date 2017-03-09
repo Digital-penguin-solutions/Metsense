@@ -4,14 +4,11 @@ Vad vi kan göra nu
     * Få upp en länk för att se de den uppdaterade sidan efter redigering på admin sidan.
     * Göra det möjligt för metsense att organisera sina givare på index sidan annorlunda.
 
-
 Vad vi kan göra när hemsidan ligger uppe på deras webhotell
     * Serchengien optimasiation
 
+Saker som Metsense folket vill att vi ska göra
+	* en knapp på admin sidan föra att göma prudukter
+
 TROLIGTIVS FIXAT MEN BEHÖVER DUBBELKOLLAS:
     * Göra om komprimerings algoritmen för slider sidan
-
-
-Saker som Metsense folket vill att vi ska göra
-     * Dölj produkt tillfälligt
-		produkterna är gömda på index men finns inget sätt att dölja dem via admin 		sidan.

@@ -30,7 +30,6 @@
         });
 
         smoothScroll.init();
-
     </script>
 
     <!-- Latest compiled and minefield JavaScript for bootstrap-->

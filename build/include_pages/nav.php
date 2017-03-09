@@ -19,4 +19,4 @@ else {
 if(!$hide_cart){
     ?> <div class="cart_button_container"><img src="img/cart.svg"></div> <?php
 }
-?> <!--hamburger mene--><ul class="nav_button_container"><li><a class="McButton" data="hamburger-menu"><b></b> <b></b> <b></b></a></li></ul>
+?> <!--hamburger meneu--><ul class="nav_button_container"><li><a class="McButton" data="hamburger-menu"><b></b> <b></b> <b></b></a></li></ul>

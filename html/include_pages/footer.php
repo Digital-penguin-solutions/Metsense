@@ -20,12 +20,12 @@
 					</div>
 				</div>
 
-				<!--logo and the creater of the webpage-->
+				<!--logo and the author of the web page-->
 				<div class="footer_bot col-xs-12 fade-in fade-delay-2">
 					<a href="index">
 						<img class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1" src="img/logo/logo-w.svg" alt="Metsense logo">
 					</a>
-					<!--author of webpage and copyright stuff-->
+					<!--author of web page and copyright stuff-->
 				</div>
 
 				<div class="footer_info col-xs-12">

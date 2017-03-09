@@ -1,21 +1,22 @@
 //import everything
-var gulp        = require('gulp');
-var less        = require('gulp-less');
-var path        = require('path');
-var cleanCss    = require('gulp-clean-css');
-var prefix      = require('gulp-autoprefixer');
-var uglify      = require('gulp-uglify');
-var concat      = require('gulp-concat');
-var htmlmin     = require('gulp-htmlmin');
-var imgmin      = require('gulp-imagemin');
-var watch       = require('gulp-watch');
-var plumber     = require('gulp-plumber');
-var removeComm  = require('gulp-remove-html-comments');
-var header      = require('gulp-header');
-var pkg         = require('./package.json');
+const g           = require('gulp');
+const less        = require('gulp-less');
+const path        = require('path');
+const cleanCss    = require('gulp-clean-css');
+const prefix      = require('gulp-autoprefixer');
+const uglify      = require('gulp-uglify');
+const concat      = require('gulp-concat');
+const htmlmin     = require('gulp-htmlmin');
+const imgmin      = require('gulp-imagemin');
+const watch       = require('gulp-watch');
+const plumber     = require('gulp-plumber');
+const clean       = require('gulp-clean');
+const removeComm  = require('gulp-remove-html-comments');
+const header      = require('gulp-header');
+const pkg         = require('./package.json');
 
 // Set the banner content
-var banner = ['/*!\n',
+const banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
     ' * Copyright 2017-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
@@ -23,105 +24,111 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
+//delete dist folder
+g.task('clean', function () {
+    return g.src('build', {read: false})
+        .pipe(clean());
+});
+
 //remove comments from php and html documents
-gulp.task('removeComm', function () {
-    return gulp.src('html/**/*.php')
+g.task('removeComm', function () {
+    return g.src('html/**/*.php')
         .pipe(removeComm())
-        .pipe(gulp.dest('build/'));
+        .pipe(g.dest('build/'));
 });
 
 //minify html and php files
-gulp.task('minify', ['removeComm'] , function() {
-    return gulp.src(['html/**/*.php' ,'html/**/*.html'])
+g.task('minify', ['removeComm'] , function() {
+    return g.src(['html/**/*.php' ,'html/**/*.html'])
         .pipe(plumber())
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('build/'));
+        .pipe(g.dest('build/'));
 });
 
 
-gulp.task('less', function () {
-    return gulp.src('html/less/*.less')
+g.task('less', function () {
+    return g.src('html/less/*.less')
         .pipe(plumber())
         .pipe(less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
-        .pipe(gulp.dest('html/css'));
+        .pipe(g.dest('html/css'));
 });
 
 // Compile LESS files from /less into /css
-gulp.task('less', function() {
-    return gulp.src('html/less/app.less')
+g.task('less', function() {
+    return g.src('html/less/app.less')
         .pipe(plumber())
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('html/css'));
+        .pipe(g.dest('html/css'));
 });
 
-gulp.task('prefix', ['less'], function () {
-    return gulp.src('html/css/app.css')
+g.task('prefix', ['less'], function () {
+    return g.src('html/css/app.css')
         .pipe(prefix({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('html/css/'));
+        .pipe(g.dest('html/css/'));
 });
 
 //minify css files and run the sass function before
-gulp.task('minify-css', ['prefix'], function() {
-    return gulp.src('html/css/*.css')
+g.task('minify-css', ['prefix'], function() {
+    return g.src('html/css/*.css')
         .pipe(plumber())
         .pipe(cleanCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest('build/css'));
+        .pipe(g.dest('build/css'));
 });
 
 //uglify and concat some files
-gulp.task('scripts', function () {
-    return gulp.src(['html/js/backgroundslider.js','html/scripts.js'])
+g.task('scripts', function () {
+    return g.src(['html/js/backgroundslider.js','html/scripts.js'])
         .pipe(plumber())
         .pipe(concat('scripts.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build/js/'))
+        .pipe(g.dest('build/js/'))
 });
 
-gulp.task('scripts', function () {
-    return gulp.src(['html/js/fade-slide.js','html/color-stellar.js'])
+g.task('scripts', function () {
+    return g.src(['html/js/fade-slide.js','html/color-stellar.js'])
         .pipe(plumber())
         .pipe(concat('color-stellar-fade.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build/js/'))
+        .pipe(g.dest('build/js/'))
 });
 
 //uglify all flies
-gulp.task('scripts', function () {
-    return gulp.src('html/js/*.js')
+g.task('scripts', function () {
+    return g.src('html/js/*.js')
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest('build/js'))
+        .pipe(g.dest('build/js'))
 });
 
 //coppy img and .htaccess files to build folder
-gulp.task('copy', function() {
-    return gulp.src('html/.htaccess')
+g.task('copy', function() {
+    return g.src('html/.htaccess')
         .pipe(plumber())
-        .pipe(gulp.dest('build'));
+        .pipe(g.dest('build'));
 });
 
 //compress all images from html folder
-gulp.task('imgmin', function () {
-    return gulp.src('html/img/**/*')
+g.task('imgmin', function () {
+    return g.src('html/img/**/*')
         .pipe(plumber())
         .pipe(imgmin())
-        .pipe(gulp.dest('build/img'));
+        .pipe(g.dest('build/img'));
 });
 
 // watch for file changes and performs the different tasks
-gulp.task('watch', function () {
-    gulp.watch('html/js/*js',         ['scripts']);
-    gulp.watch('html/less/*less',     ['minify-css']);
-    gulp.watch('html/**/*{html,php}', ['minify']);
-    gulp.watch('html/img/**/*',       ['imgmin']);
-    gulp.watch('html/.htaccess',      ['copy']);
+g.task('watch', function () {
+    g.watch('html/js/*js',         ['scripts']);
+    g.watch('html/less/*less',     ['minify-css']);
+    g.watch('html/**/*{html,php}', ['minify']);
+    g.watch('html/img/**/*',       ['imgmin']);
+    g.watch('html/.htaccess',      ['copy']);
 });
 
 // Run everything
-gulp.task('default', ['minify-css', 'minify', 'scripts', 'imgmin', 'copy', 'watch']);
+g.task('default', ['minify-css', 'minify', 'scripts', 'imgmin', 'copy', 'watch']);

@@ -8,7 +8,6 @@ function on_ready() {
 
 		var new_feature = $(container).find(".template").first().clone().removeClass("template"); // clones a feature to add a new one
 
-
 		$(new_feature).find("input").val('');
 
 		$(container).append(new_feature);
@@ -53,11 +52,8 @@ function compress_image(e) {
 	e = e || window.event;
 	var element = e.target || e.srcElement;
 	var parent = element.parentNode;
-
 	var name = element.name;
-
 	var image = element.files[0];
-
 
 	// if there is a file selected
 	if (image != undefined) {
@@ -100,7 +96,6 @@ function compress_image(e) {
 		$("[holder_name='" + name + "']").remove();
 	}
 }
-
 
 
 var maxWidth = 1000; // the max width for an image
@@ -220,4 +215,3 @@ function get_filename_from_path(fullPath){
 	}
 	return filename;
 }
-
