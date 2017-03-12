@@ -93,27 +93,27 @@ else { // big link means this is on the order.php page and should link to finish
         </div>
         <?php
     }
-    
+
     $more = "More products";
     if (count($products) == 0){
         $more = "View products";
     }
     ?>
     <a href = "index#products_page" onclick = "toggle_cart(false, true)"class = "center_horizontally_css more_products">
-    <?php
+        <?php
         echo $more;
-    ?>
+        ?>
     </a>
 
     <?php
-    
+
     if(count($products) != 0){
 
-    ?>
-    <a href = "<?php echo $continue_link ?>" class = "center_horizontally_css checkout_button">
-        Continue
-    </a>
-    <?php
+        ?>
+        <a href = "<?php echo $continue_link ?>" class = "center_horizontally_css checkout_button">
+            Continue
+        </a>
+        <?php
     }
     ?>
 

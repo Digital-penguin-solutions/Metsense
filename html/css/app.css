@@ -1101,12 +1101,19 @@ figure.effect-sarah:hover:after h2 {
   text-align: center;
   font-size: 1.5vh;
 }
+.admin_product {
+  margin-top: 10%;
+  background: #0080CF;
+  height: 35vh;
+  margin-bottom: 5%;
+  padding: 0 !important;
+  /* Delete and edit buttons */
+}
 .admin_product h1 {
   text-align: center;
   margin-top: 3%;
   font-size: 2vw;
 }
-/* Delete and edit buttons */
 .admin_product a {
   display: block;
   width: 30%;
@@ -1122,13 +1129,6 @@ figure.effect-sarah:hover:after h2 {
 .admin_product img {
   max-width: 90%;
   height: 50%;
-}
-.admin_product {
-  margin-top: 10%;
-  background: #0080CF;
-  height: 35vh;
-  margin-bottom: 5%;
-  padding: 0 !important;
 }
 .product_delete_button {
   left: 60%;
@@ -1149,25 +1149,31 @@ figure.effect-sarah:hover:after h2 {
   padding: 1%;
   margin-bottom: 5%;
 }
-.add_product_form textarea {
-  width: 100% !important;
-  height: 20vh;
-  resize: none;
-}
-.add_product_form input {
-  width: 100% !important;
-}
-.add_product_form h1 {
-  text-align: center;
-  font-size: 2vw;
-  margin-top: 9%;
-}
 /* Admin form to add a new product*/
 .add_product_form {
   width: 60%;
   margin-left: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+.add_product_form h1 {
+  text-align: center;
+  font-size: 2vw;
+  margin-top: 9%;
+}
+.add_product_form input {
+  width: 100% !important;
+}
+.add_product_form .short_description {
+  width: 100% !important;
+  height: 5vh;
+  resize: none;
+}
+.add_product_form .long_description {
+  width: 100% !important;
+  height: 5vh;
+  resize: none;
+  height: 45vh;
 }
 .admin_list_container h1 {
   margin-top: 5%;

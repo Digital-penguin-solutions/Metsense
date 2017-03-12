@@ -18,36 +18,11 @@
   text-align:center;
   font-size:2vw;
 }
+
 .admin_header2{
   margin-top:1vh;
   text-align:center;
   font-size: 1.5vh;
-}
-
-.admin_product h1 {
-  text-align:center;
-  margin-top: 3%;
-  font-size:2vw;
-}
-
-/* Delete and edit buttons */
-.admin_product a {
-  display:block;
-  width: 30%;
-  height:15%;
-  position:absolute;
-  bottom:5%;
-  background: white;
-  padding:0;
-  text-align:center;
-  color: #003057;
-  cursor:pointer;
-
-}
-
-.admin_product img {
-  max-width:90%;
-  height:50%;
 }
 
 .admin_product {
@@ -56,6 +31,36 @@
   height:35vh;
   margin-bottom:5%;
   padding:0 !important;
+
+  h1 {
+    text-align:center;
+    margin-top: 3%;
+    font-size:2vw;
+  }
+
+  /* Delete and edit buttons */
+  a {
+    display:block;
+    width: 30%;
+    height:15%;
+    position:absolute;
+    bottom:5%;
+    background: white;
+    padding:0;
+    text-align:center;
+    color: #003057;
+    cursor:pointer;
+
+  }
+
+  img {
+    max-width:90%;
+    height:50%;
+  }
+}
+
+.product_show_button{
+
 }
 
 .product_delete_button {
@@ -80,27 +85,33 @@
   margin-bottom:5%;
 }
 
-.add_product_form textarea	{
- .fullw;
-  height:20vh;
-  resize: none;
-}
-.add_product_form input	{
- .fullw;
-}
-
-.add_product_form h1{
-  text-align:center;
-  font-size: 2vw;
-  margin-top:9%;
-}
-
 /* Admin form to add a new product*/
 .add_product_form {
   width:60%;
   margin-left:20%;
   margin-top:10%;
   margin-bottom:10%;
+
+  h1{
+    text-align:center;
+    font-size: 2vw;
+    margin-top:9%;
+  }
+
+  input	{
+    .fullw;
+  }
+
+  .short_description{
+    .fullw;
+    height: 5vh;
+    resize: none;
+  }
+  .long_description{
+    .short_description;
+    height: 45vh;
+
+  }
 }
 
 .admin_list_container h1 {
@@ -116,16 +127,17 @@
   margin-top:5%;
   overflow: auto;
 }
+
 /* Container for a single row in an admin list*/
 .admin_list_item {
   margin-top:5%;
   width:@100p;
-}
 
-.admin_list_item p {
-  margin-left:10%;
-  display:block;
-  float:left;
+  p {
+    margin-left:10%;
+    display:block;
+    float:left;
+  }
 }
 
 /* an item in the list of slider images */
@@ -133,15 +145,14 @@
   height: 20vh;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
-}
-
-.image_list_item input {
-  margin-left:5% !important;
-  width:35% !important;
-  float:left;
-}
-.image_list_item p {
-  margin-left:5% !important;
+  input {
+    margin-left: 5% !important;
+    width: 35% !important;
+    float: left;
+  }
+  p {
+    margin-left: 5% !important;
+  }
 }
 
 /* Preview for image in slider list editor */
@@ -154,17 +165,17 @@
 .image_select_container {
   height: 20vh;
   border: black solid 1px;
-}
 
-.image_select_container input {
-  width:35% !important;
-  float:left;
-  margin-left:5%;
-}
-.image_select_container p {
-  display:block;
-  float:left;
-  margin-left:10%;
+  input {
+    width: 35% !important;
+    float: left;
+    margin-left: 5%;
+  }
+  p {
+    display: block;
+    float: left;
+    margin-left: 10%;
+  }
 }
 
 /* Button to add a new row to an admin list*/
@@ -199,6 +210,7 @@
   width: 80% !important;
   margin-left: 10%;
 }
+
 /* This one is slightly smaller cause there are gonna be two next to eachother*/
 .admin_tech_list input {
   width: 35% !important;

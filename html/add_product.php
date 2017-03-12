@@ -6,7 +6,7 @@ include "include_pages/head.php";
 <html lang="en">
 <head>
     <meta name="description" content="MetSense - A page to add new pruduckts ti the webpage">
-    <title>MetSense-add_pruduckt</title>
+    <title>MetSense add product</title>
 </head>
 <?php
 ini_set('memory_limit', '-1');
@@ -196,6 +196,8 @@ if (isset($_SESSION['admin'])) {
                 <div class = "col-md-8 col-md-offset-2">
                     <h1 class = "admin_header"> Add new product</h1>
                     <h2 class = "admin_header2"> All product images should to be square sized for best performance, like 1000x1000 px for example. </h2>
+                    <h2 class = "admin_header2"> Slider images should be 1920 x 1080 p</h2>
+                    <h2 class = "admin_header2"> all images need to be smmaler then 300kb dor best performance.</h2>
                     <form id = "form" class = "add_product_form" method = "post" action = "add_product.php" enctype="multipart/form-data">
                         <input type = "hidden" name = "add">
                         <?php
@@ -210,10 +212,10 @@ if (isset($_SESSION['admin'])) {
                         <input value = "<?php echo $name ?>" type = "text" name = "name">
 
                         <h1>  Short description</h1>
-                        <textarea name = "short_description"><?php echo $short?></textarea>
+                        <textarea name = "short_description" class="short_description"><?php echo $short?></textarea>
 
                         <h1>  Long description</h1>
-                        <textarea name = "long_description"><?php echo $long?></textarea>
+                        <textarea name = "long_description" class="long_description"><?php echo $long?></textarea>
 
                         <h1> Price  </h1>
                         <input value = "<?php echo $price ?>" type = "text" name = "price">
@@ -274,7 +276,6 @@ if (isset($_SESSION['admin'])) {
                                 <img src = "img/cross.svg"  class = "center_vertically_css remove_item">
                             </div>
                             <?php
-
                             // The ones that already exist for this product
                             foreach ($slider_images as $image) {
 
@@ -292,7 +293,6 @@ if (isset($_SESSION['admin'])) {
                                 </div>
                                 <?php
                             }
-
                             ?>
                             <div class = "add_item">Add new image</div>
                         </div>
@@ -341,8 +341,5 @@ if (isset($_SESSION['admin'])) {
     <?php
 }
 
-else {
-    header("Location: index.php");
-}
-?>
+else {header("Location: index.php");} ?>
 </html>

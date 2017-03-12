@@ -40,3 +40,5 @@
     <!--icon-->
     <link rel="icon" href="img/logo/favicon.png">
 </head>
+
+<?php include "function/functions.php"?>

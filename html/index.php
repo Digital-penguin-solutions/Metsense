@@ -9,7 +9,6 @@ include "include_pages/head.php";
     <title>MetSense - Home</title>
 </head>
 <?php
-include "function/functions.php";
 $con      = connect();
 $products = get_all_products($con);
 ?>
@@ -134,9 +133,7 @@ include "include_pages/welcome_index.php";
     </div>
 </section>
 
-<!--include the footer-->
-<?php
-include "include_pages/footer.php";
-?>
+<!-- Footer -->
+<?php include "include_pages/footer.php" ?>
 </body>
 </html>

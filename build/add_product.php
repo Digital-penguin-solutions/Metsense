@@ -1,7 +1,7 @@
 <?php
 include "include_pages/loading.php";
 include "include_pages/head.php";
-?> <!DOCTYPE html><html lang="en"><head><meta name="description" content="MetSense - A page to add new pruduckts ti the webpage"><title>MetSense-add_pruduckt</title></head> <?php
+?> <!DOCTYPE html><html lang="en"><head><meta name="description" content="MetSense - A page to add new pruduckts ti the webpage"><title>MetSense add product</title></head> <?php
 ini_set('memory_limit', '-1');
 include "function/functions.php";
 session_start();
@@ -179,11 +179,11 @@ if (isset($_SESSION['admin'])) {
     }
     ?> <body> <?php
     include "include_pages/nav.php";
-    ?> <section class="admin_page"><div class="container-fluid full_height"><div class="row full_height"><div class="col-md-8 col-md-offset-2"><h1 class="admin_header">Add new product</h1><h2 class="admin_header2">All product images should to be square sized for best performance, like 1000x1000 px for example.</h2><form id="form" class="add_product_form" method="post" action="add_product.php" enctype="multipart/form-data"><input type="hidden" name="add"> <?php
+    ?> <section class="admin_page"><div class="container-fluid full_height"><div class="row full_height"><div class="col-md-8 col-md-offset-2"><h1 class="admin_header">Add new product</h1><h2 class="admin_header2">All product images should to be square sized for best performance, like 1000x1000 px for example.</h2><h2 class="admin_header2">Slider images should be 1920 x 1080 p</h2><h2 class="admin_header2">all images need to be smmaler then 300kb dor best performance.</h2><form id="form" class="add_product_form" method="post" action="add_product.php" enctype="multipart/form-data"><input type="hidden" name="add"> <?php
                         if (isset($_GET["product_id"])){
                             ?> <input type="hidden" value="<?php echo $_GET['product_id'] ?>" name="product_id"> <?php
                         }
-                        ?> <h1>Product Name</h1><input value="<?php echo $name ?>" type="text" name="name"><h1>Short description</h1><textarea name="short_description"><?php echo $short?></textarea><h1>Long description</h1><textarea name="long_description"><?php echo $long?></textarea><h1>Price</h1><input value="<?php echo $price ?>" type="text" name="price"><div class="admin_list_container admin_key_features_list"><h1>Key Features List</h1> <?php
+                        ?> <h1>Product Name</h1><input value="<?php echo $name ?>" type="text" name="name"><h1>Short description</h1><textarea name="short_description" class="short_description"><?php echo $short?></textarea><h1>Long description</h1><textarea name="long_description" class="long_description"><?php echo $long?></textarea><h1>Price</h1><input value="<?php echo $price ?>" type="text" name="price"><div class="admin_list_container admin_key_features_list"><h1>Key Features List</h1> <?php
                             // echos out all the existing items of the list, if there are any
                             foreach($key_features as $features){
                                 ?> <div class="admin_list_item"><input value="<?php echo $features ?>" name="key_feature[]" type="text" placeholder="Key Feature"> <img src="img/cross.svg" class="remove_item"></div> <?php
@@ -194,7 +194,6 @@ if (isset($_SESSION['admin'])) {
                                 ?> <div class="admin_list_item"><input value="<?php echo $row[0]?>" name="tech_row_left[]" type="text" placeholder="Left column"> <input value="<?php echo $row[1]?>" name="tech_row_right[]" type="text" placeholder="Right column"> <img src="img/cross.svg" class="remove_item"></div> <?php
                             }
                             ?> <div class="template admin_list_item"><input name="tech_row_left[]" type="text" placeholder="Left column"> <input name="tech_row_right[]" type="text" placeholder="Right column"> <img src="img/cross.svg" class="remove_item"></div><div class="add_item">Add new row</div></div><div class="admin_list_container admin_tech_list"><h1>Slider images</h1><!--- THIS FIRST ONE IS HIDDEN AND IS ONLY A TEMPLETE FOR CREATING A NEW ONE BUT IT HAS TO BE HERE  --><div class="template admin_list_item image_list_item"><p class="center_vertically_css"><strong>New image:</strong></p><input class="center_vertically_css" name="slider_image[]" type="file" onchange="compress_image(event)"><p class="center_vertically_css"><strong>Current: </strong>none</p><img src="img/cross.svg" class="center_vertically_css remove_item"></div> <?php
-
                             // The ones that already exist for this product
                             foreach ($slider_images as $image) {
 
@@ -202,11 +201,7 @@ if (isset($_SESSION['admin'])) {
                                 $image_name = $image['filename'];
                                 ?> <div class="admin_list_item image_list_item"><p class="center_vertically_css"><strong>New image:</strong></p><input image_id="<?php echo $image_id;  ?>" class="center_vertically_css" name="slider_image[]" type="file" onchange="compress_image(event)"><p class="center_vertically_css"><strong>Current:</strong></p><img class="center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image['data']); ?>"> <img src="img/cross.svg" image_id="<?php echo $image_id; ?>" class="center_vertically_css remove_item"></div> <?php
                             }
-
                             ?> <div class="add_item">Add new image</div></div><h1>Key Features Image</h1><div class="image_select_container"><p class="center_vertically_css"><strong>New image:</strong></p><input name="key_features_image" class="center_vertically_css" type="file" onchange="compress_image(event)"><p class="center_vertically_css"><strong>Current:</strong></p><img class="center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image); ?>"></div><h1>About Image</h1><div class="image_select_container"><p class="center_vertically_css"><strong>New image:</strong></p><input name="about_image" class="center_vertically_css" type="file" onchange="compress_image(event)"><p class="center_vertically_css"><strong>Current:</strong></p><img class="center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image); ?>"></div><h1>Main Image</h1><div class="image_select_container"><p class="center_vertically_css"><strong>New image:</strong></p><input name="main_image" class="center_vertically_css" type="file" onchange="compress_image(event)"><p class="center_vertically_css"><strong>Current:</strong></p><img class="center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image); ?>"></div><section class="col-md-4 col-md-offset-4"><button id="js-trigger-overlay" onclick="send_form()" type="button">Save product</button></section></form></div></div></div></section></body> <?php
 }
 
-else {
-    header("Location: index.php");
-}
-?> </html>
+else {header("Location: index.php");} ?> </html>
