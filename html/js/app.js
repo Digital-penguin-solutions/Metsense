@@ -227,7 +227,7 @@ $(document).ready(on_ready);
 
 $(window).resize(on_resize);
 
-// Nav menu variables
+//variables
 var fade_duration = 0;
 var nav_menu_visible = true;
 var button_open_color = "white";
@@ -236,7 +236,7 @@ var button_closed_color = "#4A4544";
 // if the nav is currently being opened or closed
 var nav_in_animation = false;
 
-
+//when page is ready
 function on_ready () {
 
     $(".nav_menu_container").css("visibility","visible");
@@ -249,6 +249,7 @@ function on_ready () {
 
 }
 
+//toggel nav meneu
 function toggle_nav_menu(){
     nav_menu_visible = !nav_menu_visible;
 
@@ -263,6 +264,7 @@ function toggle_nav_menu(){
     }
 }
 
+//if naw is suposed to be toggeld or not
 function init_mc_button(){
 
     // hamburger menu
@@ -329,11 +331,6 @@ $(document).ready(on_ready);
 
 $(window).resize(on_resize);
 
-function on_resize () {
-    
-    //update_slider_positions();
-}
-
 // page slider variables
 var current_page = [];
 var all_sliders = [];
@@ -354,6 +351,12 @@ var border_not_selected_color = "gray";
 var slider_dot_width = 0;
 
 var sliding = false;
+
+function on_resize () {
+
+    //update_slider_positions();
+}
+
 
 function on_ready () {
 
