@@ -7,20 +7,10 @@ function on_resize () {
     //update_slider_positions();
 }
 
-// Nav menu variables
-var fade_duration = 0;
-var nav_menu_visible = true;
-var button_open_color = "white";
-var button_closed_color = "#4A4544";
-
 // page slider variables
 var current_page = [];
 var all_sliders = [];
 var slider_speed = 0;
-
-// cart menu variables
-var cart_speed = 0;
-var cart_visible = true;
 
 var selected_background = "#1c2d84";
 var not_selected_background = "#AAAAAA";
@@ -36,12 +26,9 @@ var border_not_selected_color = "gray";
 
 var slider_dot_width = 0;
 
+var sliding = false;
+
 function on_ready () {
-
-    $(".nav_menu_container").css("visibility","visible");
-    init_mc_button();
-
-    init_nav_links();
 
     init_sliders();
 
@@ -53,167 +40,14 @@ function on_ready () {
     //slider_speed = 600; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
     slider_speed = 800; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
 
-    toggle_nav_menu();
-    fade_duration = 500; // same as for slider_speed
-
-    init_add_to_cart();
-
-    // defailt is small
-    if (typeof cart_size === 'undefined') {
-        cart_size = "small";
-    }
-
-    load_cart(cart_size);
-
 }
 
 // runs after all components have been loaded
 function on_ready_after_load() {
-    init_cart_button();
     init_quantity_selecter();
-    init_remove_from_cart();
-
-    toggle_cart(true); // hides the cart
-    cart_speed = 500;
 }
 
-
-var cart_buttons_done = false; // makes sure the buttons only get init:ed once
-
-function init_cart_button() {
-    if(!cart_buttons_done) {
-        $(".cart_button_container img").click(function(){
-            toggle_cart(false, false);
-        });
-
-        cart_buttons_done = true;
-    }
-
-    $(".cart_cross").click(function(){
-        toggle_cart(false, true);
-    });
-}
-
-function toggle_cart(instant, close){
-    // if it's a big cart (when it is displayed on the order-page) it should always be shown and cannot be toggled off
-    if(cart_size != "big") {
-        if(instant) {
-            var tmp_speed = 0;
-        }
-        else {
-            var tmp_speed = cart_speed;
-        }
-
-        var width = $(".cart_small").width();
-        if(close)
-        {
-
-
-            $(".cart_small").animate({right:(-width)},tmp_speed);
-            //$(".cart_container").animate({width:'toggle'},tmp_speed);
-        }
-        else { // toggle
-            if ($(".cart_small").css("right") == "0px"){ // if shown
-                $(".cart_small").animate({right:(-width)},tmp_speed); // hide
-            } else { // if hidden
-                $(".cart_small").animate({right:0},tmp_speed); // show
-            }
-
-            //$(".cart_container").fadeToggle(tmp_speed);
-            //$(".cart_container").animate({width:'toggle'},tmp_speed);
-
-        }
-        //if(close)
-        //{
-        //$(".cart_container").fadeOut(tmp_speed);
-        //}
-        //else {
-        //$(".cart_container").fadeToggle(tmp_speed);
-        //}
-    }
-}
-
-function init_remove_from_cart() {
-    $(".cart_remove img").click(function(){
-
-        var id = $(this).attr("product_id");
-
-        var xhr = $.ajax({
-            url: 'function/alter_cart.php',
-            type: 'GET',
-            data: "remove=&product_id=" + id
-        });
-
-        xhr.success(function(response){
-            load_cart(cart_size); // reload the cart when it's done
-        });
-    });
-}
-
-// inits the add to cart button
-function init_add_to_cart(){
-
-    $(".buy-now").click(function(){
-
-        var id = $(this).attr("product_id");
-
-        var xhr = $.ajax({
-            url: 'function/alter_cart.php',
-            type: 'GET',
-            data: "add=&product_id=" + id
-        });
-
-        xhr.success(function(response){
-            load_cart(cart_size); // reload the cart when it's done
-            var button = document.getElementsByClassName("intro_button")[0];
-            button.innerHTML = "Added to cart";
-            button.style.backgroundColor = "#009600";
-        });
-
-    });
-}
-
-// loads the cart 
-function load_cart(size){
-
-    var container_parent = "";
-
-    // if it's a small one, the cart should be added directly to the body
-    if(size == "small"){
-        container_parent = "body";
-    }
-    else { // if it's a big one. The cart should be added to a section designated for the cart
-        container_parent = ".cart_section";
-    }
-
-    var container = $("<div class = 'cart_load'> </div>");
-
-    var old_cart = $(".cart_container");
-
-    var was_visible = false; // weather the cart was visible on the time of a reload
-
-    // if there is an old cart. (If its not the first time running this
-    if($(old_cart).length) {
-        if($(old_cart).is(":visible")){
-            was_visible = true;
-        }
-    }
-
-    $(container).load("cart_preview.php?size=" + size, function() {
-
-
-        $(".cart_load").remove(0); // removes the old container
-        $(container_parent).append(container); // adds the new conatainer
-
-        // if the cart was visible before reload, the cart is toggled
-        if(was_visible) {
-            toggle_cart(true);
-        }
-
-        on_ready_after_load();
-    });
-}
-
+//
 function init_quantity_selecter(){
 
     $(".quantity_select .minus").click(function(){
@@ -249,6 +83,7 @@ function send_quantity(clicked, quantity){
     });
 }
 
+//
 function change_quantity(change, clicked) {
 
     var parent = $(clicked).parent().parent().parent();
@@ -278,8 +113,7 @@ function change_quantity(change, clicked) {
     return new_value;
 }
 
-var sliding = false;
-
+//
 function slider_go_to_page(slider_number, page){
     if (!sliding) {
         sliding = true;
@@ -377,8 +211,7 @@ function slider_go_to_page(slider_number, page){
 
 }
 
-
-
+//
 function init_sliders(){
 
     var sliders = document.getElementsByClassName("all_slider_container");
@@ -530,86 +363,4 @@ function init_sliders(){
 
         }
     }
-}
-
-
-// if the nav is currently being opened or closed
-var nav_in_animation = false;
-
-function toggle_nav_menu(){
-    nav_menu_visible = !nav_menu_visible;
-
-    $(".nav_menu_container").fadeToggle(fade_duration);
-
-    // changes the color on the hamburger menu
-    if (nav_menu_visible){
-        jQuery(".McButton b").animate({"background-color" : button_open_color}, fade_duration);
-    }
-    else{
-        jQuery(".McButton b").animate({"background-color" : button_closed_color}, fade_duration);
-    }
-}
-
-function init_mc_button(){
-
-    // hamburger menu
-    var McButton = $("[data=hamburger-menu]");
-    var McBar1 = McButton.find("b:nth-child(1)");
-    var McBar2 = McButton.find("b:nth-child(2)");
-    var McBar3 = McButton.find("b:nth-child(3)");
-
-
-
-    $(McButton).click( function() {
-        toggle_nav(false);
-    });
-}
-
-// if override animation is true. It means the nav should be toggled regardless of weather it is currently being animated or not
-function toggle_nav(override_animation){
-
-    // hamburger menu
-    var McButton = $("[data=hamburger-menu]");
-    var McBar1 = McButton.find("b:nth-child(1)");
-    var McBar2 = McButton.find("b:nth-child(2)");
-    var McBar3 = McButton.find("b:nth-child(3)");
-
-    if (!nav_in_animation || override_animation) {
-        nav_in_animation = true;
-        var speed_scale = 0.8;
-
-        toggle_nav_menu();
-
-        $(McButton).toggleClass("active");
-
-        if (McButton.hasClass("active")) {
-            McBar1.velocity({ top: "50%" }, {duration: 200 * speed_scale, easing: "swing"});
-            McBar3.velocity({ top: "50%" }, {duration: 200 * speed_scale, easing: "swing"})
-                .velocity({rotateZ:"90deg"}, {duration: 800 * speed_scale, delay: 200, easing: [500,20] });
-            McButton.velocity({rotateZ:"135deg"}, {duration: 800 * speed_scale, delay: 200, easing: [500,20],
-                complete: function()
-                {
-                    nav_in_animation = false; // when the animation is done
-                }
-            });
-        } else {
-            McButton.velocity("reverse");
-            McBar3.velocity({rotateZ:"0deg"}, {duration: 800 * speed_scale, easing: [500,20] })
-                .velocity({ top: "100%" }, {duration: 200 * speed_scale, easing: "swing"});
-
-            McBar1.velocity("reverse", {delay: 800 * speed_scale,
-                complete: function()
-                {
-                    nav_in_animation = false;// when the animation is done
-                }
-            });
-
-        }
-    }
-}
-
-function init_nav_links() {
-    $(".nav_link").click(function(){
-        toggle_nav(true);
-    });
 }
