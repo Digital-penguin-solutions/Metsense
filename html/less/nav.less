@@ -19,10 +19,10 @@
       .transition(@time: 0.3s);
     }
   }
-}
 
-.nav_button_container li {
-  .fullw;
+  li{
+    .fullw;
+  }
 }
 
 .nav_button_container{
@@ -36,37 +36,41 @@
   z-index:1040;
 }
 
-
 .McButton {
-  color:black;
-  position:absolute;
+  @bar-w: 10vh;
+  @bar-h: 0.4vh;
+  @bar-color: black;
+  color: @bar-color;
+  position: absolute;
   width: 100%;
   height: 40%;
   top: 30%;
   cursor: pointer;
-  background:none;
+  background: none;
   padding: 0 !important;
-}
 
-b {
-  position: absolute;
-  display: block;
-  width: 100%;
-  background-color: #4a4544;
-  left: 0;
-  z-index: 1040;
-  height: 0.35vh;
+  b {
+    display: block;
+    left: 0;
+    z-index: 1040;
+    width: @bar-w;
+    height: @bar-h;
+    background-color: @bar-color;
 
-  &:nth-child(1) {
-    top: 0;
-  }
+    &:nth-child(1) {
+      top: 0;
+      height: @bar-h;
+    }
 
-  &:nth-child(2) {
-    top: 50%;
-  }
+    &:nth-child(2) {
+      top: 50%;
+      height: @bar-h;
+    }
 
-  &:nth-child(3) {
-    top: 100%;
+    &:nth-child(3) {
+      top: 100%;
+      height: @bar-h;
+    }
   }
 }
 
@@ -112,21 +116,24 @@ b {
   height:50%;
   list-style:none;
   margin-top:-40%;
-}
 
-.nav_menu li a:hover{
-  color: @color2;
-}
-.nav_menu li a:active,
-.nav_menu li a:visited {
-  text-decoration:none;
-}
-.nav_menu li a {
-  color:@white;
-  font-size: 8vw;
-  font-weight: 300;
-  display:block;
-  text-align:center;
+  li a {
+    color:@white;
+    font-size: 8vw;
+    font-weight: 300;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+
+    &:hover{
+      color: @color2;
+    }
+
+    &:active{
+
+    }
+
+  }
 }
 
 .nav_menu_cross {
@@ -139,12 +146,11 @@ b {
 
 //desktop nav
 @media (min-width: @screen-md-min) {
-      .nav_menu {
-    margin-top:-5%;
-  }
-
-  .nav_menu li a {
-    font-size: 3vw;
+  .nav_menu {
+    margin-top: -5%;
+    li a {
+      font-size: 3vw;
+    }
   }
 
   .navbar-header {
@@ -166,5 +172,4 @@ b {
       margin-top:15%;
     }
   }
-
 }

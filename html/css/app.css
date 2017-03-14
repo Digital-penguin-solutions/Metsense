@@ -337,7 +337,7 @@ footer .footer .footer_container .footer_info p {
   opacity: 0.85;
   transition: all 0.3s linear;
 }
-.nav_button_container li {
+.cart_button_container li {
   width: 100% !important;
 }
 .nav_button_container {
@@ -360,23 +360,25 @@ footer .footer .footer_container .footer_info p {
   background: none;
   padding: 0 !important;
 }
-b {
-  position: absolute;
+.McButton b {
   display: block;
-  width: 100%;
-  background-color: #4a4544;
   left: 0;
   z-index: 1040;
-  height: 0.35vh;
+  width: 10vh;
+  height: 0.4vh;
+  background-color: black;
 }
-b:nth-child(1) {
+.McButton b:nth-child(1) {
   top: 0;
+  height: 0.4vh;
 }
-b:nth-child(2) {
+.McButton b:nth-child(2) {
   top: 50%;
+  height: 0.4vh;
 }
-b:nth-child(3) {
+.McButton b:nth-child(3) {
   top: 100%;
+  height: 0.4vh;
 }
 .nav-manstyle {
   height: 8%;
@@ -416,19 +418,16 @@ b:nth-child(3) {
   list-style: none;
   margin-top: -40%;
 }
-.nav_menu li a:hover {
-  color: #003057;
-}
-.nav_menu li a:active,
-.nav_menu li a:visited {
-  text-decoration: none;
-}
 .nav_menu li a {
   color: #ffffff;
   font-size: 8vw;
   font-weight: 300;
   display: block;
   text-align: center;
+  text-decoration: none;
+}
+.nav_menu li a:hover {
+  color: #003057;
 }
 .nav_menu_cross {
   position: fixed;
