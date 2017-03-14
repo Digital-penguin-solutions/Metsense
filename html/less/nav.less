@@ -38,8 +38,7 @@
 
 .McButton {
   @bar-w: 10vh;
-  @bar-h: 0.4vh;
-  @bar-color: black;
+  @bar-color: @color4;
   color: @bar-color;
   position: absolute;
   width: 100%;
@@ -54,22 +53,19 @@
     left: 0;
     z-index: 1040;
     width: @bar-w;
-    height: @bar-h;
+    height: 3px !important;
     background-color: @bar-color;
 
     &:nth-child(1) {
       top: 0;
-      height: @bar-h;
     }
 
     &:nth-child(2) {
       top: 50%;
-      height: @bar-h;
     }
 
     &:nth-child(3) {
       top: 100%;
-      height: @bar-h;
     }
   }
 }
