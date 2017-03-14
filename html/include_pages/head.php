@@ -16,11 +16,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script>
 
     <!-- JavaScript -->
-    <script src="js/color-stellar-fade.js"></script>
+    <script src="js/import.js"></script>
     <!--all scripts-->
-    <script src="js/scripts.js"></script>
-    <!--Admin scripts-->
-    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/app.js"></script>
     <!--Admin scripts-->
     <script src="js/admin_script.js"></script>
 

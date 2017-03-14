@@ -45,8 +45,8 @@ g.task('minify', ['removeComm'] , function() {
         .pipe(g.dest('build/'));
 });
 
-
-g.task('less', function () {
+//less stuff
+g.task('compile-less', function () {
     return g.src('html/less/*.less')
         .pipe(plumber())
         .pipe(less({
@@ -56,7 +56,7 @@ g.task('less', function () {
 });
 
 // Compile LESS files from /less into /css
-g.task('less', function() {
+g.task('compile-less', function() {
     return g.src('html/less/app.less')
         .pipe(plumber())
         .pipe(less())
@@ -64,7 +64,7 @@ g.task('less', function() {
         .pipe(g.dest('html/css'));
 });
 
-g.task('prefix', ['less'], function () {
+g.task('prefix', ['compile-less'], function () {
     return g.src('html/css/app.css')
         .pipe(prefix({
             browsers: ['last 2 versions'],
@@ -74,39 +74,38 @@ g.task('prefix', ['less'], function () {
 });
 
 //minify css files and run the sass function before
-g.task('minify-css', ['prefix'], function() {
+g.task('css-build', ['prefix'], function() {
     return g.src('html/css/*.css')
         .pipe(plumber())
         .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(g.dest('build/css'));
 });
 
-//uglify and concat some files
-g.task('scripts', function () {
-    return g.src(['html/js/backgroundslider.js','html/scripts.js'])
+//creating app.js from all js files in the app folder
+g.task('concat-js1',function () {
+    return g.src('html/js/app/*.js')
         .pipe(plumber())
-        .pipe(concat('scripts.js'))
-        .pipe(uglify())
-        .pipe(g.dest('build/js/'))
+        .pipe(concat('app.js'))
+        .pipe(g.dest('html/js'))
 });
 
-g.task('scripts', function () {
-    return g.src(['html/js/fade-slide.js','html/color-stellar.js'])
+//create impots.js from all js files in imporst folder
+g.task('concat-js', ['concat-js1'],function () {
+    return g.src('html/js/imports/*.js')
         .pipe(plumber())
-        .pipe(concat('color-stellar-fade.js'))
-        .pipe(uglify())
-        .pipe(g.dest('build/js/'))
+        .pipe(concat('import.js'))
+        .pipe(g.dest('html/js'))
 });
 
 //uglify all flies
-g.task('scripts', function () {
+g.task('js-build', ['concat-js'] , function () {
     return g.src('html/js/*.js')
         .pipe(plumber())
         .pipe(uglify())
         .pipe(g.dest('build/js'))
 });
 
-//coppy img and .htaccess files to build folder
+//copy img and .htaccess files to build folder
 g.task('copy', function() {
     return g.src('html/.htaccess')
         .pipe(plumber())
@@ -123,12 +122,12 @@ g.task('imgmin', function () {
 
 // watch for file changes and performs the different tasks
 g.task('watch', function () {
-    g.watch('html/js/*js',         ['scripts']);
-    g.watch('html/less/*less',     ['minify-css']);
-    g.watch('html/**/*{html,php}', ['minify']);
-    g.watch('html/img/**/*',       ['imgmin']);
-    g.watch('html/.htaccess',      ['copy']);
+    g.watch('html/js/**/*.js',         ['concat-js']);
+    g.watch('html/less/*.less',     ['prefix']);
 });
 
-// Run everything
-g.task('default', ['minify-css', 'minify', 'scripts', 'imgmin', 'copy', 'watch']);
+//build dist
+g.task('build',['minify', 'css-build', 'js-build', 'copy', 'imgmin']);
+
+//develop less an js
+g.task('default', ['prefix', 'concat-js', 'watch']);
