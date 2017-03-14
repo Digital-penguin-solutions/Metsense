@@ -95,8 +95,6 @@ $products = get_all_products($con);
 
                 }
 
-                ?>
-                <?php
                 if(isset($_SESSION['admin'])){
                     ?>
                     <a href = "add_product" class = "add_product_button center_horizontally_css">
