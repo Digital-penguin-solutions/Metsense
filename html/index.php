@@ -55,7 +55,7 @@ include "include_pages/welcome_index.php";
                     $i++;
 
                     //check if the last pruduct is alone then it covers the entier page
-                    if (($i == $len - 1) && $i%2 == 1){
+                    if (($i == $len) && $i%2 == 1){
                         $size     = $odd;
                         $size_big = $odds;
                     }
@@ -63,6 +63,7 @@ include "include_pages/welcome_index.php";
                         $size     = $even;
                         $size_big = Null;
                     }
+
                     ?>
                     <div class=" full_height fade-in nopm <?php echo $size ?>">
                         <div class="prud <?php echo $size_big?>">
