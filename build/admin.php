@@ -49,7 +49,6 @@ $products = get_all_products($con);
 
                 }
 
-                ?> <?php
                 if(isset($_SESSION['admin'])){
                     ?> <a href="add_product" class="add_product_button center_horizontally_css">Add a new product </a><a href="admin?change_password=" class="add_product_button center_horizontally_css">Change password </a><a href="admin?logout=" class="add_product_button center_horizontally_css">Logout </a> <?php
                 }

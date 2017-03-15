@@ -26,6 +26,7 @@ const banner = ['/*!\n',
 
 //delete dist folder
 g.task('clean', function () {
+    console.log("Clean all files in build folder");
     return g.src('build', {read: false})
         .pipe(clean());
 });
@@ -127,7 +128,9 @@ g.task('watch', function () {
 });
 
 //build dist
-g.task('build',['minify', 'css-build', 'js-build', 'copy', 'imgmin']);
+g.task('build',['clean'],function () {
+    g.start('minify', 'css-build', 'js-build', 'copy', 'imgmin')
+});
 
 //develop less an js
 g.task('default', ['prefix', 'concat-js', 'watch']);

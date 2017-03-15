@@ -36,7 +36,7 @@ include "include_pages/welcome_index.php";
                     $i++;
 
                     //check if the last pruduct is alone then it covers the entier page
-                    if (($i == $len -1) && $i%2 == 1){
+                    if (($i == $len-1) && ($i%2 == 1)){
                         $size     = $odd;
                         $size_big = $odds;
                     }
