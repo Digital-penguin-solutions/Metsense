@@ -1,19 +1,23 @@
 //import everything
-const g           = require('gulp');
-const less        = require('gulp-less');
-const path        = require('path');
-const cleanCss    = require('gulp-clean-css');
-const prefix      = require('gulp-autoprefixer');
-const uglify      = require('gulp-uglify');
-const concat      = require('gulp-concat');
-const htmlmin     = require('gulp-htmlmin');
-const imgmin      = require('gulp-imagemin');
-const watch       = require('gulp-watch');
-const plumber     = require('gulp-plumber');
-const clean       = require('gulp-clean');
-const removeComm  = require('gulp-remove-html-comments');
-const header      = require('gulp-header');
-const pkg         = require('./package.json');
+var browserSync     = require('browser-sync').create();
+const g             = require('gulp');
+const less          = require('gulp-less');
+const path          = require('path');
+const cleanCss      = require('gulp-clean-css');
+const prefix        = require('gulp-autoprefixer');
+const uglify        = require('gulp-uglify');
+const concat        = require('gulp-concat');
+const htmlmin       = require('gulp-htmlmin');
+const imgmin        = require('gulp-imagemin');
+const watch         = require('gulp-watch');
+const plumber       = require('gulp-plumber');
+const clean         = require('gulp-clean');
+const removeComm    = require('gulp-remove-html-comments');
+const header        = require('gulp-header');
+const pkg           = require('./package.json');
+const httpProxy     = require('http-proxy');
+const connect       = require('gulp-connect-php');
+
 
 // Set the banner content
 const banner = ['/*!\n',
@@ -133,4 +137,6 @@ g.task('build',['clean'],function () {
 });
 
 //develop less an js
-g.task('default', ['prefix', 'concat-js', 'watch']);
+g.task('default', ['prefix', 'concat-js', 'wach']);
+
+
