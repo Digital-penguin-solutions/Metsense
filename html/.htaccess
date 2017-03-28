@@ -202,3 +202,6 @@ ExpiresDefault "access 1 month"
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/xml
 </IfModule>
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz

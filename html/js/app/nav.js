@@ -14,7 +14,7 @@ var nav_in_animation = false;
 //when page is ready
 function on_ready () {
 
-    $(".nav_menu_container").css("visibility","visible");
+    $('.nav_menu_container').css("visibility","visible");
     init_mc_button();
 
     init_nav_links();

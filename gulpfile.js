@@ -1,26 +1,26 @@
 //import everything
-var browserSync     = require('browser-sync').create();
-const g             = require('gulp');
-const less          = require('gulp-less');
-const path          = require('path');
-const cleanCss      = require('gulp-clean-css');
-const prefix        = require('gulp-autoprefixer');
-const uglify        = require('gulp-uglify');
-const concat        = require('gulp-concat');
-const htmlmin       = require('gulp-htmlmin');
-const imgmin        = require('gulp-imagemin');
-const watch         = require('gulp-watch');
-const plumber       = require('gulp-plumber');
-const clean         = require('gulp-clean');
-const removeComm    = require('gulp-remove-html-comments');
-const header        = require('gulp-header');
-const pkg           = require('./package.json');
-const httpProxy     = require('http-proxy');
-const connect       = require('gulp-connect-php');
+var g             = require('gulp');
+var less          = require('gulp-less');
+var path          = require('path');
+var cleanCss      = require('gulp-clean-css');
+var prefix        = require('gulp-autoprefixer');
+var uglify        = require('gulp-uglify');
+var concat        = require('gulp-concat');
+var htmlmin       = require('gulp-htmlmin');
+var imgmin        = require('gulp-imagemin');
+var watch         = require('gulp-watch');
+var plumber       = require('gulp-plumber');
+var removeComm    = require('gulp-remove-html-comments');
+var header        = require('gulp-header');
+var pkg           = require('./package.json');
+var clean           = require('gulp-clean');
+var httpProxy       = require('http-proxy');
+var browserSync     = require('browser-sync');
+var connect         = require('gulp-connect-php');
 
 
 // Set the banner content
-const banner = ['/*!\n',
+var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
     ' * Copyright 2017-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
@@ -87,7 +87,7 @@ g.task('css-build', ['prefix'], function() {
 });
 
 //creating app.js from all js files in the app folder
-g.task('concat-js1',function () {
+g.task('concat-js-app',function () {
     return g.src('html/js/app/*.js')
         .pipe(plumber())
         .pipe(concat('app.js'))
@@ -95,15 +95,15 @@ g.task('concat-js1',function () {
 });
 
 //create impots.js from all js files in imporst folder
-g.task('concat-js', ['concat-js1'],function () {
-    return g.src('html/js/imports/*.js')
+g.task('concat-js-third-party',function () {
+    return g.src('html/js/third-party/*.js')
         .pipe(plumber())
-        .pipe(concat('import.js'))
+        .pipe(concat('third-party.js'))
         .pipe(g.dest('html/js'))
 });
 
 //uglify all flies
-g.task('js-build', ['concat-js'] , function () {
+g.task('js-build', ['concat-js-third-party', 'concat-js-app'] , function () {
     return g.src('html/js/*.js')
         .pipe(plumber())
         .pipe(uglify())
@@ -126,17 +126,54 @@ g.task('imgmin', function () {
 });
 
 // watch for file changes and performs the different tasks
-g.task('watch', function () {
-    g.watch('html/js/**/*.js',         ['concat-js']);
-    g.watch('html/less/*.less',     ['prefix']);
+g.task('dev-watch', function () {
+    g.watch('html/js/**/*.js',         ['concat-js-app','concat-js-third-party']);
+    g.watch('html/less/*.less',        ['prefix']);
 });
 
-//build dist
+g.task('connect-php', function () {
+    connect.server({
+        port: 8079,
+        base: 'app',
+        open: false
+    });
+
+    var proxy   = httpProxy.createProxyServer({});
+    var reload  = browserSync.reload;
+
+    browserSync({
+        notify: false,
+        port  : 8079,
+        server: {
+            baseDir   : ['app'],
+            middleware: function (req, res, next) {
+                var url = req.url;
+
+                if (!url.match(/^\/(css)\//)) {
+                    proxy.web(req, res, { target: 'http://localhost:8079' });
+                } else {
+                    next();
+                }
+            }
+        }
+    });
+
+    g.watch([
+        'app/**/*.html',
+        'app/**/*.php',
+        'app/js/*.js',
+        'app/css/app.css'
+    ]).on('change', reload);
+
+    g.watch('app/scss/**/*scss',      ['prefix']);
+    g.watch('app/js/**/*.js',         ['concat-js-app','concat-js-third-party']);
+});
+
 g.task('build',['clean'],function () {
     g.start('minify', 'css-build', 'js-build', 'copy', 'imgmin')
 });
 
-//develop less an js
-g.task('default', ['prefix', 'concat-js', 'wach']);
+//run css tole to compile css
+g.task('default', ['prefix', 'concat-js-app','concat-js-third-party', 'connect-php']);
 
-
+g.task('dev', ['prefix', 'concat-js-app','concat-js-third-party', 'dev-watch']);
