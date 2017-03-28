@@ -4,4 +4,3 @@
 db_connect.php
 node_modules/
 *.iml
-build

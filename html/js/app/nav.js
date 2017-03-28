@@ -28,7 +28,7 @@ function on_ready () {
 function toggle_nav_menu(){
     nav_menu_visible = !nav_menu_visible;
 
-    $(".nav_menu_container").fadeToggle(fade_duration);
+    $('.nav_menu_container').fadeToggle(fade_duration);
 
     // changes the color on the hamburger menu
     if (nav_menu_visible){
@@ -58,7 +58,7 @@ function init_mc_button(){
 function toggle_nav(override_animation){
 
     // hamburger menu
-    var McButton = $("[data=hamburger-menu]");
+    var McButton = $('[data=hamburger-menu]');
     var McBar1 = McButton.find("b:nth-child(1)");
     var McBar2 = McButton.find("b:nth-child(2)");
     var McBar3 = McButton.find("b:nth-child(3)");

@@ -38,8 +38,10 @@ function on_ready () {
         slider_go_to_page(i, 0);
     }
 
-    //slider_speed = 600; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
-    slider_speed = 800; // sets the slider speed to a value after the first initialisation has been done. This is so that the animations wont be shown when the page is loaded
+    //slider_speed = 600; // sets the slider speed to a value after the first initialisation has been done.
+    // This is so that the animations wont be shown when the page is loaded
+    slider_speed = 800; // sets the slider speed to a value after the first initialisation has been done.
+    // This is so that the animations wont be shown when the page is loaded
 
 }
 
@@ -150,7 +152,8 @@ function slider_go_to_page(slider_number, page){
 
         //new_page.style.visibility = "hidden";
         var background_image = new_page.getElementsByTagName("img")[0].src;
-        //new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].style.visibility = "hidden";
+        //new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0]
+        // .style.visibility = "hidden";
         new_page.parentNode.style.background = "url(" + background_image + ") no-repeat center center";
         new_page.parentNode.style.backgroundSize = "100% 100%";
 
@@ -199,7 +202,8 @@ function slider_go_to_page(slider_number, page){
 
 
             // makes all the not clicked dots go back to the original color
-            //jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor : not_selected_background, color : not_selected_color}, slider_speed);
+            //jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor
+            // : not_selected_background, color : not_selected_color}, slider_speed);
             jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor : dot_not_selected_background, borderColor : border_not_selected_color}, slider_speed);
 
 
@@ -259,7 +263,9 @@ function init_sliders(){
             $(dots_container).attr("slider_number", i);
             $(inner_dots_container).attr("slider_number", i);
 
-            // the dots have to containers. One to center for the entire page and one to center within the first container. This is beacause the outercontianer has to fill the entire width to make sure no dots ever fall out
+            // the dots have to containers. One to center for the entire page and one to center
+            // within the first container. This is beacause the outercontianer has to fill
+            // the entire width to make sure no dots ever fall out
             $(dots_container).append(inner_dots_container);
             $(slider_parent).append(dots_container);
         }

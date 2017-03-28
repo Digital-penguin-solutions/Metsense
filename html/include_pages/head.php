@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js" type="text/javascript"></script>
 
     <!-- JavaScript -->
-    <script src="js/import.js"></script>
+    <script src="js/third-party.js"></script>
     <!--all scripts-->
     <script src="js/app.js"></script>
     <!--Admin scripts-->
