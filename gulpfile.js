@@ -176,4 +176,4 @@ g.task('build',['clean'],function () {
 //run css tole to compile css
 g.task('default', ['prefix', 'concat-js-app','concat-js-third-party', 'connect-php']);
 
-g.task('dev', ['prefix', 'concat-js-app','concat-js-third-party', 'dev-watch']);
+g.task('dev', ['prefix', 'concat-js-third-party', 'concat-js-app', 'dev-watch']);
