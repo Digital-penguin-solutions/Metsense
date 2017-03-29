@@ -1,18 +1,18 @@
 //import everything
-var g             = require('gulp');
-var less          = require('gulp-less');
-var path          = require('path');
-var cleanCss      = require('gulp-clean-css');
-var prefix        = require('gulp-autoprefixer');
-var uglify        = require('gulp-uglify');
-var concat        = require('gulp-concat');
-var htmlmin       = require('gulp-htmlmin');
-var imgmin        = require('gulp-imagemin');
-var watch         = require('gulp-watch');
-var plumber       = require('gulp-plumber');
-var removeComm    = require('gulp-remove-html-comments');
-var header        = require('gulp-header');
-var pkg           = require('./package.json');
+var g               = require('gulp');
+var less            = require('gulp-less');
+var path            = require('path');
+var cleanCss        = require('gulp-clean-css');
+var prefix          = require('gulp-autoprefixer');
+var uglify          = require('gulp-uglify');
+var concat          = require('gulp-concat');
+var htmlmin         = require('gulp-htmlmin');
+var imgmin          = require('gulp-imagemin');
+var watch           = require('gulp-watch');
+var plumber         = require('gulp-plumber');
+var removeComm      = require('gulp-remove-html-comments');
+var header          = require('gulp-header');
+var pkg             = require('./package.json');
 var clean           = require('gulp-clean');
 var httpProxy       = require('http-proxy');
 var browserSync     = require('browser-sync');
@@ -134,7 +134,7 @@ g.task('dev-watch', function () {
 g.task('connect-php', function () {
     connect.server({
         port: 8079,
-        base: 'app',
+        base: 'html',
         open: false
     });
 
@@ -145,7 +145,7 @@ g.task('connect-php', function () {
         notify: false,
         port  : 8079,
         server: {
-            baseDir   : ['app'],
+            baseDir   : ['html'],
             middleware: function (req, res, next) {
                 var url = req.url;
 
