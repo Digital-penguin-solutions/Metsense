@@ -30,7 +30,6 @@ include "include_pages/welcome_index.php";
         <div class="container-fluid full_height">
             <div class="row full_height">
                 <?php
-
                 $len        = count($products);
                 $odds       = 'prud-big';
                 $odd        = 'col-xs-12';
@@ -44,8 +43,6 @@ include "include_pages/welcome_index.php";
                     $id              = $product["product_id"];
                     $main_image_data = $product["main_image"];
 
-
-
                     //check if the last pruduct is alone then it covers the entier page
                     if (($i == $len-1) && ($len%2 == 1)){
                         $size     = $odd;
@@ -55,8 +52,6 @@ include "include_pages/welcome_index.php";
                         $size     = $even;
                         $size_big = Null;
                     }
-
-
                     ?>
                     <div class=" full_height fade-in nopm <?php echo $size ?>">
                         <div class="prud <?php echo $size_big?>">
