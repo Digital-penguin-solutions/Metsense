@@ -131,6 +131,7 @@ g.task('dev-watch', function () {
     g.watch('html/less/*.less',        ['prefix']);
 });
 
+//connect to php server and use browser sync
 g.task('connect-php', function () {
     connect.server({
         port: 8079,
@@ -165,8 +166,8 @@ g.task('connect-php', function () {
         'app/css/app.css'
     ]).on('change', reload);
 
-    g.watch('app/scss/**/*scss',      ['prefix']);
-    g.watch('app/js/**/*.js',         ['concat-js-app','concat-js-third-party']);
+    g.watch('app/scss/**/*scss',     ['prefix']);
+    g.watch('app/js/**/*.js',        ['concat-js-app','concat-js-third-party']);
 });
 
 g.task('build',['clean'],function () {
