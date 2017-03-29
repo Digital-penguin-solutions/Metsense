@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Digital Internet solutions">
+    <meta name="author" content="ISON Web Design">
 
     <!--main css style sheet-->
     <link rel="stylesheet" href="css/app.css">

@@ -7,6 +7,7 @@ include "include_pages/head.php";
 <head>
     <meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website">
     <title>Admin page</title>
+    <link rel="stylesheet" href="css/temp.css">
 </head>
 
 <?php
@@ -78,6 +79,11 @@ $products = get_all_products($con);
                                 <!--- EDIT BUTTON-->
                                 <a href = "add_product?product_id=<?php echo $product_id?>" class = "product_edit_button">
                                     <p class = "center_vertically_css">Edit</p>
+                                </a>
+
+                                <!--- TOGGLE SHOW BUTTON-->
+                                <a href = "function/toggle_product?product_id=<?php echo $product_id?>" class = "product_show_button">
+                                    <p class = "center_vertically_css">Toggle</p>
                                 </a>
 
                                 <!--- DELETE BUTTON-->

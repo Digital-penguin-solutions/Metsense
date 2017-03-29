@@ -10,7 +10,7 @@ include "include_pages/head.php";
 </head>
 <?php
 $con      = connect();
-$products = get_all_products($con);
+$products = get_all_visible_products($con);
 ?>
 
 <body id="page-top background_fixed" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -30,32 +30,24 @@ include "include_pages/welcome_index.php";
         <div class="container-fluid full_height">
             <div class="row full_height">
                 <?php
-                //variables
-                $i          = 0;
+
                 $len        = count($products);
                 $odds       = 'prud-big';
                 $odd        = 'col-xs-12';
                 $even       = 'col-md-6 col-xs-12';
 
-                //loop out all product in the database where variable show is == 1
-                foreach ($products as $product) {
+                // Loop out all product in the database where variable show == 1
+                foreach ($products as $i=>$product) {
 
-                    $show            = $product["show"];
                     $name            = $product["name"];
                     $short           = $product["short_description"];
                     $id              = $product["product_id"];
                     $main_image_data = $product["main_image"];
 
-                    //don't show pages that has the variabel show deactivated
-                    if($show == 0){
-                        break;
-                    }
 
-                    //for every looped out objekt add 1 to the i variabel used in checking for the last pruduckt
-                    $i++;
 
                     //check if the last pruduct is alone then it covers the entier page
-                    if (($i == $len-1) && ($i%2 == 1)){
+                    if (($i == $len-1) && ($len%2 == 1)){
                         $size     = $odd;
                         $size_big = $odds;
                     }
@@ -63,6 +55,7 @@ include "include_pages/welcome_index.php";
                         $size     = $even;
                         $size_big = Null;
                     }
+
 
                     ?>
                     <div class=" full_height fade-in nopm <?php echo $size ?>">
