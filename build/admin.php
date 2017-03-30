@@ -1,7 +1,7 @@
 <?php
 include "include_pages/loading.php";
 include "include_pages/head.php";
-?> <!DOCTYPE html><html><head><meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website"><title>Admin page</title></head> <?php
+?> <!DOCTYPE html><html><head><meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website"><title>Admin page</title><link rel="stylesheet" href="css/temp.css"></head> <?php
 include "function/functions.php";
 session_start();
 $con = connect();
@@ -42,7 +42,7 @@ $products = get_all_products($con);
                             else {
                                 $offset = 2;
                             }
-                            ?> <div class="col-md-4 col-md-offset-<?php echo $offset ?> admin_product"><h1> <?php echo $name ?></h1><img class="center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>"><!--- EDIT BUTTON--> <a href="add_product?product_id=<?php echo $product_id?>" class="product_edit_button"><p class="center_vertically_css">Edit</p></a><!--- DELETE BUTTON--> <a href="actions/delete_product?id=<?php echo $product_id?>" class="product_delete_button"><p class="center_vertically_css">Delete</p></a></div> <?php
+                            ?> <div class="col-md-4 col-md-offset-<?php echo $offset ?> admin_product"><h1> <?php echo $name ?></h1><img class="center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>"><!--- EDIT BUTTON--> <a href="add_product?product_id=<?php echo $product_id?>" class="product_edit_button"><p class="center_vertically_css">Edit</p></a><!--- TOGGLE SHOW BUTTON--> <a href="function/toggle_product?product_id=<?php echo $product_id?>" class="product_show_button"><p class="center_vertically_css">Toggle</p></a><!--- DELETE BUTTON--> <a href="actions/delete_product?id=<?php echo $product_id?>" class="product_delete_button"><p class="center_vertically_css">Delete</p></a></div> <?php
                             $count++;
                         }
                         ?> </div> <?php

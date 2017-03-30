@@ -93,7 +93,23 @@ if(!isset($functions_included)){
 
     }
 
-    //get all pruduckts from database
+    /* Return only the products that are to be shown on the homepage */
+    function get_all_visible_products($con) {
+        $query  = "SELECT product_id, name, short_description, main_image FROM product WHERE `show` = '1'";
+        $select = mysqli_query($con, $query) or die (mysqli_error($con));
+
+        $array  = array();
+
+        while($data = mysqli_fetch_array($select)){
+
+            $array[] = $data;
+        }
+
+
+        return $array;
+
+    }
+    //get all products from database
     function get_all_products($con) {
 
         $query  = "SELECT * FROM product";
@@ -155,7 +171,14 @@ if(!isset($functions_included)){
         return $array;
     }
 
-    //get pruduckt by name from database
+    function get_product_visibility_by_id($con, $id){
+        $id    = secure_str($id);
+        $data = get_product_by_id($con, $id);
+
+        return $data['show'];
+    }
+
+    //get product by name from database
     function get_product_id_by_name($con, $name){
 
         $id     = secure_str($name);
