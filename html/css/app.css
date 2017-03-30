@@ -1123,6 +1123,9 @@ figure.effect-sarah:hover:after h2 {
   font-size: 2vw;
 }
 .admin_product a {
+  color: black !important;
+}
+.admin_product .product_button {
   display: block;
   width: 25%;
   height: 15%;
