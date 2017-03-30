@@ -1,4 +1,10 @@
 <option value="">Country...</option>
+<?php 
+    if(isset($_GET['country'])){
+        $country = $_GET['country'];
+        echo "<option selected value='$country'>$country</option>";
+    }
+?>
 <option value="Afganistan">Afghanistan</option>
 <option value="Albania">Albania</option>
 <option value="Algeria">Algeria</option>

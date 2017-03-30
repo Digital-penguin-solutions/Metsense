@@ -13,7 +13,7 @@
 
 				<!--mid section contact us info-->
 				<div class="footer_mid col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
-					<div class="footer_contact fade-in fade-delay-1">
+					<div class="footer_contact fade-in">
 						<h1>Contact us</h1>
 						<p>info@metsense.com</p>
 						<p>+46 7010 902 30</p>
@@ -21,7 +21,7 @@
 				</div>
 
 				<!--logo and the author of the web page-->
-				<div class="footer_bot col-xs-12 fade-in fade-delay-2">
+				<div class="footer_bot col-xs-12 fade-in fade-delay-1">
 					<a href="index">
 						<img class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1" src="img/logo/logo-w.svg" alt="Metsense logo">
 					</a>

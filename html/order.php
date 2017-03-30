@@ -28,7 +28,7 @@ $hide_cart = true;
 include "include_pages/nav.php";
 ?>
 
-<section id = "welcome_page" class = "cart_section no_padding">
+<section id = "order_section" class = "cart_section no_padding">
 
 </section>
 

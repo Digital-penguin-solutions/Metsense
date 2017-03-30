@@ -59,9 +59,7 @@ else if (isset($_GET['clear'])){ //clear the cart
 
     $_SESSION['cart_ids'] = array();
     $_SESSION['cart_num'] = array();
-    echo "unsetting";
 }
 else{
-    echo "none";
 }
 ?>

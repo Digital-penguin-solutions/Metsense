@@ -103,7 +103,8 @@ include "include_pages/welcome_index.php";
                             Road surface friction, Road surface temperature and more.
                         </p>
                         <p class="fade-in fade-delay-1">
-                            <b><i>All products are designed in Sweden and manufactured in the EU.</i></b>
+
+                            <b><i><br>All products are designed in Sweden and manufactured in the EU.</i></b>
                         </p>
                     </div>
                 </div>

@@ -7,7 +7,6 @@ include "include_pages/head.php";
 <head>
     <meta name="description" content="MetSense Admin page. the page to edit the pruduckts and the content of the website">
     <title>Admin page</title>
-    <link rel="stylesheet" href="css/temp.css">
 </head>
 
 <?php
@@ -63,6 +62,17 @@ $products = get_all_products($con);
                             $name       = $product['name'];
                             $main_image = $product['main_image'];
                             $product_id = $product['product_id'];
+                            $show       = $product['show'];
+
+
+                            if($show == 1){
+                                $toggle_button_value = "Hide product";
+                                $toggle_color        = "red";
+                            }
+                            else {
+                                $toggle_button_value = "Set visible";
+                                $toggle_color        = "green";
+                            }
 
 
                             if($count % 2 == 0) {
@@ -82,8 +92,8 @@ $products = get_all_products($con);
                                 </a>
 
                                 <!--- TOGGLE SHOW BUTTON-->
-                                <a href = "function/toggle_product?product_id=<?php echo $product_id?>" class = "product_show_button">
-                                    <p class = "center_vertically_css">Toggle</p>
+                                <a href = "function/toggle_product?product_id=<?php echo $product_id?>" class = "<?php echo $toggle_color?> product_show_button">
+                                    <p class = "center_vertically_css"><?php echo $toggle_button_value?></p>
                                 </a>
 
                                 <!--- DELETE BUTTON-->

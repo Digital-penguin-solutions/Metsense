@@ -196,8 +196,8 @@ if (isset($_SESSION['admin'])) {
                 <div class = "col-md-8 col-md-offset-2">
                     <h1 class = "admin_header"> Add new product</h1>
                     <h2 class = "admin_header2"> All product images should to be square sized for best performance, like 1000x1000 px for example. </h2>
-                    <h2 class = "admin_header2"> Slider images should be 1920 x 1080 p</h2>
-                    <h2 class = "admin_header2"> all images need to be smmaler then 300kb dor best performance.</h2>
+                    <h2 class = "admin_header2"> Slider images should be 1920 x 1080 p and in .jpg format</h2>
+                    <h2 class = "admin_header2"> <br> If you are experiencing issues when trying to upload or edit a product, it may be because your webserver isn't allowing too many large images to be uploaded at once. If this is an issue, try adding only a few images first and then go back to edit the product and upload the rest</h2>
                     <form id = "form" class = "add_product_form" method = "post" action = "add_product.php" enctype="multipart/form-data">
                         <input type = "hidden" name = "add">
                         <?php

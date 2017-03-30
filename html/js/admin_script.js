@@ -126,7 +126,7 @@ function send_form(){
 
 		// compress for jpg
 		if (mime != "image/png"){
-			var quality = 0.9;
+			var quality = 1;
 
 			var cvs = document.createElement('canvas');
 			cvs.width = natW; 
