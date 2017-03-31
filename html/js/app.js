@@ -47,6 +47,7 @@ function on_ready () {
 
     // puts all the sliders to the first page
     for (var i = 0; i < all_sliders.length; i++) {
+        console.log("kör123");
         slider_go_to_page(i, 0);
     }
 
@@ -295,84 +296,86 @@ function slider_go_to_page(slider_number, page){
 
         // counts the number of pages on this slider. Minus 2 cause of the two arrows
         var num_pages = $(slider).children().length - 2;
+            if(num_pages > 0){
 
-        // makes it cycle through the pages
-        if(page >= num_pages){
-            page = 0;
+            // makes it cycle through the pages
+            if(page >= num_pages){
+                page = 0;
+            }
+            else if (page < 0){
+                page = num_pages - 1;
+            }
+
+
+            // touches only the pages with the right slider_number
+
+            var pages = $(".slider_page[slider_number='"+ slider_number +"']");
+
+
+            // the page that is to be shown
+            var new_page = pages[page];
+
+            //new_page.style.visibility = "hidden";
+            var background_image = new_page.getElementsByTagName("img")[0].src;
+            //new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].style.visibility = "hidden";
+            new_page.parentNode.style.background = "url(" + background_image + ") no-repeat center center";
+            new_page.parentNode.style.backgroundSize = "100% 100%";
+
+
+
+            $(pages).fadeToggle(slider_speed, function() {
+            });
+
+
+            for (var i = 0; i < pages.length; i++)
+            {
+
+                var margin_left = (i * 100) - page * 100 + "%";
+                $(pages[i]).animate({'left' : margin_left}, 0);
+
+            }
+
+
+            var fade_in_time = slider_speed / 2;
+
+            if(no_content){
+                fade_in_time = 0;
+            }
+
+            $(pages).fadeToggle(fade_in_time, function(){
+                sliding = false;
+            });
+            var nth = ":nth-child("+(page+1)+")";
+            //
+            // if there is a list on this slider
+            if (!$(slider).hasClass("no_list")) {
+
+                var clicked = $(list_container).find(nth).not("p");
+
+                // makes all the list objects except the clicked on go back to the original color
+                jQuery(list_container).find(".slider_list_object").not(clicked).animate({backgroundColor : not_selected_background, color : not_selected_color}, slider_speed);
+
+
+                jQuery(clicked).not("p").animate({backgroundColor : selected_background, color : selected_color}, slider_speed);
+            }
+
+            else if (!$(slider).hasClass("no_dots")) {
+                var dots_container = $(".slider_dots_container[slider_number='"+ slider_number +"']");
+
+                var clicked_dot = $(dots_container).find(nth);
+
+
+                // makes all the not clicked dots go back to the original color
+                //jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor : not_selected_background, color : not_selected_color}, slider_speed);
+                jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor : dot_not_selected_background, borderColor : border_not_selected_color}, slider_speed);
+
+
+                //jQuery(clicked_dot).animate({backgroundColor : selected_background, color : selected_color}, slider_speed);
+                jQuery(clicked_dot).animate({backgroundColor : dot_selected_background, borderColor : border_selected_color}, slider_speed);
+            }
+
+            current_page[slider_number] = page;
         }
-        else if (page < 0){
-            page = num_pages - 1;
-        }
-
-
-        // touches only the pages with the right slider_number
-
-        var pages = $(".slider_page[slider_number='"+ slider_number +"']");
-
-
-        // the page that is to be shown
-        var new_page = pages[page];
-
-        //new_page.style.visibility = "hidden";
-        var background_image = new_page.getElementsByTagName("img")[0].src;
-        //new_page.getElementsByClassName("background_image_container")[0].getElementsByTagName("img")[0].style.visibility = "hidden";
-        new_page.parentNode.style.background = "url(" + background_image + ") no-repeat center center";
-        new_page.parentNode.style.backgroundSize = "100% 100%";
-
-
-
-        $(pages).fadeToggle(slider_speed, function() {
-        });
-
-
-        for (var i = 0; i < pages.length; i++)
-        {
-
-            var margin_left = (i * 100) - page * 100 + "%";
-            $(pages[i]).animate({'left' : margin_left}, 0);
-
-        }
-
-
-        var fade_in_time = slider_speed / 2;
-
-        if(no_content){
-            fade_in_time = 0;
-        }
-
-        $(pages).fadeToggle(fade_in_time, function(){
-            sliding = false;
-        });
-        var nth = ":nth-child("+(page+1)+")";
-        //
-        // if there is a list on this slider
-        if (!$(slider).hasClass("no_list")) {
-
-            var clicked = $(list_container).find(nth).not("p");
-
-            // makes all the list objects except the clicked on go back to the original color
-            jQuery(list_container).find(".slider_list_object").not(clicked).animate({backgroundColor : not_selected_background, color : not_selected_color}, slider_speed);
-
-
-            jQuery(clicked).not("p").animate({backgroundColor : selected_background, color : selected_color}, slider_speed);
-        }
-
-        else if (!$(slider).hasClass("no_dots")) {
-            var dots_container = $(".slider_dots_container[slider_number='"+ slider_number +"']");
-
-            var clicked_dot = $(dots_container).find(nth);
-
-
-            // makes all the not clicked dots go back to the original color
-            //jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor : not_selected_background, color : not_selected_color}, slider_speed);
-            jQuery(dots_container).find(".slider_dot").not(clicked_dot).animate({backgroundColor : dot_not_selected_background, borderColor : border_not_selected_color}, slider_speed);
-
-
-            //jQuery(clicked_dot).animate({backgroundColor : selected_background, color : selected_color}, slider_speed);
-            jQuery(clicked_dot).animate({backgroundColor : dot_selected_background, borderColor : border_selected_color}, slider_speed);
-        }
-
-        current_page[slider_number] = page;
     }
 
 }
