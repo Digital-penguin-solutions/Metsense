@@ -1,10 +1,16 @@
 <?php
-    if(isset($_POST['thanks'])){
-        include "function/email_function.php";
-        // clears the cart
-        $_SESSION['cart_ids'] = array();
-        $_SESSION['cart_num'] = array();
-        ?> <?php
+    if(isset($_POST['g-recaptcha-response'])){
+        $captcha=$_POST['g-recaptcha-response'];
+
+
+        if(isset($_POST['thanks'])){
+            
+            include "function/email_function.php";
+            // clears the cart
+            //$_SESSION['cart_ids'] = array();
+            //$_SESSION['cart_num'] = array();
+            ?> <?php
+        }
     }
 include "include_pages/loading.php";
 include "include_pages/head.php";
