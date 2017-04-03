@@ -1,6 +1,7 @@
 <?php
 //variables for email
-$to         = 'anders.bjork@metsense.com';
+$to         = '';
+//$to         = 'anders.bjork@metsense.com';
 $subject    = 'Metsense client';
 $email      = $_POST['email'];
 $cname      = $_POST['cname'];
@@ -13,7 +14,12 @@ $validation = false;
 
 //validation
 if($_POST){
-    if($email == '' || $number || $cname == '' || $fname == '' || $lname == '' || $country == ''){
+    if(!$captcha){
+        $feedback = "Please finish the captcha to prove that you're not a robot";
+        header("Location: finish_order.php?feedback=$feedback&email=$email&number=$number&cname=$cname&fname=$fname&lname=$lname&country=$country&info=$info");
+
+    }
+    else if($email == '' || $number == '' || $cname == '' || $fname == '' || $lname == '' || $country == ''){
         $feedback = 'Please fill out all the fields';
         header("Location: finish_order.php?feedback=$feedback&email=$email&number=$number&cname=$cname&fname=$fname&lname=$lname&country=$country&info=$info");
     }
@@ -26,6 +32,37 @@ if($_POST){
         $validation = true;
         /*$feedback = 'Thanks for making an order to Digitalis, we will get back to you as soon as possible';*/
     }
+
+    $secret = "6Lc8XRsUAAAAALlyI5fqFW5_rssCTvMtaefXfJBP";
+
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, [
+        'secret' => $secret,
+        'response' => $captcha
+    ]);
+
+    $response = curl_exec($ch);
+    $response = json_decode((string)$response);
+
+    curl_close($ch);
+    $val = $response->success;
+
+    /*$response = file_get_contents($url, false, $context);*/
+    //echo $response;
+    if($val){
+    }
+    else{
+        $validation = false;
+        $feedback = "Failed to verify captcha, please try again later";
+        header("Location: finish_order.php?feedback=$feedback&email=$email&number=$number&cname=$cname&fname=$fname&lname=$lname&country=$country&info=$info");
+    }
+
+
 }
 
 
@@ -80,5 +117,8 @@ EMAIL;
 //$header = "From: $email";
 
 mail($to, $subject, $message);
+}
+else {
+    echo "<h1> Something has gone wrong, please try again later or contact info2@metsense.com</h1>";
 }
 ?>

@@ -7,6 +7,7 @@ include "include_pages/head.php";
 <head>
     <meta name="description" content="Finish you order to get the sensor for your needs">
     <title>Finish you order</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <script>
         var cart_size = "big";
@@ -73,6 +74,12 @@ include "include_pages/nav.php";
 
             <h2>Additional Information (optional)</h2>
             <textarea id="info" name="info" title="info" placeholder = "Additional information"><?php if(isset($_GET['info'])){echo $_GET['info'];}?></textarea>
+            <div style="margin-left:25%; margin-top:2%;" class = "center-horizontally-css">
+                <div
+                class="g-recaptcha"
+                data-sitekey="6Lc8XRsUAAAAAPEgfFLrXT1qtvFAQuY4GLG_c3pe">
+                </div>
+            </div>
             <br><br>
             <p class = "">Some additional cost may be added for shipping depending on your location, you will be notified about this as soon as we get back to you</p>
 
@@ -82,6 +89,7 @@ include "include_pages/nav.php";
             <h1>Order Summary</h1>
 
             <?php
+            //<!---data-callback="document.getElementById('form').submit();">-->
             $total_price = 0;
             foreach ($products as $index=>$product){
 
