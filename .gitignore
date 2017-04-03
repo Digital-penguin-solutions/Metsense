@@ -2,5 +2,6 @@
 *.db
 .idea/
 db_connect.php
+(metsense)db_connect.php
 node_modules/
 *.iml
