@@ -7,8 +7,8 @@
             
             include "function/email_function.php";
             // clears the cart
-            //$_SESSION['cart_ids'] = array();
-            //$_SESSION['cart_num'] = array();
+            $_SESSION['cart_ids'] = array();
+            $_SESSION['cart_num'] = array();
             ?>
             <?php
         }
@@ -39,7 +39,7 @@ include "include_pages/nav.php";
 <section id = "finish_order" class = "">
 
         <h1 class = "checkout_header"> Thank you! </h1>
-        <h3 class = "admin_header"> Your order has been sent to us and we will be in contact with further instructions very soon. <br><br>Please contact <strong>info@metsense.com</strong> if you have any more questions in the meantime.</h3>
+        <h3 class = "admin_header"> Your order has been sent to us and we will be in contact with further instructions very soon. <br><br>Please contact <strong>info2@metsense.com</strong> if you have any more questions in the meantime.</h3>
         <a href = "index" class = "blue finish_button col-xs-3 col-xs-offset-5">
             Home
         </a>
