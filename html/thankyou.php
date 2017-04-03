@@ -22,10 +22,6 @@ include "include_pages/head.php";
 </head>
 <?php
 include "function/functions.php";
-
-
-
-
 ?>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top ">
