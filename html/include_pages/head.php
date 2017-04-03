@@ -37,6 +37,7 @@
 
     <!--icon-->
     <link rel="icon" href="img/logo/favicon.png">
+    <link rel="icon" href="img/logo/favicon.ico">
 </head>
 
 <?php include "function/functions.php"?>

@@ -2,4 +2,4 @@
             $(window).stellar();
         });
 
-        smoothScroll.init();</script><!-- Latest compiled and minefield JavaScript for bootstrap--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><!--icon--><link rel="icon" href="img/logo/favicon.png"></head> <?php include "function/functions.php"?>
+        smoothScroll.init();</script><!-- Latest compiled and minefield JavaScript for bootstrap--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><!--icon--><link rel="icon" href="img/logo/favicon.png"><link rel="icon" href="img/logo/favicon.ico"></head> <?php include "function/functions.php"?>
