@@ -18,7 +18,6 @@ var httpProxy       = require('http-proxy');
 var browserSync     = require('browser-sync');
 var connect         = require('gulp-connect-php');
 
-
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
