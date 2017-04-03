@@ -47,7 +47,6 @@ function on_ready () {
 
     // puts all the sliders to the first page
     for (var i = 0; i < all_sliders.length; i++) {
-        console.log("kör123");
         slider_go_to_page(i, 0);
     }
 
