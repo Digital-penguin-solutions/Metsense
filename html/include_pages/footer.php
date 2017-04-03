@@ -15,7 +15,7 @@
 				<div class="footer_mid col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
 					<div class="footer_contact fade-in">
 						<h1>Contact us</h1>
-						<p>info@metsense.com</p>
+						<p>info2@metsense.com</p>
 						<p>+46 7010 902 30</p>
 					</div>
 				</div>
