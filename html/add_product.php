@@ -229,14 +229,14 @@ if (isset($_SESSION['admin'])) {
                                 ?>
                                 <div class = "admin_list_item">
                                     <input value = "<?php echo $features ?>" name = "key_feature[]" type = "text" placeholder = "Key Feature" >
-                                    <img src = "img/cross.svg" class = "remove_item">
+                                    <img src = "img/cross.svg" class = "remove_item" alt="remove the prudukt from the list">
                                 </div>
                                 <?php
                             }
                             ?>
                             <div class = "template admin_list_item">
                                 <input name = "key_feature[]" type = "text" placeholder = "Key Feature" >
-                                <img src = "img/cross.svg" class = "remove_item">
+                                <img src = "img/cross.svg" class = "remove_item" alt="remove item from cart">
                             </div>
                             <div class = "add_item">Add new row</div>
                         </div>
@@ -251,7 +251,7 @@ if (isset($_SESSION['admin'])) {
                                 <div class = "admin_list_item">
                                     <input value = "<?php echo $row[0]?>" name = "tech_row_left[]" type = "text" placeholder = "Left column">
                                     <input value = "<?php echo $row[1]?>" name = "tech_row_right[]" type = "text" placeholder = "Right column">
-                                    <img src = "img/cross.svg" class = "remove_item">
+                                    <img src = "img/cross.svg" class = "remove_item" alt="remove item from list">
                                 </div>
                                 <?php
                             }
@@ -259,7 +259,7 @@ if (isset($_SESSION['admin'])) {
                             <div class = "template admin_list_item">
                                 <input name = "tech_row_left[]" type = "text" placeholder = "Left column">
                                 <input name = "tech_row_right[]" type = "text" placeholder = "Right column">
-                                <img src = "img/cross.svg" class = "remove_item">
+                                <img src = "img/cross.svg" class = "remove_item" alt="remove item from list">
                             </div>
                             <div class = "add_item">Add new row</div>
                         </div>
@@ -274,7 +274,7 @@ if (isset($_SESSION['admin'])) {
                                 <p class = "center_vertically_css">
                                     <strong> Current: </strong>  none
                                 </p>
-                                <img src = "img/cross.svg"  class = "center_vertically_css remove_item">
+                                <img src = "img/cross.svg"  class = "center_vertically_css remove_item" alt="remove item from list">
                             </div>
                             <?php
                             // The ones that already exist for this product
@@ -289,8 +289,8 @@ if (isset($_SESSION['admin'])) {
                                     <p class = "center_vertically_css">
                                         <strong> Current: </strong>
                                     </p>
-                                    <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image['data']); ?>" />
-                                    <img src = "img/cross.svg" image_id = "<?php echo $image_id; ?>" class = "center_vertically_css remove_item">
+                                    <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image['data']); ?>" alt="image of the curent sensor"/>
+                                    <img src = "img/cross.svg" image_id = "<?php echo $image_id; ?>" class = "center_vertically_css remove_item" alt="remove item from list">
                                 </div>
                                 <?php
                             }
@@ -305,7 +305,7 @@ if (isset($_SESSION['admin'])) {
                             <p class = "center_vertically_css">
                                 <strong> Current: </strong>
                             </p>
-                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image); ?>" />
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image); ?>" alt="preview the curent prudukt"/>
                         </div>
 
                         <h1> About Image </h1>
@@ -315,7 +315,7 @@ if (isset($_SESSION['admin'])) {
                             <p class = "center_vertically_css">
                                 <strong> Current: </strong>
                             </p>
-                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image); ?>" />
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image); ?>" alt="preview of the curent sensor"/>
                         </div>
 
                         <h1> Main Image </h1>
@@ -325,7 +325,7 @@ if (isset($_SESSION['admin'])) {
                             <p class = "center_vertically_css">
                                 <strong> Current: </strong>
                             </p>
-                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image); ?>" />
+                            <img class = "center_vertically_css list_preview_image" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image); ?>" alt="preview of the curent sensor"/>
                         </div>
 
                         <section class="col-md-4 col-md-offset-4">

@@ -2,15 +2,21 @@
 include "include_pages/loading.php";
 include "include_pages/head.php";
 ?>
+
 <html>
 <head>
-    <meta name="description" content="Our latest products that you can order">
-    <title>MetSense products</title>
+    <meta name="description" content="Our latest products that you can order from us">
+    <title>Products</title>
 </head>
-<?php include "function/pruduct_php.php"?>
 
 <body>
-<?php include "include_pages/nav.php" ?>
+
+<!--include functions and nav page-->
+<?php
+include "function/pruduct_php.php";
+include "include_pages/nav.php";
+?>
+
 <!--welcome page -->
 <section class="container-fluid product_s_1">
     <div class="row-fluid">
@@ -18,9 +24,8 @@ include "include_pages/head.php";
             <div class="product_1_container">
                 <h1 class="fade-in fade-delay-05"><?php echo $product_name ?></h1>
                 <h2 class="fade-in fade-delay-1"><?php echo $product_short_description ?></h2>
-                <!--<img class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5" src="img/2Droad1.png" alt="productuct">-->
                 <div class = "product_main_image_container">
-                    <img class = "product_main_image col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="About image">
+                    <img class = "product_main_image col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5 fade-in fade-delay-1" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ) ?>" alt="Metsense sensor">
                 </div>
 
                 <p class="col-xs-12 fade-in fade-delay-2"><?php echo $product_price ?>€</p>
@@ -39,7 +44,7 @@ include "include_pages/head.php";
 
                 <div class="product_2_right col-xs-12 col-md-5">
                     <div class="product_2_right_img_container col-xs-12">
-                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="About image">
+                        <img class="col-xs-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $about_image ) ?>" alt="About Metsense sensors">
                     </div>
                 </div>
 
@@ -54,14 +59,12 @@ include "include_pages/head.php";
                         </p>
                     </div>
                 </div>
-                <!--picture of product-->
-
             </div>
         </div>
     </div>
 </section>
 
-<!--img slider withe pictures of the sensor-->
+<!--img slider withe pictures of the sensor and typical plases to put them-->
 <section class="container-fluid product_s_3">
     <div class="row-fluid">
         <div class="col-xs-12 nopm">
@@ -74,7 +77,7 @@ include "include_pages/head.php";
                             $image = $image['data'];
                             ?>
                             <div class = "slider_page">
-                                <img class = "product_big_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image); ?>" />
+                                <img class = "product_big_image" src="data:image/jpeg;base64,<?php echo base64_encode( $image); ?>"  alt="Metsense meteorological sensor"/>
                             </div>
                             <?php
                         }
@@ -87,7 +90,6 @@ include "include_pages/head.php";
 </section>
 
 <!--key features-->
-<!--php needed for table-->
 <section class="container-fluid product_s_4">
     <div class="row-fluid">
         <div class="col-xs-12">
@@ -97,7 +99,7 @@ include "include_pages/head.php";
                     <!--productuct img lefft container-->
                     <div class="product_4_left col-xs-12 col-md-6">
                         <div class="product_4_left_img_container col-xs-12">
-                            <img class="col-xs-10 col-md-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="key featuar img">
+                            <img class="col-xs-10 col-md-8 fade-in" src="data:image/jpeg;base64,<?php echo base64_encode( $key_features_image ); ?>" alt="Sensor key featuar img">
                         </div>
                     </div>
 
@@ -116,7 +118,7 @@ include "include_pages/head.php";
                     </div>
                 </div>
 
-                <!-- Table -->
+                <!-- Table of information for the sensor -->
                 <div class="product_4_container_bot">
                     <div class="product_4_table col-xs-12 nopm">
                         <div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -147,8 +149,7 @@ include "include_pages/head.php";
     </div>
 </section>
 
-<?php
-include "include_pages/footer.php";
-?>
+<!--include footer section-->
+<?php include "include_pages/footer.php" ?>
 </body>
 </html>

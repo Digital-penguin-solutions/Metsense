@@ -84,7 +84,7 @@ $products = get_all_products($con);
                             ?>
                             <div class = "col-md-4 col-md-offset-<?php echo $offset ?> admin_product">
                                 <h1><a href = "product?p=<?php echo $name?>"><?php echo $name ?></a></h1>
-                                <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>" />
+                                <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $main_image ); ?>" alt="the prudukt that you whant to edit"/>
 
                                 <!--- EDIT BUTTON-->
                                 <a href = "add_product?product_id=<?php echo $product_id?>" class = "product_button product_edit_button">

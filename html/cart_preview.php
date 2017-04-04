@@ -42,7 +42,7 @@ else { // big link means this is on the order.php page and should link to finish
     <?php
 
     if ($size != "big"){
-        echo "<img src = 'img/cross.svg' class = 'cart_cross'>";
+        echo "<img src = 'img/cross.svg' class = 'cart_cross' alt='close symbol'>";
     }
 
     if(count($products) === 0){
@@ -61,7 +61,7 @@ else { // big link means this is on the order.php page and should link to finish
 
             <div class = "lower_cart_row">
                 <div class = "cart_product_image">
-                    <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" />
+                    <img class = "center_horizontally_css" src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>"  alt="the product you what to order"/>
                 </div>
 
                 <table class = "center_vertically_css">
@@ -86,7 +86,7 @@ else { // big link means this is on the order.php page and should link to finish
                 </table>
 
                 <div class = "cart_remove">
-                    <img product_id = "<?php echo $product['product_id']; ?>" src = "img/cross.svg" class = "center_css">
+                    <img product_id = "<?php echo $product['product_id']; ?>" src = "img/cross.svg" class = "center_css" alt="exit symbol">
 
                 </div>
             </div>

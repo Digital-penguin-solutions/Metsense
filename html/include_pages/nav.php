@@ -32,7 +32,7 @@ else {
     <div class="container-fluid full_height">
         <div class="navbar-header center_css">
             <a class="navbar-brand" href="index">
-                <img class = "nav_logo" alt="Brand" src="img/logo/logo.svg">
+                <img class = "nav_logo" alt="Metsense logo" src="img/logo/logo.svg">
             </a>
         </div>
     </div>
@@ -43,7 +43,7 @@ else {
 if(!$hide_cart){
     ?>
     <div class = "cart_button_container">
-        <img src = "img/cart.svg">
+        <img src = "img/cart.svg" alt="cart btn">
     </div>
 
     <?php

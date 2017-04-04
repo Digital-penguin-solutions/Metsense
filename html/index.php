@@ -88,7 +88,7 @@ include "include_pages/welcome_index.php";
                 <!--left container top in mobil and tablet-->
                 <div class="index_about_left col-xs-12 col-md-6 nopm">
                     <div class="index_about_left_container col-xs-12 nopm">
-                        <img src="img/abote.jpg" alt="About metsense">
+                        <img src="img/abote.jpg" alt="About Metsense">
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@ include "include_pages/welcome_index.php";
                 <div class="index_about_contact">
                     <div class="index_about_contact_container fade-in">
                         <h1>Contact person</h1>
-                        <img src="img/contact.jpg" alt="contact person for Metsense">
+                        <img src="img/contact.jpg" alt="Contact person for Metsense">
                         <p>anders.bjork@metsense.com</p>
                         <p>+46 70 109 02 30</p>
                     </div>

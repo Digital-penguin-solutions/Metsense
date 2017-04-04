@@ -11,14 +11,10 @@ include "include_pages/head.php";
     <script>
         var cart_size = "big";
     </script>
-
 </head>
 <?php
 include "function/functions.php";
-
 $con = connect();
-
-
 $products = get_all_products($con);
 ?>
 
@@ -28,9 +24,7 @@ $hide_cart = true;
 include "include_pages/nav.php";
 ?>
 
-<section id = "order_section" class = "cart_section no_padding">
-
-</section>
+<section id = "order_section" class = "cart_section no_padding"></section>
 
 </body>
 </html>

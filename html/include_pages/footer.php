@@ -7,7 +7,7 @@
 				<!--styling for the trangle-->
 				<div class="footer_top col-xs-12">
 					<div class="footer_triangle col-xs-12">
-						<img src="img/triangel.svg" alt="triangle">
+						<img src="img/triangel.svg" alt="triangle divider">
 					</div>
 				</div>
 
