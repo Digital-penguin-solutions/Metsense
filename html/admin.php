@@ -97,7 +97,7 @@ $products = get_all_products($con);
                                 </a>
 
                                 <!--- DELETE BUTTON-->
-                                <a href = "actions/delete_product?id=<?php echo $product_id?>" class = "product_button product_delete_button">
+                                <a href = "function/delete_product?id=<?php echo $product_id?>" class = "product_button product_delete_button">
                                     <p class = "center_vertically_css">Delete</p>
                                 </a>
 

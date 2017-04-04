@@ -19,7 +19,7 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
     // if a product_id is already set, then a product is to be edited
     if (isset($_POST['product_id'])){
         $editing        = true;
-        $product_id     = $_POST['product_id'];
+        $product_id     = secure_str($_POST['product_id']);
     }
     else {
         $editing        = false;
@@ -32,7 +32,7 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
     $key_features       = $_POST["key_feature"];
     $tech_row_left      = $_POST["tech_row_left"];
     $tech_row_right     = $_POST["tech_row_right"];
-    $show               = $_POST["show"];
+    $show               = secure_str($_POST["show"]);
 
     if (isset($_POST["removed_images"])){
         $removed_images = $_POST["removed_images"];
@@ -89,11 +89,11 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
     }
 
     // removes all the previous rows from key_features
-    $query = "DELETE FROM key_feature";
+    $query = "DELETE FROM key_feature WHERE product_id=$product_id";
     mysqli_query($con, $query) or die (mysqli_error($con));
 
     // removes all the previous rows from the tech table
-    $query = "DELETE FROM tech_table_row";
+    $query = "DELETE FROM tech_table_row WHERE product_id=$product_id";
     mysqli_query($con, $query) or die (mysqli_error($con));
 
     // adds the key_features
@@ -136,6 +136,7 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
     if (count($removed_images) > 0 ) { // makes sure there are any images to be removed
         $query = "DELETE FROM product_image WHERE ";
         foreach ($removed_images as $key => $id){
+            $id = secure_str($id);
             $query .= "product_image_id = '$id' ";
 
             // if it's not the last image to be added to the query

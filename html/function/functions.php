@@ -153,7 +153,7 @@ if(!isset($functions_included)){
     // the tech table is stored as a large string with '#!' seperating each row and '%!' seperating each part of a row
     function get_tech_table_by_id($con, $id){
         $id = secure_str($id);
-        $query = "SELECT * FROM tech_table_row WHERE product_id = '$id'";
+        $query = "SELECT * FROM tech_table_row WHERE product_id = '$id' ORDER BY tech_table_row_id";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
 
         $array = array();
@@ -246,7 +246,7 @@ if(!isset($functions_included)){
     //get key featuers by id from database
     function get_key_features_by_id($con, $id){
         $id     = secure_str($id);
-        $query  = "SELECT * FROM key_feature WHERE product_id = '$id'";
+        $query  = "SELECT * FROM key_feature WHERE product_id = '$id' ORDER BY key_feature_id";
         $select = mysqli_query($con, $query) or die (mysqli_error($con));
         $array  = array();
 
