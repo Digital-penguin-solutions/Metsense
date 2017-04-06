@@ -159,14 +159,14 @@ g.task('connect-php', function () {
     });
 
     g.watch([
-        'app/**/*.html',
-        'app/**/*.php',
-        'app/js/*.js',
-        'app/css/app.css'
+        'html/**/*.html',
+        'html/**/*.php',
+        'html/js/*.js',
+        'html/css/app.css'
     ]).on('change', reload);
 
-    g.watch('app/less/**/*',          ['prefix']);
-    g.watch('app/js/**/*',            ['concat-js-app','concat-js-third-party']);
+    g.watch('html/less/**/*',          ['prefix']);
+    g.watch('html/js/**/*',            ['concat-js-app','concat-js-third-party']);
 });
 
 g.task('build',['clean'],function () {
