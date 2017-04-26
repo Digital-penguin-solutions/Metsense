@@ -102,7 +102,7 @@ include "include_pages/nav.php";
                         <img src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" alt="Product that you whant to order" />
                     </div>
                     <p class = "summary_name"><strong><?php echo $product['name']; ?> </strong> x <?php echo $num; ?> </p>
-                    <p class = "summary_single_price"> <?php echo $total_price_single; ?>$</p>
+                    <p class = "summary_single_price"> <?php echo $total_price_single; ?>€</p>
                 </div>
                 <?php
             }
