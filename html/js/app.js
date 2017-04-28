@@ -263,13 +263,13 @@ function change_quantity(change, clicked) {
         new_value = 1;
     }
 
-    $(quantity_counter).html(new_value); // sets the new falue
+    $(quantity_counter).html(new_value); // sets the new value
 
     var single_price = $(parent).find(".order_price").html().trim(); // gets the price
 
     single_price = single_price.substring(0, single_price.length - 1); // removes the dolla sign
 
-    var total_price = 1 * single_price.trim() * new_value + "€";
+    var total_price = 1 * parseInt(single_price.trim()) * new_value + "€";
 
     var total_element = $(parent).find(".total_order_price");
 
