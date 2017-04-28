@@ -33,7 +33,7 @@ include "include_pages/nav.php";
                 $total_price        += $total_price_single;
                 ?> <div class="summary_product"><div class="summary_icon_container"><img src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" alt="Product that you whant to order"></div><p class="summary_name"><strong><?php echo $product['name']; ?> </strong>x <?php echo $num; ?> </p><p class="summary_single_price"> <?php echo $total_price_single; ?>€</p></div> <?php
             }
-            ?> <div class="line"></div><p class="summary_total_text">Total Payment</p><p class="summary_total_price"> <?php echo $total_price;?>$</p></div><a onclick="document.getElementById('form').submit();" class="finish_button col-md-3 col-md-offset-2">Finish order </a><a href="order" class="blue finish_button col-md-3 col-md-offset-2">Change order </a> <?php 
+            ?> <div class="line"></div><p class="summary_total_text">Total Payment</p><p class="summary_total_price"> <?php echo $total_price;?>€</p></div><a onclick="document.getElementById('form').submit();" class="finish_button col-md-3 col-md-offset-2">Finish order </a><a href="order" class="blue finish_button col-md-3 col-md-offset-2">Change order </a> <?php 
         }
         else {
 

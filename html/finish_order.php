@@ -111,7 +111,7 @@ include "include_pages/nav.php";
             <div class = "line"> </div>
 
             <p class = "summary_total_text">Total Payment</p>
-            <p class = "summary_total_price"> <?php echo $total_price;?>$</p>
+            <p class = "summary_total_price"> <?php echo $total_price;?>€</p>
         </div>
 
         <a onclick = "document.getElementById('form').submit();" class = "finish_button col-md-3 col-md-offset-2">
