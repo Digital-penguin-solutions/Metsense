@@ -31,7 +31,7 @@
 				<div class="footer_info col-xs-12">
                     <div class = "center_vertically_css">
                         <p>&copy; 2017 Metsense all rights reserved</p>
-                        <p><i>Website made by ISON</i></p>
+                        <p><i>Website made by <strong>Digital Penguin Solutions</strong></i></p>
                     </div>
 				</div>
 
