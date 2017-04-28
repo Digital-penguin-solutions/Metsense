@@ -133,7 +133,7 @@ g.task('dev-watch', function () {
 //connect to php server and use browser sync
 g.task('connect-php', function () {
     connect.server({
-        port: 8079,
+        port: 80,
         base: 'html',
         open: false
     });
@@ -143,14 +143,14 @@ g.task('connect-php', function () {
 
     browserSync({
         notify: false,
-        port  : 8079,
+        port  : 80,
         server: {
             baseDir   : ['html'],
             middleware: function (req, res, next) {
                 var url = req.url;
 
                 if (!url.match(/^\/(css)\//)) {
-                    proxy.web(req, res, { target: 'http://localhost:8079' });
+                    proxy.web(req, res, { target: 'http://localhost:80' });
                 } else {
                     next();
                 }
