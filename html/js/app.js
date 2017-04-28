@@ -269,7 +269,7 @@ function change_quantity(change, clicked) {
 
     single_price = single_price.substring(0, single_price.length - 1); // removes the dolla sign
 
-    single_price = single_price.replcae(" ", "");
+    single_price = single_price.replace(" ", "");
     var total_price = 1 * parseInt(single_price.trim()) * new_value + "€";
 
     var total_element = $(parent).find(".total_order_price");
