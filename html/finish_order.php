@@ -95,7 +95,7 @@ include "include_pages/nav.php";
 
                 $num                = $_SESSION['cart_num'][$index];
                 $price = $product['price'];
-                $price = str_replace(" ", "");
+                $price = str_replace(" ", "", $price);
                 $total_price_single = $_SESSION['cart_num'][$index] * $price;
                 $total_price        += $total_price_single;
                 ?>
