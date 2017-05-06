@@ -94,7 +94,9 @@ include "include_pages/nav.php";
             foreach ($products as $index=>$product){
 
                 $num                = $_SESSION['cart_num'][$index];
-                $total_price_single = $_SESSION['cart_num'][$index] * $product['price'];
+                $price = $product['price'];
+                $price = str_replace(" ", "");
+                $total_price_single = $_SESSION['cart_num'][$index] * $price;
                 $total_price        += $total_price_single;
                 ?>
                 <div class = "summary_product">
