@@ -29,7 +29,9 @@ include "include_pages/nav.php";
             foreach ($products as $index=>$product){
 
                 $num                = $_SESSION['cart_num'][$index];
-                $total_price_single = $_SESSION['cart_num'][$index] * $product['price'];
+                $price = $product['price'];
+                $price = str_replace(" ", "", $price);
+                $total_price_single = $_SESSION['cart_num'][$index] * $price;
                 $total_price        += $total_price_single;
                 ?> <div class="summary_product"><div class="summary_icon_container"><img src="data:image/jpeg;base64,<?php echo base64_encode( $product['main_image'] ); ?>" alt="Product that you whant to order"></div><p class="summary_name"><strong><?php echo $product['name']; ?> </strong>x <?php echo $num; ?> </p><p class="summary_single_price"> <?php echo $total_price_single; ?>€</p></div> <?php
             }
