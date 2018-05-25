@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap -  v1.0.0 (https://github.com/Digitalis-web/Metsense#readme)
- * Copyright 2017-2017 Digitalis
+ * Copyright 2017-2018 Digitalis
  * Licensed under  ()
  */
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
@@ -1469,6 +1469,12 @@ figure.effect-sarah:hover:after h2 {
 }
 .cart_remove img:hover {
   cursor: pointer;
+}
+.gdpr {
+  bottom: 0;
+  padding-top: 5vh;
+  text-align: center;
+  color: #4A4544;
 }
 @media (min-width: 992px) {
   .cart_cross {

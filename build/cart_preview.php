@@ -55,6 +55,4 @@ else { // big link means this is on the order.php page and should link to finish
     }
     ?> <a href="index#products_page" onclick="toggle_cart(false, true)" class="center_horizontally_css more_products"> <?php
         echo $more;
-        ?> </a> <?php
-
-    ?> </div>
+        ?> </a><p class="gdpr">Our companypolicy acknowledge the rules and recommendations stipulated by EU GDPR</p></div>

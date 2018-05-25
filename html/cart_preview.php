@@ -38,7 +38,6 @@ else { // big link means this is on the order.php page and should link to finish
     <!-- Only for adding a border to the top of the next cart_item-->
     <div class = "cart_item"></div>
 
-
     <?php
 
     if ($size != "big"){
@@ -112,9 +111,6 @@ else { // big link means this is on the order.php page and should link to finish
         echo $more;
         ?>
     </a>
-
-    <?php
-
-    ?>
+    <p class="gdpr">Our companypolicy acknowledge the rules and recommendations stipulated by EU GDPR</p>
 
 </div>
