@@ -35,7 +35,7 @@ include "include_pages/nav.php";
     </div>
 </section>
 
-<!--Tecknical information about productuckt-->
+<!--Technical information about product-->
 <section class="container-fluid product_s_2">
     <div class="row-fluid">
         <div class="col-xs-12">
@@ -63,6 +63,14 @@ include "include_pages/nav.php";
         </div>
     </div>
 </section>
+
+<?php if (!empty($brochure)) { ?>
+<section class="container-fluid product_s_2_5">
+    <button onclick="location.href='view_brochure?product_id=<?php echo $product_id; ?>'" class = "download_brochure_button">
+        Download brochure
+    </button>
+</section>
+<?php } ?>
 
 <!--img slider withe pictures of the sensor and typical plases to put them-->
 <section class="container-fluid product_s_3">

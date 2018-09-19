@@ -842,11 +842,41 @@ figure.effect-sarah:hover:after h2 {
   transition: all 0.3s linear;
   background: #802b00;
 }
+.product_s_2_5 {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 15vh;
+  background: #003057;
+}
+.product_s_2_5 .download_brochure_button {
+  height: 8vh;
+  border-radius: 30% 100%;
+  background: #FF5600;
+  line-height: 8vh;
+  text-align: center;
+  font-size: 1.7vw;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin: 0 !important;
+  line-height: 0;
+  color: white;
+  height: 50%;
+  width: 30%;
+  font-size: 1.4vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+}
+.product_s_2_5 .download_brochure_button:hover {
+  background: #802b00;
+  transition: all 0.3s linear;
+}
 .product_s_2 {
   padding: 0 !important;
   margin: 0 !important;
   background: #003057;
-  height: 150vh;
+  height: 160vh;
   z-index: 2;
   color: #ffffff;
   position: relative;
@@ -872,7 +902,6 @@ figure.effect-sarah:hover:after h2 {
 }
 .product_s_2 .product_2_container .product_2_left .product_2_left_text_container p {
   font-weight: 300;
-  font-size: 1vw;
   margin-bottom: 1vh;
 }
 .product_s_2 .product_2_container .product_2_right {
@@ -988,13 +1017,28 @@ figure.effect-sarah:hover:after h2 {
   background: #FF5600;
   line-height: 8vh;
   text-align: center;
-  font-size: 1.0vw;
+  font-size: 1.7vw;
   color: #FFFFFF;
   cursor: pointer;
 }
 .intro_button:hover {
   background: #802b00;
   transition: all 0.3s linear;
+}
+/* mobile and tablet only */
+@media (max-width: 768px) {
+  .product_2_left_text_container p {
+    font-size: 2.7vw !important;
+  }
+  .intro_button {
+    width: 50%;
+    margin-left: 25% !important;
+    font-size: 2.9vw !important;
+  }
+  .download_brochure_button {
+    width: 50% !important;
+    font-size: 2.2vw !important;
+  }
 }
 @media (min-width: 768px) {
   .product_s_4 .product_4_container .product_4_container_top .product_4_left .product_4_left_img_container {
@@ -1032,7 +1076,7 @@ figure.effect-sarah:hover:after h2 {
     font-size: 3.4em;
   }
   .product_s_2 .product_2_container .product_2_left .product_2_left_text_container p {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
   .product_s_2 .product_2_container .product_2_right {
     height: 100%;

@@ -39,11 +39,27 @@
   }
 }
 
+.product_s_2_5{
+    .nopm;
+    height:15vh;
+    background: @color2;
+    .download_brochure_button {
+        .intro_button;
+        margin:0 !important;
+        line-height:0;
+        color: white;
+        height:50%;
+        width:30%;
+        font-size:1.4vw;
+        .center_horizontally_css;
+        font-weight:400;
+    }
+}
 //styling for section 2 product page
 .product_s_2{
   .nopm;
   background: @color2;
-  height: 150vh;
+  height: 160vh;
   z-index: 2;
   color: @white;
   position: relative;
@@ -63,7 +79,6 @@
         }
         p{
           font-weight: 300;
-          font-size: 1vw;
           margin-bottom: 1vh;
         }
       }
@@ -181,7 +196,7 @@
   background:@color3;
   line-height: 8vh;
   text-align:center;
-  font-size: 1.0vw;
+  font-size: 1.7vw;
   color:#FFFFFF;
   cursor:pointer;
   &:hover {
@@ -190,8 +205,29 @@
   }
 }
 
+/* mobile and tablet only */
+@media (max-width: @screen-sm-min) {
+
+    .product_2_left_text_container{
+        p{
+            font-size:2.7vw !important;
+        }
+    }
+    .intro_button {
+        width:50%;
+        margin-left:25% !important;
+        font-size:2.9vw !important;
+    }
+    .download_brochure_button{
+        width:50% !important;
+        font-size:2.2vw !important;
+    }
+}
 //tablet size
 @media (min-width: @screen-sm-min) {
+
+
+
   //section 4 tablet size
   .product_s_4{
     .product_4_container {
@@ -243,7 +279,7 @@
             font-size: 3.4em;
           }
           p{
-            font-size: 1.5vw;
+            font-size: 1.2vw;
           }
         }
       }

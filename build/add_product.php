@@ -50,10 +50,23 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
 
     read_slider_images($con, "slider_image");
 
+    $broschure_data = "";
+    $broschure_name = "";
+    //
+    // if there is a new brochure. The data will be collected and later uploaded
+    if($_FILES['brochure']['size'] > 0){
+        $brochure_tmp_name = $_FILES['brochure']['tmp_name'];
+        $brochure_name = $_FILES['brochure']['name'];
+        $fp = fopen($brochure_tmp_name, 'r');
+        $brochure_data = fread($fp, filesize($brochure_tmp_name));
+        $brochure_data = mysqli_real_escape_string($con, $brochure_data);
+        fclose($fp);
+    }
+
 
     if (!$editing) {
         // adds the product along with the constant values
-        $query = "INSERT INTO product (name, short_description, long_description, price) VALUES ('$name', '$short', '$long', '$price')";
+        $query = "INSERT INTO product (name, short_description, long_description, price, brochure, brochure_name) VALUES ('$name', '$short', '$long', '$price', '$brochure_data', '$broschure_name')";
 
         mysqli_query($con, $query) or die (mysqli_error($con));
 
@@ -64,6 +77,12 @@ if (isset($_POST["add"]) && isset($_SESSION['admin'])){
         $query = "UPDATE product SET name = '$name', short_description='$short', long_description='$long', price = '$price' WHERE product_id = '$product_id'";
 
         mysqli_query($con, $query) or die (mysqli_error($con));
+        //
+        // if there is a new brochure to be uploaded
+        if($brochure_data != ""){
+            $query = "UPDATE product SET brochure = '$brochure_data', brochure_name = '$brochure_name' WHERE product_id = '$product_id'";
+            mysqli_query($con, $query) or die (mysqli_error($con));
+        }
     }
 
     // UPLOAD OF SINGLE IMAGES
@@ -184,7 +203,7 @@ if (isset($_SESSION['admin'])) {
                         if (isset($_GET["product_id"])){
                             ?> <input type="hidden" value="<?php echo $_GET['product_id'] ?>" name="product_id"> <?php
                         }
-                        ?> <h1>Product Name</h1><input value="<?php echo $name ?>" type="text" name="name"><h1>Short description</h1><textarea name="short_description" class="short_description"><?php echo $short?></textarea><h1>Long description</h1><textarea name="long_description" class="long_description"><?php echo $long?></textarea><h1>Price</h1><input value="<?php echo $price ?>" type="text" name="price"><div class="admin_list_container admin_key_features_list"><h1>Key Features List</h1> <?php
+                        ?> <h1>Product Name</h1><input value="<?php echo $name ?>" type="text" name="name"><h1>Short description</h1><textarea name="short_description" class="short_description"><?php echo $short?></textarea><h1>Long description</h1><textarea name="long_description" class="long_description"><?php echo $long?></textarea><h1>Broschyr</h1><input id="brochure" name="brochure" class="center_horizontally_css" type="file"><h1>Price</h1><input value="<?php echo $price ?>" type="text" name="price"><div class="admin_list_container admin_key_features_list"><h1>Key Features List</h1> <?php
                             // echos out all the existing items of the list, if there are any
                             foreach($key_features as $features){
                                 ?> <div class="admin_list_item"><input value="<?php echo $features ?>" name="key_feature[]" type="text" placeholder="Key Feature"> <img src="img/cross.svg" class="remove_item" alt="remove the prudukt from the list"></div> <?php

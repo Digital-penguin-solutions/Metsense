@@ -29,4 +29,6 @@ $about_image = $product["about_image"];
 $slider_images = get_product_images_by_id($con, $product_id);
 $key_features = get_key_features_by_id($con, $product_id);
 $tech_table_array = get_tech_table_by_id($con, $product_id);
+
+$brochure = get_product_brochure_by_id($con, $product_id);
 ?>

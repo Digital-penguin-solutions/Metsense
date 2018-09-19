@@ -21,6 +21,23 @@ if(!isset($functions_included)){
         return $data;
     }
 
+    function get_product_brochure_by_id($con, $id){
+        $id     = secure_str($id);
+        $query  = "SELECT brochure FROM product WHERE product_id = '$id'";
+        $select = mysqli_query($con, $query) or die (mysqli_error($con));
+        $data = mysqli_fetch_array($select);
+        $brochure = $data['brochure'];
+        return $brochure;
+    }
+    function get_product_brochure_name_by_id($con, $id){
+        $id     = secure_str($id);
+        $query  = "SELECT brochure_name FROM product WHERE product_id = '$id'";
+        $select = mysqli_query($con, $query) or die (mysqli_error($con));
+        $data   = mysqli_fetch_array($select);
+        $name = $data['brochure_name'];
+        return $name;
+    }
+
     //read slider images
     function read_slider_images($con, $index){
 
